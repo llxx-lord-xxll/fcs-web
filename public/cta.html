@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Two-part button</title>
+  
+  
+  
+  
+      <style>
+      
+body {
+  background-color: #1E1E20;
+  font-family: 'Montserrat', sans-serif;
+}
+h1 {
+  text-align: center;
+  color: #eee;
+}
+.fcs-cta-button {
+    width: 15%;
+    margin: 0 auto;
+    border: 2px solid #9ccc3c;
+    height: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+          
+.fcs-cta-button:hover {
+  color: #1E1E20;
+}
+.fcs-cta-button:hover::after {
+  width: 100%;
+}
+.fcs-cta-button::after {
+  transition: all 0.5s;
+  width: 0;
+  height: 0px;
+  background-color: transparent easeInOutSine;
+  display: block;
+  content: ' ';
+  position: absolute;
+  left: 0;
+  border-style: solid;
+  border-width: 40px 10px 0 0;
+  border-color: #9ccc3c transparent transparent transparent;
+  z-index: -1;
+}
+.fcs-cta-title {
+  height: 40px;
+  display: inline-block;
+  background-color: #9ccc3c;
+  color: #1E1E20;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 40px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  margin-right: 10px;
+  float: left;
+}
+.fcs-cta-title::after {
+  width: 0;
+  height: 0;
+  content: ' ';
+  display: block;
+  border-style: solid;
+  border-width: 40px 10px 0 0;
+  border-color: #9ccc3c transparent transparent transparent;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+.fcs-cta-content {
+  height: 40px;
+  display: inline-block;
+  float: left;
+  line-height: 40px;
+  padding: 0;
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+          
+    </style>
+
+
+
+</head>
+
+<body translate="no" >
+
+    <h3>Year's mega event coming soon. Take the challenge.</h3>
+
+    <div class="fcs-cta-button">
+    <div class="fcs-cta-title">
+    Be
+    </div>
+    <div class="fcs-cta-content">
+    a proud Delegate!
+    </div>
+    </div>
+  
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 
