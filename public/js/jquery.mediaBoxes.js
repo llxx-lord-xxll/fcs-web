@@ -90,10 +90,10 @@
         multipleFilterLogic             : 'AND',
         filterContainer                 : '#filter',
         search                          : '', // i.e. #search
-        searchTarget                    : '.media-box-title',
+        searchTarget                    : '.media-box-nametitle',
         sortContainer                   : '', // i.e. #sort
         getSortData                     :   {
-                                              title: '.media-box-title',
+                                              title: '.media-box-nametitle',
                                               text: '.media-box-text',
                                             }, 
         waitUntilThumbWithRatioLoads    : true, // When they have dimensions specified
@@ -298,7 +298,7 @@
                 var boxImage        = $(this);
                 var thumbnailDiv    = boxImage.find('div[data-thumbnail]').eq(0); /* only one thumb allowed */
                 var thumbnailSrc    = thumbnailDiv.attr('data-thumbnail');
-                var thumbnailTitle  = thumbnailDiv.attr('data-title') != undefined ? thumbnailDiv.attr('data-title') : "";
+                var thumbnailTitle  = thumbnailDiv.attr('data-nametitle') != undefined ? thumbnailDiv.attr('data-nametitle') : "";
                 var thumbnailAlt    = thumbnailDiv.attr('data-alt') != undefined ? thumbnailDiv.attr('data-alt') : "";
                 var gotDimensions   = thumbnailDiv.attr('data-width') != undefined && thumbnailDiv.attr('data-height') != undefined;
                 var waitForAll      = container.data('settings').waitForAllThumbsNoMatterWhat;
@@ -312,7 +312,7 @@
                     return;
                 }
 
-                var imgHTML         = $('<img alt="'+thumbnailAlt+'" title="'+thumbnailTitle+'" src="'+thumbnailSrc+'" />');
+                var imgHTML         = $('<img alt="'+thumbnailAlt+'" nametitle="'+thumbnailTitle+'" src="'+thumbnailSrc+'" />');
 
                 if(imagesWithDimensions == true){
                     /* If the dimensions are specified in the images then ignore them in the imagesLoaded plugin when you insert new items */
@@ -1436,7 +1436,7 @@
                 var $this            = $(this).addClass('popup-trigger-added');
                 var attr_src         = $this.attr('data-src');
                 var attr_type        = $this.attr('data-type'); // image, iframe, inline, and ajax
-                var attr_title       = $this.attr('data-title') != undefined ? $this.attr('data-title') : "";
+                var attr_title       = $this.attr('data-nametitle') != undefined ? $this.attr('data-nametitle') : "";
                 var attr_alt         = $this.attr('data-alt') != undefined ? $this.attr('data-alt') : "";
 
                 // Instead of openning the iframe in the popup open it in the grid
@@ -1455,7 +1455,7 @@
                     $this.removeClass('mb-open-popup');
                     $this.removeAttr('data-src');
                     $this.removeAttr('data-type');
-                    $this.removeAttr('data-title');
+                    $this.removeAttr('data-nametitle');
                     $this.removeAttr('data-alt');
                 }
 
@@ -1493,7 +1493,7 @@
 
                     $this.attr('data-mfp-src', attr_src);
                     $this.addClass(type);
-                    $this.attr('mfp-title', attr_title);
+                    $this.attr('mfp-nametitle', attr_title);
                     $this.attr('mfp-alt', attr_alt);
 
                 }
@@ -1622,7 +1622,7 @@
                 tLoading            : 'loading...',
                 mainClass           : 'my-mfp-slide-bottom',
                 gallery             : { enabled : settings.magnificpopup.gallery },
-                closeMarkup         : '<button title="%title%" class="mfp-close"></button>',
+                closeMarkup         : '<button nametitle="%nametitle%" class="mfp-close"></button>',
                 titleSrc            : 'title',
                 autoFocusLast       : false, // in the new version of Magnific Popup on IE it jumps to the element that triggered the popup, which looks odd, so we better disable it 
                 iframe              : {
@@ -1641,7 +1641,7 @@
                     markup : '<div class="mfp-iframe-scaler">'+
                                     '<div class="mfp-close"></div>'+
                                     '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
-                                    '<div class="mfp-bottom-bar" style="margin-top:4px;"><div class="mfp-title"></div><div class="mfp-counter"></div></div>'+
+                                    '<div class="mfp-bottom-bar" style="margin-top:4px;"><div class="mfp-nametitle"></div><div class="mfp-counter"></div></div>'+
                              '</div>'                      
                 },
                 callbacks           : {
@@ -1649,7 +1649,7 @@
                         var item    = $(this.currItem.el);
 
                         setTimeout(function(){ 
-                            $('.mfp-title').html(item.attr('mfp-title'));    
+                            $('.mfp-nametitle').html(item.attr('mfp-nametitle'));
                             $('.mfp-img').attr('alt', item.attr('mfp-alt'));    
 
                             addSocialButtons(item)
@@ -1779,7 +1779,7 @@
                 /* if the hash will be empty then use this following peace of code, otherwise it will jump back to the top of the page if you set an empty result for the hash */
                 if(history.pushState) { 
                     history.pushState(null, null, '#'); 
-                    //history.pushState('', document.title,  window.location.pathname + window.location.search );
+                    //history.pushState('', document.nametitle,  window.location.pathname + window.location.search );
                 }else{ 
                     location.hash = '#!'; 
                 }
@@ -1868,8 +1868,8 @@
             }
             social+="</div>";
 
-            var oldHTML = $('.mfp-title').html();
-            $('.mfp-title').html(oldHTML+social);
+            var oldHTML = $('.mfp-nametitle').html();
+            $('.mfp-nametitle').html(oldHTML+social);
         }
 
         // OPEN WINDOWS FOR SHARING :D

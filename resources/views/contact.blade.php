@@ -5,31 +5,35 @@
     @endsection
 
 @section('page-content')
-    <section id="contact">
-        <div class="container-fluid">
+    <!--CONTACT-->
+    <section id="contact" class="contact-us-section">
+        <div class="container">
             <div class="row">
-
-                <div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6">
-
+                <div class="col-lg-12 text-center">
+                    <h1>Contact Us</h1>
+                    <p class="lead">If you'd prefer to get in touch with us by email please use our contact form. <br>Completing the form helps us deal with your enquiry as quickly and efficiently as possible.</p>
                 </div>
-                <div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 form-background">
+                <div class="col-lg-6 col-md-6 form-background">
                     <div class="fcs-contact fcs-form-container">
                         @if($errors->any())
-                            {{ implode('aaa', $errors->all('<div>:message</div>')) }}
+                            @foreach ($errors->all() as $error)
+                                <p class="text-center bg-danger text-muted">{{ $error }}</p>
+                            @endforeach
+                        @endif
+
+                        @if(isset($success))
+                                <p class="text-center bg-success text-muted">{{ $success }}</p>
                             @endif
 
-                            @if(isset($success))
-
-                            @endif
                         <form action="" method="post">
                             {{csrf_field()}}
                             <ul class="fcs-form-outer">
                                 <li>
-                                    <label for="full-name">Name </label>
-                                    <input type="text" id="full-name" name="full-name" placeholder="According to Passport" required>
+                                    <label for="full-name" @if($errors->has('full-name')) class="text-danger"  @endif>Name&#42;</label>
+                                    <input type="text" id="full-name" name="full-name" value="{{old('full-name')}}"  placeholder="According to Passport" required>
                                 </li>
                                 <li>
-                                    <label class="control-label" for="choose-country">Nationality :</label>
+                                    <label class="control-label @if($errors->has('choose-country'))text-danger @endif" for="choose-country">Nationality&#42;</label>
                                     <select name="choose-country" id="choose-country" required>
                                         <option value="AF">Afghanistan</option>
                                         <option value="AL">Albania</option>
@@ -276,16 +280,16 @@
                                     </select>
                                 </li>
                                 <li>
-                                    <label for="email-address">Email Address </label>
-                                    <input  type="email" id="email-address" name="email-address" placeholder="Your Email Address" required>
+                                    <label for="email-address" @if($errors->has('email-address')) class="text-danger"  @endif>Email Address&#42;</label>
+                                    <input  type="email" id="email-address" name="email-address" placeholder="Your Email Address" value="{{old('email-address')}}"  required>
                                 </li>
                                 <li>
-                                    <label for="phone-number"> Phone Number </label>
-                                    <input  type="tel" id="phone-number" name="phone-number" placeholder="e.g. 852-6582 8563" required>
+                                    <label for="phone-number" @if($errors->has('phone-number')) class="text-danger"  @endif> Phone Number&#42;</label>
+                                    <input  type="tel" id="phone-number" name="phone-number" placeholder="e.g. +852 - 6582 8563" value="{{old('phone-number')}}" required>
                                 </li>
                                 <li>
-                                    <label for="contact-message">Message Box </label>
-                                    <textarea  id="contact-message" name="contact-message" placeholder="Your Message"></textarea>
+                                    <label for="contact-message" @if($errors->has('contact-message')) class="text-danger"  @endif>Message Box&#42; </label>
+                                    <textarea  id="contact-message" name="contact-message" placeholder="Your Message" required>{{old('contact-message')}}</textarea>
                                 </li>
                                 <li>
                                     <button type="submit">Send Message</button>
@@ -294,8 +298,29 @@
                         </form>
                     </div>
                 </div>
+                <div class="col-lg-6 col-md-6 fcs-contact-description">
+                    <div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 fcs-contact-support">
+                            <i class="pe-4x pe-7s-headphones"></i>
+                            <h4>In Case of Emergency:</h4>
+                            <p><i class="fa fa-envelope"> community@futurecitysummity.org</i></p>
+                            <p><i class="fa fa-phone-square"> +852 6582 8563</i></p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 fcs-contact-location">
+                            <i class="pe-4x pe-7s-map-marker"></i>
+                            <h4>Address:</h4>
+                            <p>Pok Fu Lam, Hong Kong</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Map Section-->
+    <section id="venue-hku">
+        <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=University%20of%20Hong%20Kong%20&key=AIzaSyCigfKnVpOELbK4gb5Y5FXoEGS_dZQHn6c" allowfullscreen></iframe>
+    </section>
+    <!-- End of Map Section-->
     @endsection
 

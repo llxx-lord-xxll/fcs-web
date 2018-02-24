@@ -9,17 +9,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use LVR\CountryCode\Two;
-use Illuminate\View\View;
 
 class ContactFormCTLR extends Controller
 {
-   private $request;
-   private $suc = null;
+    private $suc = null;
+    private $v;
     public function __construct()
     {
         $this->v =  View('contact');
     }
-
 
     public function returnView(Request $request)
     {
@@ -85,17 +83,24 @@ class ContactFormCTLR extends Controller
             'full-name' => 'required|regex:/^[\s\w-]*$/',
             'choose-country' => ['required',new Two()],
             'email-address' => 'required|email',
-            'phone-number' => 'required|digits:13',
+            'phone-number' => 'required|digits_between:8,15',
             'contact-message' => 'required|string|min:10|max:200',
-        ]);
+        ])->setAttributeNames(['full-name' => 'full name',
+            'choose-country' => 'nationality',
+            'email-address' => 'email address',
+            'phone-number' => 'phone number',
+            'contact-message' => 'message']);
 
         if ($validator->fails()) {
-            return Redirect::back()->withErrors($validator);
+
+            return Redirect::back()->withErrors($validator)->withInput();
         }
         else
         {
             $this->submitToDB($request->input('full-name'),$request->input('email-address'),$request->input('choose-country'),$request->input('phone-number'),$request->input('contact-message'));
             $this->suc = 'Thank you for contacting with us, you will be notified through email';
+            return $this->returnView($request);
         }
     }
+
 }

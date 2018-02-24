@@ -28,7 +28,7 @@
 
 body {
 	color:#33404c;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'Open Sans';
 	font-size:14px;
 	font-weight:400;
 	line-height:23px;
@@ -36,33 +36,33 @@ body {
 
 h1 {
     color:#33404c;
-	  font-family: 'Quicksand', sans-serif;
+	font-family:'montserratbold';
     font-size:2.5em;
 }
 
 h2 {
 	color:#33404c;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratbold';
 	font-size:2.25em;
 }
 
 h3 {
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratregular';
 	font-size:1.5em;
 	color:#33404c;
 }
 
 h4 {
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratregular';
 	font-size:18px;
 }
 
 h5 {
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratlight';
 }
 
 h6 {
-    font-family: 'Quicksand', sans-serif;
+    font-family:'montserratlight';
     color:#33404c;
 }
 section {
@@ -98,7 +98,7 @@ a {
 /* NAVBAR */
 
 .navbar-custom {
-	font-family: 'Quicksand', sans-serif;
+	font-family:'Open sans';
 	font-size:12px;
 	font-weight:400;
 	letter-spacing:1px;
@@ -193,8 +193,7 @@ a {
     margin-bottom:100px;
     text-transform: uppercase;
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
-		color: #fff;
+    font-family: 'montserratbold';
 }
 
 
@@ -293,7 +292,7 @@ a {
 
 #countdown .countdown_amount {
 	color:#33404c;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratregular';
 	font-size:40px;
 	text-align:left;
 	line-height:50px;
@@ -302,7 +301,7 @@ a {
 
 #countdown .countdown_section {
 	color:#33404c;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratbold';
 	font-size:13px;
 	text-align:left;
 	line-height:10px;
@@ -436,7 +435,7 @@ a {
 
 #program .date {
 	color:#33404c;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratregular';
 	margin-bottom:0;
 	font-size:17px;
 	line-height:18px;
@@ -444,7 +443,7 @@ a {
 
 #program .speaker-name {
 
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratregular';
 	font-size:0.8em;
 	letter-spacing:1px;
 }
@@ -596,7 +595,7 @@ a {
 
 #pitching-day .date {
 	color:#33404c;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratregular';
 	margin-bottom:0;
 	font-size:16px;
 	line-height:18px;
@@ -604,7 +603,7 @@ a {
 
 #pitching-day .speaker-name {
 
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratregular';
 	font-size:12px;
 	letter-spacing:1px;
 }
@@ -759,7 +758,7 @@ a {
 }
 
 .hotel .caption h5 {
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratlight';
 }
 
 .hotel .caption .rating {
@@ -769,54 +768,7 @@ a {
 	padding:17px 0 0 0;
 }
 
-/* VENUE - SYSU */
-.bg-image-sysu {
-	background-image: url(../img/sysu-1.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	height:400px;
-	width:100%;
-	filter: brightness(70%);
-}
 
-.bg-image-hku {
-	background-image: url(../img/sysu-1.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	height:400px;
-	width:100%;
-	filter: brightness(70%);
-}
-
-.bg-image-cyberport {
-	background-image: url(../img/cyberport-1.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	height:650px;
-	width:100%;
-	filter: brightness(70%);
-}
-
-.venue-topic-content {
-    padding: 10px 60px;
-		font-size: 1.3em;
-		line-height: 1.7em;
-}
-
-.venue-inner-content {
-	padding: 30px 30px 0px;
-  font-size: 1.5em;
-  line-height: 1.7em;
-}
 /* FUNFACTS */
 
 #funfacts  {
@@ -858,7 +810,7 @@ a {
 }
 
 #funfacts .number {
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratbold';
 	font-size:40px;
 	font-weight:700;
 	margin-top:15px;
@@ -919,7 +871,7 @@ a {
 
 .price-table .price {
 	color:#444444;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratbold';
 	font-size:50px;
 	font-weight:400;
 }
@@ -940,7 +892,7 @@ a {
 }
 
 .price-table .desc li {
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratlight';
 	line-height:2;
 	border-bottom:1px dotted;
 	border-color:rgba(255,255,255, 0.7);
@@ -1009,7 +961,7 @@ a {
 
 #testimonial .name {
 	color:#ffffff;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratbold';
 	font-size:12px;
 	letter-spacing:2px;
 	text-transform:uppercase;
@@ -1088,7 +1040,7 @@ a {
 /*Footer*/
 
 .footer .footer-logo > a {
-
+    
     background-image: url(../img/FCS-logo-70x65.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -1151,7 +1103,7 @@ footer .button-big {
 
 footer dt {
 	color:#ffffff;
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratlight';
 	font-size:13px;
 	margin-top:7px;
 	margin-bottom:3px;
@@ -1213,7 +1165,7 @@ textarea {
 /* BUTTONS */
 
 .button {
-	font-family: 'Quicksand', sans-serif;
+	font-family:'montserratregular';
 	font-size: 17px;
 	text-transform: uppercase;
 	border: none;
@@ -3285,14 +3237,9 @@ body .progress_inner input[type="radio"] {
 }
 
 .conference-topic-content {
-    padding: 50px 60px;
-		font-size: 1.5em;
-		line-height: 1.7em;
+    padding: 15px 60px;
 }
 
-.workshop-heading {
-	padding: 0px 60px 15px;
-}
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 .special-content {
@@ -3368,14 +3315,14 @@ body .progress_inner input[type="radio"] {
 /* Listed Startup Section */
 
 .startup-section {
-     padding: 3%;
+     padding: 3%;     
 }
-
+      
 .fcs-startup *,
 .fcs-startup *:before,
 .fcs-startup *:after{
-    content: " ";
-	display: table;
+    content: " "; 
+	display: table; 
 }
 
 .fcs-startup {
@@ -3384,10 +3331,10 @@ body .progress_inner input[type="radio"] {
 }
 
 .fcs-startup *:after{
-    clear: both;
-}
-
-
+    clear: both; 
+}      
+    
+    
 .fcs-startup li {
 	float: left;
 	text-align: center;
@@ -3399,13 +3346,13 @@ body .progress_inner input[type="radio"] {
 
 .fcs-startup li:nth-child(4n){
     border-right: none;
-}
+}      
 
-
+  
 .fcs-startup li:nth-child(-n+4){
     border-top: none;
-}
-
+}      
+           
 .fcs-partner-logo {
   max-width: 100%;
   margin: 0 auto;
@@ -3422,7 +3369,7 @@ body .progress_inner input[type="radio"] {
     font-size: 1rem;
     margin: 4px auto;
 }
-
+      
 .fcs-startup-location {
     margin: 4px auto;
     font-size: .8rem;
@@ -3434,7 +3381,7 @@ body .progress_inner input[type="radio"] {
     position: relative;
     margin: 0 auto;
     width: 100%;
-    height: 440px;
+    height: 100vh;
     overflow: hidden;
     background-repeat: no-repeat;
 	background-position: center center;
@@ -3442,7 +3389,7 @@ body .progress_inner input[type="radio"] {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
     background-attachment: fixed;
-      /*
+      /*    
 box-shadow: 0px 0px 6px #33404c000;
 transform: translate(-50%); */
 }
@@ -3476,15 +3423,8 @@ transform: translate(-50%); */
 padding: 10% 25%;
 }
 
-/* Workshop Page  */
-
-.workshop-outer-list {
-    list-style: none;
-		padding: 30px 0px 0px 30px;
-}
-
-.workshop-inner-list {
-    list-style: none;
-		line-height: 1.7em;
-		font-size: 1.3em;
+.fcs-form-container> p.bg-success,.fcs-form-container> p.bg-danger
+{
+	padding: 15px 3px;
+    font-size: 1.2em;
 }

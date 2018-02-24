@@ -9,10 +9,21 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="fcs-form-container">
-                    <form action="delegate-application.html" method="post">
+                    @if($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <p class="text-center bg-danger text-muted">{{ $error }}</p>
+                        @endforeach
+                    @endif
+
+                    @if(isset($success))
+                        <p class="text-center bg-success text-muted">{{ $success }}</p>
+                    @endif
+
+                    <form action="" method="post">
+                        {{csrf_field()}}
                         <ul class="fcs-form-outer">
                             <li>
-                                <p>Title</p>
+                                <p @if($errors->has('salutation')) class="text-danger"  @endif>Title</p>
                                 <ul class="fcs-form-inner">
                                     <li>
                                         <input type="Radio" name="salutation" value="Mr." id="salutation-mr"
@@ -32,21 +43,21 @@
                                 </ul>
                             </li>
                             <li>
-                                <label for="first_name">First Name </label>
+                                <label for="first_name" @if($errors->has('first_name')) class="text-danger"  @endif>First Name </label>
                                 <input type="text" id="first_name" name="first_name"
-                                       placeholder=" According to Passport" required>
+                                       placeholder=" According to Passport" value="{{old('first_name')}}" required>
                             </li>
                             <li>
-                                <label for="last_name">Last Name </label>
+                                <label for="last_name" @if($errors->has('last_name')) class="text-danger"  @endif>Last Name </label>
                                 <input type="text" id="last_name" name="last_name"
-                                       placeholder=" According to Passport" required></label>
+                                       placeholder=" According to Passport"  value="{{old('last_name')}}" required>
                             </li>
                             <li>
-                                <label for="preferred_name">Preferred Name </label>
-                                <input type="text" id="preferred_name" name="full_name" required>
+                                <label for="preferred_name" @if($errors->has('full_name')) class="text-danger"  @endif>Preferred Name </label>
+                                <input type="text" id="preferred_name" name="full_name"  value="{{old('full_name')}}"  required>
                             </li>
                             <li>
-                                <label for="choose_country"> Nationality </label>
+                                <label for="choose_country" @if($errors->has('choose_country')) class="text-danger"  @endif> Nationality </label>
                                 <select name="choose_country" id="choose_country" required>
                                     <option value="AF">Afghanistan</option>
                                     <option value="AL">Albania</option>
@@ -293,11 +304,11 @@
                                 </select>
                             </li>
                             <li>
-                                <label for="city_name">City </label>
-                                <input type="text" id="city_name" name="city_name">
+                                <label for="city_name" @if($errors->has('city_name')) class="text-danger"  @endif>City </label>
+                                <input type="text" id="city_name" name="city_name"  value="{{old('city_name')}}" >
                             </li>
                             <li>
-                                <label for="occupation">Occupation </label>
+                                <label for="occupation" @if($errors->has('occupation')) class="text-danger"  @endif>Occupation </label>
                                 <select id="occupation" name="occupation" required>
                                     <option value="student">Student</option>
                                     <option value="corporate">Corporate</option>
@@ -308,66 +319,66 @@
                                 </select>
                             </li>
                             <li>
-                                <label id="university-name">Name of the University </label>
+                                <label id="university-name" @if($errors->has('university-name')) class="text-danger"  @endif>Name of the University </label>
                                 <input type="text" id="university-name" name="university-name"
-                                       placeholder="If Student/University Scholar/Others">
+                                       placeholder="If Student/University Scholar/Others"  value="{{old('university-name')}}">
                             </li>
                             <li>
-                                <label id="company-organization">Company / Organisation </label>
+                                <label id="company-organization" @if($errors->has('company-organization')) class="text-danger"  @endif>Company / Organisation </label>
                                 <input type="text" id="university-name" name="company-organization"
-                                       placeholder="Corporates/Startups/NGOs/Others">
+                                       placeholder="Corporates/Startups/NGOs/Others"  value="{{old('company-organization')}}">
                             </li>
                             <li>
-                                <label id="ministry-department">Ministry and Department </label>
+                                <label id="ministry-department" @if($errors->has('ministry-department')) class="text-danger"  @endif>Ministry and Department </label>
                                 <input type="text" id="university-name" name="ministry-department"
-                                       placeholder="Government/Others">
+                                       placeholder="Government/Others"  value="{{old('ministry-department')}}">
                             </li>
                             <li>
-                                <label for="email_address">Email Address </label>
-                                <input type="email" id="email_address" name="email_address"
-                                       placeholder="Your Email Address" required>
+                                <label for="email_address" @if($errors->has('email_address')) class="text-danger"  @endif>Email Address </label>
+                                <input type="email" id="email_address" name="email_address" value="{{old('email_address')}}"
+                                       placeholder="Your Email Address" required >
                             </li>
                             <li>
-                                <label for="phone_number"> Phone Number </label>
-                                <input type="tel" id="phone_number" name="phone_number"
+                                <label for="phone_number" @if($errors->has('phone_number')) class="text-danger"  @endif> Phone Number </label>
+                                <input type="tel" id="phone_number" name="phone_number" value="{{old('phone_number')}}"
                                        placeholder="e.g. +852 - 6582 8563" required>
                             </li>
                             <li>
-                                <label for="social-facebook-link">Facebook URL </label>
-                                <input type="url" name="delegate-social-fb" id="social-facebook-link">
+                                <label for="social-facebook-link" @if($errors->has('delegate-social-fb')) class="text-danger"  @endif>Facebook URL </label>
+                                <input type="url" name="delegate-social-fb" id="social-facebook-link"  value="{{old('delegate-social-fb')}}">
                             </li>
                             <li>
-                                <label for="social-linkedin-link">LinkedIn URL </label>
-                                <input type="url" name="delegate-social-li" id="social-linkedin-link">
+                                <label for="social-linkedin-link" @if($errors->has('delegate-social-li')) class="text-danger"  @endif>LinkedIn URL </label>
+                                <input type="url" name="delegate-social-li" id="social-linkedin-link" value="{{old('delegate-social-li')}}">
                             </li>
                             <li>
-                                <label for="social-scholarhub-link">Scholar Hub URL </label>
-                                <input type="url" name="delegate-social-sh" id="social-scholarhub-link">
+                                <label for="social-scholarhub-link" @if($errors->has('delegate-social-sh')) class="text-danger"  @endif>Scholar Hub URL </label>
+                                <input type="url" name="delegate-social-sh" id="social-scholarhub-link" value="{{old('delegate-social-sh')}}">
                             </li>
                             <li>
-                                <label for="delegate-pitching-deck">Share with us if you have any projects /
+                                <label for="delegate-pitching-deck" @if($errors->has('delegate-pitching-deck')) class="text-danger"  @endif>Share with us if you have any projects /
                                     startups / ventures you are carrying on for now relevant to City
                                     Innovation </label>
                                 <input type="file" id="delegate-pitching-deck" name="delegate-pitching-deck"
-                                       accept=".doc,.docx,.ppt, .pptx,.pdf"> (Pitching Deck / 3 Pages Executive
+                                       accept=".doc,.docx,.ppt,.pptx,.pdf"> (Pitching Deck / 3 Pages Executive
                                 Summary - less than 5 MB)
                             </li>
                             <li>
-                                <label for="fcs-purpose">What would you expect to gain or experience in Future City
+                                <label for="fcs-purpose" @if($errors->has('fcs-purpose')) class="text-danger"  @endif>What would you expect to gain or experience in Future City
                                     Summit 2018? </label>
                                 <textarea id="fcs-purpose" name="fcs-purpose"
-                                          placeholder="Maximum 60 Words"></textarea>
+                                          placeholder="Maximum 60 Words"> {{old('fcs-purpose')}}</textarea>
                             </li>
                             <li>
 
-                                <label for="delegate-city-message">Can you share and analyse with us one stressing
+                                <label for="delegate-city-message" @if($errors->has('delegate-city-message')) class="text-danger"  @endif>Can you share and analyse with us one stressing
                                     socio-economic issue in your city that you would like to address? </label>
                                 <textarea id="delegate-city-message" name="delegate-city-message"
-                                          placeholder="Maximum 100 Words"></textarea>
+                                          placeholder="Maximum 100 Words">{{old('delegate-city-message')}}</textarea>
                             </li>
                             <li>
 
-                                <p>Choose any of the track you're interested to participate </p>
+                                <p @if($errors->has('track-conference')) class="text-danger"  @endif>Choose any of the track you're interested to participate </p>
                                 <ul class="fcs-form-inner">
                                     <li>
                                         <input type="radio" id="track-conference" name="track-conference"
@@ -382,7 +393,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <label for="fcs-chapter-referral">Do you belong to any chapters of FCS? </label>
+                                <label for="fcs-chapter-referral" @if($errors->has('fcs-chapter-referral')) class="text-danger"  @endif>Do you belong to any chapters of FCS? </label>
                                 <select id="fcs-chapter-referral" name="fcs-chapter-referral">
                                     <option value="BD">Bangladesh</option>
                                     <option value="VN">Vietnam</option>
@@ -392,61 +403,61 @@
                                 </select>
                             </li>
                             <li>
-                                <label for="referred-person">Referred by </label>
-                                <input type="text" id="referred-person" name="referred-person"
+                                <label for="referred-person" @if($errors->has('referred-person')) class="text-danger"  @endif>Referred by </label>
+                                <input type="text" id="referred-person" name="referred-person" value="{{old('referred-person')}}"
                                        placeholder="If any - Full Name">
                             </li>
                             <li>
-                                <p>Choose a FCS Package </p>
+                                <p @if($errors->has('fcs-package')) class="text-danger"  @endif>Choose a FCS Package </p>
                                 <ul class="fcs-form-inner">
                                     <li>
-                                        <input type="radio" id="fcs-package" name="fcs-package">
+                                        <input type="radio" id="fcs-package" name="fcs-package" value="0">
                                         <label for="fcs-package">International Delegate (WITH Accommodation)</label>
                                     </li>
                                     <li>
-                                        <input type="radio" id="fcs-package" name="fcs-package">
+                                        <input type="radio" id="fcs-package" name="fcs-package" value="1">
                                         <label for="fcs-package">International Delegate (WITHOUT
                                             Accommodation)</label>
                                     </li>
                                     <li>
-                                        <input type="radio" id="fcs-package" name="fcs-package">
+                                        <input type="radio" id="fcs-package" name="fcs-package" value="2">
                                         <label for="fcs-package">Local Delegate (China | WITH Accommodation)</label>
                                     </li>
                                     <li>
-                                        <input type="radio" id="fcs-package" name="fcs-package">
+                                        <input type="radio" id="fcs-package" name="fcs-package" value="3">
                                         <label for="fcs-package">Local Delegate (China | WITHOUT
                                             Accommodation)</label>
                                     </li>
                                     <li>
-                                        <input type="radio" id="fcs-package" name="fcs-package">
+                                        <input type="radio" id="fcs-package" name="fcs-package" value="4">
                                         <label for="fcs-package">Local Delegate (Hong Kong | WITH
                                             Accommodation)</label>
                                     </li>
                                     <li>
-                                        <input type="radio" id="fcs-package" name="fcs-package">
+                                        <input type="radio" id="fcs-package" name="fcs-package" value="5">
                                         <label for="fcs-package">Local Delegate (Hong Kong | WITHOUT
                                             Accommodation)</label>
                                     </li>
                                 </ul>
                             <li>
-                                <p>Would you like to apply for scholarship? (More information would be submitted
+                                <p @if($errors->has('fcs-scholarship')) class="text-danger"  @endif>Would you like to apply for scholarship? (More information would be submitted
                                     later in follow up email) </p>
                                 <ul class="fcs-form-inner">
                                     <li>
-                                        <input type="radio" id="fcs-scholarship" name="fcs-scholarship">
+                                        <input type="radio" id="fcs-scholarship" name="fcs-scholarship" value="y">
                                         <label for="fcs-scholarship">Yes</label>
                                     </li>
                                     <li>
-                                        <input type="radio" id="fcs-scholarship" name="fcs-scholarship">
+                                        <input type="radio" id="fcs-scholarship" name="fcs-scholarship" value="n">
                                         <label for="fcs-scholarship">No</label>
                                     </li>
                                 </ul>
                             <li>
-                                <label for="fcs-newsletter-subscription">Would you like to subscribe to Future City
+                                <label for="fcs-newsletter-subscription" @if($errors->has('fcs-newsletter-subscription')) class="text-danger"  @endif>Would you like to subscribe to Future City
                                     Summit newsletter? </label>
                                 <select name="fcs-newsletter-subscription" id="fcs-newsletter-subscription">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
+                                    <option value="y">Yes</option>
+                                    <option value="n">No</option>
                                 </select>
                             </li>
                             <li>

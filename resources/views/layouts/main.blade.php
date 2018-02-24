@@ -55,7 +55,7 @@
 </div>
 
 <!-- NAVIGATION -->
-<nav id="nav-primary" class="navbar navbar-custom" role="navigation">S
+<nav id="nav-primary" class="navbar navbar-custom" role="navigation">
     <div class="container">
 
         <div class="navbar-header">
@@ -65,33 +65,50 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{{env('APP_URL','#')}}"><img src="{{asset('img/logo.png')}}" alt="logo"></a>
+            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="nav">
             <ul class="nav navbar-nav navbar-right uppercase">
-                <li><a data-toggle="elementscroll" href="#info">About</a></li>
-                <li><a data-toggle="elementscroll" href="#speakers">Speakers</a></li>
-                <li><a data-toggle="elementscroll" href="#program">Program</a></li>
-                <li><a data-toggle="elementscroll" href="#venue">Venue</a></li>
-                <li><a data-toggle="elementscroll" href="#register">Register</a></li>
-                <li><a data-toggle="elementscroll" href="#gallery">Gallery</a></li>
-                <li><a data-toggle="elementscroll" href="#sponsors">Sponsors</a></li>
-                <li>
-                    <a data-toggle="elementscroll" href="#footer">Contact</a>
-                </li>
                 <li  class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Page 1-1</a></li>
-                        <li><a href="#">Page 1-2</a></li>
-                        <li><a href="#">Page 1-3</a></li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">Founders and Advisors</a></li>
+                        <li><a href="#">Featured Stories</a></li>
                     </ul>
                 </li>
-
+                <li  class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">FCS2018<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Theme 2018</a></li>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">Speaker</a></li>
+                        <li><a href="#">Workshop</a></li>
+                        <li><a href="#">Metro-Hackathon</a></li>
+                        <li><a href="#">Imagination Expo</a></li>
+                        <li><a href="#">Industry Visit</a></li>
+                    </ul>
+                </li>
+                <li  class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Venue<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HKU</a></li>
+                        <li><a href="#">SYSU</a></li>
+                    </ul>
+                </li>
+                <li><a data-toggle="elementscroll" href="#register">Register</a></li>
+                <li><a data-toggle="elementscroll" href="#local-chapter">Chapter</a></li>
+                <li><a data-toggle="elementscroll" href="#sponsors">Contact</a></li>
             </ul>
         </div>
 
+
+
+
+
+
+        <!-- New Menu is Here -->
     </div>
 </nav>
 
@@ -190,7 +207,6 @@
 </div>
 
 
-
 <script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script src="{{asset('js/jquery.themepunch.tools.min.js')}}"></script>
@@ -205,7 +221,6 @@
 <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('js/retina.js')}}"></script>
-
 <script src="{{asset('js/main.js')}}"></script>
 
 

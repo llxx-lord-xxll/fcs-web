@@ -23,25 +23,28 @@ Route::get('/contact', function (\Illuminate\Http\Request $request) {
 
 Route::post('/contact', function (\Illuminate\Http\Request $request) {
     $ret = new \App\Http\Controllers\ContactFormCTLR();
-    $ret->submitForm($request);
-    return $ret->returnView($request);
+    return $ret->submitForm($request);
+
 });
 
 Route::get('/applications/delegates', function (\Illuminate\Http\Request $request) {
     $ret = new \App\Http\Controllers\DelegatesApplicationCTLR();
-    $ret->withReq($request);
-    return $ret->returnView();
+    return $ret->returnView($request);
+});
+
+Route::post('/applications/delegates', function (\Illuminate\Http\Request $request) {
+    $ret = new \App\Http\Controllers\DelegatesApplicationCTLR();
+    return $ret->submitForm($request);
+
 });
 
 Route::get('/applications/chapter-recruitment', function (\Illuminate\Http\Request $request) {
     $ret = new \App\Http\Controllers\ChapterReqruitmentCTLR();
-    $ret->withReq($request);
-    return $ret->returnView();
+    return $ret->returnView($request);
 });
 
 Route::get('/applications/chapter', function (\Illuminate\Http\Request $request) {
     $ret = new \App\Http\Controllers\ChapterApplicationCTLR();
-    $ret->withReq($request);
-    return $ret->returnView();
+    return $ret->returnView($request);
 });
 

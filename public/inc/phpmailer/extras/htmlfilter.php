@@ -748,7 +748,7 @@ function HTMLFilter($body, $trans_image_path, $block_external_images = false)
         "script",
         "applet",
         "embed",
-        "title",
+        "nametitle",
         "frameset",
         "xmp",
         "xml"
