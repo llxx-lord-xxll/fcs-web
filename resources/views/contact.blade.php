@@ -13,9 +13,16 @@
 
                 </div>
                 <div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 form-background">
-
                     <div class="fcs-contact fcs-form-container">
+                        @if($errors->any())
+                            {{ implode('aaa', $errors->all('<div>:message</div>')) }}
+                            @endif
+
+                            @if(isset($success))
+
+                            @endif
                         <form action="" method="post">
+                            {{csrf_field()}}
                             <ul class="fcs-form-outer">
                                 <li>
                                     <label for="full-name">Name </label>
@@ -274,7 +281,7 @@
                                 </li>
                                 <li>
                                     <label for="phone-number"> Phone Number </label>
-                                    <input  type="tel" id="phone-number" name="phone-number" placeholder="e.g. +852 - 6582 8563" required>
+                                    <input  type="tel" id="phone-number" name="phone-number" placeholder="e.g. 852-6582 8563" required>
                                 </li>
                                 <li>
                                     <label for="contact-message">Message Box </label>

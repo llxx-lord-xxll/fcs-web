@@ -6,24 +6,32 @@ use App\form_data;
 use App\form_submissions;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
+use LVR\CountryCode\Two;
 use Illuminate\View\View;
 
 class ContactFormCTLR extends Controller
 {
-   private $request = null;
-   private $v;
-    public function withReq(Request $request)
+   private $request;
+   private $suc = null;
+    public function __construct()
     {
-        $this->request = $request;
         $this->v =  View('contact');
     }
 
-    public function returnView()
+
+    public function returnView(Request $request)
     {
+        if ($this->suc != null)
+        {
+            $this->v->with('success',$this->suc);
+        }
 
         return $this->v;
     }
-    public function submitContact($name,$email,$country,$mob,$message)
+
+    public function submitToDB($name,$email,$country,$mob,$message)
     {
         $form_id =  \Illuminate\Support\Facades\DB::table('forms')->where('title','=','Contact')->value('id');
 
@@ -68,5 +76,26 @@ class ContactFormCTLR extends Controller
         $fd->field_id = $msgfield;
         $fd->field_data = $message;
         $fd->save();
+
+        return true;
+    }
+
+    public function submitForm(Request $request){
+        $validator = Validator::make($request->all(),[
+            'full-name' => 'required|regex:/^[\s\w-]*$/',
+            'choose-country' => ['required',new Two()],
+            'email-address' => 'required|email',
+            'phone-number' => 'required|digits:13',
+            'contact-message' => 'required|string|min:10|max:200',
+        ]);
+
+        if ($validator->fails()) {
+            return Redirect::back()->withErrors($validator);
+        }
+        else
+        {
+            $this->submitToDB($request->input('full-name'),$request->input('email-address'),$request->input('choose-country'),$request->input('phone-number'),$request->input('contact-message'));
+            $this->suc = 'Thank you for contacting with us, you will be notified through email';
+        }
     }
 }
