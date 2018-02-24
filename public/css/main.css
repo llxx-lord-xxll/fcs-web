@@ -27,7 +27,7 @@
 /* CORE CSS */
 
 body {
-	color:#666666;
+	color:#33404c;
 	font-family:'Open Sans';
 	font-size:14px;
 	font-weight:400;
@@ -35,13 +35,13 @@ body {
 }
 
 h1 {
-    color:#262626;
+    color:#33404c;
 	font-family:'montserratbold';
     font-size:2.5em;
 }
 
 h2 {
-	color:#262626;
+	color:#33404c;
 	font-family:'montserratbold';
 	font-size:2.25em;
 }
@@ -49,7 +49,7 @@ h2 {
 h3 {
 	font-family:'montserratregular';
 	font-size:1.5em;
-	color:#262626;
+	color:#33404c;
 }
 
 h4 {
@@ -63,7 +63,7 @@ h5 {
 
 h6 {
     font-family:'montserratlight';
-    color:#262626;
+    color:#33404c;
 }
 section {
 	display: block;
@@ -143,7 +143,7 @@ a {
 
 .is-sticky .navbar-custom {
 	width:100%;
-	background:#262626;
+	background:#33404c;
 	-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
   	-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
 	transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -237,7 +237,7 @@ a {
 
 #highlight #left {
 	color:#b0b0b0;
-	background:#262626;
+	background:#33404c;
 	min-height:100px;
 }
 
@@ -258,7 +258,7 @@ a {
 }
 
 #highlight h2 {
-	color:#262626;
+	color:#33404c;
 }
 
 #highlight #right {
@@ -291,7 +291,7 @@ a {
 }
 
 #countdown .countdown_amount {
-	color:#666666;
+	color:#33404c;
 	font-family:'montserratregular';
 	font-size:40px;
 	text-align:left;
@@ -300,7 +300,7 @@ a {
 }
 
 #countdown .countdown_section {
-	color:#262626;
+	color:#33404c;
 	font-family:'montserratbold';
 	font-size:13px;
 	text-align:left;
@@ -334,7 +334,7 @@ a {
 }
 
 .speaker-content h4 {
-  color: #666666;
+  color: #33404c;
   font-family: "montserratregular";
   font-weight: 400;
   margin-bottom: 10px;
@@ -384,7 +384,7 @@ a {
 }
 
 #program .nav-tabs > li.active > a {
-	color: #262626;
+	color: #33404c;
 	padding:10px 50px 10px 0;
 	border-bottom:4px solid #ffffff;
 	padding:10px 100px 10px 0;
@@ -392,7 +392,7 @@ a {
 
 #program .nav-tabs > li > a:hover,
 #program .nav-tabs > li.active > a:hover {
-	color: #262626;
+	color: #33404c;
 }
 
 #program .panel {
@@ -422,7 +422,7 @@ a {
 }
 
 #program .panel-title > a {
-	color: #262626;
+	color: #33404c;
 	text-decoration:none;
 	-webkit-transition: all 0.1s;
 	   -moz-transition: all 0.1s;
@@ -434,7 +434,7 @@ a {
 }
 
 #program .date {
-	color:#000;
+	color:#33404c;
 	font-family:'montserratregular';
 	margin-bottom:0;
 	font-size:17px;
@@ -444,12 +444,12 @@ a {
 #program .speaker-name {
 
 	font-family:'montserratregular';
-	font-size:12px;
+	font-size:0.8em;
 	letter-spacing:1px;
 }
 
 #program .panel-body h4 {
-	color:#666666;
+	color:#33404c;
 	font-size:21px;
 }
 
@@ -459,21 +459,21 @@ a {
 }
 
 #program .panel-body p span {
-	color:#666666;
+	color:#33404c;
 	display:inherit;
 }
 
 #program .about-speaker i{
-	color:#262626;
+	color:#33404c;
 }
 
 #program .about-speaker a{
-	color:#262626;
+	color:#33404c;
 	text-decoration:none;
 }
 
 #program .about-speaker a:hover{
-	color:#000000;
+	color:#33404c000;
 	text-decoration:none;
 }
 
@@ -494,6 +494,19 @@ a {
 }
 
 }
+
+
+.program-speaker {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    border-radius: 50%
+}
+
+.fcs-moderator {
+    margin: 8% 0 0;
+}
+
 
 
 /*  PITCHING DAY */
@@ -531,7 +544,7 @@ a {
 }
 
 #pitching-day .nav-tabs > li.active > a {
-	color: #262626;
+	color: #33404c;
 	padding:10px 50px 10px 0;
 	border-bottom:4px solid #ffffff;
 	padding:10px 100px 10px 0;
@@ -539,7 +552,7 @@ a {
 
 #pitching-day .nav-tabs > li > a:hover,
 #pitching-day .nav-tabs > li.active > a:hover {
-	color: #262626;
+	color: #33404c;
 }
 
 #pitching-day .panel {
@@ -569,7 +582,7 @@ a {
 }
 
 #pitching-day .panel-title > a {
-	color: #262626;
+	color: #33404c;
 	text-decoration:none;
 	-webkit-transition: all 0.1s;
 	   -moz-transition: all 0.1s;
@@ -581,7 +594,7 @@ a {
 }
 
 #pitching-day .date {
-	color:#000;
+	color:#33404c;
 	font-family:'montserratregular';
 	margin-bottom:0;
 	font-size:16px;
@@ -596,7 +609,7 @@ a {
 }
 
 #pitching-day .panel-body h4 {
-	color:#666666;
+	color:#33404c;
 	font-size:16px;
 }
 
@@ -606,21 +619,21 @@ a {
 }
 
 #pitching-day .panel-body p span {
-	color:#666666;
+	color:#33404c;
 	display:inherit;
 }
 
 #pitching-day .about-speaker i{
-	color:#262626;
+	color:#33404c;
 }
 
 #pitching-day .about-speaker a{
-	color:#262626;
+	color:#33404c;
 	text-decoration:none;
 }
 
 #pitching-day .about-speaker a:hover{
-	color:#000000;
+	color:#33404c000;
 	text-decoration:none;
 }
 
@@ -865,7 +878,7 @@ a {
 
 .price-table h3 {
 	color:#ffffff;
-	background:#262626;
+	background:#33404c;
 	font-family:Open Sans;
 	font-weight:400;
 	font-size:10px;
@@ -1055,7 +1068,7 @@ a {
 
 footer {
 	color:#b0b0b0;
-	background:#262626;
+	background:#33404c;
 	padding:70px 0;
 }
 
@@ -1103,7 +1116,7 @@ footer dt {
 	color:#ececee;
 	font-size:10px;
 	letter-spacing:1px;
-	background:#000000;
+	background:#33404c000;
 	padding:20px 0;
 }
 
@@ -1123,7 +1136,7 @@ footer dt {
 /* Newsletter */
 
 #newsletter {
-	color:#262626;
+	color:#33404c;
 	background:#ebe8e8;
 	margin-bottom:0;
 }
@@ -1200,21 +1213,21 @@ textarea {
 
 .button-line-light:hover,
 .button-line-light:active {
-	color: #262626;
+	color: #33404c;
 	background: #ffffff;
 	text-decoration:none;
 }
 
 .button-line-dark {
-	color:#262626;
+	color:#33404c;
 	background:transparent;
-	border:2px solid #262626;
+	border:2px solid #33404c;
 }
 
 .button-line-dark:hover,
 .button-line-dark:active {
 	color: #ffffff;
-	background: #262626;
+	background: #33404c;
 	text-decoration:none;
 }
 
@@ -1537,35 +1550,11 @@ figure.effect-ming:hover img {
     background-color:#FCFAFA;
 }
 
-/*  VENUE HKU */
-
-.bg-large-header-hku {
-    background-image: url(../img/bg-funfacts.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	height:650px;
-	width:100%;
-}
-
+/*  VENUES */
 .venue-map-text {
     margin: 50px;
 }
 
-/*  VENUE SYSU */
-
-.bg-large-header-sysu {
-    background-image: url(../img/bg-funfacts.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	height:650px;
-	width:100%;
-}
 
 /* FREQUENTLY ASKED QUESTIONS */
 
@@ -1695,7 +1684,7 @@ a:hover, a:focus {
     font-weight: bold;
     font-size: 1em;
     font-family: Open Sans;
-    color:#666666;
+    color:#33404c;
 }
 
 .fcs-column-block {
@@ -1709,7 +1698,6 @@ a:hover, a:focus {
 .fcs-partnership-application {
     margin: 50px;
 }
-
 
 
 /*  NEW BLOG POST LAYOUT*/
@@ -1913,11 +1901,14 @@ h1 {
     padding: 30px 0;
     text-align: center;
     margin: 0 auto;
+    background-color: #9ccc3c;
 }
 
 .fcs-cta-header {
     font-size: 1.75em;
     padding: 20px 0px;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 #fcs-story-info {
@@ -1927,11 +1918,11 @@ h1 {
 
 /* FCS Story Call to Action Section */
 .fcs-cta-button {
-    width: 23%;
+    width: 28%;
     margin: 0 auto;
-    border: 2px solid #9ccc3c;
+    border: 2px solid #fff;
     height: 40px;
-    color: #000;
+    color: #fff;
     cursor: pointer;
     transition: all 0.3s;
     position: relative;
@@ -1942,10 +1933,10 @@ h1 {
 .fcs-cta-button:hover {
   color: #1E1E20;
 }
-
 .fcs-cta-button:hover::after {
   width: 100%;
 }
+
 .fcs-cta-button::after {
   transition: all 0.5s;
   width: 0;
@@ -1957,18 +1948,18 @@ h1 {
   left: 0;
   border-style: solid;
   border-width: 40px 10px 0 0;
-  border-color: #9ccc3c transparent transparent transparent;
+  border-color: #9ccc34 transparent transparent transparent;
   z-index: -1;
 }
 .fcs-cta-title {
   height: 40px;
   display: inline-block;
-  background-color: #9ccc3c;
+  background-color: #fff;
   color: #1E1E20;
-  text-transform: capitalize;
-  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 800;
   font-size: 1.5em;
-  line-height: 35px;
+  line-height: 40px;
   box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
@@ -1976,6 +1967,7 @@ h1 {
   margin-right: 10px;
   float: left;
 }
+
 .fcs-cta-title::after {
   width: 0;
   height: 0;
@@ -1983,19 +1975,21 @@ h1 {
   display: block;
   border-style: solid;
   border-width: 40px 10px 0 0;
-  border-color: #9ccc3c transparent transparent transparent;
+  border-color: #fff transparent transparent transparent;
   position: absolute;
   top: 0;
   right: -10px;
 }
+
 .fcs-cta-content {
   height: 40px;
   display: inline-block;
   float: left;
-  line-height: 35px;
+  line-height: 40px;
   padding: 0;
   font-size: 1.5em;
   margin-left: 10px;
+  text-transform: uppercase;
 }
 
 /* FCS STORY INDIVIDUAL POST PAGE */
@@ -2081,7 +2075,7 @@ figcaption {
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 .snip1529 {
-  background-color: #000000;
+  background-color: #33404c000;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   color: #ffffff;
   float: left;
@@ -2271,7 +2265,7 @@ figcaption {
 }
 .tabs--blue label {
   top: 5px;
-  color: #000;
+  color: #33404c;
   border-radius: 0px;
   border: none;
   background: #9FD356;
@@ -2798,7 +2792,7 @@ body .progress_inner input[type="radio"] {
 
 .fcs-local-li a {
   text-decoration: none;
-  color: #000;
+  color: #33404c;
 
   /* transitions & animations
   transition: all .5s ease;
@@ -2940,6 +2934,23 @@ body .progress_inner input[type="radio"] {
 /* ABOUT US PAGE */
 
 /* FCS Mission */
+
+.fcs-journey {
+    padding-bottom: 30px;
+}
+
+.fcs-journey-title {
+    text-align: center;
+    color: #33404c;
+}
+.fcs-journey-timeline {
+    text-align: center;
+    color: #33404c;
+}
+
+
+
+
 .fcs-mission {
 	background-image: url(../img/bg-funfacts.png);
 	background-repeat: no-repeat;
@@ -3013,7 +3024,7 @@ body .progress_inner input[type="radio"] {
 	margin: 20px 0 10px 0;
 	padding: 20px 0 0 0;
 	font-size: 2em;
-    color: #000;
+    color: #33404c;
 	position: relative;
 	-webkit-transition: -webkit-transform 0.2s;
 	-moz-transition: -moz-transform 0.2s;
@@ -3085,7 +3096,6 @@ body .progress_inner input[type="radio"] {
 
 .img-global-agenda {
     min-height: 150px;
-    min-width: 260px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -3120,7 +3130,7 @@ body .progress_inner input[type="radio"] {
 .form-background {
   font-family: Open sans, "Helvetica Neue", sans-serif;
   font-size: 1em;
-  color: #000;
+  color: #33404c;
   padding: 50px 0;
 }
 
@@ -3380,7 +3390,7 @@ body .progress_inner input[type="radio"] {
 	-moz-background-size: cover;
     background-attachment: fixed;
       /*    
-box-shadow: 0px 0px 6px #000000;
+box-shadow: 0px 0px 6px #33404c000;
 transform: translate(-50%); */
 }
 
@@ -3392,7 +3402,6 @@ transform: translate(-50%); */
     object-fit: fcs-form-slider-photo;
 }
 
-
 .application-description {
     padding: 5%;
 }
@@ -3403,4 +3412,14 @@ transform: translate(-50%); */
 .application-description-content ul li {
     font-size: 1em;
     line-height: 2.25em;
+    list-style: none;
 }
+
+.application-description-content ul li i {
+    padding: 5px;
+}
+
+.delegate-apply-button {
+padding: 10% 25%;
+}
+

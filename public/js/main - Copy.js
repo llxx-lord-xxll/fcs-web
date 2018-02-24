@@ -95,13 +95,18 @@ jQuery(document).ready(function($) {
     		}
     	}
     	
-    });  
-	 
+    });
+
+    $('ul.nav li.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    });
 	  
 	//COUNTDOWN TIMER
 	var newYear = new Date(); 
     newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1); 
-    $('#countdown').countdown({until: new Date(2015, 12-1, 18)}); // enter event day 
+    $('#countdown').countdown({until: new Date(2018, 8-1, 2)}); // enter event day 
     
     $('#removeCountdown').toggle(
         function() {
@@ -677,4 +682,11 @@ jQuery(document).ready(function($){
 
 // Local Chapter Map 
 
- 
+// APPLICATION PAGE FORM IMAGE SLIDER
+var slider = $('.fcs-img-form-slider');
+
+setInterval(function() {
+  slider.children(':last-child').fadeOut(3000, function() {
+    $(this).prependTo(slider).show();
+  })
+}, 6000);

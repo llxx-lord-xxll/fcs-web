@@ -690,3 +690,5 @@ setInterval(function() {
     $(this).prependTo(slider).show();
   })
 }, 6000);
+
+

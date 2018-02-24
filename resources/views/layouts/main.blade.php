@@ -77,8 +77,11 @@
                 <li><a data-toggle="elementscroll" href="#register">Register</a></li>
                 <li><a data-toggle="elementscroll" href="#gallery">Gallery</a></li>
                 <li><a data-toggle="elementscroll" href="#sponsors">Sponsors</a></li>
-                <li><a data-toggle="elementscroll" href="#footer">Contact</a></li>
-                <li  class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
+                <li>
+                    <a data-toggle="elementscroll" href="#footer">Contact</a>
+                </li>
+                <li  class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown">Contact <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Page 1-1</a></li>
                         <li><a href="#">Page 1-2</a></li>
