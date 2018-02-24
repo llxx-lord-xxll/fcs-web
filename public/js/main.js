@@ -683,11 +683,17 @@ jQuery(document).ready(function($){
 // Local Chapter Map 
 
 // APPLICATION PAGE FORM IMAGE SLIDER
-var slider = $('.fcs-img-form-slider');
+var slider1 = $('#workshop-first-slider');
+var slider2 = $('#workshop-second-slider');
 
 setInterval(function() {
-  slider.children(':last-child').fadeOut(3000, function() {
-    $(this).prependTo(slider).show();
+  slider1.children(':last-child').fadeOut(3000, function() {
+    $(this).prependTo(slider1).show();
+  })
+}, 6000);
+setInterval(function() {
+  slider2.children(':last-child').fadeOut(3000, function() {
+    $(this).prependTo(slider2).show();
   })
 }, 6000);
 
