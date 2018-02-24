@@ -15,7 +15,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/contact', function (\Illuminate\Http\Request $request) {
+    $ret = new \App\Http\Controllers\ContactFormCTLR();
+    $ret->withReq($request);
+    return $ret->returnView();
+
+});
+
+Route::get('/applications/delegates', function (\Illuminate\Http\Request $request) {
+    $ret = new \App\Http\Controllers\ContactFormCTLR();
+    $ret->withReq($request);
+    return $ret->returnView();
+});
+
+Route::get('/applications/chapter-recruitment', function (\Illuminate\Http\Request $request) {
+    $ret = new \App\Http\Controllers\ContactFormCTLR();
+    $ret->withReq($request);
+    return $ret->returnView();
+});
+
+Route::get('/applications/chapter-open', function (\Illuminate\Http\Request $request) {
+    $ret = new \App\Http\Controllers\ContactFormCTLR();
+    $ret->withReq($request);
+    return $ret->returnView();
 });
 
