@@ -691,7 +691,7 @@ border-style:none;
 font-size:60px;
 line-height:60px;
 font-weight:900;
-font-family:montserratbold;
+font-family:'Quicksand', sans-serif;
 color:rgb(0, 0, 0);
 text-decoration:none;
 background-color:transparent;
@@ -1007,9 +1007,9 @@ border-style:none;
 }
 
 .tp-caption.light_heavy_70_shadowed {
-font-size:60px;
-line-height:72px;
-font-family:montserratbold;
+font-size:40px;
+line-height:50px;
+font-family:'Quicksand', sans-serif;
 color:#ffffff;
 text-decoration:none;
 background-color:transparent;

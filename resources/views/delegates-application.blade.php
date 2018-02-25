@@ -19,7 +19,7 @@
                         <p class="text-center bg-success text-muted">{{ $success }}</p>
                     @endif
 
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <ul class="fcs-form-outer">
                             <li>
@@ -367,7 +367,7 @@
                                 <label for="fcs-purpose" @if($errors->has('fcs-purpose')) class="text-danger"  @endif>What would you expect to gain or experience in Future City
                                     Summit 2018? </label>
                                 <textarea id="fcs-purpose" name="fcs-purpose"
-                                          placeholder="Maximum 60 Words"> {{old('fcs-purpose')}}</textarea>
+                                          placeholder="Maximum 60 Words">{{old('fcs-purpose')}}</textarea>
                             </li>
                             <li>
 

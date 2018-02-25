@@ -9,15 +9,25 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="fcs-form-container">
-                    <form action="chapter-application.html" method="post">
+                    @if($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <p class="text-center bg-danger text-muted">{{ $error }}</p>
+                        @endforeach
+                    @endif
+
+                    @if(isset($success))
+                        <p class="text-center bg-success text-muted">{{ $success }}</p>
+                    @endif
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {{csrf_field()}}
                         <ul class="fcs-form-outer">
                             <li>
-                                <label for="full_name">Full Name </label>
+                                <label for="full_name" @if($errors->has('full_name')) class="text-danger"  @endif>Full Name </label>
                                 <input type="text" id="full_name" name="full_name" placeholder="According to Passport"
                                        required>
                             </li>
                             <li>
-                                <label for="choose_country"> Nationality </label>
+                                <label for="choose_country" @if($errors->has('choose_country')) class="text-danger"  @endif> Nationality </label>
                                 <select name="choose_country" id="choose_country" required>
                                     <option value="AF">Afghanistan</option>
                                     <option value="AL">Albania</option>
@@ -264,7 +274,7 @@
                                 </select>
                             </li>
                             <li>
-                                <label for="occupation">Occupation </label>
+                                <label for="occupation" @if($errors->has('occupation')) class="text-danger"  @endif>Occupation </label>
                                 <select id="occupation" name="occupation" required>
                                     <option value="student">Student</option>
                                     <option value="corporate">Corporate</option>
@@ -275,51 +285,52 @@
                                 </select>
                             </li>
                             <li>
-                                <label id="university-name">Name of the University </label>
+                                <label id="university-name" @if($errors->has('university-name')) class="text-danger"  @endif>Name of the University </label>
                                 <input type="text" id="university-name" name="university-name"
                                        placeholder="If Student/University Scholar/Others">
                             </li>
                             <li>
-                                <label id="company-organization">Company / Organisation </label>
-                                <input type="text" id="university-name" name="company-organization"
+                                <label id="company-organization" @if($errors->has('company-organization')) class="text-danger"  @endif>Company / Organisation </label>
+                                <input type="text" id="company-organization" name="company-organization"
                                        placeholder="Corporates/Startups/NGOs/Others">
                             </li>
                             <li>
-                                <label id="ministry-department">Ministry and Department </label>
-                                <input type="text" id="university-name" name="ministry-department"
+                                <label id="ministry-department" @if($errors->has('ministry-department')) class="text-danger"  @endif>Ministry and Department </label>
+                                <input type="text" id="ministry-department" name="ministry-department"
                                        placeholder="Government/Others">
                             </li>
                             <li>
-                                <label for="email_address">Email Address </label>
+                                <label for="email_address" @if($errors->has('email_address')) class="text-danger"  @endif>Email Address </label>
                                 <input type="email" id="email_address" name="email_address" placeholder="Your Email Address"
                                        required>
                             </li>
                             <li>
-                                <label for="phone_number"> Phone Number </label>
+                                <label for="phone_number" @if($errors->has('phone_number')) class="text-danger"  @endif> Phone Number </label>
                                 <input type="tel" id="phone_number" name="phone_number"
                                        placeholder="Country Code - Phone Number e.g. +852 - 6582 8563" required>
                             </li>
                             <li>
-                                <label for="social-facebook-link">Facebook URL </label>
+                                <label for="social-facebook-link" @if($errors->has('delegate-social-fb')) class="text-danger"  @endif>Facebook URL </label>
                                 <input type="url" name="delegate-social-fb" id="social-facebook-link">
                             </li>
                             <li>
-                                <label for="social-linkedin-link">LinkedIn URL </label>
+                                <label for="social-linkedin-link" @if($errors->has('delegate-social-li')) class="text-danger"  @endif>LinkedIn URL </label>
                                 <input type="url" name="delegate-social-li" id="social-linkedin-link">
                             </li>
                             <li>
-                                <label for="social-scholarhub-link">Scholar Hub URL </label>
+                                <label for="social-scholarhub-link" @if($errors->has('delegate-social-sh')) class="text-danger"  @endif>Scholar Hub URL </label>
                                 <input type="url" name="delegate-social-sh" id="social-scholarhub-link">
                             </li>
                             <li>
-                                <label for="open_chapter">The Country/City Chapter that you would like to establish </label>
+                                <label for="open_chapter" @if($errors->has('open_chapter')) class="text-danger"  @endif>The Country/City Chapter that you would like to establish </label>
                                 <input type="text" name="open_chapter" id="open_chapter" placeholder="Country/City's Name"
                                        required>
                             </li>
                             <li>
-                                <label for="chapter-pitching-deck">Share with us if you have any projects/startups/ventures
-                                    you are carrying on for now relevant to City Innovation </label>
-                                <input type="file" id="chapter-pitching-deck" name="chapter-pitching-deck-pitching-deck"
+                                <label for="delegate-pitching-deck" @if($errors->has('delegate-pitching-deck')) class="text-danger"  @endif>Share with us if you have any projects /
+                                    startups / ventures you are carrying on for now relevant to City
+                                    Innovation </label>
+                                <input type="file" id="chapter-pitching-deck" name="delegate-pitching-deck"
                                        accept=".doc,.docx,.ppt, .pptx,.pdf">
                             </li>
                             <li>

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use LVR\CountryCode\Two;
 
-class ContactFormCTLR extends Controller
+class ChapterReqruitmentCTLR extends Controller
 {
     private $suc = null;
     public function __construct()

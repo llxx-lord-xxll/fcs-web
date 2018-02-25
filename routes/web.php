@@ -48,3 +48,9 @@ Route::get('/applications/chapter', function (\Illuminate\Http\Request $request)
     return $ret->returnView($request);
 });
 
+Route::post('/applications/chapter', function (\Illuminate\Http\Request $request) {
+    $ret = new \App\Http\Controllers\ChapterApplicationCTLR();
+    return $ret->submitForm($request);
+
+});
+

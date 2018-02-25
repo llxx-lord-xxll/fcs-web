@@ -9,9 +9,10 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\MessageBag;
 use Illuminate\Validation\Rule;
 use LVR\CountryCode\Two;
-use PhpParser\Node\Expr\Array_;
+
 
 class DelegatesApplicationCTLR extends Controller
 {
@@ -42,7 +43,7 @@ class DelegatesApplicationCTLR extends Controller
         $fs->updated_at = Carbon::now();
         $fs->save();
 
-        $title_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','nametitle')->value('id');
+        $title_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','title')->value('id');
         $fn_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','fname')->value('id');
         $ln_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','lname')->value('id');
         $prf_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','prfname')->value('id');
@@ -158,11 +159,17 @@ class DelegatesApplicationCTLR extends Controller
         $fd->save();
 
 
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $pitching_deck_field;
-        $fd->field_data = $request->input('delegate-pitching-deck');
-        $fd->save();
+        if($request->has('delegate-pitching-deck'))
+        {
+            $deckname = $request->input('last_name') . '_' . $request->input('city_name') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
+            $f = $request->file('delegate-pitching-deck');
+            $f->move(base_path('public\uploads\pitching-decks'),$deckname);
+            $fd = new form_data();
+            $fd->submission_id =  $fs->id;
+            $fd->field_id = $pitching_deck_field;
+            $fd->field_data = $deckname;
+            $fd->save();
+        }
 
         $fd = new form_data();
         $fd->submission_id =  $fs->id;
@@ -217,6 +224,20 @@ class DelegatesApplicationCTLR extends Controller
     }
 
     public function submitForm(Request $request){
+
+        if ($request->has('email_address'))
+        {
+            $form_id =  \Illuminate\Support\Facades\DB::table('forms')->where('title','=','Delegate Application')->value('id');
+            $email_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','email')->value('id');
+
+            if(form_data::where('field_data','=',$request->input('email_address'))->where('field_id','=',$email_field)->first())
+            {
+                $err = new MessageBag();
+                $err->add('email_address','You have already applied, please wait for the reply in your email');
+                return Redirect::back()->withErrors($err)->withInput();
+            }
+        }
+
         $validator = Validator::make($request->all(),[
             'salutation' => ['required',Rule::in(['Mr.','Mrs.','Ms.'])],
             'first_name' => 'required|regex:/^[\s\w-]*$/',
@@ -225,20 +246,20 @@ class DelegatesApplicationCTLR extends Controller
             'choose_country' => ['required',new Two()],
             'city_name' => 'required|alpha',
             'occupation' => ['required',Rule::in(['student','corporate','ngos','government','university-scholar','others'])],
-            'university-name' =>'alpha',
-            'company-organization' =>'alpha',
-            'ministry-department'  =>'alpha',
+            'university-name' =>'nullable|regex:/^[\s\w-]*$/',
+            'company-organization' =>'nullable|regex:/^[\s\w-]*$/',
+            'ministry-department'  =>'nullable|regex:/^[\s\w-]*$/',
             'email_address' => 'required|email',
-            'phone_number' => 'required|nummber|min:8|max:15',
-            'delegate-social-fb' => 'url|regex:/http(?:s):\/\/(?:www\.)facebook\.com\/.+/i',
-            'delegate-social-li' => 'url|regex:/^https:\/\/[a-z]{2,3}\.linkedin\.com\/.*$/',
-            'delegate-social-sh' => 'url',
-            'delegate-pitching-deck' => 'required|max:5000|mimes:doc,docx,ppt,pptx,pdf',
-            'fcs-purpose' => ['required', new words(60)],
-            'delegate-city-message' => ['required', new words(100)],
+            'phone_number' => 'required|digits_between:8,15',
+            'delegate-social-fb' => 'nullable|url|regex:/(https?:\/\/)?([\w\.]*)facebook\.com\/([a-zA-Z0-9_]*)$/',
+            'delegate-social-li' => 'nullable|url|regex:/^https:\/\/[a-z]{2,3}\.linkedin\.com\/.*$/',
+            'delegate-social-sh' => 'nullable|url',
+            'delegate-pitching-deck' => 'max:5000|mimes:doc,docx,ppt,pptx,pdf',
+            'fcs-purpose' => ['nullable', new words(60)],
+            'delegate-city-message' => ['nullable', new words(100)],
             'track-conference' =>['required',Rule::in(['Hackathon','Industry Visit'])],
             'fcs-chapter-referral' =>['required',Rule::in(['BD','VN','CM','PH','RS'])],
-            'referred-person' => 'required|regex:/^[\s\w-]*$/',
+            'referred-person' => 'nullable|regex:/^[\s\w-]*$/',
             'fcs-package' => 'required|integer|digits_between:0,5',
             'fcs-scholarship'=>  ['required',Rule::in(['y','n'])],
             'fcs-newsletter-subscription'=>  ['required',Rule::in(['y','n'])],

@@ -28,7 +28,7 @@
 
 body {
 	color:#33404c;
-	font-family:'Open Sans';
+	font-family: 'Quicksand', sans-serif;
 	font-size:14px;
 	font-weight:400;
 	line-height:23px;
@@ -36,33 +36,33 @@ body {
 
 h1 {
     color:#33404c;
-	font-family:'montserratbold';
+	font-family: 'Quicksand', sans-serif;
     font-size:2.5em;
 }
 
 h2 {
 	color:#33404c;
-	font-family:'montserratbold';
+	font-family: 'Quicksand', sans-serif;
 	font-size:2.25em;
 }
 
 h3 {
-	font-family:'montserratregular';
+	font-family: 'Quicksand', sans-serif;
 	font-size:1.5em;
 	color:#33404c;
 }
 
 h4 {
-	font-family:'montserratregular';
+	font-family: 'Quicksand', sans-serif;
 	font-size:18px;
 }
 
 h5 {
-	font-family:'montserratlight';
+	font-family: 'Quicksand', sans-serif;
 }
 
 h6 {
-    font-family:'montserratlight';
+    font-family: 'Quicksand', sans-serif;
     color:#33404c;
 }
 section {
@@ -98,7 +98,7 @@ a {
 /* NAVBAR */
 
 .navbar-custom {
-	font-family:'Open sans';
+	font-family: 'Quicksand', sans-serif;
 	font-size:12px;
 	font-weight:400;
 	letter-spacing:1px;
@@ -189,11 +189,12 @@ a {
 
 /* HEADER*/
 .header-style {
-    margin-top: 150px;
-    margin-bottom:100px;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'montserratbold';
+	margin-top: 150px;
+	margin-bottom: 100px;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;
 }
 
 
@@ -212,7 +213,7 @@ a {
 
 /* Main Large Header Image*/
 .bg-large-image {
-    background-image: url(../img/bg-funfacts.png);
+  background-image: url(../img/bg-funfacts.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -292,7 +293,7 @@ a {
 
 #countdown .countdown_amount {
 	color:#33404c;
-	font-family:'montserratregular';
+	font-family: 'Quicksand', sans-serif;
 	font-size:40px;
 	text-align:left;
 	line-height:50px;
@@ -301,7 +302,7 @@ a {
 
 #countdown .countdown_section {
 	color:#33404c;
-	font-family:'montserratbold';
+	font-family: 'Quicksand', sans-serif;
 	font-size:13px;
 	text-align:left;
 	line-height:10px;
@@ -335,7 +336,7 @@ a {
 
 .speaker-content h4 {
   color: #33404c;
-  font-family: "montserratregular";
+  font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   margin-bottom: 10px;
   margin-top: 21px;
@@ -435,7 +436,7 @@ a {
 
 #program .date {
 	color:#33404c;
-	font-family:'montserratregular';
+	font-family: 'Quicksand', sans-serif;
 	margin-bottom:0;
 	font-size:17px;
 	line-height:18px;
@@ -443,7 +444,7 @@ a {
 
 #program .speaker-name {
 
-	font-family:'montserratregular';
+	font-family: 'Quicksand', sans-serif;
 	font-size:0.8em;
 	letter-spacing:1px;
 }
@@ -595,7 +596,7 @@ a {
 
 #pitching-day .date {
 	color:#33404c;
-	font-family:'montserratregular';
+	font-family: 'Quicksand', sans-serif;
 	margin-bottom:0;
 	font-size:16px;
 	line-height:18px;
@@ -603,7 +604,7 @@ a {
 
 #pitching-day .speaker-name {
 
-	font-family:'montserratregular';
+	font-family: 'Quicksand', sans-serif;
 	font-size:12px;
 	letter-spacing:1px;
 }
@@ -758,7 +759,7 @@ a {
 }
 
 .hotel .caption h5 {
-	font-family:'montserratlight';
+	font-family: 'Quicksand', sans-serif;
 }
 
 .hotel .caption .rating {
@@ -772,7 +773,7 @@ a {
 /* FUNFACTS */
 
 #funfacts  {
-	background-image: url(../img/bg-funfacts.png);
+	background-image: url(../img/parallex-1.jpg);
 	background-repeat: no-repeat;
 	background-attachment:fixed;
 	background-position: center;
@@ -810,7 +811,7 @@ a {
 }
 
 #funfacts .number {
-	font-family:'montserratbold';
+	font-family: 'Quicksand', sans-serif;
 	font-size:40px;
 	font-weight:700;
 	margin-top:15px;
@@ -849,15 +850,15 @@ a {
 }
 
 .early-bird {
-	background:#fac42b;
+	background:#b1d265;
 }
 
 .standart {
-	background:#fcba00;
+	background:#9ccc40;
 }
 
 .vip {
-	background:#f0b202;
+	background:#94cc34;
 }
 
 .price-table .icon {
@@ -871,7 +872,7 @@ a {
 
 .price-table .price {
 	color:#444444;
-	font-family:'montserratbold';
+	font-family: 'Quicksand', sans-serif;
 	font-size:50px;
 	font-weight:400;
 }
@@ -885,14 +886,14 @@ a {
 	letter-spacing:2px;
 	border-radius:30px;
 	text-transform:uppercase;
-	padding:0px 16px;
+	padding:10px 16px;
 	margin:0 0 10px 0;
 	display:inline-block;
 	float:right;
 }
 
 .price-table .desc li {
-	font-family:'montserratlight';
+	font-family: 'Quicksand', sans-serif;
 	line-height:2;
 	border-bottom:1px dotted;
 	border-color:rgba(255,255,255, 0.7);
@@ -902,6 +903,12 @@ a {
 	border-bottom:none;
 }
 
+
+.early-date {
+    text-align: right;
+    color:#33404c;
+    font-weight: 700;
+}
 /* register form */
 
 #register-form {
@@ -933,7 +940,7 @@ a {
 
 #testimonial {
 	background:#fac42b;
-	background-image: url(../img/bg-testimonial.png);
+	background-image: url(../img/parallex-000.jpg);
 	background-repeat: no-repeat;
 	background-attachment:fixed;
 	background-position: center;
@@ -961,7 +968,7 @@ a {
 
 #testimonial .name {
 	color:#ffffff;
-	font-family:'montserratbold';
+	font-family: 'Quicksand', sans-serif;
 	font-size:12px;
 	letter-spacing:2px;
 	text-transform:uppercase;
@@ -971,6 +978,10 @@ a {
   text-align: left;
 }
 
+.img-testimonial {
+    width:100px;
+    height: 100px;
+}
 
 /* SPONSORS */
 
@@ -1040,7 +1051,7 @@ a {
 /*Footer*/
 
 .footer .footer-logo > a {
-    
+
     background-image: url(../img/FCS-logo-70x65.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -1051,7 +1062,7 @@ a {
 
 .footer-list {
   list-style-type: none;
-  font-family: "montserratregular";
+  font-family: 'Quicksand', sans-serif;
   font-weight: 500;
 }
 
@@ -1103,7 +1114,7 @@ footer .button-big {
 
 footer dt {
 	color:#ffffff;
-	font-family:'montserratlight';
+	font-family: 'Quicksand', sans-serif;
 	font-size:13px;
 	margin-top:7px;
 	margin-bottom:3px;
@@ -1165,7 +1176,7 @@ textarea {
 /* BUTTONS */
 
 .button {
-	font-family:'montserratregular';
+	font-family: 'Quicksand', sans-serif;
 	font-size: 17px;
 	text-transform: uppercase;
 	border: none;
@@ -1713,8 +1724,8 @@ a:hover, a:focus {
 }
 
 h1 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
 }
 
 .fcs-story-row {
@@ -2978,7 +2989,7 @@ body .progress_inner input[type="radio"] {
 /* Global Agenda Section*/
 
 .global-agenda {
-    margin:5%;
+    margin:3% 3% 0%;
 }
 
 /* General grid styles */
@@ -3003,7 +3014,7 @@ body .progress_inner input[type="radio"] {
 .global-agenda-grid li {
 	width: 33%;
 	float: left;
-	height: 350px;
+	height: 250px;
 	text-align: center;
 }
 
@@ -3051,6 +3062,7 @@ body .progress_inner input[type="radio"] {
 	font-size: 1em;
     font-weight: 600;
 	color: #94cc2c;
+    padding: 10px!important;
 	-webkit-transform: translateY(10px);
 	-moz-transform: -moz-translateY(10px);
 	-ms-transform: -ms-translateY(10px);
@@ -3095,9 +3107,10 @@ body .progress_inner input[type="radio"] {
 }
 
 .img-global-agenda {
-    min-height: 150px;
+	  height: auto;
     margin-left: auto;
     margin-right: auto;
+    max-width: 60%!important;
 }
 
 /* Founding Team Panel */
@@ -3237,7 +3250,9 @@ body .progress_inner input[type="radio"] {
 }
 
 .conference-topic-content {
-    padding: 15px 60px;
+	padding: 50px 60px;
+  font-size: 1.5em;
+  line-height: 1.7em;
 }
 
 
@@ -3315,14 +3330,14 @@ body .progress_inner input[type="radio"] {
 /* Listed Startup Section */
 
 .startup-section {
-     padding: 3%;     
+     padding: 3%;
 }
-      
+
 .fcs-startup *,
 .fcs-startup *:before,
 .fcs-startup *:after{
-    content: " "; 
-	display: table; 
+    content: " ";
+	display: table;
 }
 
 .fcs-startup {
@@ -3331,10 +3346,10 @@ body .progress_inner input[type="radio"] {
 }
 
 .fcs-startup *:after{
-    clear: both; 
-}      
-    
-    
+    clear: both;
+}
+
+
 .fcs-startup li {
 	float: left;
 	text-align: center;
@@ -3346,13 +3361,13 @@ body .progress_inner input[type="radio"] {
 
 .fcs-startup li:nth-child(4n){
     border-right: none;
-}      
+}
 
-  
+
 .fcs-startup li:nth-child(-n+4){
     border-top: none;
-}      
-           
+}
+
 .fcs-partner-logo {
   max-width: 100%;
   margin: 0 auto;
@@ -3369,7 +3384,7 @@ body .progress_inner input[type="radio"] {
     font-size: 1rem;
     margin: 4px auto;
 }
-      
+
 .fcs-startup-location {
     margin: 4px auto;
     font-size: .8rem;
@@ -3381,7 +3396,7 @@ body .progress_inner input[type="radio"] {
     position: relative;
     margin: 0 auto;
     width: 100%;
-    height: 100vh;
+    height: 500px;
     overflow: hidden;
     background-repeat: no-repeat;
 	background-position: center center;
@@ -3389,7 +3404,7 @@ body .progress_inner input[type="radio"] {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
     background-attachment: fixed;
-      /*    
+      /*
 box-shadow: 0px 0px 6px #33404c000;
 transform: translate(-50%); */
 }
@@ -3427,4 +3442,111 @@ padding: 10% 25%;
 {
 	padding: 15px 3px;
     font-size: 1.2em;
+}
+
+
+/* APPLICATION FORM VALIDATION */
+.fcs-form-container> p.bg-success,.fcs-form-container> p.bg-danger
+{
+	padding: 15px 3px;
+    font-size: 1.2em;
+}
+ul.fcs-form-outer > li > label.text-danger
+{
+    color: red;
+}
+
+
+/* Workshop Page */
+.workshop-heading {
+	padding: 0px 60px 15px;
+}
+
+.workshop-outer-list {
+    list-style: none;
+    padding: 30px 0px 0px 30px;
+}
+.workshop-inner-list {
+    list-style: none;
+    line-height: 1.7em;
+    font-size: 1.3em;
+}
+
+/* VENUE PAGES */
+.conference-topic-title {
+    margin: 1em;
+    text-align: center;
+}
+
+.venue-topic-content {
+    padding: 10px 60px;
+    font-size: 1.3em;
+    line-height: 1.7em;
+}
+
+.venue-inner-content {
+    padding: 30px 30px 0px;
+    font-size: 1.5em;
+    line-height: 1.7em;
+}
+
+.bg-image-sysu {
+		background-image: url(../img/sysu-1.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+	filter: brightness(70%);
+}
+
+/* Global Agenda */
+.fcs-ga-list {
+    list-style: none;
+    line-height: 2.5em;
+    font-size: 1.3em;
+    padding: 40px; 
+}
+
+/*  ABOUT US BACKGROUND */
+
+.bg-image-about {
+    background-image: url(../img/bg-header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    height: 800px;
+    width: 100%;
+}
+
+.about-inner-content {
+    padding: 0px 120px 30px;
+    font-size: 1.5em;
+    line-height: 1.7em;
+}
+
+.about-header-style {
+    margin-top: 150px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.article-list {
+    padding: 20px 50px;
+}
+
+.speacial-blog-image {
+   position: relative;
+}
+
+.article-ordered-list {
+    line-height: 1.5em;
+    margin: 5px;
+    padding: 0 15px;
 }

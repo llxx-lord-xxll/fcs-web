@@ -46,7 +46,7 @@ class Forms extends Migration
             $table->foreign('submission_id')->references('id')->on('form_submissions')->onDelete('cascade');
             $table->integer('field_id')->unsigned();
             $table->foreign('field_id')->references('id')->on('form_fields')->onDelete('cascade');
-            $table->string('field_data',1000);
+            $table->string('field_data',1000)->nullable();
             $table->primary(['id','submission_id','field_id']);
         });
 
