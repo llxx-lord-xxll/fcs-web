@@ -54,13 +54,3 @@ Route::post('/applications/chapter', function (\Illuminate\Http\Request $request
 
 });
 
-
-Route::get('/sendmail', function(){
-    Mail::raw('Text to e-mail', function($message)
-    {
-        $message->from('us@mg.futurecitysummit.org', 'Laravel');
-
-        $message->to('zamanpranto@gmail.com');
-    });
-
-});
