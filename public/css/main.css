@@ -505,7 +505,7 @@ a {
 }
 
 .fcs-moderator {
-    margin: 8% 0 0;
+    margin: 4% 0 0;
 }
 
 
@@ -3472,6 +3472,17 @@ ul.fcs-form-outer > li > label.text-danger
     font-size: 1.3em;
 }
 
+/* FCS Previous Years */
+
+.previous-years-list {
+    list-style: none;
+    line-height: 2em;
+    font-size: 1.3em;
+    padding: 10px 50px;
+}
+
+
+
 /* VENUE PAGES */
 .conference-topic-title {
     margin: 1em;
@@ -3491,7 +3502,7 @@ ul.fcs-form-outer > li > label.text-danger
 }
 
 .bg-image-sysu {
-		background-image: url(../img/sysu-1.jpg);
+     background-image: url(../img/sysu-1.jpg);
 	 background-repeat: no-repeat;
 	 background-position: center;
 	 background-size: cover;
@@ -3549,4 +3560,17 @@ ul.fcs-form-outer > li > label.text-danger
     line-height: 1.5em;
     margin: 5px;
     padding: 0 15px;
+}
+/* All Background Images */
+
+.bg-image-first {
+     background-image: url(../img/banner-fcs-2016.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+	filter: brightness(70%);
 }

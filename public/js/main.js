@@ -238,9 +238,12 @@ jQuery(document).ready(function($) {
 
 
 $(window).load(function(){
+    $('#venue-to-do-sysu').mediaBoxes({
+        boxesToLoadStart: 10,
+        boxesToLoad: 8,
+    });
 
-
-	$("#nav-primary").sticky({ topSpacing: 0, });
+    $("#nav-primary").sticky({ topSpacing: 0, });
 
     //PRELOADER
     $('#preload').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
@@ -608,7 +611,10 @@ var slider1 = $('#workshop-first-slider');
 var slider2 = $('#workshop-second-slider');
 var slider3 = $('#african-union-slider');
 var slider4 = $('#carcom-union-slider');
-
+var slider5 = $('#first-fcs-slider');
+var slider6 = $('#second-fcs-slider');
+var slider7 = $('#metro-hackathon-slider1');
+var slider8 = $('#metro-hackathon-slider2');
 
 setInterval(function() {
   slider1.children(':last-child').fadeOut(3000, function() {
@@ -630,3 +636,26 @@ setInterval(function() {
     $(this).prependTo(slider4).show();
   })
 }, 6000);
+setInterval(function() {
+  slider5.children(':last-child').fadeOut(3000, function() {
+    $(this).prependTo(slider5).show();
+  })
+}, 6000);
+setInterval(function() {
+  slider6.children(':last-child').fadeOut(3000, function() {
+    $(this).prependTo(slider6).show();
+  })
+}, 6000);
+setInterval(function() {
+  slider7.children(':last-child').fadeOut(3000, function() {
+    $(this).prependTo(slider7).show();
+  })
+}, 6000);
+setInterval(function() {
+  slider8.children(':last-child').fadeOut(3000, function() {
+    $(this).prependTo(slider8).show();
+  })
+}, 6000);
+
+
+
