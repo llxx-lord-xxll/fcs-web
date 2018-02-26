@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => env('mg.futurecitysummit.org'),
+        'secret' => env('key-c11b7fe00ae24be78973b01f4adeba61'),
     ],
 
     'ses' => [
