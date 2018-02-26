@@ -169,8 +169,8 @@ class ChapterApplicationCTLR extends Controller
             'ministry-department'  =>'nullable|regex:/^[\s\w-]*$/',
             'email_address' => 'required|email',
             'phone_number' => 'required|digits_between:8,15',
-            'delegate-social-fb' => 'nullable|url|regex:/(https?:\/\/)?([\w\.]*)facebook\.com\/([a-zA-Z0-9_]*)$/',
-            'delegate-social-li' => 'nullable|url|regex:/^https:\/\/[a-z]{2,3}\.linkedin\.com\/.*$/',
+            'delegate-social-fb' => 'nullable|url',
+            'delegate-social-li' => 'nullable|url',
             'delegate-social-sh' => 'nullable|url',
             'open_chapter' => 'required|alpha',
             'delegate-pitching-deck' => 'max:5000|mimes:doc,docx,ppt,pptx,pdf',
@@ -197,6 +197,13 @@ class ChapterApplicationCTLR extends Controller
         {
             $this->submitToDB($request);
             $this->suc = 'Thank you for contacting with us, you will be notified through email';
+            $data = ['email' => $request->input('email_address'),'name'=> $request->input('full-name')];
+            Mail::send('mails.open-chapter', $data, function ($m) use ($data) {
+                $m->from('no-reply@futurecitysummit.org', 'Future City Summit');
+                $m->replyTo('community@futurecitysummit.org', 'Ms. Priya Ghandi');
+                $m->to($data['email'], $data['name'])->subject('Chapter Openning Application Submitted - Future City Summit');
+            });
+
             return $this->returnView($request);
         }
     }

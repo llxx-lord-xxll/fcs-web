@@ -6,6 +6,7 @@ use App\form_data;
 use App\form_submissions;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use LVR\CountryCode\Two;
@@ -99,6 +100,13 @@ class ContactFormCTLR extends Controller
         {
             $this->submitToDB($request->input('full-name'),$request->input('email-address'),$request->input('choose-country'),$request->input('phone-number'),$request->input('contact-message'));
             $this->suc = 'Thank you for contacting with us, you will be notified through email';
+            $data = ['email' => $request->input('email-address'),'name'=> $request->input('full-name')];
+            Mail::send('mails.contact-form', $data, function ($m) use ($data) {
+                $m->from('no-reply@futurecitysummit.org', 'Future City Summit');
+                $m->replyTo('community@futurecitysummit.org', 'Ms. Priya Ghandi');
+                $m->to($data['email'], $data['name'])->subject('Contact Form Submitted - Future City Summit');
+            });
+
             return $this->returnView($request);
         }
     }

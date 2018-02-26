@@ -238,10 +238,16 @@ jQuery(document).ready(function($) {
 
 
 $(window).load(function(){
+	try {
     $('#venue-to-do-sysu').mediaBoxes({
         boxesToLoadStart: 10,
         boxesToLoad: 8,
     });
+    }
+    catch (e)
+	{
+
+	}
 
     $("#nav-primary").sticky({ topSpacing: 0, });
 

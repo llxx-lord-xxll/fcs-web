@@ -3574,3 +3574,11 @@ ul.fcs-form-outer > li > label.text-danger
 	width: 100%;
 	filter: brightness(70%);
 }
+
+.tp-bgimg{
+	-webkit-filter: brightness(0.8) blur(5px);
+	-moz-filter: brightness(0.8) blur(5px);
+	-o-filter: brightness(0.8) blur(5px);
+	-ms-filter:brightness(0.8) blur(5px);
+	filter:  brightness(0.8) blur(5px);
+}

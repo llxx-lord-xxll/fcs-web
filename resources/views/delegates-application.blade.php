@@ -395,6 +395,7 @@
                             <li>
                                 <label for="fcs-chapter-referral" @if($errors->has('fcs-chapter-referral')) class="text-danger"  @endif>Do you belong to any chapters of FCS? </label>
                                 <select id="fcs-chapter-referral" name="fcs-chapter-referral">
+                                    <option value="0">NO</option>
                                     <option value="BD">Bangladesh</option>
                                     <option value="VN">Vietnam</option>
                                     <option value="CM">Cambodia</option>
@@ -402,7 +403,7 @@
                                     <option value="RS">Russia</option>
                                 </select>
                             </li>
-                            <li>
+                            <li style="display:none">
                                 <label for="referred-person" @if($errors->has('referred-person')) class="text-danger"  @endif>Referred by </label>
                                 <input type="text" id="referred-person" name="referred-person" value="{{old('referred-person')}}"
                                        placeholder="If any - Full Name">
@@ -469,5 +470,23 @@
             </div>
         </div>
     </section>
+    @endsection
+
+@section('scripts')
+    <script type="text/javascript">
+       $(document).ready(function () {
+           $('#fcs-chapter-referral').change(function() {
+               if($(this).val() === "null")
+               {
+                   $('#referred-person').parent().css('display','none');
+               }
+               else
+               {
+                   $('#referred-person').parent().css('display','flex');
+               }
+           });
+       })
+
+    </script>
     @endsection
 

@@ -244,7 +244,7 @@ class DelegatesApplicationCTLR extends Controller
             'last_name' => 'required|regex:/^[\s\w-]*$/',
             'full_name' => 'required|regex:/^[\s\w-]*$/',
             'choose_country' => ['required',new Two()],
-            'city_name' => 'required|alpha',
+            'city_name' => 'required|regex:/^[\s\w-]*$/',
             'occupation' => ['required',Rule::in(['student','corporate','ngos','government','university-scholar','others'])],
             'university-name' =>'nullable|regex:/^[\s\w-]*$/',
             'company-organization' =>'nullable|regex:/^[\s\w-]*$/',
@@ -258,7 +258,7 @@ class DelegatesApplicationCTLR extends Controller
             'fcs-purpose' => ['nullable', new words(60)],
             'delegate-city-message' => ['nullable', new words(100)],
             'track-conference' =>['required',Rule::in(['Hackathon','Industry Visit'])],
-            'fcs-chapter-referral' =>['required',Rule::in(['BD','VN','CM','PH','RS'])],
+            'fcs-chapter-referral' =>['required',Rule::in(['0','BD','VN','CM','PH','RS'])],
             'referred-person' => 'nullable|regex:/^[\s\w-]*$/',
             'fcs-package' => 'required|integer|digits_between:0,5',
             'fcs-scholarship'=>  ['required',Rule::in(['y','n'])],
@@ -297,6 +297,13 @@ class DelegatesApplicationCTLR extends Controller
         {
             $this->submitToDB($request);
             $this->suc = 'Application submitted, you will soon be contacted via email';
+            $data = ['email' => $request->input('email_address'),'name'=> $request->input('full-name')];
+            Mail::send('mails.delegate-form', $data, function ($m) use ($data) {
+                $m->from('no-reply@futurecitysummit.org', 'Future City Summit');
+                $m->replyTo('community@futurecitysummit.org', 'Ms. Priya Ghandi');
+                $m->to($data['email'], $data['name'])->subject('Application for being delegates Submitted - Future City Summit');
+            });
+
             return $this->returnView($request);
         }
     }
