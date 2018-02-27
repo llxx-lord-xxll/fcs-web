@@ -311,11 +311,11 @@
                             </li>
                             <li>
                                 <label for="social-facebook-link" @if($errors->has('delegate-social-fb')) class="text-danger"  @endif>Facebook URL </label>
-                                <input type="url" name="delegate-social-fb" id="social-facebook-link">
+                                <input type="url" name="delegate-social-fb" id="social-facebook-link" placeholder="http://facebook.com/username>
                             </li>
                             <li>
                                 <label for="social-linkedin-link" @if($errors->has('delegate-social-li')) class="text-danger"  @endif>LinkedIn URL </label>
-                                <input type="url" name="delegate-social-li" id="social-linkedin-link">
+                                <input type="url" name="delegate-social-li" id="social-linkedin-link" >
                             </li>
                             <li>
                                 <label for="social-scholarhub-link" @if($errors->has('delegate-social-sh')) class="text-danger"  @endif>Scholar Hub URL </label>
