@@ -327,7 +327,7 @@ a {
 }
 
 .speaker-img > img {
-  border: 8px solid #FFD403;
+  border: 5px solid #5c6671;
   border-radius: 100%;
   height: 200px;
   margin: auto;
@@ -343,7 +343,7 @@ a {
   text-transform: uppercase;
 }
 .speaker-content > p {
-  color: #E2B40E;
+  color: #5c6671;
   font-size: 16px;
 }
 
@@ -353,7 +353,7 @@ a {
 
 #program {
 	color:#ffffff;
-	background:#fac42b;
+	background:#9ccc40;
 	padding:70px 0 90px 0;
 }
 
@@ -1052,29 +1052,24 @@ a {
 
 .footer .footer-logo > a {
 
-    background-image: url(../img/FCS-logo-70x65.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 95px;
-    height: 90px;
+    background-image: url(../img/FCS-logo.png)!important;
+    background-repeat: no-repeat!important;
+    background-size: 100% 100%!important;
+    width: 96px!important;
+    height: 91px!important;
     margin: 15%;
 }
 
 .footer-list {
-  list-style-type: none;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 500;
-}
-
-/*
-@media (min-width: 1200px)
-.footer-width {
-    width:20%;
-}
-*/
-
-.footer-column-hd {
-    padding-left:50px!important;
+    list-style-type: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    margin: 0px !important;
+    text-transform: uppercase;
+    line-height: 2em;
+    color: #5c6671;
+    font-size: 12px;
+    letter-spacing: .08em;
 }
 
 footer {
@@ -1121,8 +1116,10 @@ footer dt {
 	cursor:pointer;
 }
 
+*/
 /* Subfooter */
 
+/*
 .subfooter {
 	color:#ececee;
 	font-size:10px;
@@ -1143,6 +1140,8 @@ footer dt {
 	color:#ffffff;
 	text-decoration:none;
 }
+
+*/
 
 /* Newsletter */
 
@@ -1246,7 +1245,7 @@ textarea {
 /* PRELOAD */
 
 #preload {
-	background:#fac42b;
+	background:#9ccc40;
 	position: fixed;
 	top:0;
 	left:0;
@@ -1814,9 +1813,8 @@ h1 {
           transform: translateY(-60px);
 }
 
-
 .fcs-story-post .fcs-story-block {
-  background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center/cover no-repeat;
+  background-color: #33404c;
 }
 .fcs-story-post .fcs-story-block:hover .fcs-story-menu-fcs-story-content span {
   -webkit-transform: translate(-50%, -10px);
@@ -1890,6 +1888,19 @@ h1 {
 }
 
 
+.story-image-1 {
+   background: url(../img/sharing1-conference-2016.jpeg) center/cover no-repeat;
+}
+
+.story-image-2 {
+   background: url(../img/sharing2-cover-zaki.jpeg) center/cover no-repeat; 
+}
+
+.story-image-3 {
+   background: url(../img/sharing3-cover-chai.jpeg) center/cover no-repeat; 
+}
+
+
 /* BLOG-SECTION PARALLAX EFFECT */
 
 #inspirational-stories {
@@ -1912,7 +1923,7 @@ h1 {
     padding: 30px 0;
     text-align: center;
     margin: 0 auto;
-    background-color: #9ccc3c;
+    background-color: #33404c;
 }
 
 .fcs-cta-header {
@@ -3115,33 +3126,33 @@ body .progress_inner input[type="radio"] {
 
 /* Founding Team Panel */
 .founding-panel {
-    padding:50px;
-    background-color:#fefefa;
+    padding: 30px;
+    background-color: #f4f4f4;
 }
 
 /* Honorary Advisors Panel */
 .honorary-panel {
-    padding:50px;
-    background-color:#f4f4f4;
+    padding:30px;
+    background-color:#fff;
 }
 
 /* Young Advisors Panel */
 .young-panel {
-    padding:50px;
-    background-color:#fefefa;
+    padding:30px;
+    background-color:#f4f4f4;
 }
 
 /* Organizing Panel */
 .organizing-panel {
-    padding:50px;
-    background-color:#f4f4f4;
+    padding:30px;
+    background-color:#fff;
 }
 
 
 /* ALL TYPES OF FORM */
 /* Contact Form */
 .form-background {
-  font-family: Open sans, "Helvetica Neue", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1em;
   color: #33404c;
   padding: 50px 0;
@@ -3250,7 +3261,7 @@ body .progress_inner input[type="radio"] {
 }
 
 .conference-topic-content {
-	padding: 50px 60px;
+	padding: 30px 60px;
   font-size: 1.5em;
   line-height: 1.7em;
 }
@@ -3510,7 +3521,6 @@ ul.fcs-form-outer > li > label.text-danger
 	-moz-background-size: cover;
 	height: 400px;
 	width: 100%;
-	filter: brightness(70%);
 }
 
 /* Global Agenda */
@@ -3572,13 +3582,298 @@ ul.fcs-form-outer > li > label.text-danger
 	-moz-background-size: cover;
 	height: 400px;
 	width: 100%;
-	filter: brightness(70%);
 }
 
-.tp-bgimg{
+.bg-image-second {
+     background-image: url(../img/banner-fcs-2017.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+.tp-bgimg {
 	-webkit-filter: brightness(0.8) blur(5px);
 	-moz-filter: brightness(0.8) blur(5px);
 	-o-filter: brightness(0.8) blur(5px);
 	-ms-filter:brightness(0.8) blur(5px);
 	filter:  brightness(0.8) blur(5px);
 }
+
+/* Partner Logo */
+
+.partner-row {
+    padding: 25px 0 0;    
+}
+
+.fcs-section-grid {
+    padding: 50px 0 0;
+}
+
+.ga-row {
+    padding: 0px 0px 35px;
+}
+
+/* Humans of FCS */
+.bg-image-humans-fcs-1 {
+background-image: url(../img/banner-humans.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+/* Global Agenda - All Banner*/
+.bg-image-ga-africa {
+background-image: url(../img/banner-african-union-2.jpeg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.ga-background {
+    background-color: #fcfcfc;
+}
+
+.bg-image-ga-singapore {
+background-image: url(../img/banner-asean-2.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-ga-beltnroad {
+background-image: url(../img/banner-beltnroad-2.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-caricom {
+background-image: url(../img/banner-caricom-1.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-india {
+background-image: url(../img/banner-make-in-india.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-unsdg {
+background-image: url(../img/banner-un-building1.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-visionbd {
+background-image: url(../img/banner-dhaka.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-contact {
+background-image: url(../img/fcs-team.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 600px;
+	width: 100%;
+}
+
+.bg-image-legal {
+background-image: url(../img/banner-terms.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-workshop {
+background-image: url(../img/banner-workshop-4.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-hku {
+background-image: url(../img/banner-hku.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 600px;
+	width: 100%;
+}
+
+.bg-image-cyberport {
+background-image: url(../img/banner-cyberport-1.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-theme {
+background-image: url(../img/banner-theme.png);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-schedule {
+background-image: url(../img/banner-conf-schedule.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-metro-hackathon {
+background-image: url(../img/banner-metrohackathon-5.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-art-entertainment {
+background-image: url(../img/banner-art.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-entrepreneurship {
+background-image: url(../img/banner-ent.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-global {
+background-image: url(../img/banner-global.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-space {
+background-image: url(../img/banner-space.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-technology {
+background-image: url(../img/banner-tech.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-earth {
+    background-image: url(../img/banner-urban.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+.bg-image-chapter-application {
+    background-image: url(../img/banner-urban.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
+	 background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
+/* Footer */
+

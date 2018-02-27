@@ -507,7 +507,7 @@ section.mcon-otherdemos{
 }
 
 section.mcon-otherdemos:nth-child(even){
-    background: #fff;
+    background: #f4f4f4;
 }
 section.mcon-otherdemos.dark-bg{
     background: #111;
@@ -906,7 +906,7 @@ table.dzs-table	tr td:first-child{
     text-align: center; }
 
 a{
-    color: rgba(174,25,25,1);
+    color: #33404c;
 }
 
 .bigfeature i {
