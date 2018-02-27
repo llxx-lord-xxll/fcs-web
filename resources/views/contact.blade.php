@@ -5,6 +5,14 @@
     @endsection
 
 @section('page-content')
+    <!-- PAGE HEADER SECTION-->
+    <div class="bg-image-contact">
+        <div class="container-fluid">
+            <h1 class="header-style">Contact</h1>
+        </div>
+    </div>
+
+
     <!--CONTACT-->
     <section id="contact" class="contact-us-section">
         <div class="container">

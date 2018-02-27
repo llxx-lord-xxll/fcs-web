@@ -31,9 +31,15 @@
     <link rel="stylesheet" href="{{asset('css/owl.transitions.css')}}">
     <link rel="stylesheet" href="{{asset('css/revolution.css')}}">
     <link rel="stylesheet" href="{{asset('css/revolution-extralayers.css')}}">
-    <link rel="stylesheet" href="{{asset('css/revolution-extralayers.css')}}">
     <link rel="stylesheet" href="{{asset('css/normalize.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/sp-bootstrap.min.css')}}">
+
+    @hasSection('header-extra')
+        @yield('header-extra')
+    @endif
+
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+
 
 
     <!-- Font -->
@@ -41,9 +47,7 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
-    @hasSection('header-extra')
-            @yield('header-extra')
-        @endif
+
 </head>
 
 <body>
@@ -65,12 +69,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.html"><img src="{{asset('img/logo.png')}}" alt="logo"></a>
+            <a href="{{route('home')}}"><img src="{{asset('img/logo.png')}}" alt="logo"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="nav">
             <ul class="nav navbar-nav navbar-right uppercase">
-                <li  class="dropdown">
+                <!-- <li  class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Vision</a></li>
@@ -78,6 +82,8 @@
                         <li><a href="#">Featured Stories</a></li>
                     </ul>
                 </li>
+                -->
+
                 <li  class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">FCS2018<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -99,7 +105,7 @@
                 </li>
                 <li><a data-toggle="elementscroll" href="#register">Register</a></li>
                 <li><a data-toggle="elementscroll" href="#local-chapter">Chapter</a></li>
-                <li><a data-toggle="elementscroll" href="#sponsors">Contact</a></li>
+                <li><a data-toggle="elementscroll" href="{{route('contact')}}">Contact</a></li>
             </ul>
         </div>
 
@@ -112,12 +118,7 @@
     </div>
 </nav>
 
-<!-- PAGE HEADER SECTION-->
-<div class="bg-image" style="background-image: url('@yield('header-bg','../img/bg-header.png')');">
-    <div class="container-fluid">
-        <h1 class="header-style" >@yield('title' , '404 Not Found')</h1>
-    </div>
-</div>
+
 
 <!--CONTACT-->
 @hasSection('page-content')
@@ -130,81 +131,73 @@
 <!-- End of contents -->
 
 <!-- FOOTER -->
-<footer id="footer">
+<footer class="footer footer-default" role="contentinfo">
     <div class="container">
-        <div class="row">
-            <div>
-                <ul class="footer-list uppercase col-md-15 col-xs-3">
-                    <li><a href="">About</a></li>
-                    <li><a href="#">FCS 2017</a></li>
-                    <li><a href="#">FCS 2016</a></li>
-                    <li><a href="#">Local Chapters</a></li>
-                    <li><a href="#">Contact</a></li>
+        <nav class="row">
+            <div class="col-xs-12 col-md-2">
+                <div class="footer-logo">
+                    <a href="#">fcs</a>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2">
+                <h3 class="nav-title">Future City Summit</h3>
+                <ul class="footer-list">
+                    <li><a href="{{route('about')}}">About Us</a></li>
+                    <li><a href="{{route('highlights16')}}">FCS 2016</a></li>
+                    <li><a href="{{route('highlights17')}}">FCS 2017</a></li>
+                    <li><a href="{{route('humen_fcs')}}">Humen of FCS</a></li>
+                    <li><a href="{{route('contact')}}">Contact Us</a></li>
                 </ul>
             </div>
-            <div>
-                <ul class="footer-list uppercase col-md-15 col-xs-3">
-                    <li><a href="#">FCS 2018</a></li>
-                    <li><a href="#">Schedule</a></li>
-                    <li><a href="#">Session Highlights</a></li>
-                    <li><a href="#">Speakers</a></li>
-                    <li><a href="#">FAQs</a></li>
+            <div class="col-xs-6 col-sm-4 col-md-2">
+                <h3 class="nav-title">Conference 2018</h3>
+                <ul class="footer-list">
+                    <li><a href="{{route('theme')}}">Theme</a></li>
+                    <li><a href="{{route('schedule')}}">Schedule</a></li>
+                    <li><a href="{{route('metro-hackathon')}}">Metro-Hackathon</a></li>
+                    <li><a href="{{route('workshop')}}">Workshop</a></li>
+                </ul></div>
+            <div class="col-xs-6 col-sm-4 col-md-2">
+                <h3 class="nav-title">Venue</h3>
+                <ul class="footer-list">
+                    <li><a href="{{route('venue-hku')}}">HKU</a></li>
+                    <li><a href="{{route('venue-sysu')}}">SYSU</a></li>
+                    <li><a href="{{route('venue-cyberport')}}">Cyberport</a></li>
                 </ul>
             </div>
-            <div>
-                <ul class="footer-list uppercase col-md-15 col-xs-3">
-                    <li><a href="#">Venues</a></li>
-                    <li><a href="#">Metro-Hackathon</a></li>
-                    <li><a href="#">Imagination Expo</a></li>
-                    <li><a href="#">Featured Stories</a></li>
+            <div class="col-xs-6 col-sm-4 col-md-2">
+                <h3 class="nav-title">Applications</h3>
+                <ul class="footer-list">
+                    <li><a href="{{route('app_delegate')}}">Apply as a Delegate</a></li>
                 </ul>
             </div>
-            <div>
-                <ul class="footer-list uppercase col-md-15 col-xs-3">
-                    <li><a href="#">Application</a></li>
-                    <li><a href="#">Open a Local Chapter</a></li>
-                    <li><a href="#">Apply as a Delegate</a></li>
-                    <li><a href="#">Become a Partner</a></li>
-                    <li><a href="#">Apply as a Local Initiator</a></li>
+            <div class="col-xs-6 col-sm-4 col-md-2">
+                <ul class="nav list-unstyled list-inline uppercase">
+                    <li><a href="https://www.facebook.com/futurecitysummit/"><i class="fa fa-lg fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/FuturCitySummit"><i class="fa fa-lg fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/futurecitysummit/"><i class="fa fa-lg fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com/company/future-city-summit/"><i class="fa fa-lg fa-linkedin"></i></a></li>
                 </ul>
             </div>
-            <div>
-                <ul class="footer-list uppercase col-md-15 col-xs-3">
-                    <li><a href="#">FCS Plus</a></li>
-                    <li><a href="#">Login</a></li>
+        </nav>
+        <nav class="row row-small">
+            <div class="col-xs-5 col-md-3 col-md-offset-1">
+                <ul class="nav nav-small">
+                    <li>
+                        <a href="{{route('legal')}}">Legal</a>
+                    </li>
+                    <li>
+                        <a href="{{route('faq')}}">FAQs</a>
+                    </li>
                 </ul>
             </div>
-        </div>
+            <div class="col-xs-7 col-md-8 text-center">
+                <small class="copyright">Copyright © 2016-2018 All Right Reserved Future City Summit an imitative by University of Hong Kong</small>
+            </div>
+        </nav>
     </div>
 </footer>
-
-<!-- SUBFOOTER -->
-<div class="subfooter">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-lg-3">
-                <ul class="list-unstyled list-inline pull-right uppercase">
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-2">
-                <ul class="list-unstyled list-inline uppercase">
-                    <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-7">
-                <p>Copyright &copy; 2016-2018 All Right Reserved | Future City Summit an imitative by University of Hong Kong</p>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- End of Footer -->
 
 
 <script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>

@@ -5,6 +5,12 @@
 @endsection
 
 @section('page-content')
+    <!-- PAGE HEADER SECTION-->
+    <div class="bg-image-chapter-application">
+        <div class="container-fluid">
+            <h1 class="header-style">Open a Chapter</h1>
+        </div>
+    </div>
     <section id="chapter-application" class="form-background">
         <div class="container-fluid">
             <div class="row">
@@ -311,7 +317,7 @@
                             </li>
                             <li>
                                 <label for="social-facebook-link" @if($errors->has('delegate-social-fb')) class="text-danger"  @endif>Facebook URL </label>
-                                <input type="url" name="delegate-social-fb" id="social-facebook-link" placeholder="http://facebook.com/username>
+                                <input type="url" name="delegate-social-fb" id="social-facebook-link" placeholder="http://facebook.com/username">
                             </li>
                             <li>
                                 <label for="social-linkedin-link" @if($errors->has('delegate-social-li')) class="text-danger"  @endif>LinkedIn URL </label>
