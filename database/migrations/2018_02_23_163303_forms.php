@@ -13,45 +13,91 @@ class Forms extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('form_data');
-        Schema::dropIfExists('form_submissions');
-        Schema::dropIfExists('form_fields');
-        Schema::dropIfExists('forms');
 
-        Schema::create('forms', function (Blueprint $table) {
+        Schema::dropIfExists('form_contact');
+        Schema::dropIfExists('form_delegates');
+        Schema::dropIfExists('form_chapter_application');
+        Schema::dropIfExists('form_chapter_recruitment');
+
+        Schema::create('form_contact', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('country');
+            $table->string('mob');
+            $table->string('message');
+            $table->timestamp('created_at')->useCurrent();
+        });
+
+
+        Schema::create('form_delegates', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->timestamps();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('preferred_name');
+            $table->string('nationality');
+            $table->string('city');
+            $table->string('occupation');
+            $table->string('university');
+            $table->string('company');
+            $table->string('ministry');
+            $table->string('email')->unique();
+            $table->string('mob')->unique();
+            $table->string('facebook');
+            $table->string('linkedin');
+            $table->string('scholarhub');
+            $table->string('pitching-deck');
+            $table->string('purpose');
+            $table->string('city-message');
+            $table->string('track-conference');
+            $table->string('chapter-referral');
+            $table->string('referred-person');
+            $table->string('fcs-package');
+            $table->string('scholarship');
+            $table->string('newsletter-subscription');
+            $table->timestamp('created_at')->useCurrent();
         });
 
-        Schema::create('form_fields', function (Blueprint $table) {
+
+        Schema::create('form_chapter_application', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('forms_id')->unsigned()->index();;
-            $table->foreign('forms_id')->references('id')->on('forms')->onDelete('cascade');
-            $table->string('field_name');
+            $table->string('name');
+            $table->string('nationality');
+            $table->string('occupation');
+            $table->string('university');
+            $table->string('company');
+            $table->string('ministry');
+            $table->string('email')->unique();
+            $table->string('mob')->unique();
+            $table->string('facebook');
+            $table->string('linkedin');
+            $table->string('scholarhub');
+            $table->string('pitching-deck');
+            $table->string('chapter-name');
+            $table->timestamp('created_at')->useCurrent();
         });
 
-        Schema::create('form_submissions', function (Blueprint $table) {
+        Schema::create('form_chapter_recruitment', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('forms_id')->unsigned();
-            $table->foreign('forms_id')->references('id')->on('forms')->onDelete('cascade');
-            $table->timestamps();
+            $table->string('name');
+            $table->string('nationality');
+            $table->string('occupation');
+            $table->string('university');
+            $table->string('company');
+            $table->string('ministry');
+            $table->string('email')->unique();
+            $table->string('mob')->unique();
+            $table->string('facebook');
+            $table->string('linkedin');
+            $table->string('scholarhub');
+            $table->string('pitching-deck');
+            $table->string('resume');
+            $table->timestamp('created_at')->useCurrent();
         });
 
-        DB::update("ALTER TABLE form_submissions AUTO_INCREMENT = 1000;");
-
-        Schema::create('form_data', function (Blueprint $table) {
-            $table->integer('id');
-            $table->integer('submission_id')->unsigned();
-            $table->foreign('submission_id')->references('id')->on('form_submissions')->onDelete('cascade');
-            $table->integer('field_id')->unsigned();
-            $table->foreign('field_id')->references('id')->on('form_fields')->onDelete('cascade');
-            $table->string('field_data',1000)->nullable();
-            $table->primary(['id','submission_id','field_id']);
-        });
-
-        DB::update("ALTER TABLE form_data MODIFY COLUMN id INT auto_increment");
     }
+
 
     /**
      * Reverse the migrations.
@@ -60,9 +106,9 @@ class Forms extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('form_data');
-        Schema::dropIfExists('form_submissions');
-        Schema::dropIfExists('form_fields');
-        Schema::dropIfExists('forms');
+        Schema::dropIfExists('form_contact');
+        Schema::dropIfExists('form_delegates');
+        Schema::dropIfExists('form_chapter_application');
+        Schema::dropIfExists('form_chapter_recruitment');
     }
 }

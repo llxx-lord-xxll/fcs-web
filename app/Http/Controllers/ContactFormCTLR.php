@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\form_data;
-use App\form_submissions;
-use Carbon\Carbon;
+use App\ContactForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\MessageBag;
 use LVR\CountryCode\Two;
 
 class ContactFormCTLR extends Controller
@@ -32,51 +31,19 @@ class ContactFormCTLR extends Controller
 
     public function submitToDB($name,$email,$country,$mob,$message)
     {
-        $form_id =  \Illuminate\Support\Facades\DB::table('forms')->where('title','=','Contact')->value('id');
+        $cf = new ContactForm();
+        $cf->name = $name;
+        $cf->email = $email;
+        $cf->country = $country;
+        $cf->mob = $mob;
+        $cf->message = $message;
+        if($cf->save())
+        {
+            return true;
+        }
 
-        $fs = new form_submissions();
-        $fs->forms_id = $form_id;
-        $fs->created_at = Carbon::now();
-        $fs->updated_at = Carbon::now();
-        $fs->save();
 
-        $namefield = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','name')->value('id');
-        $emailfield = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','email')->value('id');
-        $countryfield = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','country')->value('id');
-        $mobfield = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','mob')->value('id');
-        $msgfield = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','message')->value('id');
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $namefield;
-        $fd->field_data = $name;
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $emailfield;
-        $fd->field_data = $email;
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $countryfield;
-        $fd->field_data = $country;
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $mobfield;
-        $fd->field_data = $mob;
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $msgfield;
-        $fd->field_data = $message;
-        $fd->save();
-
-        return true;
+        return false;
     }
 
     public function submitForm(Request $request){
@@ -98,7 +65,13 @@ class ContactFormCTLR extends Controller
         }
         else
         {
-            $this->submitToDB($request->input('full-name'),$request->input('email-address'),$request->input('choose-country'),$request->input('phone-number'),$request->input('contact-message'));
+            $res = $this->submitToDB($request->input('full-name'),$request->input('email-address'),$request->input('choose-country'),$request->input('phone-number'),$request->input('contact-message'));
+            if(!$res)
+            {
+                $err = new MessageBag();
+                $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                return Redirect::back()->withErrors($err)->withInput();
+            }
             $this->suc = 'Thank you for contacting with us, you will be notified through email';
             $data = ['email' => $request->input('email-address'),'name'=> $request->input('full-name')];
             Mail::send('mails.contact-form', $data, function ($m) use ($data) {
