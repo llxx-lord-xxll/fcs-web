@@ -28,12 +28,12 @@
                         {{csrf_field()}}
                         <ul class="fcs-form-outer">
                             <li>
-                                <label for="full_name" @if($errors->has('full_name')) class="text-danger"  @endif>Full Name </label>
+                                <label for="full_name" @if($errors->has('full_name')) class="text-danger"  @endif>Full Name *</label>
                                 <input type="text" id="full_name" name="full_name" placeholder="According to Passport"
                                        required>
                             </li>
                             <li>
-                                <label for="choose_country" @if($errors->has('choose_country')) class="text-danger"  @endif> Nationality </label>
+                                <label for="choose_country" @if($errors->has('choose_country')) class="text-danger"  @endif> Nationality *</label>
                                 <select name="choose_country" id="choose_country" required>
                                     <option value="AF">Afghanistan</option>
                                     <option value="AL">Albania</option>
@@ -280,7 +280,7 @@
                                 </select>
                             </li>
                             <li>
-                                <label for="occupation" @if($errors->has('occupation')) class="text-danger"  @endif>Occupation </label>
+                                <label for="occupation" @if($errors->has('occupation')) class="text-danger"  @endif>Occupation *</label>
                                 <select id="occupation" name="occupation" required>
                                     <option value="student">Student</option>
                                     <option value="corporate">Corporate</option>
@@ -306,26 +306,26 @@
                                        placeholder="Government/Others">
                             </li>
                             <li>
-                                <label for="email_address" @if($errors->has('email_address')) class="text-danger"  @endif>Email Address </label>
+                                <label for="email_address" @if($errors->has('email_address')) class="text-danger"  @endif>Email Address *</label>
                                 <input type="email" id="email_address" name="email_address" placeholder="Your Email Address"
                                        required>
                             </li>
                             <li>
-                                <label for="phone_number" @if($errors->has('phone_number')) class="text-danger"  @endif> Phone Number </label>
+                                <label for="phone_number" @if($errors->has('phone_number')) class="text-danger"  @endif> Phone Number *</label>
                                 <input type="tel" id="phone_number" name="phone_number"
-                                       placeholder="Country Code - Phone Number e.g. +852 - 6582 8563" required>
+                                       placeholder="Country Code - Phone Number e.g. 85265828563" required>
                             </li>
                             <li>
                                 <label for="social-facebook-link" @if($errors->has('delegate-social-fb')) class="text-danger"  @endif>Facebook URL </label>
-                                <input type="url" name="delegate-social-fb" id="social-facebook-link" placeholder="http://facebook.com/username">
+                                <input type="url" name="delegate-social-fb" id="social-facebook-link" placeholder="Facebook username or profile url">
                             </li>
                             <li>
                                 <label for="social-linkedin-link" @if($errors->has('delegate-social-li')) class="text-danger"  @endif>LinkedIn URL </label>
-                                <input type="url" name="delegate-social-li" id="social-linkedin-link" >
+                                <input type="url" name="delegate-social-li" id="social-linkedin-link"  placeholder="LinkedIn URL">
                             </li>
                             <li>
                                 <label for="social-scholarhub-link" @if($errors->has('delegate-social-sh')) class="text-danger"  @endif>Scholar Hub URL </label>
-                                <input type="url" name="delegate-social-sh" id="social-scholarhub-link">
+                                <input type="url" name="delegate-social-sh" id="social-scholarhub-link" placeholder="Your scholarhub url">
                             </li>
                             <li>
                                 <label for="open_chapter" @if($errors->has('open_chapter')) class="text-danger"  @endif>The Country/City Chapter that you would like to establish </label>

@@ -18,7 +18,7 @@
                 <!-- SLIDE 1 -->
                 <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="img/slide_thumb_1.jpg"  data-saveperformance="off"  data-title="Slide">
                     <!-- MAIN IMAGE -->
-                    <img src="img/slide_thumb_1.jpg"  alt="fullslide1"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <img src="img/slide_thumb_1.jpg"  alt="fullslide1"  data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
 
                     <!-- LAYER NR. 1 -->
@@ -34,7 +34,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018<br>"Cities Beyond Imagination - Rise Again Little Dragon"
+                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018<br>"Cities Beyond Imagination - Rise Again Little Dragon"<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -50,7 +50,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Guangzhou | Hong Kong | 3rd - 7th August 2018
+                         style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
                     </div>
 
 
@@ -59,7 +59,7 @@
                 <!-- SLIDE 2 -->
                 <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="img/slide_thumb_2.jpg"  data-saveperformance="off"  data-title="Slide">
                     <!-- MAIN IMAGE -->
-                    <img src="img/slide_thumb_2.jpg"  alt="fullslide2"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <img src="img/slide_thumb_2.jpg"  alt="fullslide2"  data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
 
                     <!-- LAYER NR. 1 -->
@@ -75,7 +75,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>"Cities Beyond Imagination - Once Upon A Time in China"
+                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>"Cities Beyond Imagination - Once Upon A Time in China"<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -91,7 +91,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Guangzhou | Hong Kong | 3rd - 7th August 2018
+                         style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
                     </div>
 
 
@@ -116,7 +116,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>- Oriental Express of venture builder and avenue of PPP
+                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>- Oriental Express of venture builder and avenue of PPP<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -132,7 +132,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Guangzhou | Hong Kong | 3rd - 7th August 2018
+                         style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">
                     </div>
 
 
@@ -169,8 +169,9 @@
 
             <!-- Panel 1 -->
             <div class="as-panel">
-                <img class="as-background" src="css/images/blank.gif" data-src="img/panel-tech-for-future.jpg" data-retina="img/panel-tech-for-future.jpg"/>
-
+                <a href="ct-technology-future.html">
+                    <img class="as-background" src="css/images/blank.gif" data-src="img/panel-tech-for-future.jpg" data-retina="img/panel-tech-for-future.jpg"/>
+                </a>
 
                 <div class="as-layer as-closed as-white panel-counter"
                      data-position="bottomLeft" data-horizontal="8" data-vertical="8">
@@ -196,8 +197,9 @@
 
             <!-- Panel 2 -->
             <div class="as-panel">
-                <img class="as-background" src="css/images/blank.gif" data-src="img/panel-entrepreneurship-for-all.jpg" data-retina="img/panel-entrepreneurship-for-all.jpg"/>
-
+                <a href="ct-entrepreneurship.html">
+                    <img class="as-background" src="css/images/blank.gif" data-src="img/panel-entrepreneurship-for-all.jpg" data-retina="img/panel-entrepreneurship-for-all.jpg"/>
+                </a>
                 <div class="as-layer as-closed as-white panel-counter"
                      data-position="bottomLeft" data-horizontal="8" data-vertical="8">
                     Entrepreneurship of All
@@ -223,9 +225,9 @@
 
             <!-- Panel 3 -->
             <div class="as-panel">
-
-                <img class="as-background" src="css/images/blank.gif" data-src="img/panel-art-entertainment.jpg" data-retina="img/panel-art-entertainment.jpg"/>
-
+                <a href="ct-entertainment-living.html">
+                    <img class="as-background" src="css/images/blank.gif" data-src="img/panel-art-entertainment.jpg" data-retina="img/panel-art-entertainment.jpg"/>
+                </a>
                 <div class="as-layer as-closed as-white panel-counter"
                      data-position="bottomLeft" data-horizontal="8" data-vertical="8">
                     Arts, Entertainment and Living
@@ -251,9 +253,9 @@
 
             <!-- Panel 4 -->
             <div class="as-panel">
-
-                <img class="as-background" src="css/images/blank.gif" data-src="img/panel-global-development.jpg" data-retina="img/panel-global-development.jpg"/>
-
+                <a href="ct-global -development-resilience.html">
+                    <img class="as-background" src="css/images/blank.gif" data-src="img/panel-global-development.jpg" data-retina="img/panel-global-development.jpg"/>
+                </a>
 
                 <div class="as-layer as-closed as-white panel-counter"
                      data-position="bottomLeft" data-horizontal="8" data-vertical="8">
@@ -280,9 +282,9 @@
 
             <!-- Panel 5 -->
             <div class="as-panel">
-
-                <img class="as-background" src="css/images/blank.gif" data-src="img/panel-urban-energy.jpg" data-retina="img/panel-urban-energy.jpg"/>
-
+                <a href="ct-earth-urban-energy.html">
+                    <img class="as-background" src="css/images/blank.gif" data-src="img/panel-urban-energy.jpg" data-retina="img/panel-urban-energy.jpg"/>
+                </a>
                 <div class="as-layer as-closed as-white panel-counter"
                      data-position="bottomLeft" data-horizontal="8" data-vertical="8">
                     The Earth, Urban and Energy
@@ -308,9 +310,9 @@
 
             <!-- Panel 6 -->
             <div class="as-panel">
-
-                <img class="as-background" src="css/images/blank.gif" data-src="img/panel-space.jpg" data-retina="img/panel-space.jpg"/>
-
+                <a href="ct-space-extraterrestrial.html">
+                    <img class="as-background" src="css/images/blank.gif" data-src="img/panel-space.jpg" data-retina="img/panel-space.jpg"/>
+                </a>
 
                 <div class="as-layer as-closed as-white panel-counter"
                      data-position="bottomLeft" data-horizontal="8" data-vertical="8">
@@ -396,7 +398,8 @@
             <div class="row">
 
                 <div class="col-lg-12">
-                    <h2 class="uppercase text-center">register</h2>
+                    <h2 class="uppercase text-center">Register as Delegate </h2>
+                    <p class="lead text-center">For Group Ticketing and special arrangement(e.g. extra schedule and days), please contact: <a href="mailto:community@futurecitysummit.org?Subject=Hello%20again" target="_top"> community@futurecitysummit.org </a></p>
                 </div>
 
                 <div class="col-lg-12">
@@ -464,7 +467,7 @@
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <a class="button button-small button-line-dark html-popup" href="register.html">register now</a>
+                    <a class="button button-small button-line-dark html-popup" href="delegate-application.html">Register Now </a>
                 </div>
 
             </div>
@@ -476,7 +479,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 fcs-section-grid">
+                <div class="col-lg-12 fcs-section-grid text-center">
                     <h2 class="uppercase">Highlights of Conference Sessions</h2>
                 </div>
             </div>
@@ -527,7 +530,7 @@
                     </div>
 
                     <!-- -------------------------- BOX MARKUP 2 -------------------------- -->
-                    <div class="media-box hackathon">
+                    <div class="media-box hackathon conference-2016">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/fcs2016-hackathon.jpg"></div>
 
@@ -544,7 +547,7 @@
                     </div>
 
                     <!-- -------------------------- BOX MARKUP 3 -------------------------- -->
-                    <div class="media-box hackathon">
+                    <div class="media-box hackathon conference-2016">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/fcs2016-hackathon1.jpg"></div>
 
@@ -560,25 +563,9 @@
                         </div>
                     </div>
 
+
                     <!-- -------------------------- BOX MARKUP 4 -------------------------- -->
-                    <div class="media-box hackathon">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/fcs2016-hackathon2.jpg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/fcs2016-hackathon2.jpg" data-title="Incididunt ut labore">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Hackathon 2016</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 5 -------------------------- -->
-                    <div class="media-box keynote">
+                    <div class="media-box keynote conference-2016">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/fcs2016-keynote.jpg"></div>
 
@@ -594,8 +581,8 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 6 -------------------------- -->
-                    <div class="media-box panel">
+                    <!-- -------------------------- BOX MARKUP 5 -------------------------- -->
+                    <div class="media-box panel conference-2016">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/fcs2016-panel.jpg"></div>
 
@@ -611,7 +598,7 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 7 -------------------------- -->
+                    <!-- -------------------------- BOX MARKUP 6 -------------------------- -->
                     <div class="media-box panel">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/fcs2017-delegate.jpg"></div>
@@ -628,7 +615,7 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 8 -------------------------- -->
+                    <!-- -------------------------- BOX MARKUP 7 -------------------------- -->
                     <div class="media-box htd">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/fcs2017-htd.jpg"></div>
@@ -645,7 +632,7 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 9 -------------------------- -->
+                    <!-- -------------------------- BOX MARKUP 8 -------------------------- -->
                     <div class="media-box panel">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/fcs2017-panel.jpg"></div>
@@ -662,59 +649,8 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 10 -------------------------- -->
-                    <div class="media-box hackathon">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-2.jpg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/metrohackathon-2.jpg" data-title="Ex ea commodo">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Metro-Hackathon</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 11 -------------------------- -->
-                    <div class="media-box hackathon">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-3.jpg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/metrohackathon-3.jpg" data-title="Duis aute irure">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Metro-Hackathon</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 12 -------------------------- -->
-                    <div class="media-box hackathon">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-4.jpg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/metrohackathon-4.jpg" data-title="Dolor sit amet">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Metro-Hackathon</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 13 -------------------------- -->
-                    <div class="media-box hackathon">
+                    <!-- -------------------------- BOX MARKUP 9 -------------------------- -->
+                    <div class="media-box hackathon conference-2017">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-5.jpg"></div>
 
@@ -730,8 +666,8 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 14 -------------------------- -->
-                    <div class="media-box hackathon">
+                    <!-- -------------------------- BOX MARKUP 10 -------------------------- -->
+                    <div class="media-box hackathon conference-2017">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-6.jpg"></div>
 
@@ -747,25 +683,8 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 15 -------------------------- -->
-                    <div class="media-box hackathon">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-7.jpg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/metrohackathon-7.jpg" data-title="Incididunt ut labore">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Metro-Hackathon</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 16 -------------------------- -->
-                    <div class="media-box hackathon">
+                    <!-- -------------------------- BOX MARKUP 11 -------------------------- -->
+                    <div class="media-box hackathon conference-2017">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-8.jpg"></div>
 
@@ -781,58 +700,8 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 17 -------------------------- -->
-                    <div class="media-box hackathon">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-9.jpg"></div>
 
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/metrohackathon-9.jpg" data-title="Enim ad minim">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Metro-Hackathon</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 18 -------------------------- -->
-                    <div class="media-box hackathon">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/metrohackathon-10.jpg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/metrohackathon-10.jpg" data-title="Nostrud exercitation">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Metro-Hackathon</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 19 -------------------------- -->
-                    <div class="media-box hackathon">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/metrohackaton-1.jpg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/metrohackaton-1.jpg" data-title="Ullamco laboris">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Metro-Hackathon</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 20 -------------------------- -->
+                    <!-- -------------------------- BOX MARKUP 12 -------------------------- -->
                     <div class="media-box conference-2016">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/sharing1-conference-2016.jpeg"></div>
@@ -849,172 +718,6 @@
                         </div>
                     </div>
 
-                    <!-- -------------------------- BOX MARKUP 21 -------------------------- -->
-                    <div class="media-box conference-2016">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing1-conference-2016-1.png"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing1-conference-2016-1.png" data-title="Ex ea commodo">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2016</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 22 -------------------------- -->
-                    <div class="media-box conference-2016">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing1-conference-2016-2.png"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing1-conference-2016-2.png" data-title="Duis aute irure">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2016</div>
-                        </div>
-                    </div>
-                    <!-- -------------------------- BOX MARKUP 23 -------------------------- -->
-                    <div class="media-box conference-2016">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing2-conference-2016-a.jpeg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing2-conference-2016-a.jpeg" data-title="In reprehenderit">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2016</div>
-                        </div>
-                    </div>
-                    <!-- -------------------------- BOX MARKUP 24  -------------------------- -->
-                    <div class="media-box conference-2016">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing2-conference-2016-b.jpeg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing2-conference-2016-b.jpeg" data-title="Enim ad minim">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2016</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 25 -------------------------- -->
-                    <div class="media-box conference-2016">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing2-cover-zaki.jpeg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing2-cover-zaki.jpeg" data-title="Nostrud exercitation">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2016</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 26 -------------------------- -->
-                    <div class="media-box conference-2017">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing3-conference-2017-a.jpeg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing3-conference-2017-a.jpeg" data-title="Ullamco laboris">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2017</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 27 -------------------------- -->
-                    <div class="media-box conference-2017">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing3-conference-2017-b.jpeg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing3-conference-2017-b.jpeg" data-title="Nisi ut aliquip">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2017</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 28 -------------------------- -->
-                    <div class="media-box conference-2017">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing3-conference-2017-c.jpeg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing3-conference-2017-c.jpeg" data-title="Ex ea commodo">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2017</div>
-                        </div>
-                    </div>
-
-                    <!-- -------------------------- BOX MARKUP 29 -------------------------- -->
-                    <div class="media-box conference-2017">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing3-conference-2017-d.jpeg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing3-conference-2017-d.jpeg" data-title="Duis aute irure">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2017</div>
-                        </div>
-                    </div>
-                    <!-- -------------------------- BOX MARKUP 30 -------------------------- -->
-                    <div class="media-box conference-2017">
-                        <div class="media-box-image">
-                            <div data-width="320" data-height="214" data-thumbnail="img/sharing3-cover-chai.jpeg"></div>
-
-                            <div class="thumbnail-overlay">
-                                <a href="#" class="mb-open-popup btn btn-sm btn-default" data-src="img/sharing3-cover-chai.jpeg" data-title="In reprehenderit">
-                                    <span class="fa fa-search"></span>&nbsp; View Larger
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="media-box-content">
-                            <div class="media-box-title text-center">Conference 2017</div>
-                        </div>
-                    </div>
                     <!-- ------------------------- End of BOX MARKUP -------------------- -->
 
                 </div> <!-- #grid -->
@@ -1066,7 +769,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="uppercase">conference partner</h2>
+                    <h2 class="uppercase text-center">partners</h2>
 
                     <div class="container">
                         <div class="row">
@@ -1097,13 +800,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="uppercase">Energy Drinks Sponsors</h2>
+                    <h2 class="uppercase text-center">Energy Drinks Sponsors</h2>
 
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 partner-row">
-                                <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/blue-horse.png" alt="" /></a>
+                                <div class="col-lg-3 col-lg-offset-5 col-md-3 col-md-offset-5 col-sm-4 col-sm-offset-5 col-xs-offset-4 sponsor-partner">
+                                    <a href="#"><img class="home-partner-logo" src="img/blue-horse.png" alt="" /></a>
                                 </div>
                             </div>
                         </div>
@@ -1119,12 +822,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="uppercase">Hackathon Partner</h2>
+                    <h2 class="uppercase text-center">Hackathon Partner</h2>
 
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 partner-row">
-                                <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
+                                <div class="col-lg-3 col-lg-offset-5 col-md-3 col-md-offset-5 col-sm-4 col-sm-offset-5 col-xs-offset-4 sponsor-partner">
                                     <a href="#"><img src="img/launchgarage-logo.PNG" alt="" /></a>
                                 </div>
                             </div>
@@ -1141,13 +844,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="uppercase">High Table Dinner Host</h2>
+                    <h2 class="uppercase text-center">High Table Dinner Host</h2>
 
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 partner-row">
-                                <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/sjc-logo.png" alt="" /></a>
+                                <div class="col-lg-3 col-lg-offset-4 col-md-3 col-md-offset-4 col-sm-4 col-sm-offset-4 sponsor-partner">
+                                    <a href="#"><img class="home-partner-logo" src="img/sjc-logo.png" alt="" /></a>
                                 </div>
                             </div>
                         </div>
@@ -1163,12 +866,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="uppercase">Supporting Organization</h2>
+                    <h2 class="uppercase text-center">Supporting Organization</h2>
 
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 partner-row">
-                                <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
+                                <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-2 sponsor-partner">
                                     <a href="#"><img src="img/brandhk-logo.png" alt="" /></a>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
@@ -1187,16 +890,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="uppercase">University Host</h2>
+                    <h2 class="uppercase text-center">University Host</h2>
 
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 partner-row">
-                                <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/sysu-logo.png" alt="" /></a>
+                                <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-3 sponsor-partner">
+                                    <a href="#"><img src="img/hku-archi-logo.png" alt="" /></a>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/hku-archi-logo.png" alt="" /></a>
+                                    <a href="#"><img class="home-university-logo" src="img/sysu-logo.png" alt="" /></a>
                                 </div>
                             </div>
                         </div>

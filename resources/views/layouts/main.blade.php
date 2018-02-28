@@ -32,7 +32,8 @@
     <link rel="stylesheet" href="{{asset('css/revolution.css')}}">
     <link rel="stylesheet" href="{{asset('css/revolution-extralayers.css')}}">
     <link rel="stylesheet" href="{{asset('css/normalize.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/sp-bootstrap.min.css')}}">
+    <link rel="stylesheet"  href="{{asset('css/sp-bootstrap.min.css')}}">
+
 
     @hasSection('header-extra')
         @yield('header-extra')
@@ -59,7 +60,7 @@
 </div>
 
 <!-- NAVIGATION -->
-<nav id="nav-primary" class="navbar navbar-custom" role="navigation">
+<nav id="nav-primary" class="navbar navbar-custom " role="navigation">
     <div class="container">
 
         <div class="navbar-header">
@@ -87,24 +88,25 @@
                 <li  class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">FCS2018<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Theme 2018</a></li>
-                        <li><a href="#">Schedule</a></li>
-                        <li><a href="#">Speaker</a></li>
-                        <li><a href="#">Workshop</a></li>
-                        <li><a href="#">Metro-Hackathon</a></li>
-                        <li><a href="#">Imagination Expo</a></li>
-                        <li><a href="#">Industry Visit</a></li>
+                        <li><a href="{{route('theme')}}">Theme 2018</a></li>
+                        <li><a href="{{route('schedule')}}">Schedule</a></li>
+                        <!--<li><a href="#">Speakers</a></li>-->
+                        <li><a href="{{route('workshop')}}">Workshop</a></li>
+                        <li><a href="{{route('metro-hackathon')}}">Metro-Hackathon</a></li>
+                        <!--<li><a href="#">Imagination Expo</a></li>-->
+                        <!--<li><a href="#">Industry Visit</a></li>-->
                     </ul>
                 </li>
                 <li  class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">Venue<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">HKU</a></li>
-                        <li><a href="#">SYSU</a></li>
+                        <li><a href="{{route('venue-hku')}}">HKU</a></li>
+                        <li><a href="{{route('venue-sysu')}}">SYSU</a></li>
+                        <li><a href="{{route('venue-cyberport')}}">Cyberport</a></li>
                     </ul>
                 </li>
-                <li><a data-toggle="elementscroll" href="#register">Register</a></li>
-                <li><a data-toggle="elementscroll" href="#local-chapter">Chapter</a></li>
+                <li><a data-toggle="elementscroll" href="{{route('app_delegate')}}">Register</a></li>
+                <li><a data-toggle="elementscroll" href="{{route('app_chapter_new')}}">Chapter</a></li>
                 <li><a data-toggle="elementscroll" href="{{route('contact')}}">Contact</a></li>
             </ul>
         </div>
@@ -131,6 +133,7 @@
 <!-- End of contents -->
 
 <!-- FOOTER -->
+<div class="sp-footer">
 <footer class="footer footer-default" role="contentinfo">
     <div class="container">
         <nav class="row">
@@ -197,6 +200,7 @@
         </nav>
     </div>
 </footer>
+</div>
 <!-- End of Footer -->
 
 

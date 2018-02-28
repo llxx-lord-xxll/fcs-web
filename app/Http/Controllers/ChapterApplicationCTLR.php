@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ChapterApplicationForm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
@@ -33,7 +34,7 @@ class ChapterApplicationCTLR extends Controller
         $deckname = null;
         if($request->has('delegate-pitching-deck'))
         {
-            $deckname = $request->input('full_name') . '_' . $request->input('city_name') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
+            $deckname = $request->input('full_name') . '_' . $request->input('open_chapter') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
             $f = $request->file('delegate-pitching-deck');
             $f->move(base_path('public\uploads\pitching-decks'),$deckname);
         }
@@ -62,20 +63,6 @@ class ChapterApplicationCTLR extends Controller
 
     public function submitForm(Request $request){
 
-        if ($request->has('email_address'))
-        {
-            $form_id =  \Illuminate\Support\Facades\DB::table('forms')->where('title','=','Chapter Application')->value('id');
-            $email_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','email')->value('id');
-
-            if(form_data::where('field_data','=',$request->input('email_address'))->where('field_id','=',$email_field)->first())
-            {
-                $err = new MessageBag();
-                $err->add('email_address','You have already applied, please wait for the reply in your email');
-                return Redirect::back()->withErrors($err)->withInput();
-            }
-        }
-
-
         $validator = Validator::make($request->all(),[
             'full_name' => 'required|regex:/^[\s\w-]*$/',
             'choose_country' => ['required',new Two()],
@@ -83,13 +70,13 @@ class ChapterApplicationCTLR extends Controller
             'university-name' =>'nullable|regex:/^[\s\w-]*$/',
             'company-organization' =>'nullable|regex:/^[\s\w-]*$/',
             'ministry-department'  =>'nullable|regex:/^[\s\w-]*$/',
-            'email_address' => 'required|email',
-            'phone_number' => 'required|digits_between:8,15',
+            'email_address' => 'required|email|unique:form_chapter_application,email',
+            'phone_number' => 'required|unique:form_chapter_application,mob|digits_between:8,15',
             'delegate-social-fb' => 'nullable|url',
             'delegate-social-li' => 'nullable|url',
             'delegate-social-sh' => 'nullable|url',
-            'open_chapter' => 'required|alpha',
-            'delegate-pitching-deck' => 'max:5000|mimes:doc,docx,ppt,pptx,pdf',
+            'open_chapter' => 'required',
+            'delegate-pitching-deck' => 'nullable|max:5000|mimes:doc,docx,ppt,pptx,pdf',
         ])->setAttributeNames([
             'full-name' => 'full name',
             'choose-country' => 'nationality',

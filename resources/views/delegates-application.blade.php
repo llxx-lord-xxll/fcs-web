@@ -5,6 +5,12 @@
 @endsection
 
 @section('page-content')
+    <div class="bg-image-delegate">
+        <div class="container-fluid">
+            <h1 class="header-style">Delegate Application</h1>
+        </div>
+    </div>
+
     <section id="delegate-application" class="form-background">
         <div class="container-fluid">
             <div class="row">
@@ -23,7 +29,7 @@
                         {{csrf_field()}}
                         <ul class="fcs-form-outer">
                             <li>
-                                <p @if($errors->has('salutation')) class="text-danger"  @endif>Title</p>
+                                <p @if($errors->has('salutation')) class="text-danger"  @endif>Title *</p>
                                 <ul class="fcs-form-inner">
                                     <li>
                                         <input type="Radio" name="salutation" value="Mr." id="salutation-mr"
@@ -43,21 +49,21 @@
                                 </ul>
                             </li>
                             <li>
-                                <label for="first_name" @if($errors->has('first_name')) class="text-danger"  @endif>First Name </label>
+                                <label for="first_name" @if($errors->has('first_name')) class="text-danger"  @endif>First Name * </label>
                                 <input type="text" id="first_name" name="first_name"
                                        placeholder=" According to Passport" value="{{old('first_name')}}" required>
                             </li>
                             <li>
-                                <label for="last_name" @if($errors->has('last_name')) class="text-danger"  @endif>Last Name </label>
+                                <label for="last_name" @if($errors->has('last_name')) class="text-danger"  @endif>Last Name * </label>
                                 <input type="text" id="last_name" name="last_name"
                                        placeholder=" According to Passport"  value="{{old('last_name')}}" required>
                             </li>
                             <li>
-                                <label for="preferred_name" @if($errors->has('full_name')) class="text-danger"  @endif>Preferred Name </label>
+                                <label for="preferred_name" @if($errors->has('full_name')) class="text-danger"  @endif>Preferred Name *</label>
                                 <input type="text" id="preferred_name" name="full_name"  value="{{old('full_name')}}"  required>
                             </li>
                             <li>
-                                <label for="choose_country" @if($errors->has('choose_country')) class="text-danger"  @endif> Nationality </label>
+                                <label for="choose_country" @if($errors->has('choose_country')) class="text-danger"  @endif> Nationality *</label>
                                 <select name="choose_country" id="choose_country" required>
                                     <option value="AF">Afghanistan</option>
                                     <option value="AL">Albania</option>
@@ -304,11 +310,11 @@
                                 </select>
                             </li>
                             <li>
-                                <label for="city_name" @if($errors->has('city_name')) class="text-danger"  @endif>City </label>
-                                <input type="text" id="city_name" name="city_name"  value="{{old('city_name')}}" >
+                                <label for="city_name" @if($errors->has('city_name')) class="text-danger"  @endif>City *</label>
+                                <input type="text" id="city_name" name="city_name"  value="{{old('city_name')}}" required>
                             </li>
                             <li>
-                                <label for="occupation" @if($errors->has('occupation')) class="text-danger"  @endif>Occupation </label>
+                                <label for="occupation" @if($errors->has('occupation')) class="text-danger"  @endif>Occupation *</label>
                                 <select id="occupation" name="occupation" required>
                                     <option value="student">Student</option>
                                     <option value="corporate">Corporate</option>
@@ -334,26 +340,26 @@
                                        placeholder="Government/Others"  value="{{old('ministry-department')}}">
                             </li>
                             <li>
-                                <label for="email_address" @if($errors->has('email_address')) class="text-danger"  @endif>Email Address </label>
+                                <label for="email_address" @if($errors->has('email_address')) class="text-danger"  @endif>Email Address *</label>
                                 <input type="email" id="email_address" name="email_address" value="{{old('email_address')}}"
                                        placeholder="Your Email Address" required >
                             </li>
                             <li>
-                                <label for="phone_number" @if($errors->has('phone_number')) class="text-danger"  @endif> Phone Number </label>
+                                <label for="phone_number" @if($errors->has('phone_number')) class="text-danger"  @endif> Phone Number *</label>
                                 <input type="tel" id="phone_number" name="phone_number" value="{{old('phone_number')}}"
                                        placeholder="e.g. +852 - 6582 8563" required>
                             </li>
                             <li>
                                 <label for="social-facebook-link" @if($errors->has('delegate-social-fb')) class="text-danger"  @endif>Facebook URL </label>
-                                <input type="url" name="delegate-social-fb" id="social-facebook-link"  value="{{old('delegate-social-fb')}}">
+                                <input type="url" name="delegate-social-fb" id="social-facebook-link"  value="{{old('delegate-social-fb')}}" placeholder="Facebook username or profile url">
                             </li>
                             <li>
                                 <label for="social-linkedin-link" @if($errors->has('delegate-social-li')) class="text-danger"  @endif>LinkedIn URL </label>
-                                <input type="url" name="delegate-social-li" id="social-linkedin-link" value="{{old('delegate-social-li')}}">
+                                <input type="url" name="delegate-social-li" id="social-linkedin-link" value="{{old('delegate-social-li')}}" placeholder="LinkedIn URL">
                             </li>
                             <li>
                                 <label for="social-scholarhub-link" @if($errors->has('delegate-social-sh')) class="text-danger"  @endif>Scholar Hub URL </label>
-                                <input type="url" name="delegate-social-sh" id="social-scholarhub-link" value="{{old('delegate-social-sh')}}">
+                                <input type="url" name="delegate-social-sh" id="social-scholarhub-link" value="{{old('delegate-social-sh')}}" placeholder="Your scholarhub url">
                             </li>
                             <li>
                                 <label for="delegate-pitching-deck" @if($errors->has('delegate-pitching-deck')) class="text-danger"  @endif>Share with us if you have any projects /
@@ -378,7 +384,7 @@
                             </li>
                             <li>
 
-                                <p @if($errors->has('track-conference')) class="text-danger"  @endif>Choose any of the track you're interested to participate </p>
+                                <p @if($errors->has('track-conference')) class="text-danger"  @endif>Choose any of the track you're interested to participate *</p>
                                 <ul class="fcs-form-inner">
                                     <li>
                                         <input type="radio" id="track-conference" name="track-conference"
@@ -393,7 +399,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <label for="fcs-chapter-referral" @if($errors->has('fcs-chapter-referral')) class="text-danger"  @endif>Do you belong to any chapters of FCS? </label>
+                                <label for="fcs-chapter-referral" @if($errors->has('fcs-chapter-referral')) class="text-danger"  @endif>Do you belong to any chapters of FCS? *</label>
                                 <select id="fcs-chapter-referral" name="fcs-chapter-referral">
                                     <option value="0">NO</option>
                                     <option value="BD">Bangladesh</option>
@@ -408,6 +414,7 @@
                                 <input type="text" id="referred-person" name="referred-person" value="{{old('referred-person')}}"
                                        placeholder="If any - Full Name">
                             </li>
+                            <!--
                             <li>
                                 <p @if($errors->has('fcs-package')) class="text-danger"  @endif>Choose a FCS Package </p>
                                 <ul class="fcs-form-inner">
@@ -441,6 +448,8 @@
                                     </li>
                                 </ul>
                             <li>
+                            -->
+                            <li>
                                 <p @if($errors->has('fcs-scholarship')) class="text-danger"  @endif>Would you like to apply for scholarship? (More information would be submitted
                                     later in follow up email) </p>
                                 <ul class="fcs-form-inner">
@@ -453,6 +462,7 @@
                                         <label for="fcs-scholarship">No</label>
                                     </li>
                                 </ul>
+                            </li>
                             <li>
                                 <label for="fcs-newsletter-subscription" @if($errors->has('fcs-newsletter-subscription')) class="text-danger"  @endif>Would you like to subscribe to Future City
                                     Summit newsletter? </label>
@@ -476,7 +486,7 @@
     <script type="text/javascript">
        $(document).ready(function () {
            $('#fcs-chapter-referral').change(function() {
-               if($(this).val() === "null")
+               if($(this).val() === "0")
                {
                    $('#referred-person').parent().css('display','none');
                }

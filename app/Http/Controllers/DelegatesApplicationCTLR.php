@@ -8,6 +8,7 @@ use App\form_submissions;
 use App\Rules\words;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
@@ -95,16 +96,16 @@ class DelegatesApplicationCTLR extends Controller
             'ministry-department'  =>'nullable|regex:/^[\s\w-]*$/',
             'email_address' => 'required|email|unique:form_delegates,email',
             'phone_number' => 'required|unique:form_delegates,mob|digits_between:8,15',
-            'delegate-social-fb' => 'nullable|url|regex:/(https?:\/\/)?([\w\.]*)facebook\.com\/([a-zA-Z0-9_]*)$/',
-            'delegate-social-li' => 'nullable|url|regex:/^https:\/\/[a-z]{2,3}\.linkedin\.com\/.*$/',
-            'delegate-social-sh' => 'nullable|url',
+            'delegate-social-fb' => 'nullable',
+            'delegate-social-li' => 'nullable',
+            'delegate-social-sh' => 'nullable',
             'delegate-pitching-deck' => 'max:5000|mimes:doc,docx,ppt,pptx,pdf',
-            'fcs-purpose' => ['nullable', new words(60)],
-            'delegate-city-message' => ['nullable', new words(100)],
+            'fcs-purpose' => ['required', new words(60)],
+            'delegate-city-message' => ['required', new words(100)],
             'track-conference' =>['required',Rule::in(['Hackathon','Industry Visit'])],
             'fcs-chapter-referral' =>['required',Rule::in(['0','BD','VN','CM','PH','RS'])],
             'referred-person' => 'nullable|regex:/^[\s\w-]*$/',
-            'fcs-package' => 'required|integer|digits_between:0,5',
+            'fcs-package' => 'nullable|integer|digits_between:0,5',
             'fcs-scholarship'=>  ['required',Rule::in(['y','n'])],
             'fcs-newsletter-subscription'=>  ['required',Rule::in(['y','n'])],
         ])->setAttributeNames
