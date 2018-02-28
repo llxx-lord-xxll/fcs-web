@@ -25,7 +25,6 @@ class ChapterApplicationCTLR extends Controller
         {
             $this->v->with('success',$this->suc);
         }
-
         return $this->v;
     }
 
