@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="{{asset('css/helper.css')}}">
     <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
-    <link rel="stylesheet" href="{{asset('css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/salvattore.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery.countdown.css')}}">
     <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
@@ -31,7 +30,6 @@
     <link rel="stylesheet" href="{{asset('css/owl.transitions.css')}}">
     <link rel="stylesheet" href="{{asset('css/revolution.css')}}">
     <link rel="stylesheet" href="{{asset('css/revolution-extralayers.css')}}">
-    <link rel="stylesheet" href="{{asset('css/normalize.min.css')}}">
     <link rel="stylesheet"  href="{{asset('css/sp-bootstrap.min.css')}}">
 
 
@@ -40,6 +38,8 @@
     @endif
 
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+
+    <link rel="stylesheet" href="{{asset('css/mediaBoxes.css')}}">
 
 
 
@@ -75,15 +75,16 @@
 
         <div class="collapse navbar-collapse" id="nav">
             <ul class="nav navbar-nav navbar-right uppercase">
-                <!-- <li  class="dropdown">
+                <li  class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Vision</a></li>
-                        <li><a href="#">Founders and Advisors</a></li>
-                        <li><a href="#">Featured Stories</a></li>
+                        <li><a href="{{route('about')}}">About Us</a></li>
+                        <li><a href="{{route('highlights16')}}">FCS 2016</a></li>
+                        <li><a href="{{route('highlights17')}}">FCS 2017</a></li>
+                        <li><a href="{{route('humen_fcs')}}">Humen of FCS</a></li>
                     </ul>
                 </li>
-                -->
+
 
                 <li  class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">FCS2018<span class="caret"></span></a>
@@ -106,12 +107,9 @@
                     </ul>
                 </li>
                 <li><a data-toggle="elementscroll" href="{{route('app_delegate')}}">Register</a></li>
-                <li><a data-toggle="elementscroll" href="{{route('app_chapter_new')}}">Chapter</a></li>
                 <li><a data-toggle="elementscroll" href="{{route('contact')}}">Contact</a></li>
             </ul>
         </div>
-
-
 
 
 

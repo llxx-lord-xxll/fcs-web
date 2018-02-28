@@ -121,33 +121,33 @@
                         <ul class="global-agenda-grid">
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/african-union.png" alt="" />
-                                <span class="agenda-more-details"><a href="#">More Details</a></span>
+                                <span class="agenda-more-details"><a href="{{route('ga-african-union')}}">More Details</a></span>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/ASEAN.png" alt="" />
-                                <span class="agenda-more-details"><a href="#">More Details</a></span>
+                                <span class="agenda-more-details"><a href="{{route('ga-asean-singapore')}}">More Details</a></span>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/Bangladesh-vision-2021.gif" alt="" />
-                                <span class="agenda-more-details"><a href="#">More Details</a></span>
+                                <span class="agenda-more-details"><a href="{{route('ga-digital-bangladesh')}}">More Details</a></span>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/beltnroad.png" alt="" />
-                                <span class="agenda-more-details"><a href="#">More Details</a></span>
+                                <span class="agenda-more-details"><a href="{{route('ga-belt-road')}}">More Details</a></span>
                                 </a>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/caricom.png" alt="" />
-                                <span class="agenda-more-details"><a href="#">More Details</a></span>
+                                <span class="agenda-more-details"><a href="{{route('ga-caricom')}}">More Details</a></span>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/makeinindia.png" alt="" />
-                                <span class="agenda-more-details"><a href="#">More Details</a></span>
+                                <span class="agenda-more-details"><a href="{{route('ga-make-in-india')}}">More Details</a></span>
                                 </a>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/unsdgs.png" alt="" />
-                                <span class="agenda-more-details"><a href="#">More Details</a></span>
+                                <span class="agenda-more-details"><a href="{{route('ga-unsdg')}}">More Details</a></span>
                             </li>
                         </ul>
                     </div>

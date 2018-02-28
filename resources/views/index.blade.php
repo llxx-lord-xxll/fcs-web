@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('header-extra')
+    <link rel="stylesheet" href="{{asset('css/normalize.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/accordion-slider.css')}}">
     <link rel="stylesheet" href="{{asset('css/mediaBoxes.css')}}">
     @endsection
@@ -169,7 +170,7 @@
 
             <!-- Panel 1 -->
             <div class="as-panel">
-                <a href="ct-technology-future.html">
+                <a href="{{route('panel-techfuture')}}">
                     <img class="as-background" src="css/images/blank.gif" data-src="img/panel-tech-for-future.jpg" data-retina="img/panel-tech-for-future.jpg"/>
                 </a>
 
@@ -191,13 +192,13 @@
                 <p class="as-layer as-opened as-black as-padding hide-small-screen"
                    data-horizontal="center" data-vertical="75%"
                    data-show-transition="left" data-show-delay="700" data-hide-transition="right" data-hide-delay="200">
-                    <a href="ct-technology-future.html"> Join This Session </a>
+                    <a href="{{route('panel-techfuture')}}"> Join This Session </a>
                 </p>
             </div>
 
             <!-- Panel 2 -->
             <div class="as-panel">
-                <a href="ct-entrepreneurship.html">
+                <a href="{{route('panel-entrepreneurship')}}">
                     <img class="as-background" src="css/images/blank.gif" data-src="img/panel-entrepreneurship-for-all.jpg" data-retina="img/panel-entrepreneurship-for-all.jpg"/>
                 </a>
                 <div class="as-layer as-closed as-white panel-counter"
@@ -219,13 +220,13 @@
                 <p class="as-layer as-opened as-black as-padding hide-small-screen"
                    data-horizontal="center" data-vertical="75%"
                    data-show-transition="left" data-show-delay="700" data-hide-transition="right" data-hide-delay="200">
-                    <a href="ct-entrepreneurship.html"> Join This Session </a>
+                    <a href="{{route('panel-entrepreneurship')}}"> Join This Session </a>
                 </p>
             </div>
 
             <!-- Panel 3 -->
             <div class="as-panel">
-                <a href="ct-entertainment-living.html">
+                <a href="{{route('panel-entertainment-living')}}">
                     <img class="as-background" src="css/images/blank.gif" data-src="img/panel-art-entertainment.jpg" data-retina="img/panel-art-entertainment.jpg"/>
                 </a>
                 <div class="as-layer as-closed as-white panel-counter"
@@ -247,13 +248,13 @@
                 <p class="as-layer as-opened as-black as-padding hide-small-screen"
                    data-horizontal="center" data-vertical="75%"
                    data-show-transition="left" data-show-delay="700" data-hide-transition="right" data-hide-delay="200">
-                    <a href="ct-entertainment-living.html"> Join This Session </a>
+                    <a href="{{route('panel-entertainment-living')}}"> Join This Session </a>
                 </p>
             </div>
 
             <!-- Panel 4 -->
             <div class="as-panel">
-                <a href="ct-global -development-resilience.html">
+                <a href="{{route('panel-development-resilience')}}">
                     <img class="as-background" src="css/images/blank.gif" data-src="img/panel-global-development.jpg" data-retina="img/panel-global-development.jpg"/>
                 </a>
 
@@ -276,13 +277,13 @@
                 <p class="as-layer as-opened as-black as-padding hide-small-screen"
                    data-horizontal="center" data-vertical="75%"
                    data-show-transition="left" data-show-delay="700" data-hide-transition="right" data-hide-delay="200">
-                    <a href="ct-global -development-resilience.html"> Join This Session </a>
+                    <a href="{{route('panel-development-resilience')}}"> Join This Session </a>
                 </p>
             </div>
 
             <!-- Panel 5 -->
             <div class="as-panel">
-                <a href="ct-earth-urban-energy.html">
+                <a href="{{route('panel-earth-urban-energy')}}">
                     <img class="as-background" src="css/images/blank.gif" data-src="img/panel-urban-energy.jpg" data-retina="img/panel-urban-energy.jpg"/>
                 </a>
                 <div class="as-layer as-closed as-white panel-counter"
@@ -304,13 +305,13 @@
                 <p class="as-layer as-opened as-black as-padding hide-small-screen"
                    data-horizontal="center" data-vertical="75%"
                    data-show-transition="left" data-show-delay="700" data-hide-transition="right" data-hide-delay="200">
-                    <a href="ct-earth-urban-energy.html"> Join This Session </a>
+                    <a href="{{route('panel-earth-urban-energy')}}"> Join This Session </a>
                 </p>
             </div>
 
             <!-- Panel 6 -->
             <div class="as-panel">
-                <a href="ct-space-extraterrestrial.html">
+                <a href="{{route('panel-space-extraterrestrial')}}">
                     <img class="as-background" src="css/images/blank.gif" data-src="img/panel-space.jpg" data-retina="img/panel-space.jpg"/>
                 </a>
 
@@ -333,7 +334,7 @@
                 <p class="as-layer as-opened as-black as-padding hide-small-screen"
                    data-horizontal="center" data-vertical="75%"
                    data-show-transition="left" data-show-delay="700" data-hide-transition="right" data-hide-delay="200">
-                    <a href="ct-space-extraterrestrial.html"> Join This Session </a>
+                    <a href="{{route('panel-space-extraterrestrial')}}"> Join This Session </a>
                 </p>
             </div>
             <!-- End of Panel-->
@@ -467,7 +468,7 @@
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <a class="button button-small button-line-dark html-popup" href="delegate-application.html">Register Now </a>
+                    <a class="button button-small button-line-dark html-popup" href="{{route('app_delegate')}}">Register Now </a>
                 </div>
 
             </div>

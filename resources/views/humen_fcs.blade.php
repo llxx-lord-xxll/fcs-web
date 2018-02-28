@@ -59,9 +59,9 @@
                                     <div class="fcs-story-data">
                                         <div class="fcs-story-content">
                                             <span class="fcs-story-author">Andre Kwok</span>
-                                            <h3 class="fcs-story-title"><a href="#">Future City and The Market Left Behind </a></h3>
+                                            <h3 class="fcs-story-title"><a href="{{route('post-1')}}">Future City and The Market Left Behind </a></h3>
                                             <p class="fcs-story-text">City is a fundamental unit to a nation and its connectivity across cities and countries shapes the future of international development...</p>
-                                            <a href="fcs-story-post-1.html" class="fcs-story-button">Read more</a>
+                                            <a href="{{route('post-1')}}" class="fcs-story-button">Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -90,9 +90,9 @@
                                     <div class="fcs-story-data">
                                         <div class="fcs-story-content">
                                             <span class="fcs-story-author">Andre Kwok</span>
-                                            <h3 class="fcs-story-title"><a href="#">A Turnover of an Indonesian Property Developer, after Future City Summit </a></h3>
+                                            <h3 class="fcs-story-title"><a href="{{route('post-2')}}">A Turnover of an Indonesian Property Developer, after Future City Summit </a></h3>
                                             <p class="fcs-story-text">As Future City Summit(FCS) is progressing towards its 2nd phrase of development, as a Hong Kong-led global development agent for the Global South...</p>
-                                            <a href="fcs-story-post-2.html" class="fcs-story-button">Read more</a>
+                                            <a href="{{route('post-2')}}" class="fcs-story-button">Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -121,9 +121,9 @@
                                     <div class="fcs-story-data">
                                         <div class="fcs-story-content">
                                             <span class="fcs-story-author">Andre Kwok</span>
-                                            <h3 class="fcs-story-title"><a href="fcs-story-post-3.html">From Imagination to Action, A Sharing of The Best Presenter in Future City Summit </a></h3>
+                                            <h3 class="fcs-story-title"><a href="{{route('post-3')}}">From Imagination to Action, A Sharing of The Best Presenter in Future City Summit </a></h3>
                                             <p class="fcs-story-text">Future City Summit(FCS) has been in Hong Kong and impacting emerging market for 2+ years and we are marching towards a better development and agenda in future cities, innovation...</p>
-                                            <a href="fcs-story-post-3.html" class="fcs-story-button">Read more</a>
+                                            <a href="{{route('post-3')}}" class="fcs-story-button">Read more</a>
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                         Be
                     </div>
                     <div class="fcs-cta-content">
-                        a proud Delegate!
+                        <a href="{{route('app_delegate')}}"> a proud Delegate!</a>
                     </div>
                 </div>
     </section>

@@ -15,9 +15,52 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::prefix('about')->group(function () {
+
+    Route::get('', function () {
+        return view('about');
+    })->name('about');
+    Route::prefix('global-agenda')->group(function () {
+        Route::get('african-union', function () {
+            return view('ga-african-union');
+        })->name('ga-african-union');
+        Route::get('asean-singapore', function () {
+            return view('ga-asean-singapore');
+        })->name('ga-asean-singapore');
+        Route::get('belt-road', function () {
+            return view('ga-belt-road');
+        })->name('ga-belt-road');
+        Route::get('caricom', function () {
+            return view('ga-caricom');
+        })->name('ga-caricom');
+        Route::get('digital-bangladesh', function () {
+            return view('ga-digital-bangladesh');
+        })->name('ga-digital-bangladesh');
+        Route::get('make-in-india', function () {
+            return view('ga-make-in-india');
+        })->name('ga-make-in-india');
+        Route::get('unsdg', function () {
+            return view('ga-unsdg');
+        })->name('ga-unsdg');
+
+    });
+
+});
+
+
+Route::prefix('posts')->group(function () {
+    Route::get('1', function () {
+        return view('post-1');
+    })->name('post-1');
+
+    Route::get('2', function () {
+        return view('post-2');
+    })->name('post-2');
+
+    Route::get('3', function () {
+        return view('post-3');
+    })->name('post-3');
+});
 
 Route::get('/faqs', function () {
     return view('faqs');
@@ -31,37 +74,81 @@ Route::get('/legal', function () {
     return view('legal');
 })->name('legal');
 
-Route::get('summit/2018/schedule', function () {
-    return view('schedule');
-})->name('schedule');
 
-Route::get('summit/2018/metro-hackathon', function () {
-    return view('metro-hackathon');
-})->name('metro-hackathon');
+Route::prefix('summit')->group(function () {
+    Route::prefix('2018')->group(function () {
+        Route::get('schedule', function () {
+            return view('schedule');
+        })->name('schedule');
 
-Route::get('summit/2018/workshop', function () {
-    return view('workshop');
-})->name('workshop');
+        Route::get('metro-hackathon', function () {
+            return view('metro-hackathon');
+        })->name('metro-hackathon');
 
-Route::get('summit/2017/highlights', function () {
-    return view('highlight17');
-})->name('highlights17');
+        Route::get('workshop', function () {
+            return view('workshop');
+        })->name('workshop');
+        Route::prefix('venues')->group(function () {
+            Route::get('hku', function () {
+                return view('venue-hku');
+            })->name('venue-hku');
 
-Route::get('summit/2016/highlights', function () {
-    return view('highlight16');
-})->name('highlights16');
+            Route::get('sysu', function () {
+                return view('venue-sysu');
+            })->name('venue-sysu');
 
-Route::get('summit/2018/venues/hku', function () {
-    return view('venue-hku');
-})->name('venue-hku');
+            Route::get('cyberport', function () {
+                return view('venue-cyberport');
+            })->name('venue-cyberport');
+        });
 
-Route::get('summit/2018/venues/sysu', function () {
-    return view('venue-sysu');
-})->name('venue-sysu');
+        Route::prefix('panel')->group(function () {
+            Route::get('technology-future', function () {
+                return view('ct-techfuture');
+            })->name('panel-techfuture');
 
-Route::get('summit/2018/venues/cyberport', function () {
-    return view('venue-cyberport');
-})->name('venue-cyberport');
+            Route::get('entrepreneurship', function () {
+                return view('ct-entrepreneurship');
+            })->name('panel-entrepreneurship');
+
+            Route::get('entertainment-living', function () {
+                return view('ct-entertainment-living');
+            })->name('panel-entertainment-living');
+
+            Route::get('development-resilience', function () {
+                return view('ct-development-resilience');
+            })->name('panel-development-resilience');
+
+            Route::get('earth-urban-energy', function () {
+                return view('ct-earth-urban-energy');
+            })->name('panel-earth-urban-energy');
+
+            Route::get('space-extraterrestrial', function () {
+                return view('ct-space-extraterrestrial');
+            })->name('panel-space-extraterrestrial');
+
+
+        });
+
+    });
+    Route::prefix('2017')->group(function () {
+        Route::get('summit/2017/highlights', function () {
+            return view('highlight17');
+        })->name('highlights17');
+
+    });
+
+    Route::prefix('2016')->group(function () {
+
+        Route::get('summit/2016/highlights', function () {
+            return view('highlight16');
+        })->name('highlights16');
+
+    });
+
+});
+
+
 
 Route::get('/humen-of-fcs', function () {
     return view('humen_fcs');
