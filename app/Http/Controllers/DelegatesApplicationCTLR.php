@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DelegateForm;
 use App\form_data;
 use App\form_submissions;
 use App\Rules\words;
@@ -35,208 +36,51 @@ class DelegatesApplicationCTLR extends Controller
 
     public function submitToDB(Request $request)
     {
-        $form_id =  \Illuminate\Support\Facades\DB::table('forms')->where('title','=','Delegate Application')->value('id');
 
-        $fs = new form_submissions();
-        $fs->forms_id = $form_id;
-        $fs->created_at = Carbon::now();
-        $fs->updated_at = Carbon::now();
-        $fs->save();
-
-        $title_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','title')->value('id');
-        $fn_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','fname')->value('id');
-        $ln_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','lname')->value('id');
-        $prf_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','prfname')->value('id');
-        $country_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','country')->value('id');
-        $city_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','city')->value('id');
-        $occupation_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','occupation')->value('id');
-        $university_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','university')->value('id');
-        $company_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','company')->value('id');
-        $ministry_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','ministry')->value('id');
-        $email_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','email')->value('id');
-        $mob_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','mob')->value('id');
-        $social_fb_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','social-fb')->value('id');
-        $social_li_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','social-li')->value('id');
-        $social_sh_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','social-sh')->value('id');
-        $pitching_deck_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','pitching-deck')->value('id');
-        $purpose_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','purpose')->value('id');
-        $citymsg_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','city-message')->value('id');
-        $trackconf_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','track-conference')->value('id');
-        $refferal_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','chapter-referral')->value('id');
-        $refdperson_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','referred-person')->value('id');
-        $fcspackage_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','fcs-package')->value('id');
-        $scholar_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','scholarship')->value('id');
-        $newsletter_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','newsletter-subscription')->value('id');
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $title_field;
-        $fd->field_data = $request->input('salutation');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $fn_field;
-        $fd->field_data = $request->input('first_name');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $ln_field;
-        $fd->field_data = $request->input('last_name');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $prf_field;
-        $fd->field_data = $request->input('full_name');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $country_field;
-        $fd->field_data = $request->input('choose_country');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $city_field;
-        $fd->field_data = $request->input('city_name');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $occupation_field;
-        $fd->field_data = $request->input('occupation');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $university_field;
-        $fd->field_data = $request->input('university-name');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $company_field;
-        $fd->field_data = $request->input('company-organization');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $ministry_field;
-        $fd->field_data = $request->input('ministry-department');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $email_field;
-        $fd->field_data = $request->input('email_address');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $mob_field;
-        $fd->field_data = $request->input('phone_number');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $social_fb_field;
-        $fd->field_data = $request->input('delegate-social-fb');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $social_li_field;
-        $fd->field_data = $request->input('delegate-social-li');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $social_sh_field;
-        $fd->field_data = $request->input('delegate-social-sh');
-        $fd->save();
-
-
+        $deckname = null;
         if($request->has('delegate-pitching-deck'))
         {
             $deckname = $request->input('last_name') . '_' . $request->input('city_name') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
             $f = $request->file('delegate-pitching-deck');
-            $f->move(base_path('public\uploads\pitching-decks'),$deckname);
-            $fd = new form_data();
-            $fd->submission_id =  $fs->id;
-            $fd->field_id = $pitching_deck_field;
-            $fd->field_data = $deckname;
-            $fd->save();
+            $f->move(base_path('public/uploads/pitching-decks'),$deckname);
+
+        }
+        $df = new DelegateForm();
+        $df->title = $request->input('salutation');
+        $df->first_name = $request->input('first_name');
+        $df->last_name = $request->input('last_name');
+        $df->preferred_name = $request->input('full_name');
+        $df->nationality = $request->input('choose_country');
+        $df->city = $request->input('city_name');
+        $df->occupation = $request->input('occupation');
+        $df->university = $request->input('university-name');
+        $df->company = $request->input('company-organization');
+        $df->ministry = $request->input('ministry-department');
+        $df->email = $request->input('email_address');
+        $df->mob = $request->input('phone_number');
+        $df->facebook = $request->input('delegate-social-fb');
+        $df->linkedin = $request->input('delegate-social-li');
+        $df->scholarhub = $request->input('delegate-social-sh');
+        $df->pitching_deck = $deckname;
+        $df->purpose = $request->input('fcs-purpose');
+        $df->city_message = $request->input('delegate-city-message');
+        $df->track_conference = $request->input('track-conference');
+        $df->chapter_referral = $request->input('fcs-chapter-referral');
+        $df->referred_person = $request->input('referred-person');
+        $df->fcs_package = $request->input('fcs-package');
+        $df->scholarship = $request->input('fcs-scholarship');
+        $df->newsletter_subscription = $request->input('fcs-newsletter-subscription');
+
+        if($df->save())
+        {
+            return true;
         }
 
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $purpose_field;
-        $fd->field_data = $request->input('fcs-purpose');
-        $fd->save();
 
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $citymsg_field;
-        $fd->field_data = $request->input('delegate-city-message');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $trackconf_field;
-        $fd->field_data = $request->input('track-conference');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $refferal_field;
-        $fd->field_data = $request->input('fcs-chapter-referral');
-        $fd->save();
-
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $refdperson_field;
-        $fd->field_data = $request->input('referred-person');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $fcspackage_field;
-        $fd->field_data = $request->input('fcs-package');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $scholar_field;
-        $fd->field_data = $request->input('fcs-scholarship');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $newsletter_field;
-        $fd->field_data = $request->input('fcs-newsletter-subscription');
-        $fd->save();
-
-        return true;
+        return false;
     }
 
     public function submitForm(Request $request){
-
-        if ($request->has('email_address'))
-        {
-            $form_id =  \Illuminate\Support\Facades\DB::table('forms')->where('title','=','Delegate Application')->value('id');
-            $email_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','email')->value('id');
-
-            if(form_data::where('field_data','=',$request->input('email_address'))->where('field_id','=',$email_field)->first())
-            {
-                $err = new MessageBag();
-                $err->add('email_address','You have already applied, please wait for the reply in your email');
-                return Redirect::back()->withErrors($err)->withInput();
-            }
-        }
 
         $validator = Validator::make($request->all(),[
             'salutation' => ['required',Rule::in(['Mr.','Mrs.','Ms.'])],
@@ -249,8 +93,8 @@ class DelegatesApplicationCTLR extends Controller
             'university-name' =>'nullable|regex:/^[\s\w-]*$/',
             'company-organization' =>'nullable|regex:/^[\s\w-]*$/',
             'ministry-department'  =>'nullable|regex:/^[\s\w-]*$/',
-            'email_address' => 'required|email',
-            'phone_number' => 'required|digits_between:8,15',
+            'email_address' => 'required|email|unique:form_delegates,email',
+            'phone_number' => 'required|unique:form_delegates,mob|digits_between:8,15',
             'delegate-social-fb' => 'nullable|url|regex:/(https?:\/\/)?([\w\.]*)facebook\.com\/([a-zA-Z0-9_]*)$/',
             'delegate-social-li' => 'nullable|url|regex:/^https:\/\/[a-z]{2,3}\.linkedin\.com\/.*$/',
             'delegate-social-sh' => 'nullable|url',
@@ -295,7 +139,13 @@ class DelegatesApplicationCTLR extends Controller
         }
         else
         {
-            $this->submitToDB($request);
+            $res = $this->submitToDB($request);
+            if(!$res)
+            {
+                $err = new MessageBag();
+                $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                return Redirect::back()->withErrors($err)->withInput();
+            }
             $this->suc = 'Application submitted, you will soon be contacted via email';
             $data = ['email' => $request->input('email_address'),'name'=> $request->input('full-name')];
             Mail::send('mails.delegate-form', $data, function ($m) use ($data) {

@@ -47,15 +47,15 @@ class Forms extends Migration
             $table->string('facebook');
             $table->string('linkedin');
             $table->string('scholarhub');
-            $table->string('pitching-deck');
+            $table->string('pitching_deck');
             $table->string('purpose');
-            $table->string('city-message');
-            $table->string('track-conference');
-            $table->string('chapter-referral');
-            $table->string('referred-person');
-            $table->string('fcs-package');
+            $table->string('city_message');
+            $table->string('track_conference');
+            $table->string('chapter_referral');
+            $table->string('referred_person');
+            $table->string('fcs_package');
             $table->string('scholarship');
-            $table->string('newsletter-subscription');
+            $table->string('newsletter_subscription');
             $table->timestamp('created_at')->useCurrent();
         });
 
@@ -73,8 +73,8 @@ class Forms extends Migration
             $table->string('facebook');
             $table->string('linkedin');
             $table->string('scholarhub');
-            $table->string('pitching-deck');
-            $table->string('chapter-name');
+            $table->string('pitching_deck');
+            $table->string('chapter_name');
             $table->timestamp('created_at')->useCurrent();
         });
 

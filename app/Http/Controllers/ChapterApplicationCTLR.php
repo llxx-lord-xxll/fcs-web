@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\form_data;
-use App\form_submissions;
-use Carbon\Carbon;
+use App\ChapterApplicationForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -33,115 +31,34 @@ class ChapterApplicationCTLR extends Controller
 
     public function submitToDB(Request $request)
     {
-        $form_id =  \Illuminate\Support\Facades\DB::table('forms')->where('title','=','Chapter Application')->value('id');
-
-        $fs = new form_submissions();
-        $fs->forms_id = $form_id;
-        $fs->created_at = Carbon::now();
-        $fs->updated_at = Carbon::now();
-        $fs->save();
-
-        $name_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','name')->value('id');
-        $country_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','country')->value('id');
-        $occupation_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','occupation')->value('id');
-        $university_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','university')->value('id');
-        $company_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','company')->value('id');
-        $ministry_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','ministry')->value('id');
-        $email_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','email')->value('id');
-        $mob_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','mob')->value('id');
-        $social_fb_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','social-fb')->value('id');
-        $social_li_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','social-li')->value('id');
-        $social_sh_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','social-sh')->value('id');
-        $chapter_title_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','chapter-title')->value('id');
-        $pitching_deck_field = \Illuminate\Support\Facades\DB::table('form_fields')->where('forms_id','=',$form_id)->where('field_name','=','pitching-deck')->value('id');
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $name_field;
-        $fd->field_data = $request->input('full_name');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $country_field;
-        $fd->field_data = $request->input('choose_country');
-        $fd->save();
-
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $occupation_field;
-        $fd->field_data = $request->input('occupation');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $university_field;
-        $fd->field_data = $request->input('university-name');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $company_field;
-        $fd->field_data = $request->input('company-organization');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $ministry_field;
-        $fd->field_data = $request->input('ministry-department');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $email_field;
-        $fd->field_data = $request->input('email_address');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $mob_field;
-        $fd->field_data = $request->input('phone_number');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $social_fb_field;
-        $fd->field_data = $request->input('delegate-social-fb');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $social_li_field;
-        $fd->field_data = $request->input('delegate-social-li');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $social_sh_field;
-        $fd->field_data = $request->input('delegate-social-sh');
-        $fd->save();
-
-        $fd = new form_data();
-        $fd->submission_id =  $fs->id;
-        $fd->field_id = $chapter_title_field;
-        $fd->field_data = $request->input('open_chapter');
-        $fd->save();
-
+        $deckname = null;
         if($request->has('delegate-pitching-deck'))
         {
             $deckname = $request->input('full_name') . '_' . $request->input('city_name') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
             $f = $request->file('delegate-pitching-deck');
             $f->move(base_path('public\uploads\pitching-decks'),$deckname);
-            $fd = new form_data();
-            $fd->submission_id =  $fs->id;
-            $fd->field_id = $pitching_deck_field;
-            $fd->field_data = $deckname;
-            $fd->save();
+        }
+        $caf = new ChapterApplicationForm();
+        $caf->name = $request->input('full_name');
+        $caf->nationality = $request->input('choose_country');
+        $caf->occupation = $request->input('occupation');
+        $caf->university = $request->input('university-name');
+        $caf->company = $request->input('company-organization');
+        $caf->ministry = $request->input('ministry-department');
+        $caf->email = $request->input('email_address');
+        $caf->mob = $request->input('phone_number');
+        $caf->facebook = $request->input('delegate-social-fb');
+        $caf->linkedin = $request->input('delegate-social-li');
+        $caf->scholarhub = $request->input('delegate-social-sh');
+        $caf->pitching_deck = $deckname;
+        $caf->chapter_name = $request->input('open_chapter');
+
+        if($caf->save())
+        {
+            return true;
         }
 
-
-        return true;
+        return false;
     }
 
     public function submitForm(Request $request){
@@ -195,7 +112,13 @@ class ChapterApplicationCTLR extends Controller
         }
         else
         {
-            $this->submitToDB($request);
+            $res =  $this->submitToDB($request);
+            if(!$res)
+            {
+                $err = new MessageBag();
+                $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                return Redirect::back()->withErrors($err)->withInput();
+            }
             $this->suc = 'Thank you for contacting with us, you will be notified through email';
             $data = ['email' => $request->input('email_address'),'name'=> $request->input('full-name')];
             Mail::send('mails.open-chapter', $data, function ($m) use ($data) {
