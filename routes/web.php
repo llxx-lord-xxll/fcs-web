@@ -126,8 +126,6 @@ Route::prefix('summit')->group(function () {
             Route::get('space-extraterrestrial', function () {
                 return view('ct-space-extraterrestrial');
             })->name('panel-space-extraterrestrial');
-
-
         });
 
     });
@@ -150,7 +148,7 @@ Route::prefix('summit')->group(function () {
 
 
 
-Route::get('/humen-of-fcs', function () {
+Route::get('/humans-of-fcs', function () {
     return view('humen_fcs');
 })->name('humen_fcs');
 

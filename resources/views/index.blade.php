@@ -35,7 +35,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018<br>"Cities Beyond Imagination - Rise Again Little Dragon"<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
+                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018<br>"Cities Beyond Imagination - Once Upon A Time in China"<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -76,7 +76,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>"Cities Beyond Imagination - Once Upon A Time in China"<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
+                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>"Cities Beyond Imagination - Rise Again Little Dragon"<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -501,7 +501,6 @@
                     <li><a class="selected" href="#" data-filter="*">All</a></li>
                     <li><a href="#" data-filter=".city-tour">City Tour </a></li>
                     <li><a href="#" data-filter=".hackathon">Hackathon</a></li>
-                    <li><a href="#" data-filter=".keynote">Keynote </a></li>
                     <li><a href="#" data-filter=".panel">Panel Session</a></li>
                     <li><a href="#" data-filter=".htd">High Table Dinner</a></li>
                     <li><a href="#" data-filter=".conference-2016">Conference 2016</a></li>
@@ -566,7 +565,7 @@
 
 
                     <!-- -------------------------- BOX MARKUP 4 -------------------------- -->
-                    <div class="media-box keynote conference-2016">
+                    <div class="media-box panel conference-2016">
                         <div class="media-box-image">
                             <div data-width="320" data-height="214" data-thumbnail="img/fcs2016-keynote.jpg"></div>
 

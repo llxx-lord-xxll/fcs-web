@@ -83,7 +83,7 @@
                         <li><a href="{{route('about')}}">About Us</a></li>
                         <li><a href="{{route('highlights16')}}">FCS 2016</a></li>
                         <li><a href="{{route('highlights17')}}">FCS 2017</a></li>
-                        <li><a href="{{route('humen_fcs')}}">Humen of FCS</a></li>
+                        <li><a href="{{route('humen_fcs')}}">Humans of FCS</a></li>
                     </ul>
                 </li>
 
@@ -148,7 +148,7 @@
                     <li><a href="{{route('about')}}">About Us</a></li>
                     <li><a href="{{route('highlights16')}}">FCS 2016</a></li>
                     <li><a href="{{route('highlights17')}}">FCS 2017</a></li>
-                    <li><a href="{{route('humen_fcs')}}">Humen of FCS</a></li>
+                    <li><a href="{{route('humen_fcs')}}">Humans of FCS</a></li>
                     <li><a href="{{route('contact')}}">Contact Us</a></li>
                 </ul>
             </div>

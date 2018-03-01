@@ -117,13 +117,15 @@ a {
 }
 
 .navbar-custom .navbar-nav > li > a:hover {
-	color:#33404c;
+	color:#fff;
+    font-weight: bold;
 	background:transparent;
 }
 
 .navbar-custom .navbar-nav > li > a:active,
 .navbar-custom .navbar-nav > li > a:focus {
-	color:#33404c;
+	color:#fff;
+    font-weight: bold;
 	background:transparent;
 }
 
@@ -4010,7 +4012,7 @@ left: 15% !important;
 @media screen and (min-width: 1367px) and (max-width: 1920px) {
 .tp-caption {
 top: 35% !important;
-left: 25% !important;
+left: 21% !important;
 }
 }
 
@@ -4105,6 +4107,12 @@ left: 25% !important;
 .fcs-human-img-center {
     display: block;
     margin: 0 auto;
+}
+
+.nav .open > a
+{
+    background-color: transparent;
+    border:0;
 }
 
 
