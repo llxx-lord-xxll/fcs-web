@@ -470,7 +470,7 @@
                 </div>
 
                 <div class="col-lg-12 text-center">
-                    <a class="button button-small button-line-dark html-popup" href="{{route('app_delegate')}}">Register Now </a>
+                    <a class="button button-small button-line-dark" href="{{route('app_delegate')}}">Register Now </a>
                 </div>
 
             </div>

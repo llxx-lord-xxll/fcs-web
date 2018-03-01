@@ -1926,6 +1926,10 @@ h1 {
     background-color: #33404c;
 }
 
+#fcs-call-to-action a {
+	color: #fff;
+}
+
 .fcs-cta-header {
     font-size: 1.75em;
     padding: 20px 0px;

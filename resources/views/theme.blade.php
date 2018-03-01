@@ -44,7 +44,7 @@
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/city-theme-1.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/city-theme-1.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
