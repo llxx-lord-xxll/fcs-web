@@ -312,7 +312,7 @@
                             <i class="pe-4x pe-7s-headphones"></i>
                             <h4>In Case of Emergency:</h4>
                             <p><i class="fa fa-envelope"> community@futurecitysummity.org</i></p>
-                            <p><i class="fa fa-phone-square"> +852 6582 8563</i></p>
+                            <p><i class="fa fa-phone-square"> +852 6436 3727</i></p>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 fcs-contact-location">
                             <i class="pe-4x pe-7s-map-marker"></i>
