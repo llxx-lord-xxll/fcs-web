@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{{asset('css/helper.css')}}">
     <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
+    <link rel="stylesheet" href="css/font.css">
+
     <link rel="stylesheet" href="{{asset('css/salvattore.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery.countdown.css')}}">
     <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
