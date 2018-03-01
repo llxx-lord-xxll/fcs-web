@@ -37,7 +37,7 @@
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/hku-1.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/hku-1.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/hku-3.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/hku-3.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12 special-content">
@@ -74,7 +74,7 @@
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/sjc-1.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/sjc-1.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/sjc-2.png" alt="">
+                        <img class="img-responsive" src="{{asset('img/sjc-2.png')}}" alt="">
                     </div>
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12 special-content">

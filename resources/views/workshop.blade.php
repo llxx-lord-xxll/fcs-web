@@ -7,43 +7,7 @@
 
 @section('page-content')
 
-    <!-- PRELOADING -->
-    <div id="preload">
-        <div class="preload">
-            <div class="spinner"></div>
-        </div>
-    </div>
-
-    <!-- NAVIGATION -->
-    <nav id="nav-primary" class="navbar navbar-custom" role="navigation">
-        <div class="container">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="nav">
-                <ul class="nav navbar-nav navbar-right uppercase">
-                    <li><a data-toggle="elementscroll" href="#info">About</a></li>
-                    <li><a data-toggle="elementscroll" href="#speakers">Speakers</a></li>
-                    <li><a data-toggle="elementscroll" href="#program">Program</a></li>
-                    <li><a data-toggle="elementscroll" href="#venue">Venue</a></li>
-                    <li><a data-toggle="elementscroll" href="#register">Register</a></li>
-                    <li><a data-toggle="elementscroll" href="#gallery">Gallery</a></li>
-                    <li><a data-toggle="elementscroll" href="#sponsors">Sponsors</a></li>
-                    <li><a data-toggle="elementscroll" href="#footer">Contact</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-
+    
     <!-- PAGE HEADER SECTION-->
     <div class="bg-image-workshop">
         <div class="container-fluid">
@@ -90,9 +54,9 @@
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
                         <div id="workshop-first-slider" class="fcs-img-form-slider">
-                            <img class="fcs-form-slider-photo" src="img/workshop-1.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/workshop-2.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/workshop-3.jpg" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/workshop-1.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/workshop-2.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/workshop-3.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -107,8 +71,8 @@
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
                         <div id="workshop-second-slider" class="fcs-img-form-slider">
-                            <img class="fcs-form-slider-photo" src="img/workshop-4.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/workshop-5.jpg" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/workshop-4.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/workshop-5.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>

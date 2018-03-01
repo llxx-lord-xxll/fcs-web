@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="{{asset('css/history-style.css')}}">
     @endsection
 @section('page-content')
+
     <!-- PAGE HEADER SECTION-->
-    <div class="bg-image-about">
+    <section class="bg-image-about vision-content special-content">
         <div class="container-fluid">
             <h1 class="about-header-style">About Future City Summit</h1>
             <p class="lead text-center">Right place | Right time | Right resources</p>
             <p class="lead text-center">“where imagination thrives for city”</p>
-            <p class="text-justify about-inner-content">Future City Summit is an regional convention which rises for a mission to develop connectivity among young talents of all walks for better city development. Every year, future enthusiasts gather in a place to connect, make synergy and take actions. Until now, more than 200 delegates have been joining our work and over 50 speakers are engaged. <br><br> In 2018 annual conference, we would like to present something more seriously with action plans and implementation. <br><br>Also, our innovation does not stop at just convention. <br><br> With the 2 years of convention and relations building, Future City Summit tries to take a step forward to envision itself a multilateral development agency for public private partnership projects in emerging market for future city advocacy. </p>
+            <p class="text-center ">Future City Summit is an regional convention which rises for a mission to develop connectivity among young talents of all walks for better city development. Every year, future enthusiasts gather in a place to connect, make synergy and take actions. Until now, more than 200 delegates have been joining our work and over 50 speakers are engaged. <br><br> In 2018 annual conference, we would like to present something more seriously with action plans and implementation. <br><br>Also, our innovation does not stop at just convention. <br><br> With the 2 years of convention and relations building, Future City Summit tries to take a step forward to envision itself a multilateral development agency for public private partnership projects in emerging market for future city advocacy. </p>
         </div>
-    </div>
+    </section>
 
     <!-- Timeline-->
     <!--<div class="mwrap-wrapper">-->
@@ -121,33 +122,33 @@
                         <ul class="global-agenda-grid">
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/african-union.png" alt="" />
-                                <span class="agenda-more-details"><a href="{{route('ga-african-union')}}">More Details</a></span>
+                                <span class="agenda-more-details"><a href="#">More Details</a></span>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/ASEAN.png" alt="" />
-                                <span class="agenda-more-details"><a href="{{route('ga-asean-singapore')}}">More Details</a></span>
+                                <span class="agenda-more-details"><a href="#">More Details</a></span>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/Bangladesh-vision-2021.gif" alt="" />
-                                <span class="agenda-more-details"><a href="{{route('ga-digital-bangladesh')}}">More Details</a></span>
+                                <span class="agenda-more-details"><a href="#">More Details</a></span>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/beltnroad.png" alt="" />
-                                <span class="agenda-more-details"><a href="{{route('ga-belt-road')}}">More Details</a></span>
+                                <span class="agenda-more-details"><a href="#">More Details</a></span>
                                 </a>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/caricom.png" alt="" />
-                                <span class="agenda-more-details"><a href="{{route('ga-caricom')}}">More Details</a></span>
+                                <span class="agenda-more-details"><a href="#">More Details</a></span>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/makeinindia.png" alt="" />
-                                <span class="agenda-more-details"><a href="{{route('ga-make-in-india')}}">More Details</a></span>
+                                <span class="agenda-more-details"><a href="#">More Details</a></span>
                                 </a>
                             </li>
                             <li>
                                 <img class="img-responsive img-global-agenda" src="img/unsdgs.png" alt="" />
-                                <span class="agenda-more-details"><a href="{{route('ga-unsdg')}}">More Details</a></span>
+                                <span class="agenda-more-details"><a href="#">More Details</a></span>
                             </li>
                         </ul>
                     </div>
@@ -510,7 +511,5 @@
             </div>
         </div>
     </section>
-
-
 @endsection
 

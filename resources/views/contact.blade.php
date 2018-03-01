@@ -293,7 +293,7 @@
                                 </li>
                                 <li>
                                     <label for="phone-number" @if($errors->has('phone-number')) class="text-danger"  @endif> Phone Number&#42;</label>
-                                    <input  type="tel" id="phone-number" name="phone-number" placeholder="e.g. +852 - 6582 8563" value="{{old('phone-number')}}" required>
+                                    <input  type="tel" id="phone-number" name="phone-number" value="{{old('phone-number')}}" placeholder="Country Code - Phone Number e.g. 85265828563" required>
                                 </li>
                                 <li>
                                     <label for="contact-message" @if($errors->has('contact-message')) class="text-danger"  @endif>Message Box&#42; </label>

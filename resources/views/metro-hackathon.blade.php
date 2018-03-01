@@ -32,10 +32,10 @@
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
                         <div id="metro-hackathon-slider1" class="fcs-img-form-slider">
-                            <img class="fcs-form-slider-photo" src="img/metrohackaton-1.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/metrohackathon-2.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/metrohackathon-3.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/metrohackathon-4.jpg" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackaton-1.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackathon-2.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackathon-3.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackathon-4.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -50,11 +50,11 @@
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
                         <div id="metro-hackathon-slider2" class="fcs-img-form-slider">
-                            <img class="fcs-form-slider-photo" src="img/metrohackathon-6.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/metrohackathon-7.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/metrohackathon-8.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/metrohackathon-9.jpg" alt="">
-                            <img class="fcs-form-slider-photo" src="img/metrohackathon-10.jpg" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackathon-6.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackathon-7.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackathon-8.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackathon-9.jpg')}}" alt="">
+                            <img class="fcs-form-slider-photo" src="{{asset('img/metrohackathon-10.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/launchgarage-logo.PNG" alt="" /></a>
+                                    <a href="#"><img src="{{asset('img/launchgarage-logo.PNG')}}" alt="" /></a>
                                 </div>
                             </div>
                         </div>

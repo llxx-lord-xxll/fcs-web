@@ -38,7 +38,7 @@
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/cyberport-2.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/cyberport-2.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
             <div class="row">
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/cyberport-3.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/cyberport-3.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
@@ -74,7 +74,7 @@
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/cyberport-4.jpeg" alt="">
+                        <img class="img-responsive" src="{{asset('img/cyberport-4.jpeg')}}" alt="">
                     </div>
                 </div>
             </div>

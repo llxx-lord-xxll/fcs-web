@@ -161,19 +161,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -183,7 +183,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -228,19 +228,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -250,7 +250,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -268,19 +268,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -290,7 +290,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -309,19 +309,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -331,7 +331,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -349,19 +349,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -371,7 +371,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -389,19 +389,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -411,7 +411,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -429,19 +429,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -451,7 +451,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -496,19 +496,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -518,7 +518,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -609,19 +609,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -631,7 +631,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -676,19 +676,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -698,7 +698,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -716,19 +716,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -738,7 +738,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -757,19 +757,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -779,7 +779,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -797,19 +797,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -819,7 +819,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -837,19 +837,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -859,7 +859,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -877,19 +877,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -899,7 +899,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -945,19 +945,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -967,7 +967,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -1230,19 +1230,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -1252,7 +1252,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -1297,19 +1297,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -1319,7 +1319,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -1337,19 +1337,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -1359,7 +1359,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -1378,19 +1378,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -1400,7 +1400,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -1418,19 +1418,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -1440,7 +1440,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -1458,19 +1458,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -1480,7 +1480,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -1498,19 +1498,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -1520,7 +1520,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
@@ -1566,19 +1566,19 @@
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div class="col-lg-3 col-md-3 col-xs-6">
-                                                        <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
@@ -1588,7 +1588,7 @@
                                                 </div>
 
                                                 <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
-                                                    <img class="img-responsive program-speaker" src="img/update-speaker.jpg" alt="">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
                                                     <p><span>Moderator</span></p>
                                                     <h5>Will be updated later</h5>
                                                     <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>

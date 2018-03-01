@@ -347,7 +347,7 @@
                             <li>
                                 <label for="phone_number" @if($errors->has('phone_number')) class="text-danger"  @endif> Phone Number *</label>
                                 <input type="tel" id="phone_number" name="phone_number" value="{{old('phone_number')}}"
-                                       placeholder="e.g. +852 - 6582 8563" required>
+                                       placeholder="Country Code - Phone Number e.g. 85265828563" required>
                             </li>
                             <li>
                                 <label for="social-facebook-link" @if($errors->has('delegate-social-fb')) class="text-danger"  @endif>Facebook URL </label>

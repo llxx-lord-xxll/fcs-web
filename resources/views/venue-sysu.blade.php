@@ -35,7 +35,7 @@
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/sysu-2.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/sysu-2.jpg')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/sysu-3.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/sysu-3.jpg')}}" alt="">
                     </div>
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
@@ -72,7 +72,7 @@
                 </div>
                 <div class="container col-lg-6 col-md-6 col-xs-12">
                     <div class="row">
-                        <img class="img-responsive" src="img/sysu-4.jpg" alt="">
+                        <img class="img-responsive" src="{{asset('img/sysu-4.jpg')}}" alt="">
                     </div>
                 </div>
             </div>

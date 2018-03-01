@@ -1,9 +1,11 @@
 @extends('layouts.main')
 
 @section('header-extra')
+    <link rel="stylesheet" href="{{asset('css/jquery.fancybox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('css/normalize.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/accordion-slider.css')}}">
-    <link rel="stylesheet" href="{{asset('css/mediaBoxes.css')}}">
+
     @endsection
 
 @section('title')
