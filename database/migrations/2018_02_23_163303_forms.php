@@ -22,7 +22,7 @@ class Forms extends Migration
         Schema::create('form_contact', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('country');
             $table->string('mob');
             $table->string('message');

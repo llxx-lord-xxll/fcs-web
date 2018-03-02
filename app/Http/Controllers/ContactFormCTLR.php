@@ -73,11 +73,18 @@ class ContactFormCTLR extends Controller
                 return Redirect::back()->withErrors($err)->withInput();
             }
             $this->suc = 'Thank you for contacting with us, you will be notified through email';
-            $data = ['email' => $request->input('email-address'),'name'=> $request->input('full-name')];
+            $data = ['email' => $request->input('email-address'),'name'=> $request->input('full-name'),'ip'=>$request->ip(),'msg' => $request->input('contact-message'),'mob' => $request->input('phone-number'),'country'=> $request->input('choose-country')];
+
             Mail::send('mails.contact-form', $data, function ($m) use ($data) {
                 $m->from('no-reply@futurecitysummit.org', 'Future City Summit');
                 $m->replyTo('community@futurecitysummit.org', 'Ms. Priya Ghandi');
                 $m->to($data['email'], $data['name'])->subject('Contact Form Submitted - Future City Summit');
+            });
+
+            Mail::send('mails.contact-form-to-admin', $data, function ($m) use ($data) {
+                $m->from($data['email'], $data['name']);
+                $m->replyTo($data['email'], $data['name']);
+                $m->to('community@futurecitysummit.org','Ms. Priya Ghandi' )->subject('A new contact form submitted - Future City Summit');
             });
 
             return $this->returnView($request);
