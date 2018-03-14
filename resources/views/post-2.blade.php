@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    About us
+    A Turnover of an Indonesian Property Developer, after Future City Summit
     @endsection
 @section('header-extra')
     <link rel="stylesheet" href="{{asset('css/accordion-slider.css')}}">

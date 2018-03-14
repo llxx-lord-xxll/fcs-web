@@ -74,6 +74,13 @@ class DelegatesApplicationCTLR extends Controller
 
         if($df->save())
         {
+            $data = ['email' => $request->input('email_address'),'name'=> $request->input('first_name'),'request'=>$request,'pitching_deck' =>$deckname];
+            Mail::send('mails.delegateapp-form-to-admin', $data, function ($m) use ($data) {
+                $m->from($data['email'], $data['name']);
+                $m->replyTo($data['email'], $data['name']);
+                $m->to('community@futurecitysummit.org','Ms. Priya Ghandi' )->subject('A new delegate application form submitted - Future City Summit');
+            });
+
             return true;
         }
 

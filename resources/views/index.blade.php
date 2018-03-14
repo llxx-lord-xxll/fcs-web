@@ -415,7 +415,7 @@
                             <div class="table-header">
                                 <h3>Early Bird</h3>
                                 <p class="price">$330</p>
-                                <p class="early-date center-right">Deadline:15th April, 2018</p>
+                                <p class="early-date center-right">Deadline: 1<sup>st</sup> May, 2018</p>
                             </div>
 
                             <ul class="desc list-unstyled">
@@ -434,7 +434,7 @@
                             <div class="table-header">
                                 <h3>REGULAR</h3>
                                 <p class="price">$350</p>
-                                <p class="early-date">Deadline: 27th May, 2018</p>
+                                <p class="early-date">Deadline: 1<sup>st</sup> June, 2018</p>
                             </div>
 
                             <ul class="desc list-unstyled">
@@ -453,7 +453,7 @@
                             <div class="table-header">
                                 <h3>FINAL</h3>
                                 <p class="price">$370</p>
-                                <p class="early-date">Deadline:1st July, 2018</p>
+                                <p class="early-date">Deadline: 1<sup>st</sup> July, 2018</p>
                             </div>
 
                             <ul class="desc list-unstyled">
