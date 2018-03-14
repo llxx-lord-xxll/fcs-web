@@ -164,13 +164,13 @@
   
 <!-- Add or remove .compact to change the UI-->
 <div id="landing-venue">
-  <div class="content active" data-slide="1" data-bg="http://127.0.0.1:8000/img/banner-hku.jpg">
+  <div class="content active" data-slide="1" data-bg="img/banner-hku.jpg">
     <div class="info-wrapper">
       <h3 class="slidetitle">LOREM IPSUM <span>(lorem)</span></h3>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias numquam ipsum possimus nihil velit, recusandae. Molestias, nobis consectetur facilis officiis, sint earum inventore. Voluptas tempore quibusdam molestiae nostrum id, dolorum?</p>
     </div>
   </div>
-  <div class="content" data-slide="2" data-bg="http://127.0.0.1:8000/img/venue-hku.jpg">
+  <div class="content" data-slide="2" data-bg="img/venue-hku.jpg">
     <div class="info-wrapper">
       <h3 class="slidetitle">LOREM IPSUM <span>(lorem)</span></h3>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias numquam ipsum possimus nihil velit, recusandae. Molestias, nobis consectetur facilis officiis, sint earum inventore. Voluptas tempore quibusdam molestiae nostrum id, dolorum?</p>
@@ -238,17 +238,7 @@ $(document).ready(function() {
 	} else {
 		$(".slide-left, .slide-right").hide();
 	}
-	
-	// Play/pause button click
-	$(".playbutton").on("click", function() {
-		if ($(this).hasClass("paused")) {
-			$(this).removeClass("paused");
-			repeat = setInterval(changeSlide, slideInterval);
-		} else {
-			$(this).addClass("paused");
-			clearInterval(repeat);
-		} // END if/else
-	}); // END onClick
+
 	
 	// Physical clicking | Content panels
 	$(".content").on("click", function() {
