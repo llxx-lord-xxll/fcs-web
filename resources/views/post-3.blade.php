@@ -34,7 +34,6 @@
                     <img class="img-responsive" src="{{asset('img/sharing3-cover-chai.jpeg')}}" alt="">
                 </div>
                 <p>Future City Summit(FCS) has been in Hong Kong and impacting emerging market for 2+ years and we are marching towards a better development and agenda in future cities, innovation and public private partnership.</p>
-
                 <p>Meet Ryan Chai M. Cabañez, 21 years-old from Manila, studying in Architecture Faculty in De La Salle–College of Saint Benilde. He participated in FCS2017 as delegate from Manila and won his opportunity to the UN, with insightful knowledge back for his country.</p>
                 <p>Chai learnt about Future City Summit from our alumni Russ Earl Malagen(FCS2016), awardee of Connected World Magazine P10NEERS 2018. They first met in Startup Weekend Manila working together on the robotics hack for cleaning up water waste in Manila with IoT capability, increasing values of property and opportunities for housing and business centre. With the encouragement of Russ, Chai joined the FCS in Hong Kong.</p>
                 <div class="row">

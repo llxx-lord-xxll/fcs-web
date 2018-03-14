@@ -164,13 +164,13 @@
   
 <!-- Add or remove .compact to change the UI-->
 <div id="landing-venue">
-  <div class="content active" data-slide="1" data-bg="img/venue-sysu.jpg">
+  <div class="content active" data-slide="1" data-bg="http://127.0.0.1:8000/img/banner-hku.jpg">
     <div class="info-wrapper">
       <h3 class="slidetitle">LOREM IPSUM <span>(lorem)</span></h3>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias numquam ipsum possimus nihil velit, recusandae. Molestias, nobis consectetur facilis officiis, sint earum inventore. Voluptas tempore quibusdam molestiae nostrum id, dolorum?</p>
     </div>
   </div>
-  <div class="content" data-slide="2" data-bg="img/venue-hku.jpg">
+  <div class="content" data-slide="2" data-bg="http://127.0.0.1:8000/img/venue-hku.jpg">
     <div class="info-wrapper">
       <h3 class="slidetitle">LOREM IPSUM <span>(lorem)</span></h3>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias numquam ipsum possimus nihil velit, recusandae. Molestias, nobis consectetur facilis officiis, sint earum inventore. Voluptas tempore quibusdam molestiae nostrum id, dolorum?</p>
@@ -221,14 +221,11 @@ $(document).ready(function() {
 	
 	// Color each slide
 	$(".content").each(function() {
-		var bg_img = $(this).attr("data-bg"),
-			color1 = hexToRgb(dullcolors[Math.floor(Math.random()*dullcolors.length)]),
-			color2 = hexToRgb(fullcolors[Math.floor(Math.random()*fullcolors.length)]),
-			darken = 150;
+		var bg_img = $(this).attr("data-bg");
 
 
 		$(this).css({
-			"background" : "linear-gradient(135deg, rgba("+parseInt(color1.r - darken)+","+parseInt(color1.g - darken)+","+parseInt(color1.b - darken)+",0.7), rgba("+color2.r+","+color2.g+","+color2.b+",0.5)), url("+bg_img+")"
+			"background" :" url("+bg_img+")"
 		})
 	});
 	
