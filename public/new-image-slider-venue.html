@@ -21,7 +21,7 @@
   margin: 0;
 }
 
-#container {
+#landing-venue {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,10 +29,10 @@
   overflow: hidden;
   background-color: #282828;
 }
-#container.compact .content:not(.active) {
+#landing-venue.compact .content:not(.active) {
   width: 0%;
 }
-#container .content {
+#landing-venue .content {
   width: 100%;
   height: 100%;
   position: relative;
@@ -54,10 +54,10 @@
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
 }
-#container .content.transition {
+#landing-venue .content.transition {
   width: 50% !important;
 }
-#container .content:before {
+#landing-venue .content:before {
   content: "";
   position: absolute;
   width: 32px;
@@ -79,40 +79,40 @@
 
           
 
-#container .content.active {
+#landing-venue .content.active {
   width: 1000%;
 }
  
           
-#container .content:not(.active) {
+#landing-venue .content:not(.active) {
   cursor: pointer;
   width: 100%;
 }
-#container .content:not(.active) .info-wrapper {
+#landing-venue .content:not(.active) .info-wrapper {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease-in-out 0s;
   transition: opacity 0.5s ease-in-out 0s;
 }
 
-#container .content .info-wrapper {
+#landing-venue .content .info-wrapper {
   color: white;
   margin: 20%;
   -webkit-transition: opacity 1s ease-in-out 1s;
   transition: opacity 1s ease-in-out 1s;
 }
-#container .content .info-wrapper h3.slidetitle {
+#landing-venue .content .info-wrapper h3.slidetitle {
   font-size: 3em;
 }
-#container .content .info-wrapper h3.slidetitle span {
+#landing-venue .content .info-wrapper h3.slidetitle span {
   font-size: 0.25em;
   color: rgba(255, 255, 255, 0.3);
 }
-#container .content .info-wrapper p {
+#landing-venue .content .info-wrapper p {
   width: 100%;
   line-height: 30px;
 }
           
-#container .slide-left, html #container .slide-right {
+#landing-venue .slide-left, html #landing-venue .slide-right {
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0%, -50%);
@@ -128,28 +128,28 @@
   -webkit-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
 }
-#container .slide-left:hover, html #container .slide-right:hover {
+#landing-venue .slide-left:hover, html #landing-venue .slide-right:hover {
   color: rgba(255, 255, 255, 0.9);
 }
-#container .slide-left:hover.slide-left, html #container .slide-right:hover.slide-left {
+#landing-venue .slide-left:hover.slide-left, html #landing-venue .slide-right:hover.slide-left {
   left: 0px;
 }
-#container .slide-left:hover.slide-right, html #container .slide-right:hover.slide-right {
+#landing-venue .slide-left:hover.slide-right, html #landing-venue .slide-right:hover.slide-right {
   right: 0px;
 }
-#container .slide-left:active, html #container .slide-right:active {
+#landing-venue .slide-left:active, html #landing-venue .slide-right:active {
   background-color: rgba(255, 255, 255, 0.2);
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
-#container .slide-left i, html #container .slide-right i {
+#landing-venue .slide-left i, html #landing-venue .slide-right i {
   font-size: 5em;
   margin-top: 5px;
 }
-#container .slide-left {
+#landing-venue .slide-left {
   left: -10px;
   border-radius: 0px 60px 60px 0px;
 }
-#container .slide-right {
+#landing-venue .slide-right {
   right: -10px;
   border-radius: 60px 0px 0px 60px;
 }
@@ -163,7 +163,7 @@
 
   
 <!-- Add or remove .compact to change the UI-->
-<div id="container">
+<div id="landing-venue">
   <div class="content active" data-slide="1" data-bg="img/venue-sysu.jpg">
     <div class="info-wrapper">
       <h3 class="slidetitle">LOREM IPSUM <span>(lorem)</span></h3>
@@ -195,8 +195,8 @@ $(document).ready(function() {
 		transTimer = 2500;
 	
 	// Init vars
-	var compact = $("#container").hasClass("compact");
-	var contentAmt = $("#container .content").length;  // Number of slides
+	var compact = $("#landing-venue").hasClass("compact");
+	var contentAmt = $("#landing-venue .content").length;  // Number of slides
 	var loop = true;
 	
 	// HEX TO RGB FUNCTION
@@ -261,7 +261,7 @@ $(document).ready(function() {
 	}); // END onClick
 	
 	$(".slide-left, .slide-right").on("click", function() {
-		var slide = parseInt($("#container .content.active").attr("data-slide"));
+		var slide = parseInt($("#landing-venue .content.active").attr("data-slide"));
 		if ($(this).hasClass("slide-left")) {
 			slide--
 			console.log(slide);
@@ -284,11 +284,11 @@ $(document).ready(function() {
 	
 	// changeSlide() function
 	function changeSlide(clicked, method) {
-		var compact = $("#container").hasClass("compact"); // If compact is added
+		var compact = $("#landing-venue").hasClass("compact"); // If compact is added
 		// If natural, and not clicked called
 		if (method != "clicked") {
 			// Figure slides
-			var currentSlide = $("#container .content.active").attr("data-slide");
+			var currentSlide = $("#landing-venue .content.active").attr("data-slide");
 			var nextSlide = parseInt(currentSlide) + 1;
 
 			// Check if last slide
@@ -298,9 +298,9 @@ $(document).ready(function() {
 				// Mobile/Fullscreen end slide transition | show all for a time
 				if (compact == true) {
 					// Transitioney stuff
-					$("#container .content:not(.active)").addClass("transition");
+					$("#landing-venue .content:not(.active)").addClass("transition");
 					setTimeout(function() {
-						$("#container .content").removeClass("transition");
+						$("#landing-venue .content").removeClass("transition");
 					}, transTimer);
 				}
 			}
@@ -309,8 +309,8 @@ $(document).ready(function() {
 		} // END if/else
 		
 		//Remove and add the active class | Make the slides slide
-		$("#container .content").removeClass("active");
-		$("#container .content[data-slide='"+nextSlide+"']").addClass("active");
+		$("#landing-venue .content").removeClass("active");
+		$("#landing-venue .content[data-slide='"+nextSlide+"']").addClass("active");
 	} // END function
 }); // END .ready
       //# sourceURL=pen.js
