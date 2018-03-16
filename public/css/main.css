@@ -4565,7 +4565,7 @@ input[type="submit"]:active {
 }
 
 .custom-filter li a {
-    color: #999;
+    color: #33404C;
     text-decoration: none;
 }
 
@@ -4574,7 +4574,7 @@ input[type="submit"]:active {
 }
 
 .custom-filter li a.selected {
-    color: #D1474C !important;
+    color: #33404C !important;
 }
 
 /* Set the style of the thumbnail overlay items */
