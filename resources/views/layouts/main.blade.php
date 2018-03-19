@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{asset('css/helper.css')}}">
     <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
-    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="{{asset('css/font.css')}}">
 
     <link rel="stylesheet" href="{{asset('css/salvattore.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery.countdown.css')}}">
@@ -92,6 +92,7 @@
                 <li  class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">FCS2018<span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="{{route('overview18')}}">Overview</a></li>
                         <li><a href="{{route('theme')}}">Theme 2018</a></li>
                         <li><a href="{{route('schedule')}}">Schedule</a></li>
                         <!--<li><a href="#">Speakers</a></li>-->
@@ -156,6 +157,7 @@
             <div class="col-xs-6 col-sm-4 col-md-2">
                 <h3 class="nav-title">Conference 2018</h3>
                 <ul class="footer-list">
+                    <li><a href="{{route('overview18')}}">Overview</a></li>
                     <li><a href="{{route('theme')}}">Theme</a></li>
                     <li><a href="{{route('schedule')}}">Schedule</a></li>
                     <li><a href="{{route('metro-hackathon')}}">Metro-Hackathon</a></li>

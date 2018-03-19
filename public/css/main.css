@@ -117,14 +117,16 @@ a {
 }
 
 .navbar-custom .navbar-nav > li > a:hover {
-	color:#33404c;
-	background:transparent;
+	color: #ffffff;
+	background: transparent;
+	font-weight: bold;
 }
 
 .navbar-custom .navbar-nav > li > a:active,
 .navbar-custom .navbar-nav > li > a:focus {
-	color:#33404c;
-	background:transparent;
+	color: #ffffff;
+	background: transparent;
+	font-weight: bold;
 }
 
 .navbar-custom .icon-bar {

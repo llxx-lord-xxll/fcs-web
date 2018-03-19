@@ -77,6 +77,10 @@ Route::get('/legal', function () {
 
 Route::prefix('summit')->group(function () {
     Route::prefix('2018')->group(function () {
+        Route::get('overview', function () {
+            return view('overview-fcs18');
+        })->name('overview18');
+
         Route::get('schedule', function () {
             return view('schedule');
         })->name('schedule');
