@@ -35,11 +35,21 @@
                     <div id="fcs-newsletter">
                         <h2 class="landing-header text-center">Verify Your Email</h2>
                         <p class="text-center">Get the latest trends and news from us!</p>
-                        <form action="/" class="fcs-inline-form">
-                            <input type="text" name="myname" id="myname" placeholder="Your Full Name" required />
-                            <input type="email" name="email" id="email" placeholder="Your Email Address" required />
-                            <input type="submit" value="Submit">
+                        <form action="" method="post" class="fcs-inline-form">
+                            {{csrf_field()}}
+                            <input type="text" name="myname" id="myname" placeholder="Your Full Name" value="{{old('myname')}}" required />
+                            <input type="email" name="email" id="email" placeholder="Your Email Address" value="{{old('email')}}" required />
+                            <input type="submit" value="Submit" />
                         </form>
+                        @if($errors->any())
+                            @foreach ($errors->all() as $error)
+                                <p class="text-center text-danger">{{ $error }}</p>
+                            @endforeach
+                        @endif
+                        @if(isset($success))
+                            <p class="text-center text-success">{{ $success }}</p>
+                        @endif
+
                     </div>
                 </div>
             </div>
@@ -805,7 +815,7 @@
                             <div>
                                 <img class="img-media-kit" src="{{asset('img/Conference-Booklet-FCS-2017.png')}}" alt="" />
                                 <h3 class="text-center">Conference Booklet FCS2017</h3>
-                                <a class="button button-small button-line-dark fcs-btn" href="#">download pdf</a>
+                                <a class="button button-small button-line-dark fcs-btn" href="https://drive.google.com/file/d/1nQgBJpwkwH4XA0bOEgq1_wpU6knU3CQk/view">download pdf</a>
                             </div>
                         </div>
 
@@ -813,7 +823,7 @@
                             <div>
                                 <img class="img-media-kit" src="{{asset('img/Marketing-Proposal-FCS2018.png')}}" alt="" />
                                 <h3 class="text-center">Marketing Proposal FCS2018</h3>
-                                <a class="button button-small button-line-dark fcs-btn" href="#">download pdf</a>
+                                <a class="button button-small button-line-dark fcs-btn" href="https://drive.google.com/file/d/1MuSQCa95J1P7puAF5ClrS4yl_GzLDofE/view?usp=sharing">download pdf</a>
                             </div>
                         </div>
 
@@ -821,7 +831,7 @@
                             <div>
                                 <img class="img-media-kit" src="{{asset('img/Organization-Document-FCS2018.png')}}" alt="" />
                                 <h3 class="text-center">Organization Document FCS2018</h3>
-                                <a class="button button-small button-line-dark fcs-btn" href="#">download pdf</a>
+                                <a class="button button-small button-line-dark fcs-btn" href="https://drive.google.com/open?id=1JGOlPEPsjUN91LDYszBS92qOgH7e7DRM">download pdf</a>
                             </div>
                         </div>
 

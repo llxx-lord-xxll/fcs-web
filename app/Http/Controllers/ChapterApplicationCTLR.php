@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
 use Illuminate\Validation\Rule;
 use LVR\CountryCode\Two;
+use Mockery\Exception;
 
 class ChapterApplicationCTLR extends Controller
 {
@@ -32,33 +33,34 @@ class ChapterApplicationCTLR extends Controller
     public function submitToDB(Request $request)
     {
         $deckname = null;
-        if($request->has('delegate-pitching-deck'))
-        {
-            $deckname = $request->input('full_name') . '_' . $request->input('open_chapter') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
-            $f = $request->file('delegate-pitching-deck');
-            $f->move(base_path('public\uploads\pitching-decks'),$deckname);
+        try {
+            if ($request->has('delegate-pitching-deck')) {
+                $deckname = $request->input('full_name') . '_' . $request->input('open_chapter') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
+                $f = $request->file('delegate-pitching-deck');
+                $f->move(base_path('public\uploads\pitching-decks'), $deckname);
+            }
+            $caf = new ChapterApplicationForm();
+            $caf->name = $request->input('full_name');
+            $caf->nationality = $request->input('choose_country');
+            $caf->occupation = $request->input('occupation');
+            $caf->university = $request->input('university-name');
+            $caf->company = $request->input('company-organization');
+            $caf->ministry = $request->input('ministry-department');
+            $caf->email = $request->input('email_address');
+            $caf->mob = $request->input('phone_number');
+            $caf->facebook = $request->input('delegate-social-fb');
+            $caf->linkedin = $request->input('delegate-social-li');
+            $caf->scholarhub = $request->input('delegate-social-sh');
+            $caf->pitching_deck = $deckname;
+            $caf->chapter_name = $request->input('open_chapter');
+            $caf->save();
         }
-        $caf = new ChapterApplicationForm();
-        $caf->name = $request->input('full_name');
-        $caf->nationality = $request->input('choose_country');
-        $caf->occupation = $request->input('occupation');
-        $caf->university = $request->input('university-name');
-        $caf->company = $request->input('company-organization');
-        $caf->ministry = $request->input('ministry-department');
-        $caf->email = $request->input('email_address');
-        $caf->mob = $request->input('phone_number');
-        $caf->facebook = $request->input('delegate-social-fb');
-        $caf->linkedin = $request->input('delegate-social-li');
-        $caf->scholarhub = $request->input('delegate-social-sh');
-        $caf->pitching_deck = $deckname;
-        $caf->chapter_name = $request->input('open_chapter');
-
-        if($caf->save())
+        catch (\Exception $e)
         {
-            return true;
+           return false;
         }
 
-        return false;
+        return true;
     }
 
     public function submitForm(Request $request){

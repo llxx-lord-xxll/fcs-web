@@ -77,9 +77,16 @@ Route::get('/legal', function () {
 
 Route::prefix('summit')->group(function () {
     Route::prefix('2018')->group(function () {
-        Route::get('overview', function () {
-            return view('overview-fcs18');
+        Route::get('overview', function (\Illuminate\Http\Request $request) {
+            $ret = new \App\Http\Controllers\NewsletterSubscriptionCTLR();
+
+            return $ret->returnView($request);
         })->name('overview18');
+
+        Route::post('overview', function (\Illuminate\Http\Request $request) {
+            $ret = new \App\Http\Controllers\NewsletterSubscriptionCTLR();
+            return $ret->submitForm($request);
+        });
 
         Route::get('schedule', function () {
             return view('schedule');

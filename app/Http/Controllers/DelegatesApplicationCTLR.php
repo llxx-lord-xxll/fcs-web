@@ -39,53 +39,54 @@ class DelegatesApplicationCTLR extends Controller
     {
 
         $deckname = null;
-        if($request->has('delegate-pitching-deck'))
-        {
-            $deckname = $request->input('last_name') . '_' . $request->input('city_name') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
-            $f = $request->file('delegate-pitching-deck');
-            $f->move(base_path('public/uploads/pitching-decks'),$deckname);
 
-        }
-        $df = new DelegateForm();
-        $df->title = $request->input('salutation');
-        $df->first_name = $request->input('first_name');
-        $df->last_name = $request->input('last_name');
-        $df->preferred_name = $request->input('full_name');
-        $df->nationality = $request->input('choose_country');
-        $df->city = $request->input('city_name');
-        $df->occupation = $request->input('occupation');
-        $df->university = $request->input('university-name');
-        $df->company = $request->input('company-organization');
-        $df->ministry = $request->input('ministry-department');
-        $df->email = $request->input('email_address');
-        $df->mob = $request->input('phone_number');
-        $df->facebook = $request->input('delegate-social-fb');
-        $df->linkedin = $request->input('delegate-social-li');
-        $df->scholarhub = $request->input('delegate-social-sh');
-        $df->pitching_deck = $deckname;
-        $df->purpose = $request->input('fcs-purpose');
-        $df->city_message = $request->input('delegate-city-message');
-        $df->track_conference = $request->input('track-conference');
-        $df->chapter_referral = $request->input('fcs-chapter-referral');
-        $df->referred_person = $request->input('referred-person');
-        $df->fcs_package = $request->input('fcs-package');
-        $df->scholarship = $request->input('fcs-scholarship');
-        $df->newsletter_subscription = $request->input('fcs-newsletter-subscription');
+        try {
+            if ($request->has('delegate-pitching-deck')) {
+                $deckname = $request->input('last_name') . '_' . $request->input('city_name') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
+                $f = $request->file('delegate-pitching-deck');
+                $f->move(base_path('public/uploads/pitching-decks'), $deckname);
 
-        if($df->save())
-        {
+            }
+            $df = new DelegateForm();
+            $df->title = $request->input('salutation');
+            $df->first_name = $request->input('first_name');
+            $df->last_name = $request->input('last_name');
+            $df->preferred_name = $request->input('full_name');
+            $df->nationality = $request->input('choose_country');
+            $df->city = $request->input('city_name');
+            $df->occupation = $request->input('occupation');
+            $df->university = $request->input('university-name');
+            $df->company = $request->input('company-organization');
+            $df->ministry = $request->input('ministry-department');
+            $df->email = $request->input('email_address');
+            $df->mob = $request->input('phone_number');
+            $df->facebook = $request->input('delegate-social-fb');
+            $df->linkedin = $request->input('delegate-social-li');
+            $df->scholarhub = $request->input('delegate-social-sh');
+            $df->pitching_deck = $deckname;
+            $df->purpose = $request->input('fcs-purpose');
+            $df->city_message = $request->input('delegate-city-message');
+            $df->track_conference = $request->input('track-conference');
+            $df->chapter_referral = $request->input('fcs-chapter-referral');
+            $df->referred_person = $request->input('referred-person');
+            $df->fcs_package = $request->input('fcs-package');
+            $df->scholarship = $request->input('fcs-scholarship');
+            $df->newsletter_subscription = $request->input('fcs-newsletter-subscription');
+            $df->save();
+
             $data = ['email' => $request->input('email_address'),'name'=> $request->input('first_name'),'request'=>$request,'pitching_deck' =>$deckname];
             Mail::send('mails.delegateapp-form-to-admin', $data, function ($m) use ($data) {
                 $m->from($data['email'], $data['name']);
                 $m->replyTo($data['email'], $data['name']);
                 $m->to('community@futurecitysummit.org','Ms. Priya Ghandi' )->subject('A new delegate application form submitted - Future City Summit');
             });
-
             return true;
         }
+        catch (\Exception $e)
+        {
+            return false;
+        }
 
-
-        return false;
     }
 
     public function submitForm(Request $request){

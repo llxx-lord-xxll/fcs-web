@@ -31,19 +31,22 @@ class ContactFormCTLR extends Controller
 
     public function submitToDB($name,$email,$country,$mob,$message)
     {
-        $cf = new ContactForm();
-        $cf->name = $name;
-        $cf->email = $email;
-        $cf->country = $country;
-        $cf->mob = $mob;
-        $cf->message = $message;
-        if($cf->save())
+        try {
+            $cf = new ContactForm();
+            $cf->name = $name;
+            $cf->email = $email;
+            $cf->country = $country;
+            $cf->mob = $mob;
+            $cf->message = $message;
+            $cf->save();
+        }
+        catch (\Exception $e)
         {
-            return true;
+            return false;
         }
 
+        return true;
 
-        return false;
     }
 
     public function submitForm(Request $request){
