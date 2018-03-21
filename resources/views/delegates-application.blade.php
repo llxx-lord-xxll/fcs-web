@@ -46,6 +46,16 @@
                                         <input type="Radio" name="salutation" value="Miss" id="salutation-miss">
                                         <label for="salutation-miss">Miss.</label>
                                     </li>
+                                    <br>
+                                    <li>
+                                        <input type="Radio" name="salutation" value="Prof" id="salutation-miss">
+                                        <label for="salutation-miss">Prof.</label>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <input type="Radio" name="salutation" value="Dr" id="salutation-miss">
+                                        <label for="salutation-miss">Dr.</label>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
@@ -484,6 +494,9 @@
 
 @section('scripts')
     <script type="text/javascript">
+        @if(isset($success))
+        fbq('track', 'CompleteRegistration');
+        @endif
        $(document).ready(function () {
            $('#fcs-chapter-referral').change(function() {
                if($(this).val() === "0")

@@ -202,3 +202,8 @@ Route::post('/applications/chapter', function (\Illuminate\Http\Request $request
 
 });
 
+Route::get('/unsubscribe/{code}',function (\Illuminate\Http\Request $request,$code){
+    $ret = new \App\Http\Controllers\NewsletterSubscriptionCTLR();
+    return $ret->unsubscribe($request,$code);
+});
+

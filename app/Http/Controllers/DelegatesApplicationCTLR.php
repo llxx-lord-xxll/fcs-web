@@ -92,7 +92,7 @@ class DelegatesApplicationCTLR extends Controller
     public function submitForm(Request $request){
 
         $validator = Validator::make($request->all(),[
-            'salutation' => ['required',Rule::in(['Mr.','Mrs.','Miss'])],
+            'salutation' => ['required',Rule::in(['Mr.','Mrs.','Miss','Prof','Dr'])],
             'first_name' => 'required|regex:/^[\s\w-]*$/',
             'last_name' => 'required|regex:/^[\s\w-]*$/',
             'full_name' => 'required|regex:/^[\s\w-]*$/',

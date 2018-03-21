@@ -148,6 +148,10 @@
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:undefined;width:300px;">
                     <![endif]-->
 
+                    @hasSection('footer')
+                    @yield('footer')
+                    @endif
+
                     <div class="" style="cursor:auto;color:#858585;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:12px;line-height:22px;text-align:center;">&copy;2018 Future City Summit, All Rights Reserved<br>
                     </div>
                     <!--[if mso | IE]>

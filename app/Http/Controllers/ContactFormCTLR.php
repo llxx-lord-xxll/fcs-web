@@ -31,6 +31,7 @@ class ContactFormCTLR extends Controller
 
     public function submitToDB($name,$email,$country,$mob,$message)
     {
+
         try {
             $cf = new ContactForm();
             $cf->name = $name;

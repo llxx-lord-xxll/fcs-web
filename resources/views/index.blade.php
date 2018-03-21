@@ -394,6 +394,7 @@
     </section>
 
     <!-- REGISTER -->
+    <!--
     <section id="register">
         <div class="container">
             <div class="row">
@@ -405,6 +406,8 @@
 
                 <div class="col-lg-12">
                     <!-- PRICE TABLES -->
+
+    <!--
                     <div id="price-carousel">
 
                         <div class="price-table early-bird">
@@ -474,6 +477,9 @@
             </div>
         </div>
     </section>
+
+    -->
+
 
 
     <!-- GALLERY -->
@@ -775,16 +781,16 @@
                         <div class="row">
                             <div class="col-lg-12 partner-row">
                                 <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/geb-logo.png" alt="" /></a>
+                                    <a href="#"><img src="{{asset('img/geb-logo.png')}}" alt="" /></a>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/gsc-logo.png" alt="" /></a>
+                                    <a href="#"><img src="{{asset('img/gsc-logo.png')}}" alt="" /></a>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/gsd-logo-black.png" alt="" /></a>
+                                    <a href="#"><img src="{{asset('img/gsd-logo-black.png')}}" alt="" /></a>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img src="img/choson-exchange-logo.png" alt="" /></a>
+                                    <a href="#"><img src="{{asset('img/choson-exchange-logo.png')}}" alt="" /></a>
                                 </div>
                             </div>
                         </div>
@@ -921,6 +927,28 @@
     <script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
     <script src="{{asset('js/jquery.mediaBoxes.dropdown.js')}}"></script>
     <script src="{{asset('js/jquery.mediaBoxes.js')}}"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1738317552847133');
+        fbq('track', 'PageView');
+
+    </script>
+
+    <noscript>
+        <img height="1" width="1"
+             src="https://www.facebook.com/tr?id=1738317552847133&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
 
     <script type="text/javascript">
         jQuery(document).ready(function($) {

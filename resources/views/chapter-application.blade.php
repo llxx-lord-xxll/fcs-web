@@ -350,3 +350,11 @@
     </section>
     @endsection
 
+@section('scripts')
+    <script type="text/javascript">
+        @if(isset($success))
+        fbq('track', 'CompleteRegistration');
+    @endif
+
+@endsection
+

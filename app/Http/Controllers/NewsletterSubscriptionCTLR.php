@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\NewsletterSubscriptions;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Contracts\Encryption\EncryptException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
@@ -36,6 +39,7 @@ class NewsletterSubscriptionCTLR extends Controller
             $cf->email = $email;
             $cf->tag = $tag;
             $cf->save();
+            return encrypt($cf->id . '|' . $cf->email);
         }
         catch (\Exception $e)
         {
@@ -43,7 +47,6 @@ class NewsletterSubscriptionCTLR extends Controller
         }
 
 
-        return true;
     }
 
 
@@ -78,7 +81,13 @@ class NewsletterSubscriptionCTLR extends Controller
             }
 
             $this->suc = 'Thank you for subscribing to our newsletter';
-            $data = ['email' => $request->input('email-address'),'name'=> $request->input('full-name'),'ip'=>$request->ip(),'msg' => $request->input('contact-message'),'mob' => $request->input('phone-number'),'country'=> $request->input('choose-country')];
+            $data = ['request'=>$request,'link' => env('APP_URL') . '/unsubscribe/' . $res];
+
+            Mail::send('mails.newsletter-subscription', $data, function ($m) use ($data) {
+                $m->from('no-reply@futurecitysummit.org', 'Future City Summit');
+                $m->replyTo('community@futurecitysummit.org', 'Ms. Priya Ghandi');
+                $m->to($data['request']->input('email'), $data['request']->input('myname'))->subject('Newsletter program - Future City Summit');
+            });
 
             return $this->returnView($request);
 
@@ -87,7 +96,34 @@ class NewsletterSubscriptionCTLR extends Controller
 
     }
 
+    public function unsubscribe(Request $request,$code)
+    {
+        $v = View('newsletter-unsubscribe');
+        try {
+            $code = decrypt($code);
+            $msg = '';
+            if (strpos($code, '|') !== false) {
+                $arrCode = explode('|', $code, 2);
+                $get_unsub = NewsletterSubscriptions::where('id', '=', $arrCode[0])->where('email', '=', $arrCode[1])->first();
+                if ($get_unsub) {
+                    $get_unsub->delete();
+                    $msg = "Your email $arrCode[1] will no longer receive any newsletter email further";
 
+                } else {
+                    $msg = "Your email $arrCode[1] is already unsubscribed";
+                    $v->with('error', "1");
+                }
+                $v->with('msg', $msg);
+            }
+        }
+        catch (DecryptException $e)
+        {
+            abort(404);
+        }
+
+
+        return $v;
+    }
 
 
 }
