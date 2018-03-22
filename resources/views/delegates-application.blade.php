@@ -32,6 +32,16 @@
                                 <p @if($errors->has('salutation')) class="text-danger"  @endif>Title *</p>
                                 <ul class="fcs-form-inner">
                                     <li>
+                                        <input type="Radio" name="salutation" value="Dr" id="salutation-dr">
+                                        <label for="salutation-dr">Dr.</label>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <input type="Radio" name="salutation" value="Prof" id="salutation-prof">
+                                        <label for="salutation-prof">Prof.</label>
+                                    </li>
+                                    <br>
+                                    <li>
                                         <input type="Radio" name="salutation" value="Mr." id="salutation-mr"
                                                checked>
                                         <label for="salutation-mr">Mr.</label>
@@ -46,16 +56,10 @@
                                         <input type="Radio" name="salutation" value="Miss" id="salutation-miss">
                                         <label for="salutation-miss">Miss.</label>
                                     </li>
-                                    <br>
-                                    <li>
-                                        <input type="Radio" name="salutation" value="Prof" id="salutation-miss">
-                                        <label for="salutation-miss">Prof.</label>
-                                    </li>
-                                    <br>
-                                    <li>
-                                        <input type="Radio" name="salutation" value="Dr" id="salutation-miss">
-                                        <label for="salutation-miss">Dr.</label>
-                                    </li>
+
+
+
+
                                 </ul>
                             </li>
                             <li>

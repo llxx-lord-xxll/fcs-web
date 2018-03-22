@@ -110,6 +110,7 @@ class NewsletterSubscriptionCTLR extends Controller
                     $msg = "Your email $arrCode[1] will no longer receive any newsletter email further";
 
                 } else {
+                    abort(404);
                     $msg = "Your email $arrCode[1] is already unsubscribed";
                     $v->with('error', "1");
                 }
