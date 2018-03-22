@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    About us
+    404 Not Found
 @endsection
 
 
