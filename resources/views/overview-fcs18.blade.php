@@ -669,7 +669,7 @@
                         <div class="row">
                             <div class="col-lg-12 partner-row">
                                 <div class="col-lg-3 col-lg-offset-4 col-md-3 col-md-offset-4 col-sm-4 col-sm-offset-4 sponsor-partner">
-                                    <a href="#"><img class="home-partner-logo" src="{{asset('img/sjc-logo.png')}}')}}" alt="" /></a>
+                                    <a href="#"><img class="home-partner-logo" src="{{asset('img/sjc-logo.png')}}" alt="" /></a>
                                 </div>
                             </div>
                         </div>
