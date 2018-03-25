@@ -203,13 +203,13 @@
                 </a>
                 <div class="as-layer as-closed as-white panel-counter"
                      data-position="bottomLeft" data-horizontal="8" data-vertical="8">
-                    Entrepreneurship of All
+                    Entrepreneurship For All
                 </div>
 
                 <h3 class="as-layer as-opened as-black as-padding"
                     data-horizontal="40" data-vertical="10%"
                     data-show-transition="left" data-hide-transition="left">
-                    Entrepreneurship of All
+                    Entrepreneurship For All
                 </h3>
 
                 <p class="as-layer as-opened as-black as-padding hide-small-screen"
@@ -317,13 +317,13 @@
 
                 <div class="as-layer as-closed as-white panel-counter"
                      data-position="bottomLeft" data-horizontal="8" data-vertical="8">
-                    Space and Extra-terrestrial
+                    Space Technology in Asia
                 </div>
 
                 <h3 class="as-layer as-opened as-black as-padding"
                     data-horizontal="40" data-vertical="10%"
                     data-show-transition="left" data-hide-transition="left">
-                    Space and Extra-terrestrial
+                    Space Technology in Asia
                 </h3>
 
                 <p class="as-layer as-opened as-black as-padding hide-small-screen"

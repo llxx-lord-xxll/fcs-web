@@ -62,7 +62,7 @@
             <div class="row">
 
                 <div class="col-lg-12 text-center">
-                    <h1>About Future City Summit and FCS2018</h1>
+                    <h1 class="uppercase">About Future City Summit and FCS2018</h1>
                     <p class="lead text-center">Future City Summit is an avenue to gather young government leaders, entrepreneurs, investors and scholar, over deep conversations of future cities and collaboration.</p>
                     <p class="lead text-center">A great journey of future cities begins with an idea of gathering bright minds. When we look back, dots are connected. This is the footprint left by every doer together that makes a step of civilisation.</p>
                 </div>
@@ -135,8 +135,8 @@
     <section class="landing-gallery-section">
         <div class="landing-gallery-grid-section">
 
-            <div class="headline">
-                <h2 class="text-center">Previous Year Highlights</h2>
+            <div class="headline text-center">
+                <h2 class="uppercase ">Previous Year Highlights</h2>
             </div>
 
             <div class="content grid-container">
@@ -299,7 +299,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12 panel-section">
+                <div class="col-lg-12 panel-section text-center">
                     <h2 class="uppercase">Previous Speakers</h2>
                 </div>
 
@@ -313,8 +313,8 @@
                                     <img src="{{asset('img/speaker-regina-ip.jpg')}}" alt="" />
                                 </div>
                                 <div class="speaker-content">
-                                    <h4>Regina Ip Lau Suk-yee</h4>
-                                    <p>GBS, JP, Executive Council of Hong Kong</p>
+                                    <h4>Regina Ip Lau Suk-yee GBS, JP</h4>
+                                    <p>Executive Council of Hong Kong</p>
                                 </div>
                             </div>
                         </div>
@@ -326,8 +326,8 @@
                                     <img src="{{asset('img/speaker-ada-wong.jpg')}}" alt="" />
                                 </div>
                                 <div class="speaker-content">
-                                    <h4>Ada Wong</h4>
-                                    <p>JP, Chairperson, Make A Difference Institute</p>
+                                    <h4>Ada Wong JP</h4>
+                                    <p>Chairperson, Make A Difference Institute</p>
                                 </div>
                             </div>
                         </div>
@@ -338,8 +338,8 @@
                                     <img src="{{asset('img/speaker-winnie-tang.jpg')}}" alt="" />
                                 </div>
                                 <div class="speaker-content">
-                                    <h4>Dr. Winnie Tang</h4>
-                                    <p>JP, Founder and Honorary President, Smart City Consortium</p>
+                                    <h4>Dr. Winnie Tang JP</h4>
+                                    <p>Founder and Honorary President, Smart City Consortium</p>
                                 </div>
                             </div>
                         </div>
@@ -351,8 +351,8 @@
                                     <img src="{{asset('img/speaker-jasper-tsang.jpg')}}" alt="" />
                                 </div>
                                 <div class="speaker-content">
-                                    <h4>Jasper Tsang Yok-sing</h4>
-                                    <p>GBM, JP, 2nd President of the Legislative Council, HK SAR</p>
+                                    <h4>Jasper Tsang Yok-sing GBM, JP</h4>
+                                    <p>2nd President of the Legislative Council, HK SAR</p>
                                 </div>
                             </div>
                         </div>
