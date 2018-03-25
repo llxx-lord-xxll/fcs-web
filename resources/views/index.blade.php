@@ -892,6 +892,8 @@
     </section>
     <!-- End of Supporting Organization -->
     <!-- University Host -->
+
+
     <section id="sponsors">
         <div class="container">
             <div class="row">
@@ -901,11 +903,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12 partner-row">
-                                <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-4 col-sm-offset-3 sponsor-partner">
-                                    <a href="#"><img src="img/hku-archi-logo.png" alt="" /></a>
+                                <div class="col-lg-6 col-lg-offset-2 col-md-6 col-md-2 col-sm-6 col-sm-offset-1 sponsor-partner">
+                                    <a href="#"><img class="img-responsive" src="{{asset('img/hku-archi-logo.png')}}" alt="" /></a>
                                 </div>
                                 <div class="col-lg-3 col-md-3 col-sm-4 sponsor-partner">
-                                    <a href="#"><img class="home-university-logo" src="img/sysu-logo.png" alt="" /></a>
+                                    <a href="#"><img class="home-university-logo" src="{{asset('img/sysu-logo.png')}}" alt="" /></a>
                                 </div>
                             </div>
                         </div>
