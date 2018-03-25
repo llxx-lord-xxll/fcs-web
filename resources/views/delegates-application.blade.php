@@ -398,17 +398,17 @@
                             </li>
                             <li>
 
-                                <p @if($errors->has('track-conference')) class="text-danger"  @endif>Choose any of the track you're interested to participate *</p>
+                                <p @if($errors->has('track-conference')) class="text-danger"  @endif>Please choose a delegate package to apply *</p>
                                 <ul class="fcs-form-inner">
                                     <li>
                                         <input type="radio" id="track-conference" name="track-conference"
-                                               value="Hackathon">
-                                        <label for="track-conference">Hackathon</label>
+                                               value="STANDARD">
+                                        <label for="track-conference">STANDARD PACKAGE</label>
                                     </li>
                                     <li>
                                         <input type="radio" id="track-conference" name="track-conference"
-                                               value="Industry Visit">
-                                        <label for="track-conference">Industry Visit</label>
+                                               value="EXECUTIVE">
+                                        <label for="track-conference">EXECUTIVE PACKAGE</label>
                                     </li>
                                 </ul>
                             </li>

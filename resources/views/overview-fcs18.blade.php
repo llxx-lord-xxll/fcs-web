@@ -712,7 +712,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="uppercase text-center">Supporting Organization</h2>
+                    <h2 class="uppercase text-center">Supporting Organizations</h2>
 
                     <div class="container">
                         <div class="row">

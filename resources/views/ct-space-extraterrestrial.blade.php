@@ -13,7 +13,7 @@
     <!-- PAGE HEADER SECTION-->
     <div class="bg-image-space">
         <div class="container-fluid">
-            <h1 class="header-style">Space and Extraterrestrial</h1>
+            <h1 class="header-style">Space Technology in Asia</h1>
         </div>
     </div>
 
@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="container special-textbox col-lg-12 col-md-12 col-xs-12">
-                    <h2 class="conference-topic-title">Space and Extraterrestrial</h2>
+                    <h2 class="conference-topic-title">Space Technology in Asia</h2>
                     <p class="text-center conference-topic-content">Space has been one of the latest room of exploration and development, especially with the success thrust and landing of Falcon Heavy by SpaceX. Though cities are built on land, the understanding about space contributes hugely to human species, to learn more about weather and climate, solar system and event extraterrestrial. <br>The panel is having the dialogue with entrepreneurs, educators and government leaders from Asia to explore the future of education, and investing in space technology, how human life and development of cities in future are highly linked to understanding of space.</p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title')
-    About us
+    Entrepreneurship For All
     @endsection
 @section('header-extra')
     <link rel="stylesheet" href="{{asset('css/accordion-slider.css')}}">

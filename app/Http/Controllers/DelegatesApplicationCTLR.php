@@ -110,7 +110,7 @@ class DelegatesApplicationCTLR extends Controller
             'delegate-pitching-deck' => 'max:5000|mimes:doc,docx,ppt,pptx,pdf',
             'fcs-purpose' => ['required', new words(60)],
             'delegate-city-message' => ['required', new words(100)],
-            'track-conference' =>['required',Rule::in(['Hackathon','Industry Visit'])],
+            'track-conference' =>['required',Rule::in(['STANDARD','EXECUTIVE'])],
             'fcs-chapter-referral' =>['required',Rule::in(['0','BD','VN','CM','PH','RS'])],
             'referred-person' => 'nullable|regex:/^[\s\w-]*$/',
             'fcs-package' => 'nullable|integer|digits_between:0,5',

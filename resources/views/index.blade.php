@@ -394,7 +394,6 @@
     </section>
 
     <!-- REGISTER -->
-    <!--
     <section id="register">
         <div class="container">
             <div class="row">
@@ -407,7 +406,12 @@
                 <div class="col-lg-12">
                     <!-- PRICE TABLES -->
 
-    <!--
+                    <div class="col-lg-12">
+                        <h2 class="uppercase text-center">STANDARD PACKAGE</h2>
+                        <p class="lead text-center">(Dormitory in The University of Hong Kong)</p>
+                    </div>
+
+
                     <div id="price-carousel">
 
                         <div class="price-table early-bird">
@@ -417,13 +421,13 @@
 
                             <div class="table-header">
                                 <h3>Early Bird</h3>
-                                <p class="price">$330</p>
-                                <p class="early-date center-right">Deadline: 1<sup>st</sup> May, 2018</p>
+                                <p class="price">$400</p>
+                                <p class="early-date center-right">Deadline: 1st May, 2018</p>
                             </div>
 
                             <ul class="desc list-unstyled">
-                                <li>5 Nights Accommodation (HK and GZ)</li>
-                                <li>Transportation (Transfer to GZ Included)</li>
+                                <li><strong>6 Nights Accommodation in HK, GZ &amp; FS (HKU Dormitory)</strong></li>
+                                <li>Transportation (Transfer to GZ &amp; FS Included)</li>
                                 <li>Conference Kit, Industry Visits &amp; Workshops</li>
                                 <li>Refreshment &amp; Meals</li>
                             </ul>
@@ -436,13 +440,13 @@
 
                             <div class="table-header">
                                 <h3>REGULAR</h3>
-                                <p class="price">$350</p>
-                                <p class="early-date">Deadline: 1<sup>st</sup> June, 2018</p>
+                                <p class="price">$420</p>
+                                <p class="early-date">Deadline: 1st June, 2018</p>
                             </div>
 
                             <ul class="desc list-unstyled">
-                                <li>5 Nights Accommodation (HK and GZ)</li>
-                                <li>Transportation (Transfer to GZ Included)</li>
+                                <li><strong>6 Nights Accommodation in HK, GZ &amp; FS (HKU Dormitory)</strong></li>
+                                <li>Transportation (Transfer to GZ &amp; FS Included)</li>
                                 <li>Conference Kit, Industry Visits &amp; Workshops</li>
                                 <li>Refreshment &amp; Meals</li>
                             </ul>
@@ -455,13 +459,83 @@
 
                             <div class="table-header">
                                 <h3>FINAL</h3>
-                                <p class="price">$370</p>
-                                <p class="early-date">Deadline: 1<sup>st</sup> July, 2018</p>
+                                <p class="price">$440</p>
+                                <p class="early-date">Deadline: 1st July, 2018</p>
                             </div>
 
                             <ul class="desc list-unstyled">
-                                <li>5 Nights Accommodation (HK and GZ)</li>
-                                <li>Transportation (Transfer to GZ Included)</li>
+                                <li><strong>6 Nights Accommodation in HK, GZ &amp; FS (HKU Dormitory)</strong></li>
+                                <li>Transportation (Transfer to GZ &amp; FS Included)</li>
+                                <li>Conference Kit, Industry Visits &amp; Workshops</li>
+                                <li>Refreshment &amp; Meals</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- End opf Standard Pricing Table-->
+
+                <div class="col-lg-12">
+                    <!-- PRICE TABLES -->
+                    <div class="col-lg-12">
+                        <h2 class="uppercase text-center">EXECUTIVE PACKAGE</h2>
+                        <p class="lead text-center">(International 5* Hotel with Shuttle Service in Hong Kong)</p>
+                    </div>
+
+                    <div id="executive-price-carousel">
+
+                        <div class="price-table premium-early-bird">
+                            <div class="icon">
+                                <i class="pe-5x pe-7s-wristwatch"></i>
+                            </div>
+
+                            <div class="table-header">
+                                <h3>Early Bird</h3>
+                                <p class="price">$550</p>
+                                <p class="early-date center-right">Deadline: 1st May, 2018</p>
+                            </div>
+
+                            <ul class="desc list-unstyled">
+                                <li><strong>6 Nights Accommodation in HK, GZ &amp; FS (5&#42; International Hotel in Hong Kong with Shuttle Service)</strong></li>
+                                <li>Transportation (Transfer to GZ &amp; FS Included)</li>
+                                <li>Conference Kit, Industry Visits &amp; Workshops</li>
+                                <li>Refreshment &amp; Meals</li>
+                            </ul>
+                        </div>
+
+                        <div class="price-table premium-standart">
+                            <div class="icon">
+                                <i class="pe-5x pe-va pe-7s-ribbon"></i>
+                            </div>
+
+                            <div class="table-header">
+                                <h3>REGULAR</h3>
+                                <p class="price">$570</p>
+                                <p class="early-date">Deadline: 1st June, 2018</p>
+                            </div>
+
+                            <ul class="desc list-unstyled">
+                                <li><strong>6 Nights Accommodation in HK, GZ &amp; FS (5&#42; International Hotel in Hong Kong with Shuttle Service)</strong></li>
+                                <li>Transportation (Transfer to GZ &amp; FS Included)</li>
+                                <li>Conference Kit, Industry Visits &amp; Workshops</li>
+                                <li>Refreshment &amp; Meals</li>
+                            </ul>
+                        </div>
+
+                        <div class="price-table premium-vip">
+                            <div class="icon">
+                                <i class="pe-5x pe-va pe-7s-diamond"></i>
+                            </div>
+
+                            <div class="table-header">
+                                <h3>FINAL</h3>
+                                <p class="price">$590</p>
+                                <p class="early-date">Deadline: 1st July, 2018</p>
+                            </div>
+
+                            <ul class="desc list-unstyled">
+                                <li><strong>6 Nights Accommodation in HK, GZ &amp; FS (5&#42; International Hotel in Hong Kong with Shuttle Service)</strong></li>
+                                <li>Transportation (Transfer to GZ &amp; FS Included)</li>
                                 <li>Conference Kit, Industry Visits &amp; Workshops</li>
                                 <li>Refreshment &amp; Meals</li>
                             </ul>
@@ -470,15 +544,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 text-center">
-                    <a class="button button-small button-line-dark" href="{{route('app_delegate')}}">Register Now </a>
-                </div>
+
+                <!-- End of Pricing Table -->
 
             </div>
         </div>
     </section>
 
-    -->
+    <!-- End of Executive Register -->
+
 
 
 
@@ -872,7 +946,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="uppercase text-center">Supporting Organization</h2>
+                    <h2 class="uppercase text-center">Supporting Organizations</h2>
 
                     <div class="container">
                         <div class="row">
