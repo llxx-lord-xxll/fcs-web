@@ -114,7 +114,7 @@
     <section class="global-agenda">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12  text-center">
                     <h2 class="uppercase ga-row">global agenda</h2>
                 </div>
                 <div class="container-fluid">
@@ -162,7 +162,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12 panel-section">
+                <div class="col-lg-12 panel-section text-center">
                     <h2 class="uppercase">Founding Team</h2>
                 </div>
 
@@ -233,7 +233,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12 panel-section">
+                <div class="col-lg-12 panel-section text-center">
                     <h2 class="uppercase">Honorary Advisors</h2>
                 </div>
 
@@ -247,8 +247,8 @@
                                     <img src="img/advisor1-srinivas-kollipara.jpg" alt="" />
                                 </div>
                                 <div class="speaker-content">
-                                    <h4>Srinivas Kallipara</h4>
-                                    <p>Chief Operation Officer, T-Hub India</p>
+                                    <h4>Srinivas Kollipara</h4>
+                                    <p>Founder & COO, T-Hub India</p>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +305,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12 panel-section">
+                <div class="col-lg-12 panel-section text-center">
                     <h2 class="uppercase">Young Advisors</h2>
                 </div>
 
@@ -448,7 +448,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12 panel-section">
+                <div class="col-lg-12 panel-section text-center">
                     <h2 class="uppercase">Organizing Team</h2>
                 </div>
 
