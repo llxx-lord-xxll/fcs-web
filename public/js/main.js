@@ -178,24 +178,41 @@ jQuery(document).ready(function($) {
 		  navigationText : ['<i class="pe-4x pe-7s-angle-left pe-border"></i>','<i class="pe-4x  pe-7s-angle-right pe-border"></i>'],
 	  });
 
-	  //OWLCAROUSEL PRICE TABLE CAROUSEL
-	var owl = $("#price-carousel");
+    //OWLCAROUSEL STANDARD PRICE TABLE CAROUSEL
+    var owl = $("#price-carousel");
 
-	  owl.owlCarousel({
-		  itemsCustom : [
-			[0, 1],
-			[450, 1],
-			[600, 2],
-			[700, 3],
-			[1000, 3],
-			[1200, 3],
-		  ],
-		  pagination : false,
-		  navigation : true,
-		  navigationText : ['<i class="pe-4x pe-7s-angle-left pe-border"></i>','<i class="pe-4x  pe-7s-angle-right pe-border"></i>'],
-	  });
+    owl.owlCarousel({
+        itemsCustom : [
+            [0, 1],
+            [450, 1],
+            [600, 2],
+            [700, 3],
+            [1000, 3],
+            [1200, 3],
+        ],
+        pagination : false,
+        navigation : true,
+        navigationText : ['<i class="pe-4x pe-7s-angle-left pe-border"></i>','<i class="pe-4x  pe-7s-angle-right pe-border"></i>'],
+    });
+    //OWLCAROUSEL EXECUTIVE PRICE TABLE CAROUSEL
+    var owl = $("#executive-price-carousel");
 
-	//OWLCAROUSEL TESTIMONIAL CAROUSEL
+    owl.owlCarousel({
+        itemsCustom : [
+            [0, 1],
+            [450, 1],
+            [600, 2],
+            [700, 3],
+            [1000, 3],
+            [1200, 3],
+        ],
+        pagination : false,
+        navigation : true,
+        navigationText : ['<i class="pe-4x pe-7s-angle-left pe-border"></i>','<i class="pe-4x  pe-7s-angle-right pe-border"></i>'],
+    });
+
+
+    //OWLCAROUSEL TESTIMONIAL CAROUSEL
 	var owl = $("#testimonial-carousel");
 
 	  owl.owlCarousel({

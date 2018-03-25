@@ -869,7 +869,7 @@ a {
 }
 
 .price-table {
-	color:#ffffff;
+	color:#33404c;
 	background:#94cc34;
 	padding:20px;
 	line-height:1;
@@ -888,6 +888,18 @@ a {
 
 .vip {
 	background:#94cc34;
+}
+
+.premium-early-bird {
+	background:#4fd6ff;
+}
+
+.premium-standart {
+	background:#3cd1ff;
+}
+
+.premium-vip {
+	background:#29cdff;
 }
 
 .price-table .icon {
@@ -4736,4 +4748,9 @@ input[type="submit"]:active {
 	-moz-background-size: cover;
 	height: 400px;
 	width:100%;
+}
+
+/* Media Heading Section */
+.media-heading {
+	padding: 30px 30px 60px;
 }
