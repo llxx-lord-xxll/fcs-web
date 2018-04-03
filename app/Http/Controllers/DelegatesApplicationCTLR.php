@@ -52,6 +52,7 @@ class DelegatesApplicationCTLR extends Controller
             $df->first_name = $request->input('first_name');
             $df->last_name = $request->input('last_name');
             $df->preferred_name = $request->input('full_name');
+            $df->passport = $request->input('passport');
             $df->nationality = $request->input('choose_country');
             $df->city = $request->input('city_name');
             $df->occupation = $request->input('occupation');
@@ -96,6 +97,7 @@ class DelegatesApplicationCTLR extends Controller
             'first_name' => 'required|regex:/^[\s\w-]*$/',
             'last_name' => 'required|regex:/^[\s\w-]*$/',
             'full_name' => 'required|regex:/^[\s\w-]*$/',
+            'passport' => 'required',
             'choose_country' => ['required',new Two()],
             'city_name' => 'required|regex:/^[\s\w-]*$/',
             'occupation' => ['required',Rule::in(['student','corporate','ngos','government','university-scholar','others'])],
@@ -121,6 +123,7 @@ class DelegatesApplicationCTLR extends Controller
             [   'first_name' => 'first name',
                 'last_name' => 'last name',
                 'full_name' => 'preferred name',
+                'passport' => 'passport id',
                 'choose_country' => 'nationality',
                 'city_name' => 'city',
                 'university-name' =>'university',

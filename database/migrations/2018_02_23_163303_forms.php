@@ -36,6 +36,7 @@ class Forms extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('preferred_name');
+            $table->string('passport');
             $table->string('nationality');
             $table->string('city');
             $table->string('occupation');

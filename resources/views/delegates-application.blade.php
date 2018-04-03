@@ -65,17 +65,22 @@
                             <li>
                                 <label for="first_name" @if($errors->has('first_name')) class="text-danger"  @endif>First Name * </label>
                                 <input type="text" id="first_name" name="first_name"
-                                       placeholder=" According to Passport" value="{{old('first_name')}}" required>
+                                       placeholder="According to Passport" value="{{old('first_name')}}" required>
                             </li>
                             <li>
                                 <label for="last_name" @if($errors->has('last_name')) class="text-danger"  @endif>Last Name * </label>
                                 <input type="text" id="last_name" name="last_name"
-                                       placeholder=" According to Passport"  value="{{old('last_name')}}" required>
+                                       placeholder="According to Passport"  value="{{old('last_name')}}" required>
                             </li>
                             <li>
                                 <label for="preferred_name" @if($errors->has('full_name')) class="text-danger"  @endif>Preferred Name *</label>
                                 <input type="text" id="preferred_name" name="full_name"  value="{{old('full_name')}}"  required>
                             </li>
+                            <li>
+                                <label for="passport" @if($errors->has('passport')) class="text-danger"  @endif>Passport *</label>
+                                <input type="text" id="passport" name="passport"  value="{{old('passport')}}" placeholder="Your passport number" required>
+                            </li>
+
                             <li>
                                 <label for="choose_country" @if($errors->has('choose_country')) class="text-danger"  @endif> Nationality *</label>
                                 <select name="choose_country" id="choose_country" required>
