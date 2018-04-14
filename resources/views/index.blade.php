@@ -1003,6 +1003,18 @@
     <script src="{{asset('js/jquery.fancybox.min.js')}}"></script>
     <script src="{{asset('js/jquery.mediaBoxes.dropdown.js')}}"></script>
     <script src="{{asset('js/jquery.mediaBoxes.js')}}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117105068-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117105068-1');
+    </script>
+
+
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
