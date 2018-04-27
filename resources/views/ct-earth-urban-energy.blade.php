@@ -5,7 +5,6 @@
     @endsection
 @section('header-extra')
     <link rel="stylesheet" href="{{asset('css/accordion-slider.css')}}">
-
     @endsection
 
 @section('page-content')

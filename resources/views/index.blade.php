@@ -35,7 +35,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018<br>"Cities Beyond Imagination - Once Upon A Time in China"<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
+                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018<br>"Cities Beyond Imagination - Once Upon A Time in China"<br>Guangzhou | Hong Kong | 3rd - 8th August 2018
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -76,7 +76,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>"Cities Beyond Imagination - Rise Again Little Dragon"<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
+                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>"Cities Beyond Imagination - Rise Again Little Dragon"<br>Guangzhou | Hong Kong | 3rd - 8th August 2018
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -117,7 +117,7 @@
                          data-endelementdelay="0.1"
                          data-endspeed="500"
                          data-endeasing="Power4.easeIn"
-                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>- Oriental Express of venture builder and avenue of PPP<br>Guangzhou | Hong Kong | 3rd - 7th August 2018
+                         style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">Future City Summit 2018 <br>- Oriental Express of venture builder and avenue of PPP<br>Guangzhou | Hong Kong | 3rd - 8th August 2018
                     </div>
 
                     <!-- LAYER NR. 2 -->

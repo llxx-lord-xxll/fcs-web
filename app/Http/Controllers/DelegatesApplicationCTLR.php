@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
 use Illuminate\Validation\Rule;
 use LVR\CountryCode\Two;
+use Newsletter;
 
 
 class DelegatesApplicationCTLR extends Controller
@@ -81,10 +82,33 @@ class DelegatesApplicationCTLR extends Controller
                 $m->replyTo($data['email'], $data['name']);
                 $m->to('community@futurecitysummit.org','Ms. Priya Ghandi' )->subject('A new delegate application form submitted - Future City Summit');
             });
+
+
+           Newsletter::subscribeOrUpdate($request->input('email_address'), [
+                'MMERGE5'=>$df->id?$df->id:"",
+                'FNAME'=>$request->input('first_name'),
+                'LNAME'=>$request->input('last_name'),
+                'MMERGE6'=>$request->input('salutation'),
+                'MMERGE7'=>$request->input('first_name'),
+                'MMERGE8'=>$request->input('last_name'),
+                'MMERGE9'=>$request->input('full_name'),
+                'MMERGE10'=>$request->input('passport'),
+                'MMERGE11'=>$request->input('choose_country'),
+                'MMERGE12'=>$request->input('city_name'),
+                'MMERGE13'=>$request->input('occupation'),
+                'MMERGE14'=> $df->university?$df->university:"",
+                'MMERGE15'=>$df->company?$df->company:"",
+                'MMERGE16'=>$df->ministry?$df->company:"",
+                'MMERGE17'=>$request->input('phone_number'),
+            ]);
+
+
+
             return true;
         }
         catch (\Exception $e)
         {
+            print_r($e->getMessage());
             return false;
         }
 
@@ -165,6 +189,8 @@ class DelegatesApplicationCTLR extends Controller
                 $m->replyTo('community@futurecitysummit.org', 'Ms. Priya Ghandi');
                 $m->to($data['email'], $data['name'])->subject('Application for being delegates Submitted - Future City Summit');
             });
+
+
 
             return $this->returnView($request);
         }
