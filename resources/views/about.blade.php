@@ -287,7 +287,7 @@
                                 </div>
                                 <div class="speaker-content">
                                     <h4>Regina Ip Lau Suk-Yee, GBS, JP</h4>
-                                    <p>Co-chair, Executive Committee, Maritime Silk Road Society</p>
+                                    <p>Member, Executive Council (ExCo) of Hong Kong SAR Government</p>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +305,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12 panel-section text-center">
+                <div class="col-lg-12 panel-section">
                     <h2 class="uppercase">Young Advisors</h2>
                 </div>
 
@@ -313,8 +313,8 @@
                     <div class="row">
 
                         <!--Speaker 1-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/aaron-frio.jpg" alt="" />
                                 </div>
@@ -326,8 +326,8 @@
                         </div>
 
                         <!--Speaker 2-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/christopher-david.jpg" alt="" />
                                 </div>
@@ -339,8 +339,8 @@
                         </div>
 
                         <!--Speaker 3-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/durrie-hassan.jpg" alt="" />
                                 </div>
@@ -352,8 +352,8 @@
                         </div>
 
                         <!--Speaker 4-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/jason-lin.jpg" alt="" />
                                 </div>
@@ -365,8 +365,8 @@
                         </div>
 
                         <!-- Young Advisors 5-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/john-mak.jpg" alt="" />
                                 </div>
@@ -376,9 +376,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="clearfix visible-lg visible-md"></div>
                         <!-- Young Advisors 6-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/khagendra.jpg" alt="" />
                                 </div>
@@ -389,8 +390,8 @@
                             </div>
                         </div>
                         <!-- Young Advisors 7-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/koh-onozawa.jpg" alt="" />
                                 </div>
@@ -401,8 +402,8 @@
                             </div>
                         </div>
                         <!-- Young Advisors 8-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/peggy-tse.jpg" alt="" />
                                 </div>
@@ -413,8 +414,8 @@
                             </div>
                         </div>
                         <!-- Young Advisors 9-->
-                        <div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/seb-ko.jpg" alt="" />
                                 </div>
@@ -425,8 +426,8 @@
                             </div>
                         </div>
                         <!-- Young Advisors 10-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/william-du.jpg" alt="" />
                                 </div>
@@ -448,16 +449,16 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-12 panel-section text-center">
+                <div class="col-lg-12 panel-section">
                     <h2 class="uppercase">Organizing Team</h2>
                 </div>
 
                 <div class="container">
                     <div class="row">
 
-                        <!--Speaker 1-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <!--Organizing Team Member 1-->
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/oc2018-nazmul.jpg" alt="" />
                                 </div>
@@ -468,9 +469,9 @@
                             </div>
                         </div>
 
-                        <!--Speaker 2-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <!--Organizing Team Member 2-->
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/oc2018-priya(left).jpg" alt="" />
                                 </div>
@@ -481,9 +482,9 @@
                             </div>
                         </div>
 
-                        <!--Speaker 3-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <!--Organizing Team Member 3-->
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/oc2018-russ.jpg" alt="" />
                                 </div>
@@ -494,9 +495,9 @@
                             </div>
                         </div>
 
-                        <!--Speaker 4-->
-                        <div class="col-lg-3 col-md-3 col-sm-4">
-                            <div class="team-sin text-center">
+                        <!--Organizing Team Member 4-->
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
                                 <div class="speaker-img">
                                     <img src="img/oc2018-shadman.jpg" alt="" />
                                 </div>
@@ -506,10 +507,26 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- End of Organizing Team Member 4 -->
+                        <!-- Organizing Team Member 5 -->
+                        <div class="col-md-15 col-sm-4">
+                            <div class="fcs-team text-center">
+                                <div class="speaker-img">
+                                    <img src="img/rax-tsang.jpg" alt="" />
+                                </div>
+                                <div class="speaker-content">
+                                    <h4>Rax Tsang</h4>
+                                    <p>China Relations</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Organizing Team Member 5 -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 @endsection
 

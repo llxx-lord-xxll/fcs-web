@@ -21,7 +21,8 @@
 
                 <div class="col-lg-12">
 
-                    <h2 class="uppercase">Schedule</h2>
+                    <h2 class="uppercase text-center">Schedule</h2>
+                    <p class="lead text-center">Keep innovating to make it fun </p>
 
 
                     <!-- SCHEDULE TAB -->
@@ -32,6 +33,7 @@
                         <li role="presentation" class=""><a href="#day4" role="tab" id="day4-tab" data-toggle="tab" aria-controls="day4" aria-expanded="false">Day 3</a></li>
                         <li role="presentation" class=""><a href="#day5" role="tab" id="day5-tab" data-toggle="tab" aria-controls="day5" aria-expanded="false">Day 4</a></li>
                         <li role="presentation" class=""><a href="#day6" role="tab" id="day6-tab" data-toggle="tab" aria-controls="day6" aria-expanded="false">Day 5</a></li>
+                        <li role="presentation" class=""><a href="#day7" role="tab" id="day7-tab" data-toggle="tab" aria-controls="day7" aria-expanded="false">Day 6</a></li>
                     </ul>
 
                     <!-- CONTENT -->
@@ -95,7 +97,7 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">10.30</p>
+                                                <p class="date">09.30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
@@ -117,8 +119,8 @@
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
                                                     <h4>Opening Ceremony</h4>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10:30 - 11:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Cyberport Hong Kong </span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">09:30 - 10:30</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Cyberport, Hong Kong </span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -137,7 +139,7 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">11.30</p>
+                                                <p class="date">10.30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
@@ -177,7 +179,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10:30 - 11:45</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Cyberport, HK</span></p>
                                                     </div>
                                                 </div>
@@ -204,7 +206,7 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">14.30</p>
+                                                <p class="date">13.00</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
@@ -244,7 +246,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:30 - 15:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13:00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -284,7 +286,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:30 - 15:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13:00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -325,7 +327,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:30 - 15:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13:00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -365,7 +367,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:30 - 15:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13:00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -385,7 +387,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Panel Discussion I: Space and Extraterrestrial</h4>
+                                                    <h4>Panel Discussion I: Space Technology in Asia</h4>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -405,7 +407,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:30 - 15:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13:00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -425,7 +427,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Panel Discussion I: The Earth, Urban and Energy</h4>
+                                                    <h4>Panel Discussion I: Real Estate For Future</h4>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -445,7 +447,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:30 - 15:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13:00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -472,14 +474,14 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">15.50</p>
+                                                <p class="date">15.00</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program5" aria-expanded="true" aria-controls="Program5">
-                                                        Workshop Session I
+                                                        Workshop Session I : Learnings and Cross-Sectoral Thinking Model in City Expansion
                                                     </a>
                                                 </h4>
                                             </div>
@@ -492,7 +494,8 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Workshop Session I</h4>
+                                                    <h4>Workshop Session I : Learnings and Cross-Sectoral Thinking Model in City Expansion</h4>
+                                                    <h5>Host : Harvard University Graduate School of Design &amp; The University of Hong Kong Faculty of Architecture</h5>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -512,7 +515,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">15:50 - 17:00</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">15:00 - 17:45</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -625,7 +628,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">9:30 - 11:00</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">09:30 - 11:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -652,7 +655,7 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">11.30</p>
+                                                <p class="date">13.00</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
@@ -692,7 +695,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -732,7 +735,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -773,7 +776,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -813,7 +816,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -833,7 +836,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Panel Discussion II: Space and Extraterrestrial</h4>
+                                                    <h4>Panel Discussion II: Space Technology in Asia</h4>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -853,7 +856,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -873,7 +876,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Panel Discussion II: The Earth, Urban and Energy</h4>
+                                                    <h4>Panel Discussion II: Real Estate For Future</h4>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -893,7 +896,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.00 - 14:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -921,14 +924,14 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">14:30</p>
+                                                <p class="date">15:00</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program9" aria-expanded="true" aria-controls="Program9">
-                                                        Workshop Session II
+                                                        Workshop Session II : Best Practice In Financing and Learnings of PPP Projects
                                                     </a>
                                                 </h4>
                                             </div>
@@ -941,7 +944,8 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Workshop Session II</h4>
+                                                    <h4>Workshop Session II : Best Practice In Financing and Learnings of PPP Projects</h4>
+                                                    <h5>Host : World Bank - International Financial Cooperation &amp; Asian Development Bank</h5>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -961,7 +965,7 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:30 - 15:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">15:00 - 17:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -988,14 +992,14 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">15:50</p>
+                                                <p class="date">17:30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program10" aria-expanded="true" aria-controls="Program10">
-                                                        Hackathon Briefing
+                                                        Hackathon Briefing (For Hackathon Delegates)
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1008,9 +1012,9 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4> Hackathon Briefing </h4>
+                                                    <h4> Hackathon Briefing (For Hackathon Delegates)</h4>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">15:50 - 17:30</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">17:30 - 18:30</span></p>
                                                         <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
                                                     </div>
                                                 </div>
@@ -1029,14 +1033,14 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">18:30</p>
+                                                <p class="date">19:30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program11" aria-expanded="true" aria-controls="Program11">
-                                                        Tram Welcome Party
+                                                        Transportation to Guangzhou
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1049,10 +1053,10 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Tram Welcome Party</h4>
+                                                    <h4>Transportation to Guangzhou</h4>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">18:30 - 20:00</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Hong Kong</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">19:30 - 21:30</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Hong Kong to Guangzhou</span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1082,7 +1086,7 @@
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program12" aria-expanded="true" aria-controls="Program12">
-                                                        Track I: Hackathon
+                                                        Keynote Speaking
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1095,138 +1099,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4> Track I: Hackathon </h4>
-                                                    <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10:30 - 16:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Centennial Campus, HKU</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <!-- PROGRAM 13-->
-                                <div class="panel panel-default">
-
-                                    <!-- Program Heading -->
-                                    <div class="panel-heading" role="tab" id="heading13">
-
-                                        <div class="row">
-                                            <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">13:30</p>
-                                            </div>
-
-                                            <div class="col-lg-11 col-md-11 col-sm-11">
-
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program13" aria-expanded="true" aria-controls="Program13">
-                                                        Track II: Industry Visit
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div id="Program13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
-                                        <!-- Program Content -->
-                                        <div class="panel-body">
-                                            <div class="row">
-                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4> Track II: Industry Visit </h4>
-                                                    <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">18:30 - 20:00</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Hong Kong</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <!-- PROGRAM 14-->
-                                <div class="panel panel-default">
-
-                                    <!-- Program Heading -->
-                                    <div class="panel-heading" role="tab" id="heading14">
-
-                                        <div class="row">
-                                            <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">19:00</p>
-                                            </div>
-
-                                            <div class="col-lg-11 col-md-11 col-sm-11">
-
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program14" aria-expanded="true" aria-controls="Program14">
-                                                        Move to Guangzhou
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div id="Program14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading14">
-                                        <!-- Program Content -->
-                                        <div class="panel-body">
-                                            <div class="row">
-                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Move to Guangzhou</h4>
-                                                    <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">19:00 - 21:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">HK to GZ</span></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <!-- End of Program 14 -->
-                            </div>
-                        </div>
-
-                        <!-- End of Day 4-->
-                        <!-- Day 5 -->
-                        <div role="tabpanel" class="tab-pane fade in" id="day5" aria-labelledby="day5-tab">
-                            <div class="panel-group" id="accordion5" role="tablist" aria-multiselectable="true">
-
-                                <!-- PROGRAM 15-->
-                                <div class="panel panel-default">
-
-                                    <!-- Program Heading -->
-                                    <div class="panel-heading" role="tab" id="heading15">
-
-                                        <div class="row">
-                                            <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">09.30</p>
-                                            </div>
-
-                                            <div class="col-lg-11 col-md-11 col-sm-11">
-
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program15" aria-expanded="true" aria-controls="Program15">
-                                                        Keynote Speaking
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <div id="Program15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15">
-                                        <!-- Program Content -->
-                                        <div class="panel-body">
-                                            <div class="row">
-                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Keynote Speaking</h4>
+                                                    <h4> Keynote Speaking</h4>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -1246,8 +1119,8 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">9:30 - 11:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10:30 - 12:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
                                                     </div>
                                                 </div>
 
@@ -1260,26 +1133,24 @@
 
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </div>
 
-                                <!-- PROGRAM 16-->
+                                <!-- PROGRAM 13-->
                                 <div class="panel panel-default">
 
                                     <!-- Program Heading -->
-                                    <div class="panel-heading" role="tab" id="heading16">
+                                    <div class="panel-heading" role="tab" id="heading13">
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">11:30</p>
+                                                <p class="date">13:30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program16" aria-expanded="true" aria-controls="Program16">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program13" aria-expanded="true" aria-controls="Program13">
                                                         Panel Discussion III
                                                     </a>
                                                 </h4>
@@ -1288,7 +1159,7 @@
 
                                     </div>
 
-                                    <div id="Program16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading16">
+                                    <div id="Program13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading13">
                                         <!-- Program Content -->
                                         <div class="panel-body">
                                             <div class="row">
@@ -1313,8 +1184,8 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.30 - 15:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
                                                     </div>
                                                 </div>
 
@@ -1353,8 +1224,8 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.30 - 15:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
                                                     </div>
                                                 </div>
 
@@ -1394,8 +1265,8 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.30 - 15:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
                                                     </div>
                                                 </div>
 
@@ -1434,8 +1305,8 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.30 - 15:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
                                                     </div>
                                                 </div>
 
@@ -1454,7 +1325,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Panel Discussion III: Space and Extraterrestrial</h4>
+                                                    <h4>Panel Discussion III: Space Technology in Asia</h4>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -1474,8 +1345,8 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.30 - 15:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
                                                     </div>
                                                 </div>
 
@@ -1494,7 +1365,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Panel Discussion III: The Earth, Urban and Energy</h4>
+                                                    <h4>Panel Discussion III: Real Estate For Future</h4>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -1514,8 +1385,8 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">11:30 - 12:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13.30 - 15:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
                                                     </div>
                                                 </div>
 
@@ -1529,27 +1400,27 @@
                                             </div>
                                         </div>
                                         <!-- End of Sixth Panel-->
-                                        <!-- End of Program Content-->
+
                                     </div>
 
                                 </div>
 
-                                <!-- PROGRAM 17-->
+                                <!-- PROGRAM 14-->
                                 <div class="panel panel-default">
 
                                     <!-- Program Heading -->
-                                    <div class="panel-heading" role="tab" id="heading17">
+                                    <div class="panel-heading" role="tab" id="heading14">
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">14:00</p>
+                                                <p class="date">15:30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program17" aria-expanded="true" aria-controls="Program17">
-                                                        Workshop Session III
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program14" aria-expanded="true" aria-controls="Program14">
+                                                        Workshop Session III : Regional Policy Implication Learnings on PPP Projects
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1557,12 +1428,130 @@
 
                                     </div>
 
-                                    <div id="Program17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading17">
+                                    <div id="Program14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading14">
                                         <!-- Program Content -->
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4>Workshop Session III</h4>
+                                                    <h4>Workshop Session III : Regional Policy Implication Learnings on PPP Projects</h4>
+                                                    <h5>Host : <a href="https://opendatahk.com/">Open Data Hong Kong</a> </h5>
+
+                                                    <div class="col-lg-3 col-md-2 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">15:30 - 17:30</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>Will be updated later</h5>
+                                                    <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- End of Program 14 -->
+                                <!-- PROGRAM 15-->
+                                <div class="panel panel-default">
+
+                                    <!-- Program Heading -->
+                                    <div class="panel-heading" role="tab" id="heading15">
+
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-1">
+                                                <p class="date">17.30</p>
+                                            </div>
+
+                                            <div class="col-lg-11 col-md-11 col-sm-11">
+
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program15" aria-expanded="true" aria-controls="Program15">
+                                                        Hackathon Time (For Hackathon Delegates)
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="Program15" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading15">
+                                        <!-- Program Content -->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Hackathon Time (For Hackathon Delegates)</h4>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">17:30 - 22:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- End of Program 15 -->
+                            </div>
+                        </div>
+
+                        <!-- End of Day 4-->
+                        <!-- Day 5 -->
+                        <div role="tabpanel" class="tab-pane fade in" id="day5" aria-labelledby="day5-tab">
+                            <div class="panel-group" id="accordion5" role="tablist" aria-multiselectable="true">
+
+                                <!-- PROGRAM 16-->
+                                <div class="panel panel-default">
+
+                                    <!-- Program Heading -->
+                                    <div class="panel-heading" role="tab" id="heading16">
+
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-1">
+                                                <p class="date">10.30</p>
+                                            </div>
+
+                                            <div class="col-lg-11 col-md-11 col-sm-11">
+
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program16" aria-expanded="true" aria-controls="Program16">
+                                                        Workshop Session IV : Project Governance, Sustainability and Compliance
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="Program16" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading16">
+                                        <!-- Program Content -->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Workshop Session IV Project Governance, Sustainability and Compliance</h4>
+                                                    <h5>Host : <a href="http://www.yitopia.co/">Yi-Topia, China</a> and Leading Law Firm </h5>
 
 
                                                     <div class="col-lg-3 col-md-2 col-xs-6">
@@ -1582,8 +1571,8 @@
                                                         <h6>Updated Later</h6>
                                                     </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:00 - 15:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou (TBC)</span></p>
                                                     </div>
                                                 </div>
 
@@ -1601,6 +1590,47 @@
 
                                 </div>
 
+                                <!-- PROGRAM 17-->
+                                <div class="panel panel-default">
+
+                                    <!-- Program Heading -->
+                                    <div class="panel-heading" role="tab" id="heading17">
+
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-1">
+                                                <p class="date">10:30</p>
+                                            </div>
+
+                                            <div class="col-lg-11 col-md-11 col-sm-11">
+
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program17" aria-expanded="true" aria-controls="Program17">
+                                                        Hackathon Pitching (For Hackathon Delegates)
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="Program17" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading17">
+                                        <!-- Program Content -->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4> Hackathon Pitching (For Hackathon Delegates)</h4>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou Automobile Company Headquarter</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End of Program Content-->
+                                    </div>
+
+                                </div>
+
                                 <!-- PROGRAM 18-->
                                 <div class="panel panel-default">
 
@@ -1609,14 +1639,14 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">16:00</p>
+                                                <p class="date">13:30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program18" aria-expanded="true" aria-controls="Program18">
-                                                        Track I: Hackathon
+                                                        Smart City Industry Tour &amp; City Culture Industry Tour
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1629,14 +1659,16 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4> Track I: Hackathon </h4>
+                                                    <h4>Smart City Industry Tour &amp; City Culture Industry Tour</h4>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">16:00 - 20:00</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13:30 - 17:30</span></p>
+                                                        <p><i class="fa fa-lg fa-users"></i> <span class="small">Organized by New World Development（K11 Foundation）</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou</span></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- End of Program Content-->
 
                                     </div>
 
@@ -1650,14 +1682,14 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">15:50</p>
+                                                <p class="date">19:30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program19" aria-expanded="true" aria-controls="Program19">
-                                                        Track II: Industry Visit
+                                                        Transportation to Foshan
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1670,10 +1702,10 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4> Track II: Industry Visit </h4>
+                                                    <h4>Transportation to Foshan</h4>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">15:50 - 19:00</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">19:30 - 21:30</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Guangzhou to Foshan</span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1682,7 +1714,7 @@
                                     </div>
 
                                 </div>
-                                <!-- End of Program 19 -->
+                                <!-- End of Program Content -->
                             </div>
                         </div>
                         <!-- End of Day 5-->
@@ -1697,14 +1729,14 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">14:30</p>
+                                                <p class="date">10:30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program20" aria-expanded="true" aria-controls="Program20">
-                                                        Hackathon Pitching
+                                                        Panel Discussion IV
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1717,14 +1749,242 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4> Hackathon Pitching </h4>
+                                                    <h4>Panel Discussion IV : Entrepreneurship For All</h4>
+
+
+                                                    <div class="col-lg-3 col-md-2 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">14:30 - 17:00</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10.30 - 12:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan (TBC)</span></p>
                                                     </div>
                                                 </div>
+
+                                                <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>Will be updated later</h5>
+                                                    <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
+                                                </div>
+
                                             </div>
                                         </div>
+                                        <!-- End of Panel Discussion One-->
+                                        <hr>
+                                        <!-- Second Panel Discussion-->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Panel Discussion IV : Technology For Future </h4>
+
+
+                                                    <div class="col-lg-3 col-md-2 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10.30 - 12:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan (TBC)</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>Will be updated later</h5>
+                                                    <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- End of Second Panel-->
+                                        <hr>
+                                        <!-- Third Panel Discussion-->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Panel Discussion IV : Global Development and Resilience </h4>
+
+
+                                                    <div class="col-lg-3 col-md-2 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10.30 - 12:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan (TBC)</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>Will be updated later</h5>
+                                                    <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- End of Thirds Panel-->
+                                        <hr>
+                                        <!-- Fourth Panel Discussion-->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Panel Discussion IV: Arts, Entertainment and Living</h4>
+
+
+                                                    <div class="col-lg-3 col-md-2 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10.30 - 12:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan (TBC)</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>Will be updated later</h5>
+                                                    <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- End of Fourth Panel-->
+                                        <hr>
+                                        <!-- Fifth Panel Discussion-->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Panel Discussion IV: Space Technology in Asia</h4>
+
+
+                                                    <div class="col-lg-3 col-md-2 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10.30 - 12:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan (TBC)</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>Will be updated later</h5>
+                                                    <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- End of Fifth Panel-->
+                                        <hr>
+                                        <!-- Sixth Panel Discussion-->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Panel Discussion IV: Real Estate For Future</h4>
+
+
+                                                    <div class="col-lg-3 col-md-2 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10.30 - 12:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan (TBC)</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>Will be updated later</h5>
+                                                    <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- End of Sixth Panel-->
 
                                     </div>
 
@@ -1738,7 +1998,7 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">10.30</p>
+                                                <p class="date">13.00</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
@@ -1760,8 +2020,8 @@
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
                                                     <h4>Imagination Expo, Project Showcase and Dealflow</h4>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">10:30 - 17:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">13:00 - 15:30</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan</span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1779,14 +2039,14 @@
 
                                         <div class="row">
                                             <div class="col-lg-1 col-md-1 col-sm-1">
-                                                <p class="date">18:00</p>
+                                                <p class="date">15:30</p>
                                             </div>
 
                                             <div class="col-lg-11 col-md-11 col-sm-11">
 
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#Program22" aria-expanded="true" aria-controls="Program22">
-                                                        Closing Ceremony
+                                                        Keynote Speaking
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1799,10 +2059,77 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
-                                                    <h4> Closing Ceremony</h4>
+                                                    <h4> Keynote Speaking</h4>
+
+
+                                                    <div class="col-lg-3 col-md-2 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-3 col-xs-6">
+                                                        <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                        <h6>Updated Later</h6>
+                                                    </div>
                                                     <div>
-                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">18:00 - 19:30</span></p>
-                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Campus, SYSU</span></p>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">15:30 - 17:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan (TBC)</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-2 col-md-2 col-xs-6 fcs-moderator">
+                                                    <img class="img-responsive program-speaker" src="{{asset('img/update-speaker.jpg')}}" alt="">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>Will be updated later</h5>
+                                                    <span class="about-speaker"><i class="fa fa-lg fa-globe"></i> <a class="small" href="#">futurecitysummit.org</a></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- End of Program 22 -->
+                                <!-- Program 23 -->
+                                <div class="panel panel-default">
+
+                                    <!-- Program Heading -->
+                                    <div class="panel-heading" role="tab" id="heading23">
+
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-1">
+                                                <p class="date">18.00</p>
+                                            </div>
+
+                                            <div class="col-lg-11 col-md-11 col-sm-11">
+
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program23" aria-expanded="true" aria-controls="Program23">
+                                                        Gala Dinner
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="Program23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading23">
+                                        <!-- Program Content -->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Gala Dinner</h4>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">18:00 - 20:00</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan</span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1811,11 +2138,98 @@
                                     </div>
 
                                 </div>
-                                <!-- End of Program 22 -->
+                                <!-- End of Program -->
                                 <!-- End of Day 6-->
                             </div>
                         </div>
+                        <!-- End of Day 6 -->
+                        <!-- Day 7 -->
+                        <div role="tabpanel" class="tab-pane fade in" id="day7" aria-labelledby="day7-tab">
+                            <div class="panel-group" id="accordion7" role="tablist" aria-multiselectable="true">
+                                <!-- Program 24 -->
+                                <div class="panel panel-default">
 
+                                    <!-- Program Heading -->
+                                    <div class="panel-heading" role="tab" id="heading24">
+
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-1">
+                                                <p class="date">09.30</p>
+                                            </div>
+
+                                            <div class="col-lg-11 col-md-11 col-sm-11">
+
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program24" aria-expanded="true" aria-controls="Program24">
+                                                        Closing Ceremony
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="Program24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading24">
+                                        <!-- Program Content -->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Closing Ceremony</h4>
+                                                    <div>
+                                                        <p><i class="fa fa-lg fa-clock-o"></i> <span class="small">09:30 - 12:30</span></p>
+                                                        <p><i class="fa fa-lg fa-map-marker"></i> <span class="small">Foshan</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- End of Program -->
+                                <!-- Program 25 -->
+                                <div class="panel panel-default">
+
+                                    <!-- Program Heading -->
+                                    <div class="panel-heading" role="tab" id="heading25">
+
+                                        <div class="row">
+                                            <div class="col-lg-1 col-md-1 col-sm-1">
+                                                <p class="date"></p>
+                                            </div>
+
+                                            <div class="col-lg-11 col-md-11 col-sm-11">
+
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#Program25" aria-expanded="true" aria-controls="Program25">
+                                                        Post FCS2018 Arrangement
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="Program25" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading25">
+                                        <!-- Program Content -->
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-9 col-lg-offset-1 col-md-9 col-sm-12">
+                                                    <h4>Post FCS2018 Arrangement</h4>
+                                                    <div>
+                                                        <p class="text-justify">After the end of the conference official program, FCS would be arranging shuttle bus for needed delegates to Shenzhen International Airport or Guangzhou International Airport. Delegates may make their own decision of returning to Hong Kong or staying behind after FCS2018. </p>
+                                                        <p class="text-justify">For more details or request of extra-arrangement, such as visiting more places, meetings and travels to other cities in China, please kindly contact us at <a href="mailto:community@futurecitysummit.org">community@futurecitysummit.org</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- End of Program -->
+                            </div>
+                        </div>
                         <!-- End of Days-->
                     </div>
 
