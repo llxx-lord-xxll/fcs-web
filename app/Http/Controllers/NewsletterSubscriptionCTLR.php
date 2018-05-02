@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\MessageBag;
 use Mockery\Exception;
+use Newsletter;
 
 class NewsletterSubscriptionCTLR extends Controller
 {
@@ -39,6 +40,14 @@ class NewsletterSubscriptionCTLR extends Controller
             $cf->email = $email;
             $cf->tag = $tag;
             $cf->save();
+
+
+            Newsletter::subscribeOrUpdate($email, [
+                'MMERGE4'=>$name,
+            ]
+                ,'newsletter');
+
+
             return encrypt($cf->id . '|' . $cf->email);
         }
         catch (\Exception $e)
