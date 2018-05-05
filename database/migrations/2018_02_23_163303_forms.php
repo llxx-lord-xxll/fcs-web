@@ -26,6 +26,7 @@ class Forms extends Migration
             $table->string('country');
             $table->string('mob');
             $table->string('message');
+            $table->integer('seen')->default(0);
             $table->timestamp('created_at')->useCurrent();
         });
 
@@ -57,6 +58,7 @@ class Forms extends Migration
             $table->string('fcs_package')->nullable();
             $table->string('scholarship');
             $table->string('newsletter_subscription');
+            $table->integer('seen')->default(0);
             $table->timestamp('created_at')->useCurrent();
         });
 
@@ -76,6 +78,7 @@ class Forms extends Migration
             $table->string('scholarhub')->nullable();
             $table->string('pitching_deck')->nullable();
             $table->string('chapter_name');
+            $table->integer('seen')->default(0);
             $table->timestamp('created_at')->useCurrent();
         });
 
@@ -94,6 +97,7 @@ class Forms extends Migration
             $table->string('scholarhub');
             $table->string('pitching-deck');
             $table->string('resume');
+            $table->integer('seen')->default(0);
             $table->timestamp('created_at')->useCurrent();
         });
 
