@@ -102,6 +102,14 @@ class DelegatesApplicationCTLR extends Controller
                 'MMERGE17'=>$request->input('phone_number'),
             ]);
 
+           if($df->newsnewsletter_subscription == "y")
+           {
+               Newsletter::subscribeOrUpdate($df->email, [
+                       'MMERGE4'=>$df->preferred_name,
+                   ]
+                   ,'newsletter');
+           }
+
 
 
             return true;
