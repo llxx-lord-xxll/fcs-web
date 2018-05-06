@@ -72,7 +72,7 @@ class DelegatesApplicationCTLR extends Controller
             $df->chapter_referral = $request->input('fcs-chapter-referral');
             $df->referred_person = $request->input('referred-person');
             $df->fcs_package = $request->input('fcs-package');
-            $df->scholarship = $request->input('fcs-scholarship');
+            $df->scholarship = "";
             $df->newsletter_subscription = $request->input('fcs-newsletter-subscription');
             $df->save();
 
@@ -148,7 +148,6 @@ class DelegatesApplicationCTLR extends Controller
             'fcs-chapter-referral' =>['required',Rule::in(['0','BD','VN','CM','PH','RS'])],
             'referred-person' => 'nullable|regex:/^[\s\w-]*$/',
             'fcs-package' => 'nullable|integer|digits_between:0,5',
-            'fcs-scholarship'=>  ['required',Rule::in(['y','n'])],
             'fcs-newsletter-subscription'=>  ['required',Rule::in(['y','n'])],
         ])->setAttributeNames
         (
@@ -173,7 +172,6 @@ class DelegatesApplicationCTLR extends Controller
                 'fcs-chapter-referral' => 'referral',
                 'referred-person' => 'reffered by',
                 'fcs-package' => 'package',
-                'fcs-scholarship'=>  'scholarship apply',
                 'fcs-newsletter-subscription'=>  'newsletter subscription',
             ]
         );

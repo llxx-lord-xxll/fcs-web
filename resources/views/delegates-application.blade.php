@@ -467,8 +467,9 @@
                                     </li>
                                 </ul>
                             <li>
-                            -->
-                            <li>
+
+
+                             <li>
                                 <p @if($errors->has('fcs-scholarship')) class="text-danger"  @endif>Would you like to apply for scholarship? (More information would be submitted
                                     later in follow up email) </p>
                                 <ul class="fcs-form-inner">
@@ -482,6 +483,10 @@
                                     </li>
                                 </ul>
                             </li>
+                            -->
+
+
+
                             <li>
                                 <label for="fcs-newsletter-subscription" @if($errors->has('fcs-newsletter-subscription')) class="text-danger"  @endif>Would you like to subscribe to Future City
                                     Summit newsletter? </label>
