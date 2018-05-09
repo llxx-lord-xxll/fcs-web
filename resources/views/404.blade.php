@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.mainCopy')
 
 @section('title')
     404 Not Found

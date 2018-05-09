@@ -11,6 +11,7 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('index');
 })->name('home');
@@ -206,4 +207,9 @@ Route::get('/unsubscribe/{code}',function (\Illuminate\Http\Request $request,$co
     $ret = new \App\Http\Controllers\NewsletterSubscriptionCTLR();
     return $ret->unsubscribe($request,$code);
 });
+
+*/
+
+
+Route::any('/{any}', 'RouteController@show')->where('any', '.*');
 
