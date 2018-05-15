@@ -13,6 +13,7 @@
 
 @section('page-content')
     <!-- FULLSCREEN SLIDER -->
+
     <div class="tp-banner-container">
         <div class="tp-banner">
             <ul>
@@ -140,6 +141,7 @@
                 </li>
 
             </ul>
+
             <div class="tp-bannertimer"></div>
         </div>
     </div>
@@ -151,7 +153,7 @@
 
                 <div id="left" class="left col-lg-9 col-md-8 text-right">
                     <h2>Join the conference</h2>
-                    <p>An Avenue For Young Entrepreneur | Young Government Leader | Young Scholar
+                    <p>An Avenue For Young Entrepreneur | Young Government Leader | Young Scholar</p>
                 </div>
 
                 <div id="right" class="col-lg-3 col-md-4 text-left">

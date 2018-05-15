@@ -27,8 +27,8 @@ class RouteController extends Controller
                     {
                         try{
                             $template = 'layouts.'.SiteLayouts::find(SiteTemplates::find($row->template_id)->layout_id)->slug;
-                            $data = WidgetParser::parse($row->id);
-                            return view($row->slug)->with('request',$request)->with('template',$template)->with('menus', WidgetParser::buildMenuWidget())->with('data',$data);
+                            $data = WidgetParser::parse($row->id,$row->template_id);
+                            return view($row->slug)->with('request',$request)->with('template',$template)->with('menus', WidgetParser::buildMenuWidget())->with('data',$data)->with('page_title',$row->title);
                         }
                         catch (NotFoundResourceException $e)
                         {

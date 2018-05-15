@@ -106,7 +106,8 @@ jQuery(document).ready(function($) {
 	//COUNTDOWN TIMER
 	var newYear = new Date();
     newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1);
-    $('#countdown').countdown({until: new Date(2018, 8-1, 2)}); // enter event day
+    var countdownDateSplit = $('#countdown').attr('data-countdown').split('/');
+    $('#countdown').countdown({until: new Date(countdownDateSplit[0], countdownDateSplit[1], countdownDateSplit[2])}); // enter event day
 
     $('#removeCountdown').toggle(
         function() {

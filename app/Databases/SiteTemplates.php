@@ -9,7 +9,6 @@ class SiteTemplates extends Model
 {
     protected $fillable = ['title', 'layout_id', 'slug', 'author', 'updated_at'];
     protected $table = 'site_templates';
-
     public static function buildChildrenArray($template_id,$parent_id = 0)
     {
         $ret = array();
@@ -18,7 +17,8 @@ class SiteTemplates extends Model
             $tmp = array();
             $children = self::buildChildrenArray($template_id,$row->id);
             $tmp = array(
-                'title'=>$row->title,
+                'id' => $row->id,
+                'type' => SiteWidgets::find($row->widgets_id)->slug,
                 'children' => $children
             );
             array_push($ret,$tmp);
