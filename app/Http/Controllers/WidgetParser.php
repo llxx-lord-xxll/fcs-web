@@ -24,7 +24,7 @@ class WidgetParser extends Controller
         }
 
         $ret = "<section" .$attrs . ">";
-        $ret = self::parseTemplate($page,$element['children']);
+        $ret .= self::parseTemplate($page,$element['children']);
         $ret .= "</section>";
         return $ret;
     }
@@ -40,7 +40,7 @@ class WidgetParser extends Controller
         }
 
         $ret = "<div" .$attrs . ">";
-        $ret = self::parseTemplate($page,$element['children']);
+        $ret .= self::parseTemplate($page,$element['children']);
         $ret .= "</div>";
         return $ret;
     }
@@ -56,7 +56,7 @@ class WidgetParser extends Controller
         }
 
         $ret = "<div class='row' " .$attrs . ">";
-        $ret = self::parseTemplate($page,$element['children']);
+        $ret .= self::parseTemplate($page,$element['children']);
         $ret .= "</div>";
         return $ret;
     }
@@ -72,7 +72,7 @@ class WidgetParser extends Controller
         }
 
         $ret = "<div class='container' " .$attrs . ">";
-        $ret = self::parseTemplate($page,$element['children']);
+        $ret .= self::parseTemplate($page,$element['children']);
         $ret .= "</div>";
         return $ret;
     }
