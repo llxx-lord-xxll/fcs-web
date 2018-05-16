@@ -13,6 +13,23 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function accordion_slider($element,$page)
+    {
+        $elems = $element['children'];
+
+        $ret = '<section id="fcs-theme-panel" class="accordion-slider">
+                    <div class="as-panels">';
+        foreach ($elems as $elem)
+        {
+            dump($elem);
+
+        }
+
+
+        $ret .= '    </div>
+                </section>';
+
+    }
 
     public static function countdown($element,$page)
     {
