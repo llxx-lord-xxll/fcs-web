@@ -21,7 +21,42 @@ class WidgetParser extends Controller
                     <div class="as-panels">';
         foreach ($elems as $elem)
         {
-            dump($elem);
+            $elem1 = $elem['children'];
+            $bgImg = SitePages::get_page_data($page,"input_" .$elem1[0]['id']);
+            $title = SitePages::get_page_data($page,"input_" .$elem1[1]['id']);
+            $desc = SitePages::get_page_data($page,"input_" .$elem1[2]['id']);
+            $footerText = SitePages::get_page_data($page,"input_" .$elem1[3]['id']);
+            $link =  SitePages::get_page_data($page,"input_" .$elem1[4]['id']);
+            if ($bgImg)
+            {
+                $ret .= '<div class="as-panel">
+                <a href="'.$link.'">
+                    <img class="as-background" src="'.asset('css/images/blank.gif').'" data-src="'. asset('uploads/'. $bgImg) .'" data-retina="'. asset('uploads/'. $bgImg) .'"/>
+                </a>
+
+                <div class="as-layer as-closed as-white panel-counter"
+                     data-position="bottomLeft" data-horizontal="8" data-vertical="8">
+                    '. $title .'
+                </div>
+
+                <h3 class="as-layer as-opened as-black as-padding"
+                    data-horizontal="40" data-vertical="10%"
+                    data-show-transition="left" data-hide-transition="left">
+                    '. $title .'
+                </h3>
+                <p class="as-layer as-opened as-black as-padding hide-small-screen"
+                   data-horizontal="40" data-vertical="34%" data-width="300"
+                   data-show-transition="left" data-show-delay="400" data-hide-transition="left" data-hide-delay="500">
+                    '.$desc.'
+                </p>
+                <p class="as-layer as-opened as-black as-padding hide-small-screen"
+                   data-horizontal="center" data-vertical="75%"
+                   data-show-transition="left" data-show-delay="700" data-hide-transition="right" data-hide-delay="200">
+                    <a href="'.$link.'"> '. $footerText .' </a>
+                </p>
+            </div>';
+            }
+
 
         }
 
@@ -29,6 +64,7 @@ class WidgetParser extends Controller
         $ret .= '    </div>
                 </section>';
 
+        return $ret;
     }
 
     public static function countdown($element,$page)
