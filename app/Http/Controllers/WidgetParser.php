@@ -13,6 +13,103 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function section($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<section" .$attrs . ">";
+        $ret = self::parseTemplate($page,$element['children']);
+        $ret .= "</section>";
+        return $ret;
+    }
+
+    public static function div($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<div" .$attrs . ">";
+        $ret = self::parseTemplate($page,$element['children']);
+        $ret .= "</div>";
+        return $ret;
+    }
+
+    public static function row($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<div class='row' " .$attrs . ">";
+        $ret = self::parseTemplate($page,$element['children']);
+        $ret .= "</div>";
+        return $ret;
+    }
+
+    public static function container($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<div class='container' " .$attrs . ">";
+        $ret = self::parseTemplate($page,$element['children']);
+        $ret .= "</div>";
+        return $ret;
+    }
+
+    public static function anicounters($element,$page)
+    {
+
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<div " .$attrs . ">";
+
+        foreach ($element['children'] as $item)
+        {
+            $elem1 = $item['children'];
+            $iconClass = SitePages::get_page_data($page,"input_" .$elem1[0]['id']);
+            $number = SitePages::get_page_data($page,"input_" .$elem1[1]['id']);
+            $desc = SitePages::get_page_data($page,"input_" .$elem1[2]['id']);
+
+            $ret .= '<div class="item">
+                                <i class="pe pe-4x '.$iconClass.'"></i>
+                                <div class="desc">
+                                    <p class="number">'.$number.'</p>
+                                    <p class="description">'.$desc.'</p>
+                                </div>
+                            </div>';
+        }
+
+        $ret .= "</div>";
+        return $ret;
+    }
+
     public static function accordion_slider($element,$page)
     {
         $elems = $element['children'];
@@ -141,7 +238,6 @@ class WidgetParser extends Controller
 
     }
 
-
     public static function parseTemplate($page,$elements)
     {
         $ret = "\n";
@@ -163,8 +259,6 @@ class WidgetParser extends Controller
 
         return $ret;
     }
-
-
 
     public static function buildMenuWidget($obj = null){
 

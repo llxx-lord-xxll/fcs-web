@@ -349,9 +349,6 @@
         <div class="funfacts-inner">
             <div class="container">
                 <div class="row">
-
-                    <h2 class="hidden">funfacts</h2>
-
                     <div class="col-lg-10 col-lg-offset-1">
                         <div id="funfacts-carousel">
 

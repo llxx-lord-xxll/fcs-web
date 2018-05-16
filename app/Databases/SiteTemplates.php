@@ -16,15 +16,27 @@ class SiteTemplates extends Model
         {
             $tmp = array();
             $children = self::buildChildrenArray($template_id,$row->id);
+            $metas = self::buildTemplatePropertyArray($row->id);
             $tmp = array(
                 'id' => $row->id,
                 'order'=> $row->order,
+                'meta'=> $metas,
                 'type' => SiteWidgets::find($row->widgets_id)->slug,
                 'children' => $children
             );
             array_push($ret,$tmp);
         }
         return $ret;
+    }
+
+    private static function buildTemplatePropertyArray($template_meta_id)
+    {
+        $tmp = array();
+        foreach(DB::table('site_templates_meta_values')->where('template_meta_id','=',$template_meta_id)->get() as $property)
+        {
+            $tmp[$property->meta_key]  = $property->meta_value;
+        }
+            return $tmp;
     }
 
 
