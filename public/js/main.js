@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
 	  });
 
     //OWLCAROUSEL STANDARD PRICE TABLE CAROUSEL
-    var owl = $("#price-carousel");
+    var owl = $(".price-carousel");
 
     owl.owlCarousel({
         itemsCustom : [

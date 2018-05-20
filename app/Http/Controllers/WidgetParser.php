@@ -3,14 +3,84 @@
 namespace App\Http\Controllers;
 
 use App\Databases\SiteMenu;
+use App\Databases\SitePackages;
 use App\Databases\SitePages;
 use App\Databases\SiteTemplates;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class WidgetParser extends Controller
 {
     public static function parse($page_id,$template_id){
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
+    }
+
+    public static function pricing_table($element,$page)
+    {
+        $package_group_id =SitePages::get_page_data($page,"input_" .$element['id']);
+
+        $group_info = SitePackages::get_package_group($package_group_id);
+
+        $ret = "";
+        if ($group_info != null || $group_info != false)
+        {
+            $packages = SitePackages::where('package_group_id','=',$package_group_id);
+
+            $ret = '<div class="col-lg-12">
+
+                    <div class="col-lg-12">
+                        <h2 class="uppercase text-center">'.$group_info->title.'</h2>
+                        <p class="lead text-center">('.$group_info->description.')</p>
+                    </div>';
+
+            if ($packages->count() > 0) $ret .= '<div class="price-carousel">';
+
+
+            foreach ($packages->get() as $item)
+            {
+                $ret .= '<div class="price-table early-bird">';
+                $ret .= '<div class="icon">
+                                <i class="fa fa-5x '.$item->icon.'"></i>
+                          </div>';
+                $ret .= '<div class="table-header">
+                                <h3>'.$item->title.'</h3>
+                                <p class="price"> $'.$item->price.'</p>
+                                <p class="early-date center-right">Deadline: '.Carbon::parse($item->deadline)->format('d M, Y').'</p>
+                            </div>';
+
+                $ret .= '<ul class="desc list-unstyled">';
+
+                foreach (SitePackages::get_package_details($item->id)->get() as $feature)
+                {
+                    $ret .= "<li>$feature->description</li>";
+                }
+
+                $ret .= '</ul>';
+
+
+                $ret .= '</div>';
+            }
+
+
+            if ($packages->count() > 0) $ret.= '</div>';
+
+
+            $ret .= '</div>';
+        }
+        else
+        {
+            $ret = "<h3>Invalid Group</h3>";
+        }
+
+
+
+
+        return $ret;
+    }
+
+    public static function html($element,$page)
+    {
+    return SitePages::get_page_data($page,"input_" .$element['id']);
     }
 
     public static function section($element,$page)
