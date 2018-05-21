@@ -62,16 +62,19 @@ class WidgetParser extends Controller
                         foreach ($photos as $photo)
                         {
                             $photo_model = SiteGallary::find($photo);
-                            $slugs = SiteGallary::getPhotoSlugs($photo);
-                            $ret .= '<div class="media-box '.$slugs.' "><div class="media-box-image">';
-                            $ret .= "<div data-width='$photo_model->width' data-height='$photo_model->height' data-thumbnail='".asset('uploads/' . $photo_model->image). "'></div>";
-                            $ret .= "<div class='thumbnail-overlay'>
+                            if($photo_model !=null)
+                            {
+                                $slugs = SiteGallary::getPhotoSlugs($photo);
+                                $ret .= '<div class="media-box '.$slugs.' "><div class="media-box-image">';
+                                $ret .= "<div data-width='$photo_model->width' data-height='$photo_model->height' data-thumbnail='".asset('uploads/' . $photo_model->image). "'></div>";
+                                $ret .= "<div class='thumbnail-overlay'>
                                 <a href='#' class='mb-open-popup btn btn-sm btn-default' data-src='".asset('uploads/' . $photo_model->image). "' data-title='$photo_model->caption'>
                                     <span class='fa fa-search'></span>&nbsp; View Larger
                                 </a>
                             </div>";
 
-                            $ret .= ' </div></div>';
+                                $ret .= ' </div></div>';
+                            }
                         }
 
                         $ret .= '    </div>
