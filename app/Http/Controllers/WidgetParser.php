@@ -16,6 +16,34 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function testimonial_carousel($element,$page)
+    {
+        $ret = "<div class='testimonial-inner'>
+                        <div class='testimonial-carousel' id='testimonial-carousel'>";
+       $elems =  $element['children'];
+
+
+       foreach ($elems as $elem)
+       {
+           $item = $elem['children'];
+           $photo = SitePages::get_page_data($page,"input_" .$item[0]['id']);
+           $photo = asset('uploads/' . $photo);
+           $content = SitePages::get_page_data($page,"input_" .$item[1]['id']);
+           $intro = SitePages::get_page_data($page,"input_" .$item[2]['id']);
+
+            $ret .= "<div class='item'>";
+
+            $ret .= "<img class='img-circle img-testimonial' src='$photo' alt=''>";
+            $ret .= "<p class='lead'>$content</p>";
+            $ret .= "<p class='name'>$intro</p>";
+
+            $ret .= "</div>";
+       }
+        $ret .= ' </div></div>';
+
+       return $ret;
+    }
+
     public static function gallery($element,$page)
     {
         $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);

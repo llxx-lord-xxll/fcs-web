@@ -214,7 +214,7 @@ jQuery(document).ready(function($) {
 
 
     //OWLCAROUSEL TESTIMONIAL CAROUSEL
-	var owl = $("#testimonial-carousel");
+	var owl = $(".testimonial-carousel");
 
 	  owl.owlCarousel({
 		  navigation : false, // Show next and prev buttons

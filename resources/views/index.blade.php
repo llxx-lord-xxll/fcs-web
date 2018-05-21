@@ -817,8 +817,6 @@
 
                 <div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 no-padding">
                     <div class="testimonial-inner">
-                        <h2 class="hidden">testimonial</h2>
-
                         <div id="testimonial-carousel">
                             <div class="item">
                                 <img class="img-circle img-testimonial" src="img/testimonial-jennifer.jpg" alt="">
