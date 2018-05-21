@@ -591,7 +591,7 @@
             </div>
 
             <div class="container-fluid partner-row">
-                <div id="fcs-gallery">
+                <div class="fcs-gallery">
 
                     <!-- -------------------------- BOX MARKUP 1 -------------------------- -->
                     <div class="media-box city-tour">

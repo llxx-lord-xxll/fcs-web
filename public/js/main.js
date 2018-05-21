@@ -257,7 +257,7 @@ jQuery(document).ready(function($) {
 
 $(window).load(function(){
     try {
-		$('#fcs-gallery').mediaBoxes({
+		$('.fcs-gallery').mediaBoxes({
 			boxesToLoadStart: 10,
 			boxesToLoad: 8,
 		});
@@ -266,6 +266,7 @@ $(window).load(function(){
 	{
 
 	}
+
     $("#nav-primary").sticky({ topSpacing: 0, });
 
     //PRELOADER

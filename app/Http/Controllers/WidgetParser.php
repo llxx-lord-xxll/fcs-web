@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Databases\SiteGallary;
 use App\Databases\SiteMenu;
 use App\Databases\SitePackages;
 use App\Databases\SitePages;
@@ -13,6 +14,82 @@ class WidgetParser extends Controller
 {
     public static function parse($page_id,$template_id){
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
+    }
+
+    public static function gallery($element,$page)
+    {
+        $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
+        $gallery = SiteGallary::getGallery($gallery_id);
+        $ret = "";
+        if ($gallery != null)
+        {
+            $albums = SiteGallary::getAlbums($gallery_id);
+            $photos = SiteGallary::getPhotos($albums);
+            $ret = "<section>
+                        <div class='container'>
+                            <div class='row'>
+                                <div class='col-lg-12 fcs-section-grid text-center'>
+                                    <h2 class='uppercase'>$gallery->description</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+                        <div class='container-fluid grid-section'>
+                
+                         <div class='content grid-container'>";
+
+
+                    if (!empty($albums))
+                    {
+                        $ret .= ' <div class="filters-container text-center partner-row"><ul class="media-boxes-filter" id="filter"> <li><a class="selected" href="#" data-filter="*">All</a></li>';
+
+                        foreach ($albums as $album)
+                        {
+                            $album_model = SiteGallary::getAlbumInfo($album);
+                            $ret .= "<li><a href='#' data-filter='.$album_model->slug'>$album_model->title </a></li>";
+                        }
+
+                        $ret .= '    </ul></div>';
+                    }
+
+                    if (!empty($photos))
+                    {
+                        $ret .= "<div class='container-fluid partner-row'>
+                                    <div class='fcs-gallery'>";
+
+
+                        foreach ($photos as $photo)
+                        {
+                            $photo_model = SiteGallary::find($photo);
+                            $slugs = SiteGallary::getPhotoSlugs($photo);
+                            $ret .= '<div class="media-box '.$slugs.' "><div class="media-box-image">';
+                            $ret .= "<div data-width='$photo_model->width' data-height='$photo_model->height' data-thumbnail='".asset('uploads/' . $photo_model->image). "'></div>";
+                            $ret .= "<div class='thumbnail-overlay'>
+                                <a href='#' class='mb-open-popup btn btn-sm btn-default' data-src='".asset('uploads/' . $photo_model->image). "' data-title='$photo_model->caption'>
+                                    <span class='fa fa-search'></span>&nbsp; View Larger
+                                </a>
+                            </div>";
+
+                            $ret .= ' </div></div>';
+                        }
+
+                        $ret .= '    </div>
+                        </div>';
+
+                    }
+
+
+
+            $ret .= '    </div>
+                        </div>';
+        }
+        else
+        {
+            $ret = "<strong>Invalid gallery</strong>";
+        }
+
+        return $ret;
     }
 
     public static function pricing_table($element,$page)
