@@ -16,6 +16,102 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function h6($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<h6" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</h6>";
+        return $ret;
+    }
+
+    public static function h5($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<h5" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</h5>";
+        return $ret;
+    }
+
+    public static function h4($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<h4" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</h4>";
+        return $ret;
+    }
+
+    public static function h3($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<h3" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</h3>";
+        return $ret;
+    }
+
+    public static function h2($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<h2" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</h2>";
+        return $ret;
+    }
+
+    public static function h1($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<h1" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</h1>";
+        return $ret;
+    }
+
     public static function testimonial_carousel($element,$page)
     {
         $ret = "<div class='testimonial-inner'>
