@@ -17,6 +17,21 @@ class WidgetParser extends Controller
     }
 
 
+
+    public static function textarea($element,$page)
+    {
+        $text =SitePages::get_page_data($page,"input_" .$element['id']);
+
+        return $text;
+    }
+
+    public static function text($element,$page)
+    {
+        $text =SitePages::get_page_data($page,"input_" .$element['id']);
+
+        return $text;
+    }
+
     public static function p($element,$page)
     {
         $metas = $element['meta'];
