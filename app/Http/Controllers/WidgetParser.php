@@ -16,6 +16,27 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function a($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $href = SitePages::get_page_data($page,"input_" .$element['id']);
+        if (!filter_var($href, FILTER_VALIDATE_URL)) {
+            $href = asset( $href);
+        }
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<a src='$href' " .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</a>";
+        return $ret;
+    }
+
     public static function image($element,$page)
     {
         $metas = $element['meta'];
