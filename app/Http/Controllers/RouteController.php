@@ -23,7 +23,8 @@ class RouteController extends Controller
             case 'GET':
                 foreach(SitePages::all() as $row)
                 {
-                    if ($row->permalink == $request->path())
+
+                    if (ltrim($row->permalink,'/') == ltrim($request->path(),'/'))
                     {
                         try{
                             $template = 'layouts.'.SiteLayouts::find(SiteTemplates::find($row->template_id)->layout_id)->slug;
