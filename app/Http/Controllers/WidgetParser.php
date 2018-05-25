@@ -7,6 +7,7 @@ use App\Databases\SiteMenu;
 use App\Databases\SitePackages;
 use App\Databases\SitePages;
 use App\Databases\SiteTemplates;
+use App\Databases\SiteTimeline;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,46 @@ class WidgetParser extends Controller
 {
     public static function parse($page_id,$template_id){
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
+    }
+
+    public static function timeline($element,$page)
+    {
+        $ret = '<div class="zoomtimeline mode-3dslider auto-init zoomtimeline0 skin-light circuit-the-timeline-on inited ztm-ready" data-options="{startItem: 2}" id="zoomtimeline5"> <div class="items"></div>';
+        $ret .= '      <div class="yearlist-con">
+                            <div class="yearlist-container">
+                                <div class="yearlist-container-inner">
+                                    <div class="yearlist-line"></div>
+                                </div>
+                            </div>
+                        </div>';
+
+        $ret .= '<div class="details-container" style="height: 651px;"><div class="clear"></div>';
+        $id = 0;
+
+        $center = (int)round(SiteTimeline::all()->count()/2) ;
+
+        foreach (SiteTimeline::get() as $item)
+        {
+            $id++;
+            $checked = "";
+            if ($id == $center)
+            {
+                $checked = "checked";
+            }
+            $ret .= '       <input type="radio" name="radio_btn" id="it'.$id.'" '.$checked.' />
+                            <label for="it'.$id.'" class="detail ">
+                                <div class="the-year">'.Carbon::parse($item->event_date)->format('d M y').'<figure></figure></div>
+                                <h3 class="the-heading">'.$item->title.' </h3>
+								<div class="detail-image-con" style="">
+								<div class="detail-image--border"></div><div class="detail-image" style="background-image:url('.asset('uploads/'.$item->image).');"></div><div class="detail-image-shadow-con"><div class="detail-image-shadow-left"></div><div class="detail-image-shadow-right"></div></div></div>
+								<div class=" detail-excerpt"><p>'.$item->subtitle.'</p></div>
+								<div class="clear"></div>
+                            </label>';
+        }
+
+        $ret .= "</div></div>";
+
+        return $ret;
     }
 
     public static function a($element,$page)
