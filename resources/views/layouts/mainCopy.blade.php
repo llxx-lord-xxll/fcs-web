@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 
-    <title>Future City Summit | Hong Kong - @yield('title' , 'Not Found')</title>
+    <title>{{\App\Databases\SiteSettings::get_value('title')}} - @yield('title' , 'Not Found')</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,7 +73,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href=""><img src="{{asset('img/logo.png')}}" alt="logo"></a>
+            <a href=""><img src="{{asset('uploads/'. \App\Databases\SiteSettings::get_value('logo'))}}" alt="logo"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="nav">
