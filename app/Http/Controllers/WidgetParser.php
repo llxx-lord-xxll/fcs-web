@@ -6,6 +6,7 @@ use App\Databases\SiteGallary;
 use App\Databases\SiteMenu;
 use App\Databases\SitePackages;
 use App\Databases\SitePages;
+use App\Databases\SitePeople;
 use App\Databases\SiteTemplates;
 use App\Databases\SiteTimeline;
 use Carbon\Carbon;
@@ -15,6 +16,78 @@ class WidgetParser extends Controller
 {
     public static function parse($page_id,$template_id){
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
+    }
+
+    public static function people($element,$page)
+    {
+        $team_id = $text =SitePages::get_page_data($page,"input_" .$element['id']);
+
+        $metas = $element['meta'];
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $team_title = SitePeople::find($team_id);
+        if ($team_title != null)
+        {
+            $team_title= $team_title->title;
+        }
+
+        $team_people = SitePeople::getPeople($team_id);
+
+
+
+        $ret = "<section" .$attrs . ">";
+        $ret .= '<div class="container"><div class="row">';
+        $ret .='  <div class="col-lg-12 panel-section text-center">
+                    <h2 class="uppercase"> ' .$team_title. ' </h2>
+                  </div>';
+
+        $ret .= '<div class="container"><div class="row">';
+
+        if (!empty($team_people))
+        {
+            $size = 3;
+            if(count($team_people)< 5)
+            {
+                $size = 3;
+            }
+            else
+            {
+                if(count($team_people) % 5)
+                {
+                    $size = 15;
+                }
+                else
+                {
+                    $size = 3;
+                }
+            }
+            foreach ($team_people as $person)
+            {
+                $pInfo = SitePeople::getPersonInfo($person);
+
+                $ret.= '<div class="col-lg-'.$size.' col-md-3 col-sm-4"><div class="team-sin text-center">';
+
+                $ret .= '<div class="speaker-img">
+                                    <img src="'. asset('uploads/'.$pInfo->photo) . '" alt="" />
+                                </div>';
+                $ret .= '<div class="speaker-content">
+                                    <h4>'.$pInfo->name.'</h4>
+                                    <p>'.$pInfo->profession.'</p>
+                                </div>';
+
+                $ret.='</div></div>';
+            }
+        }
+
+        $ret .= '</div></div>';
+
+        $ret .= "</div></div></section>";
+
+        return $ret;
     }
 
 
@@ -138,7 +211,7 @@ class WidgetParser extends Controller
             $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
         }
 
-        $ret = "<a src='$href' " .$attrs . ">";
+        $ret = "<a href='$href' " .$attrs . ">";
         $ret .= self::parseTemplate($page,$element['children']);
         $ret .= "</a>";
         return $ret;
