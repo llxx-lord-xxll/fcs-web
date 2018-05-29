@@ -17,6 +17,72 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+
+    public static function ul($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<ul" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</ul>";
+        return $ret;
+    }
+
+    public static function ol($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<ol" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</ol>";
+        return $ret;
+    }
+
+    public static function li($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<li" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</li>";
+        return $ret;
+    }
+
+    public static function span($element,$page)
+    {
+        $metas = $element['meta'];
+
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "<span" .$attrs . ">";
+        $ret .= self::parseTemplate($page,$element['children']);
+        $ret .= "</span>";
+        return $ret;
+    }
+
+
     public static function timeline($element,$page)
     {
         $ret = '<div class="zoomtimeline mode-3dslider auto-init zoomtimeline0 skin-light circuit-the-timeline-on inited ztm-ready" data-options="{startItem: 2}" id="zoomtimeline5"> <div class="items"></div>';
