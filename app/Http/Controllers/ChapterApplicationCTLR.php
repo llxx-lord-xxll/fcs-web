@@ -37,7 +37,7 @@ class ChapterApplicationCTLR extends Controller
             if ($request->has('delegate-pitching-deck')) {
                 $deckname = $request->input('full_name') . '_' . $request->input('open_chapter') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
                 $f = $request->file('delegate-pitching-deck');
-                $f->move(base_path('public\uploads\pitching-decks'), $deckname);
+                $f->move(base_path('public\uploads\files\pdfs'), $deckname);
             }
             $caf = new ChapterApplicationForm();
             $caf->name = $request->input('full_name');
