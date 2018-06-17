@@ -34,7 +34,7 @@
 
                 <p>City innovation for future In 2 years of development, Future City Summit and its fellows from Philippines, Bangladesh and Cambodia spot the niche of market. Public Private Partnership(PPP) project market is usually left behind with the few dominating players in the region such as United Nations, Asian Development Bank and World Bank focuses massively on: </p>
 
-                <ul class="article-list">
+                <ul>
                     <li>Large scale government project for youth (> 10 million USD)</li>
                     <li>Strong leadership of seniors with bureaucracy</li>
                     <li>Lack of active participation of regional hubs such as Hong Kong</li>

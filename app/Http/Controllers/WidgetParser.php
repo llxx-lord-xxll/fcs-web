@@ -7,10 +7,12 @@ use App\Databases\SiteMenu;
 use App\Databases\SitePackages;
 use App\Databases\SitePages;
 use App\Databases\SitePeople;
+use App\Databases\SiteStories;
 use App\Databases\SiteTemplates;
 use App\Databases\SiteTimeline;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class WidgetParser extends Controller
 {
@@ -18,6 +20,67 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function stories($element,$page)
+    {
+
+
+        $team_id = $text =SitePages::get_page_data($page,"input_" .$element['id']);
+
+        $metas = $element['meta'];
+        $ret = '    <section id ="inspirational-stories">
+        <div class="inspirational-stories-section">
+            <div class="container">
+                <div class="row">';
+
+                foreach (SiteStories::where('post_type','=','article')->get() as $stories)
+                {
+
+                    $content = strip_tags($stories->post_content);
+                    $content = str_limit($content,140,'...');
+
+                    $ret .= '<div class="col-lg-4 col-md-4 col-xs-12">
+                        <div class="fcs-story-row">
+                            <div class="fcs-story-post fcs-story-card">
+                                <div class="fcs-story-block story-image-1" style="background: url('.$stories->post_thumb.') center/cover no-repeat">
+                                    <div class="fcs-story-header">
+                                        <div class="fcs-story-date">
+                                        <span class="text-electric-seafoam">
+                                        '. Carbon::parse($stories->created_at)->format("d M Y") .'
+                                        </span>
+                                        <!--
+                                            <span class="fcs-story-day">22</span>
+                                            <span class="fcs-story-month">Feb</span>
+                                            <span class="fcs-story-year">2018</span> -->
+                                        </div>
+                                        <ul class="fcs-story-menu-fcs-story-content">
+                                            <li>
+                                                <a href="/posts/'.$stories->post_slug.'" data-title="FCS POST - '.$stories->post_title.'" class="fa fa-bookmark-o"></a>
+                                            </li>
+                                            <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+                                            <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="fcs-story-data">
+                                        <div class="fcs-story-content">
+                                            <span class="fcs-story-author">'.DB::table('admin_users')->find($stories->author_ID)->name.'</span>
+                                            <h3 class="fcs-story-title"><a href="/posts/'.$stories->post_slug.'">'. $stories->post_title .' </a></h3>
+                                            <p class="fcs-story-text">'.$content.'</p>
+                                            <a href="/posts/'.$stories->post_slug.'" class="fcs-story-button">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
+                }
+
+        $ret .= '</div>
+            </div>
+        </div>
+    </section>
+';
+        return $ret;
+    }
     public static function people($element,$page)
     {
         $team_id = $text =SitePages::get_page_data($page,"input_" .$element['id']);

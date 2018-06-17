@@ -46,7 +46,6 @@ class DelegatesApplicationCTLR extends Controller
                 $deckname = $request->input('last_name') . '_' . $request->input('city_name') . '_' . md5(uniqid()) . '.' . $request->file('delegate-pitching-deck')->getClientOriginalExtension();
                 $f = $request->file('delegate-pitching-deck');
                 $f->move(base_path('public/uploads/files/pdfs'), $deckname);
-
             }
             $df = new DelegateForm();
             $df->title = $request->input('salutation');
