@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Databases\SiteForms;
 use App\Databases\SiteGallary;
 use App\Databases\SiteMenu;
 use App\Databases\SitePackages;
@@ -20,10 +21,102 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function forms($element,$page)
+    {
+        $form = $text =SitePages::get_page_data($page,"input_" .$element['id']);
+        $metas = $element['meta'];
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $ret = "";
+
+        $form = SiteForms::find($form);
+        if ($form)
+        {
+
+                $ret = '<form action="" method="post" enctype="multipart/form-data"> <ul class="fcs-form-outer">' . csrf_field() ;
+
+          foreach (DB::table('site_form_entries')->where('form_id',$form->id)->get() as $input)
+          {
+                $vals = $input->field_ivals;
+                $vType = str_before($vals,"(");
+                switch ($vType)
+                {
+                    case 'array':
+                        $vals = str_before(str_after($vals,"array("),")");
+                        $vals = explode(",",$vals);
+                        $tmp = array();
+                        foreach ($vals as $val)
+                        {
+
+
+                            $tmp[str_slug($val)] = ltrim(rtrim($val,'"'),'"');
+                        }
+                        $vals = $tmp;
+                        break;
+                    case 'string':
+                        $vals = str_before(str_after($vals,"array("),")");
+                        break;
+                }
+                switch ($input->field_type)
+                {
+
+                    case 'radiobutton':
+                        $ret .="<li>";
+                        $ret .="<p>$input->field_title</p>";
+
+                        $ret .= '<ul class="fcs-form-inner">';
+                        foreach ($vals as $key => $val)
+                        {
+                         $ret .="<li>";
+                         $ret .= '<input type="radio" name="'.$input->field_name.'" value="'.$key.'">';
+                         $ret .= '<label>'.$val.'</label>';
+                         $ret .="</li>";
+                        }
+
+                        $ret .="</ul></li>";
+                        break;
+                    case 'text':
+                        $ret .= '<li>
+                                <label for="'.$input->field_name.'">'.$input->field_title.' </label>
+                                <input type="text" id="'.$input->field_name.'" name="'.$input->field_name.'" placeholder="'.$input->field_placeholder.'">
+                                '.$input->field_instructions.'
+                            </li>';
+                        break;
+                    case 'textarea':
+                        dump($input->field_type);
+                        $ret = '<li>
+                                <label for="'.$input->field_name.'">'.$input->field_title.' </label>
+                                <textarea id="'.$input->field_name.'" name="'.$input->field_name.'" placeholder="'.$input->field_placeholder.'"></textarea>
+                            </li>';
+                        break;
+                    case 'select':
+                        $ret .= '<li>
+                                <label for="'.$input->field_name.'">'.$input->field_title.'</label>';
+
+                        $ret .= '<select id="'.$input->field_name.'" name="'.$input->field_name.'">';
+
+                        foreach ($vals as $key => $val)
+                        {
+                            $ret  .= '<option value="'.$key.'">'.$val.'</option>';
+                        }
+
+                        $ret.= '</select></li>';
+                        break;
+                }
+          }
+                $ret .= " </ul></form>";
+        }
+
+
+        return $ret;
+    }
+
     public static function stories($element,$page)
     {
-
-
         $team_id = $text =SitePages::get_page_data($page,"input_" .$element['id']);
 
         $metas = $element['meta'];
