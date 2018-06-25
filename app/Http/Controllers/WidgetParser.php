@@ -14,6 +14,9 @@ use App\Databases\SiteTimeline;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Validation\Rule;
+
 
 class WidgetParser extends Controller
 {
@@ -36,13 +39,24 @@ class WidgetParser extends Controller
         $form = SiteForms::find($form);
         if ($form)
         {
+                $ret = "";
+                $errors = Session::get('errors');
+                if($errors !== null)
+                {
+                    foreach ($errors->all() as $error)
+                    {
+                        $ret .= '<p class="text-center bg-danger text-muted">'.$error.'</p>';
+                    }
+                }
 
-                $ret = '<form action="" method="post" enctype="multipart/form-data"> <ul class="fcs-form-outer">' . csrf_field() ;
+                $ret .= '<form '.$attrs.' action="/forms/'.$form->id.'" method="post" enctype="multipart/form-data"> <ul class="fcs-form-outer">' . csrf_field() ;
 
           foreach (DB::table('site_form_entries')->where('form_id',$form->id)->get() as $input)
           {
                 $vals = $input->field_ivals;
                 $vType = str_before($vals,"(");
+                $rules = explode("\r\n",$input->field_rules);
+                $input->required = "";
                 switch ($vType)
                 {
                     case 'array':
@@ -51,8 +65,6 @@ class WidgetParser extends Controller
                         $tmp = array();
                         foreach ($vals as $val)
                         {
-
-
                             $tmp[str_slug($val)] = ltrim(rtrim($val,'"'),'"');
                         }
                         $vals = $tmp;
@@ -61,6 +73,32 @@ class WidgetParser extends Controller
                         $vals = str_before(str_after($vals,"array("),")");
                         break;
                 }
+
+
+                foreach ($rules as $key => $rule)
+                {
+                    switch ($rule)
+                    {
+                        case 'unique':
+                            $rules[$key] = 'unique:' . $form->table_name . ',' . $input->field_name;
+                            break;
+                        case 'in':
+                            if ($vType == 'array')
+                            {
+                                $rules[$key] = Rule::in(array_keys($vals));
+                            }
+                            else
+                            {
+                                $rules[$key] = Rule::in(array($vals));
+                            }
+
+                            break;
+                        case 'required':
+                            $input->required = 'required';
+                            break;
+                    }
+                }
+
                 switch ($input->field_type)
                 {
 
@@ -72,7 +110,7 @@ class WidgetParser extends Controller
                         foreach ($vals as $key => $val)
                         {
                          $ret .="<li>";
-                         $ret .= '<input type="radio" name="'.$input->field_name.'" value="'.$key.'">';
+                         $ret .= '<input type="radio" name="'.$input->field_name.'" value="'.$key.'" '.$input->required.'>';
                          $ret .= '<label>'.$val.'</label>';
                          $ret .="</li>";
                         }
@@ -82,22 +120,21 @@ class WidgetParser extends Controller
                     case 'text':
                         $ret .= '<li>
                                 <label for="'.$input->field_name.'">'.$input->field_title.' </label>
-                                <input type="text" id="'.$input->field_name.'" name="'.$input->field_name.'" placeholder="'.$input->field_placeholder.'">
+                                <input type="text" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
                                 '.$input->field_instructions.'
                             </li>';
                         break;
                     case 'textarea':
-                        dump($input->field_type);
-                        $ret = '<li>
+                        $ret .= '<li>
                                 <label for="'.$input->field_name.'">'.$input->field_title.' </label>
-                                <textarea id="'.$input->field_name.'" name="'.$input->field_name.'" placeholder="'.$input->field_placeholder.'"></textarea>
+                                <textarea id="'.$input->field_name.'" name="'.$input->field_name.'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >'.old($input->field_name).'</textarea>
                             </li>';
                         break;
                     case 'select':
                         $ret .= '<li>
                                 <label for="'.$input->field_name.'">'.$input->field_title.'</label>';
 
-                        $ret .= '<select id="'.$input->field_name.'" name="'.$input->field_name.'">';
+                        $ret .= '<select id="'.$input->field_name.'" name="'.$input->field_name.'" '.$input->required.' >';
 
                         foreach ($vals as $key => $val)
                         {
@@ -106,8 +143,42 @@ class WidgetParser extends Controller
 
                         $ret.= '</select></li>';
                         break;
+                    case  'file':
+                        $ret .= '<li>
+                                <label for="'.$input->field_name.'">'.$input->field_title.' </label>
+                                <input type="file" id="'.$input->field_name.'" name="'.$input->field_name.'" accept=".doc,.docx,.ppt,.pptx,.pdf" '.$input->required.' > '.$input->field_instructions.'
+                            </li>';
+                        break;
+                    case  'email':
+                        $ret .='<li>
+                                <label for='.$input->field_name.'>'.$input->field_title.' </label>
+                                <input type="email" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
+                            </li>';
+                        break;
+                    case  'tel':
+                        $ret .='<li>
+                                <label for='.$input->field_name.'>'.$input->field_title.' </label>
+                                <input type="tel" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
+                            </li>';
+                        break;
+                    case  'url':
+                        $ret .='<li>
+                                <label for='.$input->field_name.'>'.$input->field_title.' </label>
+                                <input type="url" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
+                            </li>';
+                        break;
                 }
           }
+
+                $ret .= '<li>
+							<label></label>
+								<div class="checkbox"><input required="" name="agreement" type="checkbox" value="">'.$form->agreement_html.'</div>
+							
+							</li>';
+
+                $ret .= '<li>
+                                <button type="submit">'.$form->submit_button.'</button>
+                            </li>';
                 $ret .= " </ul></form>";
         }
 

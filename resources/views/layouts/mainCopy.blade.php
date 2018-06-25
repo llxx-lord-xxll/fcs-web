@@ -14,7 +14,7 @@
 
     <!-- viewport settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+<script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('css/pe-icon-7-stroke.css')}}">
@@ -177,7 +177,7 @@
 <!-- End of Footer -->
 
 
-<script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
+
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script src="{{asset('js/jquery.themepunch.tools.min.js')}}"></script>
 <script src="{{asset('js/jquery.themepunch.revolution.min.js')}}"></script>

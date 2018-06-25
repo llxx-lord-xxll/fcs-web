@@ -106,19 +106,26 @@ jQuery(document).ready(function($) {
 	//COUNTDOWN TIMER
 	var newYear = new Date();
     newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1);
-    var countdownDateSplit = $('#countdown').attr('data-countdown').split('/');
-    $('#countdown').countdown({until: new Date(countdownDateSplit[0], countdownDateSplit[1], countdownDateSplit[2])}); // enter event day
+    try
+	{
+        var countdownDateSplit = $('#countdown').attr('data-countdown').split('/');
+        $('#countdown').countdown({until: new Date(countdownDateSplit[0], countdownDateSplit[1], countdownDateSplit[2])}); // enter event day
 
-    $('#removeCountdown').toggle(
-        function() {
-            $(this).text('Re-attach');
-            $('#defaultCountdown').countdown('destroy');
-        },
-        function() {
-            $(this).text('Remove');
-            $('#defaultCountdown').countdown({until: newYear});
-        }
-    );
+        $('#removeCountdown').toggle(
+            function() {
+                $(this).text('Re-attach');
+                $('#defaultCountdown').countdown('destroy');
+            },
+            function() {
+                $(this).text('Remove');
+                $('#defaultCountdown').countdown({until: newYear});
+            }
+        );
+	}
+	catch (e){
+		console.log(e);
+	}
+
 
 
 	//MAGNIFIC POPUP LOAD CONTENT VIA AJAX
