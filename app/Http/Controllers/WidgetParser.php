@@ -41,6 +41,14 @@ class WidgetParser extends Controller
         {
                 $ret = "";
                 $errors = Session::get('errors');
+                $success = Session::get('success');
+                if($success !== null)
+                {
+                    foreach ($success->all() as $suc)
+                    {
+                        $ret .= '<p class="text-center bg-success">'.$suc.'</p>';
+                    }
+                }
                 if($errors !== null)
                 {
                     foreach ($errors->all() as $error)

@@ -14,6 +14,7 @@ use Illuminate\Support\MessageBag;
 use Illuminate\Validation\Rule;
 use Symfony\Component\Translation\Exception\NotFoundResourceException;
 use Illuminate\Support\Facades\Validator;
+use Newsletter;
 
 class RouteController extends Controller
 {
@@ -140,12 +141,26 @@ class RouteController extends Controller
                             try
                             {
                                 DB::table($form->table_name)->insert(array_except($request->all(),['_token','agreement']));
-                                $this->go_newsletter($form,$request);
+
+                                if ($request->has('newsletter_subscription'))
+                                {
+                                    if ($request->input('newsletter_subscription') == 'y')
+                                    {
+                                        $this->go_newsletter($form,$request);
+                                    }
+                                }
+
                                 $this->go_subscribe($form,$request);
+
+                                dump($request->file());
+                                die("");
+                                $suc = (new MessageBag())->add('none','Submitted successfully, we shall contact you via email for further assistance');
+                                return Redirect::back()->with('success',$suc);
 
                             }
                             catch (\Exception $e)
                             {
+
                                 $err = new MessageBag();
                                 $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
                                 return Redirect::back()->withErrors($err)->withInput();
@@ -180,6 +195,7 @@ class RouteController extends Controller
 
     private function go_newsletter($form,Request $request)
     {
+
         if ($form->newsletter == 1)
         {
             if($request->input('email'))
@@ -191,15 +207,15 @@ class RouteController extends Controller
 
                     $arr[$input->list_field_name] = $request->input($input->form_field_name);
                 }
-
-
                 Newsletter::subscribeOrUpdate($request->input('email'), $arr,'newsletter');
+
             }
         }
     }
 
     private function go_subscribe($form,$request)
     {
+
         if ($form->subscribers == 1)
         {
             if($request->input('email'))
