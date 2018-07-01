@@ -10,6 +10,7 @@ use App\Databases\SiteTemplates;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\MessageBag;
 use Illuminate\Validation\Rule;
 use Symfony\Component\Translation\Exception\NotFoundResourceException;
 use Illuminate\Support\Facades\Validator;
@@ -136,12 +137,26 @@ class RouteController extends Controller
                         }
                         else
                         {
+                            try
+                            {
+                                DB::table($form->table_name)->insert(array_except($request->all(),['_token','agreement']));
+                                $this->go_newsletter($form,$request);
+                                $this->go_subscribe($form,$request);
 
+                            }
+                            catch (\Exception $e)
+                            {
+                                $err = new MessageBag();
+                                $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                                return Redirect::back()->withErrors($err)->withInput();
+                            }
                         }
                     }
                     catch (\Exception $e)
                     {
-
+                        $err = new MessageBag();
+                        $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                        return Redirect::back()->withErrors($err)->withInput();
                     }
 
 
@@ -150,16 +165,7 @@ class RouteController extends Controller
 
 
 
-                    try
-                    {
-                        $form = DB::table($form->table_name);
-                        $form->insert(array_except($request->all(),['_token','agreement']));
-                    }
-                    catch (\Exception $e)
-                    {
-                        dump($request->all());
-                        dump($e->getMessage());
-                    }
+
 
                     //dump(array_except($request->all(),'_token'));
 
@@ -172,5 +178,44 @@ class RouteController extends Controller
 
     }
 
+    private function go_newsletter($form,Request $request)
+    {
+        if ($form->newsletter == 1)
+        {
+            if($request->input('email'))
+            {
+                $arr = array();
+
+                foreach (DB::table('site_forms_subscription')->where('form_id','=',$form->id)->where('subscription_type','=','newsletter')->get() as $input)
+                {
+
+                    $arr[$input->list_field_name] = $request->input($input->form_field_name);
+                }
+
+
+                Newsletter::subscribeOrUpdate($request->input('email'), $arr,'newsletter');
+            }
+        }
+    }
+
+    private function go_subscribe($form,$request)
+    {
+        if ($form->subscribers == 1)
+        {
+            if($request->input('email'))
+            {
+                $arr = array();
+
+                foreach (DB::table('site_forms_subscription')->where('form_id','=',$form->id)->where('subscription_type','=','subscription')->get() as $input)
+                {
+
+                    $arr[$input->list_field_name] = $request->input($input->form_field_name);
+                }
+
+
+                Newsletter::subscribeOrUpdate($request->input('email'), $arr,$form->subscribers_confname);
+            }
+        }
+    }
 
 }

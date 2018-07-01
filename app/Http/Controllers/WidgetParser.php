@@ -98,19 +98,44 @@ class WidgetParser extends Controller
                             break;
                     }
                 }
+                $err = array();
+
+                if ($errors != null)
+                {
+                    if ($errors->has($input->field_name))
+                    {
+                        $err[0] = 'text-danger"';
+                        $err[1] = 'has-danger';
+                        $err[2] = 'form-control-danger';
+                    }
+                    else
+                    {
+                        $err[0] = "";
+                        $err[1] = "";
+                        $err[2] = "";
+                    }
+                }
+                else
+                {
+                    $err[0] = "";
+                    $err[1] = "";
+                    $err[2] = "";
+                }
+
 
                 switch ($input->field_type)
                 {
 
                     case 'radiobutton':
-                        $ret .="<li>";
-                        $ret .="<p>$input->field_title</p>";
+                        $ret .="<li class='$err[1]'>";
+                        $ret .="<p class='$err[0]'>$input->field_title</p>";
 
                         $ret .= '<ul class="fcs-form-inner">';
                         foreach ($vals as $key => $val)
                         {
+                           $checked = old($input->field_name)==$key?"checked":"";
                          $ret .="<li>";
-                         $ret .= '<input type="radio" name="'.$input->field_name.'" value="'.$key.'" '.$input->required.'>';
+                         $ret .= '<input type="radio" name="'.$input->field_name.'" value="'.$key.'" '.$input->required . ' ' .  $checked .'>';
                          $ret .= '<label>'.$val.'</label>';
                          $ret .="</li>";
                         }
@@ -118,63 +143,82 @@ class WidgetParser extends Controller
                         $ret .="</ul></li>";
                         break;
                     case 'text':
-                        $ret .= '<li>
-                                <label for="'.$input->field_name.'">'.$input->field_title.' </label>
-                                <input type="text" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
+                        $ret .= '<li class="'.$err[1].'">
+                                <label class="'.$err[0].'" for="'.$input->field_name.'">'.$input->field_title.' </label>
+                                <input class="'.$err[2].'" type="text" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
                                 '.$input->field_instructions.'
                             </li>';
                         break;
                     case 'textarea':
-                        $ret .= '<li>
-                                <label for="'.$input->field_name.'">'.$input->field_title.' </label>
-                                <textarea id="'.$input->field_name.'" name="'.$input->field_name.'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >'.old($input->field_name).'</textarea>
+                        $ret .= '<li class="'.$err[1].'">
+                                <label class="'.$err[0].'" for="'.$input->field_name.'">'.$input->field_title.' </label>
+                                <textarea class="'.$err[2].'" id="'.$input->field_name.'" name="'.$input->field_name.'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >'.old($input->field_name).'</textarea>
                             </li>';
                         break;
                     case 'select':
-                        $ret .= '<li>
-                                <label for="'.$input->field_name.'">'.$input->field_title.'</label>';
 
-                        $ret .= '<select id="'.$input->field_name.'" name="'.$input->field_name.'" '.$input->required.' >';
+                        $ret .= '<li class="'.$err[1].'">
+                                <label class="'.$err[0].'" for="'.$input->field_name.'">'.$input->field_title.'</label>';
+
+                        $ret .= '<select class="'.$err[2].'" id="'.$input->field_name.'" name="'.$input->field_name.'" '.$input->required.' >';
 
                         foreach ($vals as $key => $val)
                         {
-                            $ret  .= '<option value="'.$key.'">'.$val.'</option>';
+                            $selected = old($input->field_name)==$key?"selected":"";
+
+                            $ret  .= '<option value="'.$key.'" '.$selected.' >'.$val.'</option>';
                         }
 
                         $ret.= '</select></li>';
                         break;
                     case  'file':
-                        $ret .= '<li>
-                                <label for="'.$input->field_name.'">'.$input->field_title.' </label>
-                                <input type="file" id="'.$input->field_name.'" name="'.$input->field_name.'" accept=".doc,.docx,.ppt,.pptx,.pdf" '.$input->required.' > '.$input->field_instructions.'
+                        $ret .= '<li class="'.$err[1].'">
+                                <label class="'.$err[0].'" for="'.$input->field_name.'">'.$input->field_title.' </label>
+                                <input class="'.$err[2].'" type="file" id="'.$input->field_name.'" name="'.$input->field_name.'" accept=".doc,.docx,.ppt,.pptx,.pdf" '.$input->required.' > '.$input->field_instructions.'
                             </li>';
                         break;
                     case  'email':
-                        $ret .='<li>
-                                <label for='.$input->field_name.'>'.$input->field_title.' </label>
-                                <input type="email" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
+                        $ret .='<li class="'.$err[1].'">
+                                <label class="'.$err[0].'" for='.$input->field_name.'>'.$input->field_title.' </label>
+                                <input class="'.$err[2].'" type="email" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
                             </li>';
                         break;
                     case  'tel':
-                        $ret .='<li>
-                                <label for='.$input->field_name.'>'.$input->field_title.' </label>
-                                <input type="tel" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
+                        $ret .='<li class="'.$err[1].'">
+                                <label class="'.$err[0].'" for='.$input->field_name.'>'.$input->field_title.' </label>
+                                <input class="'.$err[2].'" type="tel" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
                             </li>';
                         break;
                     case  'url':
-                        $ret .='<li>
-                                <label for='.$input->field_name.'>'.$input->field_title.' </label>
-                                <input type="url" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
+                        $ret .='<li class="'.$err[1].'">
+                                <label class="'.$err[0].'" for='.$input->field_name.'>'.$input->field_title.' </label>
+                                <input class="'.$err[2].'" type="url" id="'.$input->field_name.'" name="'.$input->field_name.'" value="'.old($input->field_name).'" placeholder="'.$input->field_placeholder.'" '.$input->required.' >
                             </li>';
                         break;
                 }
           }
 
-                $ret .= '<li>
+          if ($form->newsletter == 1)
+          {
+                $ret .= ' <li>
+                                <label for="newsletter_subscription">Would you like to subscribe to Future City
+                                    Summit newsletter? </label>
+                                <select name="newsletter_subscription" id="newsletter_subscription">
+                                    <option value="y">Yes</option>
+                                    <option value="n">No</option>
+                                </select>
+                            </li>';
+          }
+
+          if ($form->agreement_html != "")
+          {
+              $ret .= '<li>
 							<label></label>
 								<div class="checkbox"><input required="" name="agreement" type="checkbox" value="">'.$form->agreement_html.'</div>
 							
 							</li>';
+          }
+
 
                 $ret .= '<li>
                                 <button type="submit">'.$form->submit_button.'</button>
