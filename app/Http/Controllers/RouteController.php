@@ -140,8 +140,20 @@ class RouteController extends Controller
                         {
                             try
                             {
-                                DB::table($form->table_name)->insert(array_except($request->all(),['_token','agreement']));
+                                $arrToInsert = array_except($request->all(),['_token','agreement']);            //Trimming extras
 
+                                //Moving and renaming file inputs
+                                foreach ($request->file() as $key => $file)
+                                {
+                                    $ext = $request->file($key)->getClientOriginalExtension();
+                                    $deckname = md5(uniqid()) . '.' . $ext;
+                                    $file->move(base_path('public/uploads/files/'.$ext), $deckname);
+                                    $arrToInsert[$key] = 'public/uploads/files/'.$ext . '/' . $deckname;
+                                }
+
+                                DB::table($form->table_name)->insert($arrToInsert);         //Insert to database
+
+                                //Preparation of Subscribing to newsletter
                                 if ($request->has('newsletter_subscription'))
                                 {
                                     if ($request->input('newsletter_subscription') == 'y')
@@ -150,10 +162,10 @@ class RouteController extends Controller
                                     }
                                 }
 
-                                $this->go_subscribe($form,$request);
+                                $this->go_subscribe($form,$request);        //Subscribe to newsletter
 
-                                dump($request->file());
-                                die("");
+
+
                                 $suc = (new MessageBag())->add('none','Submitted successfully, we shall contact you via email for further assistance');
                                 return Redirect::back()->with('success',$suc);
 
@@ -163,6 +175,7 @@ class RouteController extends Controller
 
                                 $err = new MessageBag();
                                 $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                                $err->add('none',$e->getMessage());
                                 return Redirect::back()->withErrors($err)->withInput();
                             }
                         }
@@ -171,6 +184,7 @@ class RouteController extends Controller
                     {
                         $err = new MessageBag();
                         $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                        $err->add('none',$e->getMessage());
                         return Redirect::back()->withErrors($err)->withInput();
                     }
 
