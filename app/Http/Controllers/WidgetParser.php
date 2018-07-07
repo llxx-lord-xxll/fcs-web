@@ -24,6 +24,64 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function accordion_faq($element,$page)
+    {
+        $faq_content = SitePages::get_page_data($page,"input_" .$element['id']);
+        $metas = $element['meta'];
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        $faq_content = str_replace("\r\n","",$faq_content);
+        if (($faq_content != null || $faq_content != "") && str_contains($faq_content,"#END OF TAB#"))
+        {
+            $faq_content = explode("#END OF TAB#",$faq_content);
+            $incrementer = 0;
+            $ret = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">';
+            foreach ($faq_content as $item)
+            {
+                if (str_contains($item,"#CONTENT"))
+                {
+                    $content = explode("#CONTENT",$item);
+                    $in = $incrementer == 0?'in':'';
+                    $aria_expanded = $incrementer == 0?'true':'false';
+                    $aria_collapsed =  $incrementer == 0?'':'collapsed';
+                    $ret .= '
+                 <div class="panel panel-default">
+                     <div class="panel-heading" role="tab" id="heading'.$element['id'].$incrementer.'">
+                         <h4 class="panel-title">
+                             <a class="'.$aria_collapsed.'" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'.$element['id'].$incrementer.'" aria-expanded="'.$aria_expanded.'" aria-controls="collapse'.$element['id'].$incrementer.'">
+                             '.$content[0].'
+                             </a>
+                         </h4>
+                     </div>
+                     <div id="collapse'.$element['id'].$incrementer.'" class="panel-collapse collapse '. $in .'" role="tabpanel" aria-labelledby="heading'.$element['id'].$incrementer.'">
+                         <div class="panel-body">
+                         '.$content[1].'
+                         </div>
+                     </div>
+                 </div>';
+                    $incrementer++;
+                }
+            }
+            $ret .= '</div>';
+        }
+        else
+        {
+            $ret = "Invalid data format for Accordion FAQ widget";
+        }
+
+
+
+
+
+
+        return $ret;
+
+    }
+
     public static function forms($element,$page)
     {
         $form = $text =SitePages::get_page_data($page,"input_" .$element['id']);
@@ -1049,12 +1107,21 @@ class WidgetParser extends Controller
 
             if (is_callable("self::".$element['type']))
             {
-                $tmp = call_user_func("self::".$element['type'],$element,$page);
+                try
+                {
+                    $tmp = call_user_func("self::".$element['type'],$element,$page);
+                }
+                catch (\Exception $exception)
+                {
+                    $tmp = "<strong>" . $element['type'] . '</strong> can not be parsed';
+                }
+
             }
             else
             {
-                throw new \Exception("The widget slug '" . $element['type'] ."' can not be parsed");
+                $tmp = "<span class='text-danger bg-danger' style='padding: 5px; font-size: large'>Widget slug <strong>" . $element['type'] . '</strong> can not be parsed</span>';
             }
+
             $ret .=  $tmp . "\n";
         }
 
