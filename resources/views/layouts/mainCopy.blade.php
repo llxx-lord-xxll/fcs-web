@@ -111,64 +111,31 @@
             <nav class="row">
                 <div class="col-xs-12 col-md-2">
                     <div class="footer-logo">
-                        <a href="#">fcs</a>
+                        <a href="#" style="background-image: url({{\App\Databases\SiteSettings::get_footer('logo')}})!important;" >fcs</a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2">
-                    <h3 class="nav-title">Future City Summit</h3>
-                    <ul class="footer-list">
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">FCS 2016</a></li>
-                        <li><a href="">FCS 2017</a></li>
-                        <li><a href="">Humans of FCS</a></li>
-                        <li><a href="">Contact Us</a></li>
-                    </ul>
+                    {!! \App\Http\Controllers\WidgetParser::buildFooterMenuWidget(1) !!}
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2">
-                    <h3 class="nav-title">Conference 2018</h3>
-                    <ul class="footer-list">
-                        <li><a href="">Overview</a></li>
-                        <li><a href="">Theme</a></li>
-                        <li><a href="">Schedule</a></li>
-                        <li><a href="">Metro-Hackathon</a></li>
-                        <li><a href="">Workshop</a></li>
-                    </ul></div>
-                <div class="col-xs-6 col-sm-4 col-md-2">
-                    <h3 class="nav-title">Venue</h3>
-                    <ul class="footer-list">
-                        <li><a href="">HKU</a></li>
-                        <li><a href="">SYSU</a></li>
-                        <li><a href="">Cyberport</a></li>
-                    </ul>
+                    {!! \App\Http\Controllers\WidgetParser::buildFooterMenuWidget(2) !!}
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2">
-                    <h3 class="nav-title">Applications</h3>
-                    <ul class="footer-list">
-                        <li><a href="">Apply as a Delegate</a></li>
-                    </ul>
+                    {!! \App\Http\Controllers\WidgetParser::buildFooterMenuWidget(3) !!}
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2">
-                    <ul class="nav list-unstyled list-inline uppercase">
-                        <li><a href="https://www.facebook.com/futurecitysummit/"><i class="fa fa-lg fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/FuturCitySummit"><i class="fa fa-lg fa-twitter"></i></a></li>
-                        <li><a href="https://www.instagram.com/futurecitysummit/"><i class="fa fa-lg fa-instagram"></i></a></li>
-                        <li><a href="https://linkedin.com/company/future-city-summit/"><i class="fa fa-lg fa-linkedin"></i></a></li>
-                    </ul>
+                    {!! \App\Http\Controllers\WidgetParser::buildFooterMenuWidget(4) !!}
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    {!! \App\Http\Controllers\WidgetParser::buildFooterMenuWidget(5,'social') !!}
                 </div>
             </nav>
             <nav class="row row-small">
                 <div class="col-xs-5 col-md-3 col-md-offset-1">
-                    <ul class="nav nav-small">
-                        <li>
-                            <a href="">Legal</a>
-                        </li>
-                        <li>
-                            <a href="">FAQs</a>
-                        </li>
-                    </ul>
+                    {!! \App\Http\Controllers\WidgetParser::buildFooterMenuWidget(6,'subfooter') !!}
                 </div>
                 <div class="col-xs-7 col-md-8 text-center">
-                    <small class="copyright">Copyright © 2016-2018 All Right Reserved Future City Summit an imitative by University of Hong Kong</small>
+                    <small class="copyright">{{\App\Databases\SiteSettings::get_footer('copyright')}}</small>
                 </div>
             </nav>
         </div>

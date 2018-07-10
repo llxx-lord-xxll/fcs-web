@@ -1128,6 +1128,43 @@ class WidgetParser extends Controller
         return $ret;
     }
 
+    public static function buildFooterMenuWidget($slot_code,$placement = 'nav')
+    {
+        $ret = "";
+        try
+        {
+            $menu_id = DB::table('site_footer')->where('meta_key','=','sel_menu'. $slot_code)->first()->meta_value;
+            $menu = DB::table('site_menus')->find($menu_id);
+            $obj = SiteMenu::buildMenuArray($menu_id);
+
+            if ($placement == 'nav')
+            {
+                $ret = '<h3 class="nav-title">'.$menu->title.'</h3>  <ul class="footer-list">';
+            }
+            elseif ($placement == 'social')
+            {
+                $ret = '<ul class="nav list-unstyled list-inline uppercase">';
+            }
+            elseif ($placement == 'subfooter')
+            {
+                $ret .= '<ul class="nav nav-small">';
+            }
+
+            foreach ($obj as $node)
+            {
+                $ret .= '<li><a href="'.$node['uri'].'">'.$node['title'].'</a></li>';
+            }
+
+            $ret .= '</ul>';
+        }
+        catch (\Exception $exception)
+        {
+            $ret = "";
+        }
+
+        return $ret;
+    }
+
     public static function buildMenuWidget($obj = null){
 
         if ($obj==null)

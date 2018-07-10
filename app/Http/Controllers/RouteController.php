@@ -21,7 +21,7 @@ class RouteController extends Controller
 
     public function index()
     {
-      return 'test';
+      return '';
     }
 
     public function show(Request $request)
@@ -29,7 +29,6 @@ class RouteController extends Controller
         switch ($request->method())
         {
             case 'GET':
-
                 if(substr(ltrim($request->path(),'/'),0,5) == "posts")
                 {
                     $post_slug = str_after(ltrim($request->path(),'/'),"posts/");

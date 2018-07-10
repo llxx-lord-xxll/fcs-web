@@ -3,6 +3,7 @@
 namespace App\Databases;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class SiteSettings extends Model
 {
@@ -19,5 +20,19 @@ class SiteSettings extends Model
         {
             return $default;
         }
+    }
+
+    public static function get_footer($meta_key)
+    {
+        try
+        {
+            $ret =  DB::table('site_footer')->where('meta_key','=',$meta_key)->first()->meta_value;
+        }
+        catch (\Exception $exception)
+        {
+            $ret = "";
+        }
+       return $ret;
+
     }
 }
