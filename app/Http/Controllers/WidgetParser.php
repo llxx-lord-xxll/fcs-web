@@ -1132,7 +1132,7 @@ class WidgetParser extends Controller
 
         if ($obj==null)
         {
-            $obj = SiteMenu::buildMenuArray();
+            $obj = SiteMenu::buildMenuArray(1);
         }
 
         $ret = "";

@@ -10,14 +10,14 @@ class SiteMenu extends Model
     protected $table = 'site_menu_tables';
 
 
-    public static function buildMenuArray($parent_id = 0)
+    public static function buildMenuArray($menu_id = 1,$parent_id = 0)
     {
         $ret = array();
-        foreach (DB::table('site_menu_tables')->orderBy('id','ASC')->orderBy('order','ASC')->where('parent_id','=',$parent_id)->get() as $row)
+        foreach (DB::table('site_menu_tables')->where('menu_id','=',$menu_id)->orderBy('id','ASC')->orderBy('order','ASC')->where('parent_id','=',$parent_id)->get() as $row)
         {
 
             $tmp = array();
-            $children = self::buildMenuArray($row->id);
+            $children = self::buildMenuArray($menu_id,$row->id);
             $tmp = array(
                 'title'=>$row->title,
                 'uri' => $row->uri,
