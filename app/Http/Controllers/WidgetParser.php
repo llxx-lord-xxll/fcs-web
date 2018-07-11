@@ -24,6 +24,10 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function br($element,$page)
+    {
+        return '<br>';
+    }
     public static function accordion_faq($element,$page)
     {
         $faq_content = SitePages::get_page_data($page,"input_" .$element['id']);
@@ -872,6 +876,10 @@ class WidgetParser extends Controller
     return SitePages::get_page_data($page,"input_" .$element['id']);
     }
 
+    public static function vhtml($element,$page)
+    {
+        return SitePages::get_page_data($page,"input_" .$element['id']);
+    }
     public static function section($element,$page)
     {
         $metas = $element['meta'];
