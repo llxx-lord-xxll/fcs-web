@@ -150,7 +150,9 @@ class RouteController extends Controller
                                     $arrToInsert[$key] = 'public/uploads/files/'.$ext . '/' . $deckname;
                                 }
 
-                                DB::table($form->table_name)->insert($arrToInsert);         //Insert to database
+                                if ($form->table_name != null) {
+                                    DB::table($form->table_name)->insert($arrToInsert);  //Insert to database
+                                }
 
                                 //Preparation of Subscribing to newsletter
                                 if ($request->has('newsletter_subscription'))
