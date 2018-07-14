@@ -24,6 +24,24 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function cover_image($element,$page){
+        $elem = $element['children'];
+
+        $height = SitePages::get_page_data($page,"input_" .$elem[0]['id']);
+        $image = SitePages::get_page_data($page,"input_" .$elem[1]['id']);
+        $content = SitePages::get_page_data($page,"input_" .$elem[2]['id']);
+
+        $ret = '
+        <section class="cover-image" style="background-image: url('.asset('/uploads/'.$image).'); height: '.$height.'">
+            <div class="container-fluid" style="padding-top: 150px;">
+              '.$content.'
+            </div>
+        </section>';
+
+        return $ret;
+    }
+
+
     public static function br($element,$page)
     {
         return '<br>';

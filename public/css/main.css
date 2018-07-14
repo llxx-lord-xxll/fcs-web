@@ -1618,7 +1618,7 @@ figure.effect-ming:hover img {
 
 /*  VENUES */
 .venue-map-text {
-	margin: 50px;
+	margin: 50px 0px;
 }
 
 
@@ -4757,4 +4757,15 @@ input[type="submit"]:active {
 /* Media Heading Section */
 .media-heading {
 	padding: 30px 30px 60px;
+}
+
+.cover-image{
+	background-image: url(../img/banner-theme-2.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	width: 100%;
+	padding: 0 5% 1.5%;
 }
