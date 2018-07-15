@@ -23,6 +23,17 @@ class WidgetParser extends Controller
     public static function parse($page_id,$template_id){
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
+    public static function i($element,$page){
+        $icon_class = SitePages::get_page_data($page,"input_" .$element['id']);
+        $metas = $element['meta'];
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        return '<i class="fa '.$icon_class.'" '. $attrs .' ></i>';
+    }
 
     public static function cover_image($element,$page){
         $elem = $element['children'];

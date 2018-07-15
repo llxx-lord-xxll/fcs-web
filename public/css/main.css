@@ -4244,16 +4244,16 @@ ul.fcs-form-outer > li > label.text-danger
 	height: 100%;
 	background-color: rgba(55,48,64,.5);
 }
-#fcs-newsletter{
+.fcs-newsletter{
 	position: relative;
 	z-index:2;
 	padding: 5% 15%;
 }
-#fcs-newsletter h1{
+.fcs-newsletter h1{
 	color:#FFFFFF;
 	margin-bottom:5px;
 }
-#fcs-newsletter p{
+.fcs-newsletter p{
 	color:#FFFFFF;
 	margin-top:10px;
 	font-weight:300;
@@ -4261,14 +4261,20 @@ ul.fcs-form-outer > li > label.text-danger
 .fcs-inline-form{
 	margin: 3% 5%;
 }
-.fcs-inline-form input{
+.fcs-inline-form label{
+	display: none;
+}
+.fcs-inline-form li{
 	display:inline-block;
-	border:none;
-	outline:none;
-	margin:5px 4px;
-	font-size:14px;
-	max-width:100%;
-	padding:1% 3%;
+}
+.fcs-inline-form input{
+	display: inline-block;
+	border: none !important;
+	outline: none;
+	margin: 5px 6px;
+	font-size: 14px;
+	max-width: 100%;
+	padding: 3% 4% !important;
 }
 
 .fcs-inline-form input[type="text"]{
@@ -4279,18 +4285,18 @@ ul.fcs-form-outer > li > label.text-danger
 	width:250px;
 }
 
-.fcs-inline-form input[type="submit"]{
+.fcs-inline-form .fcs-form-outer li button[type="submit"]{
 	cursor: pointer;
-	background: #9ACA41;
+	background: #9aca41;
 	width:180px;
 	color:#FFFFFF;
 	text-align:center;
 	font-weight:400;
 }
 
-.fcs-inline-form input[type="submit"]:hover,
-input[type="submit"]:focus,
-input[type="submit"]:active {
+.fcs-inline-form button[type="submit"]:hover,
+button[type="submit"]:focus,
+button[type="submit"]:active {
 	background: #9ACA41;
 }
 
