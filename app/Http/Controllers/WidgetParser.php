@@ -23,6 +23,8 @@ class WidgetParser extends Controller
     public static function parse($page_id,$template_id){
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
+
+
     public static function i($element,$page){
         $icon_class = SitePages::get_page_data($page,"input_" .$element['id']);
         $metas = $element['meta'];
@@ -1088,22 +1090,332 @@ class WidgetParser extends Controller
     </section>';
     }
 
-    public static function slider($element,$page)
+
+    public static function venue_slider($element,$page)
     {
-        $elems = $element['children'];
+        $elemid = "input_" . $element['id'];
+
+
+
+        $slider = SitePages::get_page_data($page, "input_" . $element['id']);
+
+        $elems = DB::table('site_slider_meta')->where('slider_id', '=', $slider)->get();
+
+        $ret = '<div id="'.$elemid.'">';
+
+        $counter = 1;
+        foreach ($elems as $elem) {
+            $bgimg = $elem->img;
+            $oText = $elem->content;
+            $active = $counter==1?'active':'';
+            if ($bgimg) {
+                $ret .= '<div class="content ' . $active .'" data-slide="'.$counter.'" data-bg="'.$bgimg.'">
+                <div class="info-wrapper">
+                    '.$oText.'
+                </div>
+            </div>';
+            }
+
+            $counter++;
+        }
+
+
+        $ret .= '
+            <div class="slide-left"><i class="material-icons">chevron_left</i></div>
+            <div class="slide-right"><i class="material-icons">chevron_right</i></div>
+                </div>';
+
+
+        $elemid = '#' . $elemid;
+
+        $ret .= "
+<style type='text/css'>
+                /* Landing Page Venue */
+                $elemid {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    height: 100vh;
+                    overflow: hidden;
+                    background-color: #282828;
+                }
+                
+                $elemid.compact .content:not(.active) {
+                    width: 0%;
+                }
+                
+                $elemid .content {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    overflow: hidden;
+                    -webkit-box-shadow: 5px 10px 20px black;
+                    box-shadow: 5px 10px 20px black;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                    -webkit-filter: saturate(50%);
+                    filter: saturate(50%);
+                    -webkit-transition-property: width, -webkit-filter;
+                    transition-property: width, -webkit-filter;
+                    transition-property: filter, width;
+                    transition-property: filter, width, -webkit-filter;
+                    -webkit-transition-duration: 0.5s;
+                    transition-duration: 0.5s;
+                    -webkit-transition-timing-function: ease-in-out;
+                    transition-timing-function: ease-in-out;
+                    -webkit-transition-delay: 0.5s;
+                    transition-delay: 0.5s;
+                }
+                $elemid .content.transition {
+                    width: 50% !important;
+                }
+                
+                $elemid .content:before {
+                    content: \"\";
+                    position: absolute;
+                    width: 32px;
+                    height: 32px;
+                    bottom: 10px;
+                    position: absolute;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, 0%) scale(0.5);
+                    transform: translate(-50%, 0%) scale(0.5);
+                    background-color: rgba(0, 0, 0, 0.3);
+                    -webkit-box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.3) inset;
+                    box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.3) inset;
+                    border-radius: 50%;
+                    -webkit-transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+                    transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+                    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+                    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+                }
+                
+                $elemid .content.active {
+                    width: 1000%;
+                }
+                
+                $elemid .content:not(.active) {
+                    cursor: pointer;
+                    width: 100%;
+                }
+                $elemid .content:not(.active) .info-wrapper {
+                    opacity: 0;
+                    -webkit-transition: opacity 0.5s ease-in-out 0s;
+                    transition: opacity 0.5s ease-in-out 0s;
+                }
+                
+                $elemid .content .info-wrapper {
+                    color: white;
+                    margin: 20%;
+                    -webkit-transition: opacity 1s ease-in-out 1s;
+                    transition: opacity 1s ease-in-out 1s;
+                }
+                $elemid .content .info-wrapper h3.slidetitle {
+                    font-size: 3em;
+                    color: #fff;
+                }
+                $elemid .content .info-wrapper h3.slidetitle span {
+                    font-size: 0.25em;
+                    color: rgba(255, 255, 255, 0.3);
+                }
+                $elemid .content .info-wrapper p {
+                    width: 100%;
+                    font-size: 1.5em;
+                    text-align: justify;
+                    line-height: 30px;
+                }
+                
+                $elemid .slide-left, html $elemid .slide-right {
+                    position: absolute;
+                    top: 50%;
+                    -webkit-transform: translate(0%, -50%);
+                    transform: translate(0%, -50%);
+                    color: rgba(255, 255, 255, 0.5);
+                    background-color: rgba(255, 255, 255, 0.1);
+                    cursor: pointer;
+                    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+                    -webkit-transition-property: color, padding, left, right;
+                    transition-property: color, padding, left, right;
+                    -webkit-transition-duration: 0.25s;
+                    transition-duration: 0.25s;
+                    -webkit-transition-timing-function: ease-in-out;
+                    transition-timing-function: ease-in-out;
+                }
+                $elemid .slide-left:hover, html $elemid .slide-right:hover {
+                    color: rgba(255, 255, 255, 0.9);
+                }
+                $elemid .slide-left:hover.slide-left, html $elemid .slide-right:hover.slide-left {
+                    left: 0px;
+                }
+                $elemid .slide-left:hover.slide-right, html $elemid .slide-right:hover.slide-right {
+                    right: 0px;
+                }
+                $elemid .slide-left:active, html $elemid .slide-right:active {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+                }
+                $elemid .slide-left i, html $elemid .slide-right i {
+                    font-size: 5em;
+                    margin-top: 5px;
+                }
+                $elemid .slide-left {
+                    left: -10px;
+                    border-radius: 0px 60px 60px 0px;
+                }
+                $elemid .slide-right {
+                    right: -10px;
+                    border-radius: 60px 0px 0px 60px;
+                }
+                
+                
+                </style>
+                ";
+
+        $ret .= '    <script type="text/javascript">
+        // I\'m kinda tempted to turn this into a jquery/css plugin
+        $(document).ready(function() {
+            Math.seedrandom(\'pr\'); // Make Math.random seed based
+
+            // Set timers and intervals
+            var slideInterval = 5000,
+                transTimer = 2500;
+
+            // Init vars
+            var compact = $("'.$elemid.'").hasClass("compact");
+            var contentAmt = $("'.$elemid.' .content").length;  // Number of slides
+            var loop = true;
+
+            // HEX TO RGB FUNCTION
+            function hexToRgb(hex) {
+                var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+                return result ? {
+                    r: parseInt(result[1], 16),
+                    g: parseInt(result[2], 16),
+                    b: parseInt(result[3], 16)
+                } : null;
+            }
+
+            // Styling
+            var dullcolors = ["#f44336", "#ec407a", "#ab47bc", "#7e57c2",
+                    "#3f51b5", "#2196f3", "#4fc3f7", "#00bcd4",
+                    "#66bb6a", "#aed581", "#e6ee9c", "#fff176",
+                    "#ffca28", "#ffa726", "#ff5722"],
+                fullcolors = ["#8d6e63", "#f50057", "#d500f9", "#651fff",
+                    "#3d5afe", "#2979ff", "#00b0ff", "#00e5ff",
+                    "#1de9b6", "#00e676", "#76ff03", "#c6ff00",
+                    "#ffea00", "#ffc400", "#ff9100", "#ff3d00"];
+
+            // Color each slide
+            $(".content").each(function() {
+                var bg_img = $(this).attr("data-bg");
+
+
+                $(this).css({
+                    "background" : " url("+bg_img+")",
+                    "background-repeat" : "no-repeat",
+                    "background-position" : "center",
+                    "background-size" : "cover",
+                    "-webkit-background-size" : "cover",
+                    "-moz-background-size" : "cover"
+                })
+            });
+
+            // Functionality
+            if (loop) { var repeat = setInterval(changeSlide, slideInterval); }
+
+            // Hide or show left right controls | only compact supports those
+            if (compact == true) {
+                $(".slide-left, .slide-right").show();
+            } else {
+                $(".slide-left, .slide-right").hide();
+            }
+
+
+            // Physical clicking | Content panels
+            $(".content").on("click", function() {
+                clearInterval(repeat); // Clear the interval | pause, basically
+                $(".playbutton").addClass("paused"); // add the paused class | visual shit
+                changeSlide($(this).attr("data-slide"), "clicked"); // changeSlide
+            }); // END onClick
+
+            $(".slide-left, .slide-right").on("click", function() {
+                var slide = parseInt($("'.$elemid.' .content.active").attr("data-slide"));
+                if ($(this).hasClass("slide-left")) {
+                    slide--
+                    console.log(slide);
+                    if (slide == 0) {
+                        slide = contentAmt;
+                    }
+                } else {
+                    slide++
+                    if (slide > contentAmt) {
+                        slide = 1;
+                    }
+                }
+                $(".playbutton").addClass("paused");
+                clearInterval(repeat);
+                changeSlide(slide, "clicked");
+            });
+
+
+            // FUNCTIONS -------
+
+            // changeSlide() function
+            function changeSlide(clicked, method) {
+                var compact = $("'.$elemid.'").hasClass("compact"); // If compact is added
+                // If natural, and not clicked called
+                if (method != "clicked") {
+                    // Figure slides
+                    var currentSlide = $("'.$elemid.' .content.active").attr("data-slide");
+                    var nextSlide = parseInt(currentSlide) + 1;
+
+                    // Check if last slide
+                    if (nextSlide > contentAmt) {
+                        nextSlide = 1; // Set next slide to be the first slide
+
+                        // Mobile/Fullscreen end slide transition | show all for a time
+                        if (compact == true) {
+                            // Transitioney stuff
+                            $("'.$elemid.' .content:not(.active)").addClass("transition");
+                            setTimeout(function() {
+                                $("'.$elemid.' .content").removeClass("transition");
+                            }, transTimer);
+                        }
+                    }
+                } else { // If clicked, not natural
+                    nextSlide = clicked;
+                } // END if/else
+
+                //Remove and add the active class | Make the slides slide
+                $("'.$elemid.' .content").removeClass("active");
+                $("'.$elemid.' .content[data-slide=\'"+nextSlide+"\']").addClass("active");
+            } // END function
+        }); // END .ready
+        //# sourceURL=pen.js
+    </script>';
+
+        return $ret;
+    }
+
+
+        public static function slider($element,$page)
+    {
+        $slider = SitePages::get_page_data($page,"input_" .$element['id']);
+
+        $elems = DB::table('site_slider_meta')->where('slider_id','=',$slider)->get();
 
         $ret = '<div class="tp-banner-container">
                     <div class="tp-banner">
                     <ul>';
         foreach ($elems as $elem)
         {
-            $bgimg = SitePages::get_page_data($page,"input_" .$elem['children'][0]['id']);
-            $oText = SitePages::get_page_data($page,"input_" .$elem['children'][1]['id']);
+            $bgimg = $elem->img;
+            $oText = $elem->content;
             if($bgimg)
             {
-                $ret .= '<li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="'. asset('uploads/'. $bgimg) .'"  data-saveperformance="off"  data-title="Slide">
+                $ret .= '<li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000" data-thumb="'. $bgimg .'"  data-saveperformance="off"  data-title="Slide">
                     <!-- MAIN IMAGE -->
-                    <img src="'. asset('uploads/'. $bgimg) .'"  alt="fullslide1"  data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <img src="'. $bgimg .'"  alt="fullslide1"  data-bgposition="left top" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
 
                     <!-- LAYER NR. 1 -->

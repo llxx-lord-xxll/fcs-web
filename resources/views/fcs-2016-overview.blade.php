@@ -11,3 +11,9 @@
 {!! $data !!}
 
 @endsection
+
+@section('scripts')
+
+    <script type="text/javascript" src='{{asset('js/seedrandom.min.js')}}'></script>
+    
+@endsection
