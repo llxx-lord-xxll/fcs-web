@@ -24,6 +24,53 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function delegate_handbook($element,$page){
+        $handbooks = SitePages::get_page_data($page,"input_" .$element['id']);
+        $ret = "";
+
+        $metas = $element['meta'];
+        $attrs = "";
+        foreach ($metas as $meta_key => $meta_value)
+        {
+            $attrs .= " ". $meta_key . " = '" . $meta_value . "' ";
+        }
+
+        if (($handbooks != null || $handbooks != "") && str_contains($handbooks,"\r\n"))
+        {
+            $handbooks = explode("\r\n",$handbooks);
+            $ret .= '    <section id="landing-download">
+                            <div class="container">
+                                <div class="row">
+                                    <h2 class="uppercase text-center">Materials to Download</h2>
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="row">';
+            foreach ($handbooks as $handbook)
+            {
+                if (($handbook != null || $handbook != "") && str_contains($handbook,"=="))
+                {
+                    $handbook = str_replace(" ","",$handbook);
+                    $books = explode("==",$handbook);
+
+                    $ret .= '<div class="col-lg-4 col-md-4 col-sm-4">
+                            <div>
+                                <img class="img-media-kit" src="'. asset('img/Conference-Booklet-FCS-2017.png') . '" alt="" />
+                                <h3 class="text-center">'.$books[0].'</h3>
+                                <a class="button button-small button-line-dark fcs-btn" href="'.$books[1].'">download pdf</a>
+                            </div>
+                        </div>';
+                }
+            }
+
+            $ret .= '                    </div>
+                                        </div>
+                        
+                                    </div>
+                                </div>
+                            </section>';
+        }
+
+        return $ret;
+    }
 
     public static function i($element,$page){
         $icon_class = SitePages::get_page_data($page,"input_" .$element['id']);
@@ -1462,6 +1509,7 @@ class WidgetParser extends Controller
                 }
                 catch (\Exception $exception)
                 {
+                    dump($exception->getMessage());
                     $tmp = "<strong>" . $element['type'] . '</strong> can not be parsed';
                 }
 
