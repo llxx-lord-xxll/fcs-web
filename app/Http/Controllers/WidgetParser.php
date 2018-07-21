@@ -48,14 +48,14 @@ class WidgetParser extends Controller
             {
                 if (($handbook != null || $handbook != "") && str_contains($handbook,"=="))
                 {
-                    $handbook = str_replace(" ","",$handbook);
+                    $handbook = str_replace(" == ","==",$handbook);
                     $books = explode("==",$handbook);
 
                     $ret .= '<div class="col-lg-4 col-md-4 col-sm-4">
                             <div>
                                 <img class="img-media-kit" src="'. asset('img/Conference-Booklet-FCS-2017.png') . '" alt="" />
                                 <h3 class="text-center">'.$books[0].'</h3>
-                                <a class="button button-small button-line-dark fcs-btn" href="'.$books[1].'">download pdf</a>
+                                <a class="button button-small button-line-dark fcs-btn" href="'.str_replace(" ","",$books[1]).'">download pdf</a>
                             </div>
                         </div>';
                 }
