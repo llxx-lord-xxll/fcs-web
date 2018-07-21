@@ -3322,14 +3322,26 @@ body .progress_inner input[type="radio"] {
 	line-height: 1.7em;
 }
 
+.special-content {
+	display: block;
+	display: -webkit-box;
+	height: 450px;
+	margin: 0 auto;
+	padding: 10px 30px;
+	overflow: auto;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+}
+
 @media screen and (min-width: 1281px) and (max-width: 1366px) {
 	.special-content {
 		display: block;
 		display: -webkit-box;
 		height: 450px;
 		margin: 0 auto;
-		-webkit-box-orient: vertical;
+		padding: 10px 30px;
 		overflow: auto;
+		-webkit-box-orient: vertical;
 		text-overflow: ellipsis;
 	}
 }
@@ -3340,6 +3352,7 @@ body .progress_inner input[type="radio"] {
 		display: -webkit-box;
 		height: 350px;
 		margin: 0 auto;
+		padding: 10px 30px;
 		-webkit-box-orient: vertical;
 		overflow: auto;
 		text-overflow: ellipsis;
@@ -3603,6 +3616,16 @@ ul.fcs-form-outer > li > label.text-danger
 	list-style: none;
 	line-height: 1.7em;
 	font-size: 1.3em;
+}
+
+.workshop-inner-list li:before{
+ 	content: '\f068';
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	padding-right: 5px;
 }
 
 /* FCS Previous Years */

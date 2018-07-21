@@ -1136,13 +1136,42 @@ class WidgetParser extends Controller
         </div>
     </section>';
     }
+    public static function img_slider($element,$page)
+    {
+        $elemid = "input_" . $element['id'];
 
+        $slider = SitePages::get_page_data($page, "input_" . $element['id']);
+
+        $elems = DB::table('site_slider_meta')->where('slider_id', '=', $slider)->get();
+
+        $ret = '<div id="'.$elemid.'" class="fcs-img-form-slider">';
+
+        foreach ($elems as $elem) {
+            $bgimg = $elem->img;
+            $ret .= '<img class="fcs-form-slider-photo" src="'.$bgimg.'" alt="">';
+        }
+
+        $ret .= '</div>';
+
+
+        $ret .= ' <script type="text/javascript">
+                        $(document).ready(function() {
+                            var '.$elemid.' = $("#'.$elemid.'");
+                            setInterval(function() {
+                              '.$elemid.'.children(\':last-child\').fadeOut(3000, function() {
+                                $(this).prependTo('.$elemid.').show();
+                              })
+                            }, 6000);
+                        }); // END .ready
+                    </script>';
+
+
+        return $ret;
+    }
 
     public static function venue_slider($element,$page)
     {
         $elemid = "input_" . $element['id'];
-
-
 
         $slider = SitePages::get_page_data($page, "input_" . $element['id']);
 
