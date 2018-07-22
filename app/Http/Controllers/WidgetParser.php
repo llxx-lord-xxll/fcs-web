@@ -24,6 +24,269 @@ class WidgetParser extends Controller
        return self::parseTemplate($page_id,SiteTemplates::buildChildrenArray($template_id));
     }
 
+    public static function schedule_table($element,$page){
+
+        $ret = "";
+
+        if (DB::table('site_schedules')->first()) {
+            $tmpFirst = true;
+            $ret .= "<ul id=\"myTab\" class=\"nav nav-tabs\" role=\"tablist\">";
+                foreach (DB::table('site_schedules')->get() as $schedule)
+                {
+                    $tmpFirst = $tmpFirst?'active':'';
+                    $ret .= "<li role=\"presentation\" class=\"".$tmpFirst."\"><a href=\"#".str_slug($schedule->title)."\" role=\"tab\" id=\"".str_slug($schedule->title)."-tab\" data-toggle=\"tab\" aria-controls=\"".str_slug($schedule->title)."\" aria-expanded=\"false\">".$schedule->title."</a></li>";
+                    $tmpFirst = false;
+                }
+
+            $ret .= "</ul>";
+
+
+            $tmpFirst = true;
+
+            $ret .= "<div id=\"myTabContent\" class=\"tab-content\">";
+
+            $acounter = 1;
+            $panelcounter = 1;
+                foreach (DB::table('site_schedules')->get() as $schedule)
+                {
+                    $tmpArrayEvents = array();
+                    $tmpFirst = $tmpFirst?'active in':'';
+                    $ret .= "<div role=\"tabpanel\" class=\"tab-pane fade $tmpFirst\" id=\"".str_slug($schedule->title)."\" aria-labelledby=\"".str_slug($schedule->title)."-tab\">
+                                <div class=\"panel-group\" id=\"accordion$acounter\" role=\"tablist\" aria-multiselectable=\"true\">";
+                        foreach (DB::table('site_schedules_meta')->where('schedule_id','=',$schedule->id)->get() as $events)
+                        {
+
+
+                            if(in_array($events->id,$tmpArrayEvents))
+                            {
+                                continue;
+                            }
+
+                            $tmpOtherEvents = "";
+                            foreach (DB::table('site_schedules_meta')->where('schedule_id','=',$schedule->id)->where('title','=',$events->title)->where('id','!=',$events->id)->get() as $events2)
+                            {
+                                $tmpTitle = $events2->title;
+
+                                if ($events2->subtitle)
+                                {
+                                    $tmpTitle .= " : " . $events2->subtitle;
+                                }
+
+                                $tmpTime = explode(':',$events2->time_period_start);
+                                $events2->time_period_start = Carbon::createFromTime($tmpTime[0],$tmpTime[1],$tmpTime[2])->format('H:i');
+                                $tmpTime = explode(':',$events2->time_period_end);
+                                $events2->time_period_end = Carbon::createFromTime($tmpTime[0],$tmpTime[1],$tmpTime[2])->format('H:i');
+
+                                $tmpTime = $events2->time_period_start;
+                                if ($events2->time_period_start=="00:00" || $events2->time_period_end=="00:00" )
+                                {
+                                    $tmpTime="Whole day";
+                                }
+                                else
+                                {
+                                    $tmpTime = $events2->time_period_start . " - " . $events2->time_period_end;
+                                }
+
+
+                                if($events2->moderator !== null || $events2->moderator !== "0")
+                                {
+                                    $moderator = SitePeople::getPersonInfo($events->moderator);
+
+                                    if($moderator)
+                                    {
+                                        $moderator = "<div class=\"col-lg-2 col-md-2 col-xs-6 fcs-moderator\">
+                                                    <img class=\"img-responsive program-speaker\" src=\"".asset('uploads/'.$moderator->photo)."\" alt=\"\">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>".$moderator->name."</h5>
+                                                    <span class=\"about-speaker\"><i class=\"fa fa-lg fa-globe\"></i> <a class=\"small\" href=\"#\">futurecitysummit.org</a></span>
+                                                </div>";
+                                    }
+                                }
+                                else
+                                {
+                                    $moderator = "";
+                                }
+
+                                $strSpeaker = "";
+
+                                if($events2->speakers !== null || $events2->speakers !== "0")
+                                {
+                                    $speakers = SitePeople::getPeople($events2->speakers);
+
+                                    if(!empty($speakers))
+                                    {
+                                        $strSpeaker .= "<div class=\"col-lg-12\" align='center'>";
+                                        foreach ($speakers as $speaker)
+                                        {
+                                            $people =  SitePeople::getPersonInfo($speaker);
+
+                                            $strSpeaker .= "<div class=\"col-lg-3 col-md-2 col-xs-6\">
+                                                        <img class=\"img-responsive program-speaker\" src=\"".asset('uploads/'.$people->photo)."\" alt=\"\">
+                                                        <h6>$people->name</h6>
+                                                    </div>";
+
+                                        }
+
+                                        $strSpeaker .= "</div>";
+
+
+                                    }
+                                }
+
+                                $tmpTime2 =  $tmpTime=="Whole day"?$tmpTime:$events2->time_period_start;
+
+                                $tmpOtherEvents .= "<div class=\"panel-body\">
+                                            <div class=\"row\">
+                                                <div class=\"col-lg-9 col-lg-offset-1 col-md-9 col-sm-12\">
+                                                    <h4>$tmpTitle</h4>
+                                                    
+                                                    $strSpeaker
+                                                    
+                                                    <div>
+                                                        <p><i class=\"fa fa-lg fa-clock-o\"></i> <span class=\"small\">$tmpTime</span></p>
+                                                        <p><i class=\"fa fa-lg fa-map-marker\"></i> <span class=\"small\">". $events->location . " </span></p>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                $moderator
+                                            </div>
+                                        </div>";
+                                $tmpArrayEvents = array_add($tmpArrayEvents,count($tmpArrayEvents),$events2->id);
+                            }
+
+                            $tmpTitle = $events->title;
+
+                            if ($events->subtitle)
+                            {
+                                $tmpTitle .= " : " . $events->subtitle;
+                            }
+                            $tmpTime = explode(':',$events->time_period_start);
+                            $events->time_period_start = Carbon::createFromTime($tmpTime[0],$tmpTime[1],$tmpTime[2])->format('H:i');
+                            $tmpTime = explode(':',$events->time_period_end);
+                            $events->time_period_end = Carbon::createFromTime($tmpTime[0],$tmpTime[1],$tmpTime[2])->format('H:i');
+
+                            $tmpTime = $events->time_period_start;
+                            if ($events->time_period_start=="00:00" || $events->time_period_end=="00:00" )
+                            {
+                                $tmpTime="Whole day";
+                            }
+                            else
+                            {
+                                $tmpTime = $events->time_period_start . " - " . $events->time_period_end;
+                            }
+
+
+                            if($events->moderator !== null || $events->moderator !== "0")
+                            {
+                                $moderator = SitePeople::getPersonInfo($events->moderator);
+
+                                if($moderator)
+                                {
+                                    $moderator = "<div class=\"col-lg-2 col-md-2 col-xs-6 fcs-moderator\">
+                                                    <img class=\"img-responsive program-speaker\" src=\"".asset('uploads/'.$moderator->photo)."\" alt=\"\">
+                                                    <p><span>Moderator</span></p>
+                                                    <h5>".$moderator->name."</h5>
+                                                    <span class=\"about-speaker\"><i class=\"fa fa-lg fa-globe\"></i> <a class=\"small\" href=\"#\">futurecitysummit.org</a></span>
+                                                </div>";
+                                }
+                            }
+                            else
+                            {
+                                $moderator = "";
+                            }
+
+                            $strSpeaker = "";
+
+                            if($events->speakers !== null || $events->speakers !== "0")
+                            {
+                                $speakers = SitePeople::getPeople($events->speakers);
+
+                                if(!empty($speakers))
+                                {
+                                    $strSpeaker .= "<div class=\"col-lg-12\" align='center'>";
+                                    foreach ($speakers as $speaker)
+                                    {
+                                       $people =  SitePeople::getPersonInfo($speaker);
+
+                                       $strSpeaker .= "<div class=\"col-lg-3 col-md-2 col-xs-6\">
+                                                        <img class=\"img-responsive program-speaker\" src=\"".asset('uploads/'.$people->photo)."\" alt=\"\">
+                                                        <h6>$people->name</h6>
+                                                    </div>";
+
+                                    }
+                                    $strSpeaker .="</div>";
+                                }
+                            }
+
+                            $tmpTime2 =  $tmpTime=="Whole day"?$tmpTime:$events->time_period_start;
+
+                            $ret .= "<div class=\"panel panel-default\">
+
+                                    <!-- Program Heading -->
+                                    <div class=\"panel-heading\" role=\"tab\" id=\"heading$panelcounter\">
+
+                                        <div class=\"row\">
+                                            <div class=\"col-lg-1 col-md-1 col-sm-1\">
+                                                <p class=\"date\">$tmpTime2</p>
+                                            </div>
+
+                                            <div class=\"col-lg-11 col-md-11 col-sm-11\">
+
+                                                <h4 class=\"panel-title\">
+                                                    <a data-toggle=\"collapse\" data-parent=\"#accordion$acounter\" href=\"#Program$panelcounter\" aria-expanded=\"true\" aria-controls=\"Program$panelcounter\">
+                                                        ". $events->title . "
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div id=\"Program$panelcounter\" class=\"panel-collapse collapse\" role=\"tabpanel\" aria-labelledby=\"heading$panelcounter\">
+                                        <!-- Program Content -->
+                                        <div class=\"panel-body\">
+                                            <div class=\"row\">
+                                                <div class=\"col-lg-9 col-lg-offset-1 col-md-9 col-sm-12\">
+                                                    <h4>$tmpTitle</h4>
+                                                    
+                                                    $strSpeaker
+                                                    
+                                                    <div>
+                                                        <p><i class=\"fa fa-lg fa-clock-o\"></i> <span class=\"small\">$tmpTime</span></p>
+                                                        <p><i class=\"fa fa-lg fa-map-marker\"></i> <span class=\"small\">". $events->location . " </span></p>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                $moderator
+                                            </div>
+                                        </div>
+                                        
+                                        $tmpOtherEvents
+
+                                    </div>
+
+                                </div>";
+
+                            $panelcounter++;
+                        }
+
+                    $ret .= "    </div>
+                             </div>";
+
+                    $tmpFirst = false;
+                    $acounter++;
+                }
+
+            $ret .= "</div>";
+
+        }
+
+        return $ret;
+
+    }
+
     public static function delegate_handbook($element,$page){
         $handbooks = SitePages::get_page_data($page,"input_" .$element['id']);
         $ret = "";
@@ -1538,7 +1801,7 @@ class WidgetParser extends Controller
                 }
                 catch (\Exception $exception)
                 {
-                    dump($exception->getMessage());
+                    dump($exception->getTraceAsString());
                     $tmp = "<strong>" . $element['type'] . '</strong> can not be parsed';
                 }
 
