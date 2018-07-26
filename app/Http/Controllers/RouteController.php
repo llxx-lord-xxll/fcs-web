@@ -49,7 +49,7 @@ class RouteController extends Controller
                     }
                 }
 
-                foreach(SitePages::all() as $row)
+                foreach(SitePages::where('visibility','=','1')->get() as $row)
                 {
                     if (ltrim($row->permalink,'/') == ltrim($request->path(),'/'))
                     {
