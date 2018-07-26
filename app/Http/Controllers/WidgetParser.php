@@ -1120,9 +1120,9 @@ class WidgetParser extends Controller
                             {
                                 $slugs = SiteGallary::getPhotoSlugs($photo);
                                 $ret .= '<div class="media-box '.$slugs.' "><div class="media-box-image">';
-                                $ret .= "<div data-width='$photo_model->width' data-height='$photo_model->height' data-thumbnail='".asset('uploads/' . $photo_model->image). "'></div>";
+                                $ret .= "<div data-width='$photo_model->width' data-height='$photo_model->height' data-thumbnail='". $photo_model->image. "'></div>";
                                 $ret .= "<div class='thumbnail-overlay'>
-                                <a href='#' class='mb-open-popup btn btn-sm btn-default' data-src='".asset('uploads/' . $photo_model->image). "' data-title='$photo_model->caption'>
+                                <a href='#' class='mb-open-popup btn btn-sm btn-default' data-src='".$photo_model->image. "' data-title='$photo_model->caption'>
                                     <span class='fa fa-search'></span>&nbsp; View Larger
                                 </a>
                             </div>";
