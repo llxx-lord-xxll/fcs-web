@@ -7,11 +7,16 @@ use App\Databases\SiteLayouts;
 use App\Databases\SitePages;
 use App\Databases\SiteStories;
 use App\Databases\SiteTemplates;
+use App\Rules\UniqueWhere;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\MessageBag;
 use Illuminate\Validation\Rule;
+use PhpParser\Node\Stmt\Throw_;
+use Stripe\Stripe;
+use Symfony\Component\CssSelector\Parser\Token;
 use Symfony\Component\Translation\Exception\NotFoundResourceException;
 use Illuminate\Support\Facades\Validator;
 use Newsletter;
@@ -77,26 +82,33 @@ class RouteController extends Controller
                 $validator_names = array();
                 if ($form)
                 {
-                    foreach (DB::table('site_form_entries')->where('form_id','=',$form_id)->get() as $input)
+                    foreach (DB::table('site_form_fields')->where('form_id','=',$form_id)->get() as $input)
                     {
                         $vals = $input->field_ivals;
-                        $vType = str_before($vals,"(");
+                        if ($input->field_type=='radiobutton' || $input->field_type=='checkbox' || $input->field_type=='select')
+                        {
+                            $vType = 'array';
+                        }
+                        else
+                        {
+                            $vType = 'string';
+                        }
+
                         $rules = explode("\r\n",$input->field_rules);
                         $input->required = "";
                         switch ($vType)
                         {
                             case 'array':
-                                $vals = str_before(str_after($vals,"array("),")");
-                                $vals = explode(",",$vals);
+                                $vals = explode("\r\n",$vals);
                                 $tmp = array();
                                 foreach ($vals as $val)
                                 {
-                                    $tmp[str_slug($val)] = ltrim(rtrim($val,'"'),'"');
+                                    $tmp[str_slug($val)] = $val;
                                 }
                                 $vals = $tmp;
                                 break;
                             case 'string':
-                                $vals = str_before(str_after($vals,"array("),")");
+                                $vals = rtrim(ltrim($vals,'""'),'"');
                                 break;
                         }
 
@@ -106,7 +118,7 @@ class RouteController extends Controller
                             switch ($rule)
                             {
                                 case 'unique':
-                                    $rules[$key] = 'unique:' . $form->table_name . ',' . $input->field_name;
+                                    $rules[$key] = new UniqueWhere($input->form_id,$input->id);
                                     break;
                                 case 'in':
                                     if ($vType == 'array')
@@ -115,7 +127,14 @@ class RouteController extends Controller
                                     }
                                     else
                                     {
-                                        $rules[$key] = Rule::in(array($vals));
+                                        $vals = explode("\r\n",$vals);
+                                        $tmp = array();
+                                        foreach ($vals as $val)
+                                        {
+                                            $tmp[str_slug($val)] = $val;
+                                        }
+                                        $vals = $tmp;
+                                        $rules[$key] = Rule::in($vals);
                                     }
 
                                     break;
@@ -140,7 +159,6 @@ class RouteController extends Controller
                             try
                             {
                                 $arrToInsert = array_except($request->all(),['_token','agreement']);            //Trimming extras
-
                                 //Moving and renaming file inputs
                                 foreach ($request->file() as $key => $file)
                                 {
@@ -150,8 +168,19 @@ class RouteController extends Controller
                                     $arrToInsert[$key] = 'public/uploads/files/'.$ext . '/' . $deckname;
                                 }
 
-                                if ($form->table_name != null) {
-                                    DB::table($form->table_name)->insert($arrToInsert);  //Insert to database
+                                $sub = DB::table('site_forms_submissioon')->insertGetId(array('id'=>null,'form_id'=>$form_id,'ip'=> $request->ip(),'ua'=>$request->userAgent(),'created_at'=>Carbon::now()->toDateTimeString(),'updated_at'=>Carbon::now()->toDateTimeString()));
+
+                                foreach (DB::table('site_form_fields')->where('form_id','=',$form_id)->get() as $input)
+                                {
+                                    if (array_key_exists($input->field_name,$arrToInsert))
+                                    {
+                                        DB::table('site_forms_data')->insert(array('submission_id'=>$sub,'field_id'=>$input->id,'field_data'=> $arrToInsert[$input->field_name]));
+                                    }
+                                    else
+                                    {
+                                        DB::table('site_forms_data')->insert(array('submission_id'=>$sub,'field_id'=>$input->id,'field_data'=> null));
+                                    }
+
                                 }
 
                                 //Preparation of Subscribing to newsletter
@@ -165,6 +194,72 @@ class RouteController extends Controller
 
                                 $this->go_subscribe($form,$request);        //Subscribe to newsletter
 
+                                if ($form->payment==1)
+                                {
+                                    $amount = 0;
+                                    $description = "";
+
+                                    if ($form->payment_charge == 0 || $form->payment_charge == null)
+                                    {
+                                        $package = DB::table('site_packages')->find($request->input('payment_package'));
+                                        $package_group = DB::table('site_package_group')->find($package->package_group_id);
+
+                                        if ($package_group)
+                                        {
+                                            $package_group = $package_group->title;
+                                        }
+                                        else
+                                        {
+                                            $package_group = "";
+                                        }
+
+                                        if ($package)
+                                        {
+                                            $amount = $package->price * 100;
+                                            $description = "Payment for $package->title in $package_group";
+                                        }
+                                        else
+                                        {
+                                            //Throw error
+                                        }
+                                    }
+                                    else
+                                    {
+                                        $description = $form->title . " Payment";
+                                        $amount = $form->payment_charge * 100;
+                                    }
+                                    //Handle payment, Charge
+                                    if ($request->has('stripeToken'))
+                                    {
+                                        Stripe::setApiKey(env("STRIPE_SECRET"));
+
+
+                                       $customer = $this->GetStripeCustomer($request->input('email'));
+
+                                           if (!empty($customer)){
+
+                                                   $card = $customer->sources->create(array(
+                                                           "source" => $request->input('stripeToken')
+                                                       ));
+                                                   $customer->default_source = $card->id;
+                                                   $customer->save();
+
+                                                   $charge = \Stripe\Charge::create(array(
+                                                       'customer' => $customer->id,
+                                                       'amount' => $amount,
+                                                       'currency' => 'usd',
+                                                       'description' => $description,
+                                                   ));
+                                                DB::table('site_forms_submissioon')->where('id','=',$sub)->update(['stripe_charge'=>$charge->id]);
+
+                                               }else{
+                                                    Throw new \Exception("Something wrong with the email address provided");
+                                           }
+
+                                    }
+
+                                }
+
 
 
                                 $suc = (new MessageBag())->add('none','Submitted successfully, we shall contact you via email for further assistance');
@@ -173,18 +268,23 @@ class RouteController extends Controller
                             }
                             catch (\Exception $e)
                             {
+                                DB::table('site_forms_data')->where('submission_id', '=' , $sub)->delete();
+                                DB::table('site_forms_submissioon')->where('id','=',$sub)->delete();
 
                                 $err = new MessageBag();
-                                $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
-                                $err->add('none',$e->getMessage());
+                                //$err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                                $err->add('none', $e->getMessage() );
                                 return Redirect::back()->withErrors($err)->withInput();
                             }
                         }
                     }
                     catch (\Exception $e)
                     {
+                        DB::table('site_forms_data')->where('submission_id', '=' , $sub)->delete();
+                        DB::table('site_forms_submissioon')->where('id','=',$sub)->delete();
+
                         $err = new MessageBag();
-                        $err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                        //$err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
                         $err->add('none',$e->getMessage());
                         return Redirect::back()->withErrors($err)->withInput();
                     }

@@ -1737,12 +1737,14 @@ a:hover, a:focus {
 .fcs-fieldset {
 	border: 1px solid #e0e0e0;
 	padding: 10px;
+	margin-bottom: 15px;
 }
 
 .fcs-form-title {
 	font-size: 16px!important;
 	font-family:'Quicksand', sans-serif;
 }
+
 
 .fcs-title-label {
 	display: inline-block;
@@ -1753,7 +1755,10 @@ a:hover, a:focus {
 	font-family:'Quicksand', sans-serif;
 	color:#33404c;
 }
+.fcs-form-agreement {
+	padding: 5px 5%;
 
+}
 .fcs-column-block {
 	display: block;
 }
@@ -3254,16 +3259,14 @@ body .progress_inner input[type="radio"] {
 	margin-bottom: 20px;
 }
 
-.fcs-form-outer li label,
-.fcs-form-outer li p {
+.fcs-form-outer li label, .fcs-form-outer li p, .fcs-form-outer fieldset .form-row label {
 	padding: 15px 8px 8px;
 	font-weight: 500;
 	letter-spacing: .09em;
 	text-transform: capitalize;
 }
 
-.fcs-form-outer > li > label,
-.fcs-form-outer li p {
+.fcs-form-outer > li > label, .fcs-form-outer li p, .fcs-form-outer fieldset .form-row label {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 0 120px;
 	flex: 1 0 120px;
@@ -4667,4 +4670,34 @@ button[type="submit"]:active {
 
 .cover-image h1, .cover-image h2, .cover-image p {
 	color: #fff;
+}
+
+li.expiry-date input{
+	width: 25%;
+	display: inline;
+}
+
+li.expiry-date .expiry-group{
+	display: block;
+	width: 100%;
+}
+
+
+
+.StripeElement {
+	padding: 15px;
+	border: 1px solid #eff1f2;
+	background-color: #f4f7f7;
+}
+
+.StripeElement--focus {
+	box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+	border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+	background-color: #fefde5 !important;
 }

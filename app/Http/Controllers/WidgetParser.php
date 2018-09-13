@@ -11,11 +11,13 @@ use App\Databases\SitePeople;
 use App\Databases\SiteStories;
 use App\Databases\SiteTemplates;
 use App\Databases\SiteTimeline;
+use App\Rules\UniqueWhere;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rule;
+use Stripe\Stripe;
 
 
 class WidgetParser extends Controller
@@ -460,30 +462,37 @@ class WidgetParser extends Controller
                     }
                 }
 
-                $ret .= '<form '.$attrs.' action="/forms/'.$form->id.'" method="post" enctype="multipart/form-data"> <ul class="fcs-form-outer">' . csrf_field() ;
 
-          foreach (DB::table('site_form_entries')->where('form_id',$form->id)->get() as $input)
+                $ret .= '<form id="'.$form->slug.'" '.$attrs.' action="/forms/'.$form->id.'" method="post" enctype="multipart/form-data"> <ul class="fcs-form-outer">' . csrf_field() ;
+
+          foreach (DB::table('site_form_fields')->where('form_id',$form->id)->get() as $input)
           {
                 $vals = $input->field_ivals;
-                $vType = str_before($vals,"(");
+                  if ($input->field_type=='radiobutton' || $input->field_type=='checkbox' || $input->field_type=='select')
+                  {
+                      $vType = 'array';
+                  }
+                  else
+                  {
+                      $vType = 'string';
+                  }
                 $rules = explode("\r\n",$input->field_rules);
                 $input->required = "";
-                switch ($vType)
-                {
-                    case 'array':
-                        $vals = str_before(str_after($vals,"array("),")");
-                        $vals = explode(",",$vals);
-                        $tmp = array();
-                        foreach ($vals as $val)
-                        {
-                            $tmp[str_slug($val)] = ltrim(rtrim($val,'"'),'"');
-                        }
-                        $vals = $tmp;
-                        break;
-                    case 'string':
-                        $vals = str_before(str_after($vals,"array("),")");
-                        break;
-                }
+                  switch ($vType)
+                  {
+                      case 'array':
+                          $vals = explode("\r\n",$vals);
+                          $tmp = array();
+                          foreach ($vals as $val)
+                          {
+                              $tmp[str_slug($val)] = $val;
+                          }
+                          $vals = $tmp;
+                          break;
+                      case 'string':
+                          $vals = rtrim(ltrim($vals,'""'),'"');
+                          break;
+                  }
 
 
                 foreach ($rules as $key => $rule)
@@ -491,7 +500,7 @@ class WidgetParser extends Controller
                     switch ($rule)
                     {
                         case 'unique':
-                            $rules[$key] = 'unique:' . $form->table_name . ',' . $input->field_name;
+                            $rules[$key] = new UniqueWhere($input->form_id,$input->id);
                             break;
                         case 'in':
                             if ($vType == 'array')
@@ -500,7 +509,14 @@ class WidgetParser extends Controller
                             }
                             else
                             {
-                                $rules[$key] = Rule::in(array($vals));
+                                $vals = explode("\r\n",$vals);
+                                $tmp = array();
+                                foreach ($vals as $val)
+                                {
+                                    $tmp[str_slug($val)] = $val;
+                                }
+                                $vals = $tmp;
+                                $rules[$key] = Rule::in($vals);
                             }
 
                             break;
@@ -621,10 +637,115 @@ class WidgetParser extends Controller
                             </li>';
           }
 
+
+          if ($form->payment == 1)
+            {
+                $ret.= '<fieldset class="fcs-fieldset"><legend class="fcs-form-title">Payment</legend>';
+                if ($form->payment_charge == 0 || $form->payment_charge == null)
+                {
+                    $ret .= '<li>
+                                <label class="fcs-title-label" for="payment_package">Choose a package</label>
+                                <select name="payment_package" id="payment_package" required>
+                                    ';
+
+                    foreach (DB::table('site_package_group')->get() as $package_groups)
+                    {
+                        $ret .= '<optgroup label="'.$package_groups->title.'">';
+                        foreach (DB::table('site_packages')->where('package_group_id','=',$package_groups->id)->get() as $package_item)
+                        {
+                            $ret .= '<option value="'.$package_item->id.'">'.$package_item->title. ' ( $'. $package_item->price .')'.'</option>';
+                        }
+
+                        $ret .= '</optgroup>';
+
+                    }
+
+                    $ret .= '
+                                </select>
+                            </li>';
+                }
+                else
+                {
+                    $ret .= '<li><label class="fcs-title-label">Charge: </label> <label style="font-weight: bold"> '. number_format(doubleval($form->payment_charge),2).' USD</label></li>';
+                }
+
+                /*$ret .= '<hr><li>
+                                <label class="fcs-title-label"  for="payment_name">Card Holder Name *</label>
+                                <input type="text" name="payment_name" autocomplete="off" id="payment_name" placeholder="Name on the card to be used" required/>
+                         </li>
+                         <li>
+                                <label class="fcs-title-label"  for="payment_card_number">Card Number *</label>
+                                <input type="text" name="payment_card_number "autocomplete="off" pattern="\d*" maxlength="19" id="payment_card_number" placeholder="1234 5478 9123 4567" required/>
+                         </li>';
+                $ret .= '<li class="expiry-date">
+                                <label class="fcs-title-label"  for="payment_name">Expiry & CVV *</label>
+                                <div class="expiry-group">
+                                    <input type="text" placeholder="Month" name="payment_exp_m" id="payment_exp_m" autocomplete="off" required />
+                                    <input type="text" name="payment_exp_y" placeholder="Year" id="payment_exp_y" autocomplete="off" required />
+                                    <input type="text" name="payment_cvv" id="payment_cvv" placeholder="CVV" autocomplete="off" required />
+                                </div>
+                         </li>';
+
+                */
+
+                $ret.= '  <div class="form-row">
+                            <label for="card-element" class="fcs-title-label">
+                              Credit or debit card
+                            </label>
+                            <div id="card-element">
+                              <!-- A Stripe Element will be inserted here. -->
+                            </div>
+                        
+                            <!-- Used to display form errors. -->
+                            <div id="card-errors" role="alert"></div>
+                          </div>';
+
+                $ret .= '</fieldset>';
+
+
+                $ret.='<script src="https://js.stripe.com/v3/"></script>';
+                $ret .= " <script type='text/javascript'> var stripe = Stripe('".env('STRIPE_PUBLIC')."'); var stripe_elements = stripe.elements(); </script>";
+
+                $ret .= '
+                <script type="text/javascript">
+                    var style = {
+                      base: {
+                        fontSize: \'16px\',
+                        color: "#32325d",
+                      }
+                    };
+                    
+                    var card = stripe_elements.create(\'card\', {style: style,hidePostalCode: true});
+                    
+                    card.mount(\'#card-element\'); 
+                    card.addEventListener(\'change\', function(event) {
+                      var displayError = document.getElementById(\'card-errors\');
+                      if (event.error) {
+                        displayError.textContent = event.error.message;
+                      } else {
+                        displayError.textContent = \'\';
+                      }
+                    });
+                    
+                    var form = document.getElementById(\''.$form->slug.'\');
+                        form.addEventListener(\'submit\', function(event) {
+                          event.preventDefault();
+                          stripe.createToken(card).then(function(result) {
+                            if (result.error) {
+                              var errorElement = document.getElementById(\'card-errors\');
+                              errorElement.textContent = result.error.message;
+                            } else {
+                              stripeTokenHandler(result.token,\''.$form->slug.'\');
+                            }
+                          });
+                        });
+                </script>';
+
+            }
+
           if ($form->agreement_html != "")
           {
-              $ret .= '<li>
-							<label></label>
+              $ret .= '<li class="fcs-form-agreement">
 								<div class="checkbox"><input required="" name="agreement" type="checkbox" value="">'.$form->agreement_html.'</div>
 							
 							</li>';

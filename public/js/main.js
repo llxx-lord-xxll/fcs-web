@@ -688,5 +688,15 @@ setInterval(function() {
   })
 }, 6000);
 
+function stripeTokenHandler(token,form_id) {
+    var form = document.getElementById(form_id);
+    var hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'stripeToken');
+    hiddenInput.setAttribute('value', token.id);
+    form.appendChild(hiddenInput);
+    form.submit();
+}
+
 
 
