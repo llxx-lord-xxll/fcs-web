@@ -1191,7 +1191,57 @@ class WidgetParser extends Controller
        return $ret;
     }
 
-    public static function gallery($element,$page)
+    public static function gallery2($element,$page)
+    {
+        $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
+        $gallery = SiteGallary::getGallery($gallery_id);
+        $ret = "";
+        if ($gallery != null)
+        {
+            $albums = SiteGallary::getAlbums($gallery_id);
+            $photos = SiteGallary::getPhotos($albums);
+
+            $ret .= '<section id="gallery">
+                        <div class="container">
+                            <div class="row">
+            
+                                <div class="col-lg-12">
+                                    <h2 class="uppercase">'.$gallery->description.'</h2>
+                                    <div id="timeline" data-columns>';
+
+            if (!empty($photos))
+            {
+                foreach ($photos as $photo)
+                {
+                    $photo_model = SiteGallary::find($photo);
+                    if($photo_model !=null)
+                    {
+                        $slugs = SiteGallary::getPhotoSlugs($photo);
+
+                        $ret .= '<div class="item wrap">
+                                <img class="img-responsive" src="'.$photo_model->image.'" alt="">
+                                <div class="overlay"></div>
+                                <div class="icon">
+                                    <a class="image-popup" href="'.$photo_model->image.'" title="'.$photo_model->caption.'"><i class="pe-3x pe-7s-plus"></i></a>
+                                </div>
+                            </div>';
+
+                    }
+                }
+            }
+
+
+            $ret .= '                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>';
+
+        }
+        return $ret;
+    }
+
+    public static function gallery1($element,$page)
     {
         $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
         $gallery = SiteGallary::getGallery($gallery_id);
