@@ -966,7 +966,7 @@
         .zoomtimeline.mode-3dslider .details-container > .detail .detail-excerpt p {
           line-height: 1.7; }
       .zoomtimeline.mode-3dslider .details-container > .detail > .the-heading {
-        color: #33404c;
+        color: #ffffff;
         transform: rotateY(0deg) scale(1) translate3d(0, 0, 0);
         -webkit-transform: rotateY(0deg) scale(1) translate3d(0, 0, 0);
         transition-property: all;
@@ -1085,7 +1085,9 @@
         top: 477px;
         width: 100%;
         text-align: center;
-        font-size: 1.5em; }
+        font-size: 1.5em;
+        color:#ffffff;
+      }
         .zoomtimeline.mode-3dslider .details-container > input:checked + .detail .the-year figure {
           opacity: 0;
           visibility: hidden; }

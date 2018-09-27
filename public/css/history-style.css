@@ -508,7 +508,7 @@ section.mcon-otherdemos{
 }
 
 section.mcon-otherdemos:nth-child(even){
-    background: #f4f4f4;
+    background: #03213D;
 }
 section.mcon-otherdemos.dark-bg{
     background: #111;
