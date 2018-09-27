@@ -1980,16 +1980,15 @@ h1 {
 	height: auto;
 	position: relative;
 	padding: 2%;
-	background-color: #f4f7f7;
-
+	background-color: #03213D;
 }
 
 #fcs-call-to-action {
-	display: block;
-	padding: 30px 0;
-	text-align: center;
-	margin: 0 auto;
-	background-color: #33404c;
+    display: block;
+    padding: 30px 0;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #03213D;
 }
 
 .fcs-cta-header {
