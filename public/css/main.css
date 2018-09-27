@@ -2001,7 +2001,7 @@ h1 {
 
 #fcs-story-info {
 	padding: 70px 0 90px 0;
-	background-color: #fff;
+	background-color: #03213D;
 }
 
 /* FCS Story Call to Action Section */
@@ -4102,11 +4102,14 @@ ul.fcs-form-outer > li > label.text-danger
 .fcs-story-article p {
 	font-size: 1.3em;
 	line-height: 1.7em;
+	color: #A2BFDA;
+
 }
 
 .fcs-story-article ul li {
 	font-size: 1.3em;
 	line-height: 1.7em;
+	color: #A2BFDA;
 }
 
 .fcs-story-article ol li {
