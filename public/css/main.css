@@ -2043,8 +2043,8 @@ h1 {
 .fcs-cta-title {
 	height: 40px;
 	display: inline-block;
-	background-color: #fff;
-	color: #1E1E20;
+	background-color: #14487A;
+	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 800;
 	font-size: 1.4em;
@@ -4050,6 +4050,7 @@ ul.fcs-form-outer > li > label.text-danger
 	padding: 0% 5% 1.5%;
 	font-size: 1.5em;
 	line-height: 1.7em;
+    color: #A2BFDA;
 }
 
 /* HOME PARTNER LOGO */
