@@ -32,16 +32,17 @@ body {
 	font-size:14px;
 	font-weight:400;
 	line-height:23px;
+    background-color: #03213D;
 }
 
 h1 {
-	color:#33404c;
+	color:#ffffff;
 	font-family: 'Quicksand', sans-serif;
 	font-size:2.5em;
 }
 
 h2 {
-	color:#33404c;
+	color:#ffffff;
 	font-family: 'Quicksand', sans-serif;
 	font-size:2.25em;
 }
@@ -49,12 +50,13 @@ h2 {
 h3 {
 	font-family: 'Quicksand', sans-serif;
 	font-size:1.5em;
-	color:#33404c;
+	color:#ffffff;
 }
 
 h4 {
 	font-family: 'Quicksand', sans-serif;
 	font-size:18px;
+	color: #ffffff;
 }
 
 h5 {
@@ -63,10 +65,11 @@ h5 {
 
 h6 {
 	font-family: 'Quicksand', sans-serif;
-	color:#33404c;
+	color:#ffffff;
 }
 section {
 	display: block;
+	background-color: #03213D;
 	/*    padding:90px 0; */
 }
 
@@ -83,7 +86,7 @@ section {
 }
 
 .lead {
-	color:#999999;
+	color:#A2BFDA;
 }
 
 a {
@@ -145,7 +148,7 @@ a {
 
 .is-sticky .navbar-custom {
 	width:100%;
-	background:#33404c;
+	background:#03213D;
 	-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
 	-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
 	transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -1561,6 +1564,13 @@ figure.effect-ming:hover img {
 
 .contact-us-section {
 	padding: 60px 0;
+    background-image: url(../img/cloud.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-color: #03213D;
 }
 
 
@@ -1976,16 +1986,15 @@ h1 {
 	height: auto;
 	position: relative;
 	padding: 2%;
-	background-color: #f4f7f7;
-
+	background-color: #03213D;
 }
 
 #fcs-call-to-action {
-	display: block;
-	padding: 30px 0;
-	text-align: center;
-	margin: 0 auto;
-	background-color: #33404c;
+    display: block;
+    padding: 30px 0;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #03213D;
 }
 
 .fcs-cta-header {
@@ -1997,7 +2006,7 @@ h1 {
 
 #fcs-story-info {
 	padding: 70px 0 90px 0;
-	background-color: #fff;
+	background-color: #03213D;
 }
 
 /* FCS Story Call to Action Section */
@@ -2039,8 +2048,8 @@ h1 {
 .fcs-cta-title {
 	height: 40px;
 	display: inline-block;
-	background-color: #fff;
-	color: #1E1E20;
+	background-color: #14487A;
+	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 800;
 	font-size: 1.4em;
@@ -3024,11 +3033,11 @@ body .progress_inner input[type="radio"] {
 
 .fcs-journey-title {
 	text-align: center;
-	color: #33404c;
+	color: #ffffff;
 }
 .fcs-journey-timeline {
 	text-align: center;
-	color: #33404c;
+	color: #A2BFDA;
 }
 
 
@@ -3215,7 +3224,7 @@ body .progress_inner input[type="radio"] {
 .form-background {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 1em;
-	color: #33404c;
+	color: #A2BFDA;
 	padding: 50px 0;
 }
 
@@ -3296,7 +3305,7 @@ body .progress_inner input[type="radio"] {
 	margin: 0 auto;
 	padding: 8px 16px;
 	border: none;
-	background: #333;
+	background: #14497B;
 	color: #f2f2f2;
 	text-transform: uppercase;
 	letter-spacing: .09em;
@@ -3865,7 +3874,7 @@ ul.fcs-form-outer > li > label.text-danger
 }
 
 .bg-image-contact {
-	background-image: url(../img/fcs-team.jpg);
+	background-image: url(../img/contact_page_photo.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -4046,6 +4055,7 @@ ul.fcs-form-outer > li > label.text-danger
 	padding: 0% 5% 1.5%;
 	font-size: 1.5em;
 	line-height: 1.7em;
+    color: #A2BFDA;
 }
 
 /* HOME PARTNER LOGO */
@@ -4098,11 +4108,14 @@ ul.fcs-form-outer > li > label.text-danger
 .fcs-story-article p {
 	font-size: 1.3em;
 	line-height: 1.7em;
+	color: #A2BFDA;
+
 }
 
 .fcs-story-article ul li {
 	font-size: 1.3em;
 	line-height: 1.7em;
+	color: #A2BFDA;
 }
 
 .fcs-story-article ol li {

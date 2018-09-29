@@ -9728,7 +9728,8 @@
     padding: 1em 0;
 }
 .sp-footer .footer-default {
-    background: #000;
+    background: #03213D;
+    background-image: url(../img/fcs_footer_background.png);
 }
 .sp-footer .footer-default .nav a,
 .sp-footer .footer-default .nav-inverse a {
