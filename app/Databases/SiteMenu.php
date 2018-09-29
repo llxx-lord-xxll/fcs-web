@@ -13,7 +13,7 @@ class SiteMenu extends Model
     public static function buildMenuArray($menu_id = 1,$parent_id = 0)
     {
         $ret = array();
-        foreach (DB::table('site_menu_tables')->where('menu_id','=',$menu_id)->orderBy('order','DESC')->where('parent_id','=',$parent_id)->get() as $row)
+        foreach (DB::table('site_menu_tables')->where('menu_id','=',$menu_id)->orderBy('order','ASC')->where('parent_id','=',$parent_id)->get() as $row)
         {
 
             $tmp = array();
