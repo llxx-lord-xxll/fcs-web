@@ -179,6 +179,8 @@ textarea {
 }
 optgroup {
   font-weight: bold;
+  color: #A2BFDA;
+  background-color: #03213D;
 }
 table {
   border-collapse: collapse;
@@ -2335,7 +2337,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #333333;
+  color: #A2BFDA;
   border: 0;
 }
 
