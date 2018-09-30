@@ -70,7 +70,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="{{env('APP_URL')}}"><img src="{{asset('uploads/'. \App\Databases\SiteSettings::get_value('logo'))}}" alt="logo"></a>
+            <a href="{{env('APP_URL')}}"><img src="{{  \App\Databases\SiteSettings::get_value('logo') }}" alt="logo"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="nav">
