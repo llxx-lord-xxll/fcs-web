@@ -698,5 +698,13 @@ function stripeTokenHandler(token,form_id) {
     form.submit();
 }
 
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('preload'), // Required
+    path: '../assets/world_locations.json', // Required
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: true, // Optional
+});
+
 
 
