@@ -873,7 +873,7 @@ a {
 }
 
 .price-table {
-	color:#33404c;
+	color:#A2BFDA;
 	background:#94cc34;
 	padding:20px;
 	line-height:1;
@@ -883,7 +883,8 @@ a {
 }
 
 .early-bird {
-	background:#b1d265;
+    background: #052441;
+    margin-right: 10px;
 }
 
 .standart {
@@ -895,7 +896,8 @@ a {
 }
 
 .premium-early-bird {
-	background:#4fd6ff;
+    background: #052441;
+    margin-right: 10px;
 }
 
 .premium-standart {
@@ -916,7 +918,7 @@ a {
 }
 
 .price-table .price {
-	color:#444444;
+	color:#A2BFDA;
 	font-family: 'Quicksand', sans-serif;
 	font-size:50px;
 	font-weight:400;
@@ -924,7 +926,7 @@ a {
 
 .price-table h3 {
 	color:#ffffff;
-	background:#33404c;
+	background:#082D50;
 	font-family:'Quicksand', sans-serif;
 	font-weight:400;
 	font-size:10px;
@@ -940,8 +942,8 @@ a {
 .price-table .desc li {
 	font-family: 'Quicksand', sans-serif;
 	line-height:2;
-	border-bottom:1px dotted;
-	border-color:rgba(255,255,255, 0.7);
+	border-bottom:1px dotted #062542;
+    border-color: #062542;
 }
 
 .price-table .desc li:last-child {
@@ -951,7 +953,7 @@ a {
 
 .early-date {
 	text-align: right;
-	color:#33404c;
+	color:#A2BFDA;
 	font-weight: 700;
 }
 /* register form */
