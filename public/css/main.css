@@ -1305,7 +1305,7 @@ textarea {
 /* PRELOAD */
 
 #preload {
-	background:#9ccc40;
+	background:#153285;
 	position: fixed;
 	top:0;
 	left:0;
@@ -1323,11 +1323,10 @@ textarea {
 .spinner {
 	width: 30px;
 	height: 30px;
-	background-color: #fff;
 
 	margin: 100px auto;
-	-webkit-animation: rotateplane 1.2s infinite ease-in-out;
-	animation: rotateplane 1.2s infinite ease-in-out;
+	/*-webkit-animation: rotateplane 1.2s infinite ease-in-out;*/
+	/*animation: rotateplane 1.2s infinite ease-in-out; */
 }
 
 @-webkit-keyframes rotateplane {

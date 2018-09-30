@@ -57,9 +57,6 @@
 <body>
 <!-- PRELOADING -->
 <div id="preload">
-    <div class="preload">
-        <div class="spinner"></div>
-    </div>
 </div>
 
 <!-- NAVIGATION -->
@@ -158,6 +155,7 @@
 <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('js/retina.js')}}"></script>
+<script src="{{asset('js/bodymovin.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/main.js')}}"></script>
 
 
