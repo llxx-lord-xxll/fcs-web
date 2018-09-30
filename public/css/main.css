@@ -1744,7 +1744,6 @@ a:hover, a:focus {
 }
 
 .fcs-fieldset {
-	border: 1px solid #e0e0e0;
 	padding: 10px;
 	margin-bottom: 15px;
 }
@@ -1762,7 +1761,7 @@ a:hover, a:focus {
 	font-weight: bold;
 	font-size: 1em;
 	font-family:'Quicksand', sans-serif;
-	color:#33404c;
+	color:#A2BFDA;
 }
 .fcs-form-agreement {
 	padding: 5px 5%;
@@ -3296,8 +3295,9 @@ body .progress_inner input[type="radio"] {
 .fcs-form-outer li select,
 .fcs-form-outer li textarea {
 	padding: 15px;
-	border: 1px solid #eff1f2;
-	background-color: #f4f7f7;
+    color: #648fb7;
+	border: 1px solid #163e64;
+	background-color: #092d4e;
 }
 
 .fcs-form-outer li button {
