@@ -109,7 +109,7 @@ jQuery(document).ready(function($) {
     try
 	{
         var countdownDateSplit = $('#countdown').attr('data-countdown').split('/');
-        $('#countdown').countdown({until: new Date(countdownDateSplit[0], countdownDateSplit[1], countdownDateSplit[2])}); // enter event day
+        $('#countdown').countdown({until: new Date(countdownDateSplit[0], countdownDateSplit[1]-1, countdownDateSplit[2])}); // enter event day
 
         $('#removeCountdown').toggle(
             function() {
