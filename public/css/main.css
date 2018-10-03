@@ -341,7 +341,7 @@ a {
 }
 
 .speaker-content h4 {
-	color: #33404c;
+	color:#A2BFDA;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 400;
 	margin-bottom: 10px;
@@ -863,8 +863,8 @@ a {
 /* REGISTER */
 
 #register {
-	background:#f5f5f5;
-	border-bottom:1px solid #f0f0f0;
+	background:#03213D;
+	border-bottom:1px solid #03213D;
 	padding:70px 0 90px 0;
 }
 
@@ -3204,7 +3204,7 @@ body .progress_inner input[type="radio"] {
 /* Honorary Advisors Panel */
 .honorary-panel {
 	padding:30px;
-	background-color:#fff;
+	background-color:#03213D;
 }
 
 /* Young Advisors Panel */
