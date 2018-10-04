@@ -1241,7 +1241,7 @@ class WidgetParser extends Controller
                 }
 
 
-                $ret.= ' <script id="shuffle-images">
+                $ret.= ' <script type="text/javascript">
                         $(document).ready(function(){
                        $(".shuffle-me").shuffleImages({
                          target: ".images > img"
