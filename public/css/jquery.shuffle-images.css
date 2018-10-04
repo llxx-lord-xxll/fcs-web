@@ -48,6 +48,7 @@
     position: relative;
     width: 100%;
     margin-bottom: 10px;
+    display: flex;
 }
 
 .shuffle-group .shuffle-me {
@@ -56,17 +57,17 @@
     margin: 5px;
 }
 
-.shuffle-group .shuffle-me:first-child {
+.shuffle-group .shuffle-me:nth-child(3n+1) {
     width: 66%;
     float: left;
     height: 431px;
 }
-.shuffle-group .shuffle-me:first-child h1 {
+.shuffle-group .shuffle-me:nth-child(3n+1) h1 {
     margin-top: 190px;
     font-size: 30px;
 }
 
-.shuffle-group .shuffle-me:first-child .images{
+.shuffle-group .shuffle-me:nth-child(3n+1) .images{
     height: 430px;
     width: 100%;
     overflow: hidden;
