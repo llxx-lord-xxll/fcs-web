@@ -57,17 +57,17 @@
     margin: 5px;
 }
 
-.shuffle-group .shuffle-me:nth-child(3n+1) {
+.shuffle-group .shuffle-me:first-child {
     width: 64.8%;
     float: left;
     height: 428px;
 }
-.shuffle-group .shuffle-me:nth-child(3n+1) h1 {
+.shuffle-group .shuffle-me:first-child h1 {
     margin-top: 190px;
     font-size: 30px;
 }
 
-.shuffle-group .shuffle-me:nth-child(3n+1) .images{
+.shuffle-group .shuffle-me:first-child .images{
     height: 428px;
     width: 100%;
     overflow: hidden;
