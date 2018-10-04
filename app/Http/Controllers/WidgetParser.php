@@ -1215,7 +1215,7 @@ class WidgetParser extends Controller
                         {
                             $photos = SiteGallary::getPhotos(array($album_model->id));
 
-                            $ret .= '<div data-si-mousemove-trigger="100" class="shuffle-me '. $gallery->slug .'">';
+                            $ret .= '<div data-si-mousemove-trigger="100" class="shuffle-me gallery_'. $gallery->id .'">';
                             $ret .= '<a href="#" class="info" data-toggle="modal" data-target="album_'.$album_model->id.'">';
                             $ret .= '<h1>'. $album_model->title . '</h1>';
                             $ret .= '<h2>'. $album_model->description . '</h2>';
