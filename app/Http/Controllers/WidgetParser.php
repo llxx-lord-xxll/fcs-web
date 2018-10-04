@@ -1216,8 +1216,14 @@ class WidgetParser extends Controller
 
                         $ret .= '<div data-si-mousemove-trigger="100" class="shuffle-me gallery_'. $gallery->id .'">';
                         $ret .= '<div class="info">';
-                        $ret .= '<h1>'. $album_model->title . '</h1>';
-                        $ret .= '<h2>'. $album_model->description . '</h2>';
+                        if (!empty($album_model->description))
+                        {
+                            $ret .= str_replace("%title%",$album_model->title,$album_model->description);
+                        }
+                        else
+                        {
+                            $ret .= '<h1>'. $album_model->title . '</h1>';
+                        }
                         $ret .= '</div>';
 
 
