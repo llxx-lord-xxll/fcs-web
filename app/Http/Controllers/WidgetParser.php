@@ -885,7 +885,7 @@ class WidgetParser extends Controller
                 {
                     if ($pInfo->country !== "0")
                     {
-                        $ret .= '<span style="display: block"> <span class="flag-icon flag-icon-'.strtolower($pInfo->country).' flag-icon-squared"></span> '.SitePeople::get_country($pInfo->country).'</span>';
+                        $ret .= '<span style="display: block"> <span style="padding-right: 25px;" class="flag-icon flag-icon-'.strtolower($pInfo->country).' flag-icon-squared"></span>  '.SitePeople::get_country($pInfo->country).'</span>';
                     }
                 }
 
