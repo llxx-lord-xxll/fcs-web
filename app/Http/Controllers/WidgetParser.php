@@ -841,8 +841,8 @@ class WidgetParser extends Controller
         $team_people = SitePeople::getPeople($team_id);
 
 
-
-        $ret = "<section" .$attrs . ">";
+        $ret = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.css" />';
+        $ret .= "<section" .$attrs . ">";
         $ret .= '<div class="container"><div class="row">';
         $ret .='  <div class="col-lg-12 panel-section text-center">
                     <h2 class="uppercase"> ' .$team_title. ' </h2>
@@ -879,7 +879,17 @@ class WidgetParser extends Controller
                                 </div>';
                 $ret .= '<div class="speaker-content">
                                     <h4>'.$pInfo->name.'</h4>
-                                    <p>'.$pInfo->profession.'</p>
+                                    <p>'.$pInfo->profession;
+
+                if (!empty($pInfo->country))
+                {
+                    if ($pInfo->country !== "0")
+                    {
+                        $ret .= '<span style="display: block"> <span class="flag-icon flag-icon-'.strtolower($pInfo->country).' flag-icon-squared"></span> '.SitePeople::get_country($pInfo->country).'</span>';
+                    }
+                }
+
+                $ret .= '</p>
                                 </div>';
 
                 $ret.='</div></div>';
