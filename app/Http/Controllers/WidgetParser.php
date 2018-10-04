@@ -1191,6 +1191,64 @@ class WidgetParser extends Controller
        return $ret;
     }
 
+    public static function gallery3($element,$page)
+    {
+        $ret = "";
+        $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
+        $gallery = SiteGallary::getGallery($gallery_id);
+        if ($gallery != null)
+        {
+            $albums = SiteGallary::getAlbums($gallery_id);
+            $ret.= "<script type='text/javascript' src='".asset('js/jquery.shuffle-images.js')."'>";
+            $ret.= '<link rel="stylesheet" href="'.asset("css/jquery.shuffle-images.css").'">';
+
+            if (count($albums))
+            {
+                $ret .= '<div class="shuffle-group">';
+                    foreach ($albums as $album)
+                    {
+                        $album_model = SiteGallary::getAlbumInfo($album);
+                        if (!(empty($album_model)))
+                        {
+                            $photos = SiteGallary::getPhotos(array($album->id));
+
+                            $ret .= '<div data-si-mousemove-trigger="100" class="shuffle-me '. $gallery->slug .'">';
+                            $ret .= '<a href="#" class="info" data-toggle="modal" data-target="album_'.$album_model->id.'">';
+                            $ret .= '<h1>'. $album_model->title . '</h1>';
+                            $ret .= '<h2>'. $album_model->description . '</h2>';
+                            $ret .= '</a>';
+                            $ret .= '</div>';
+
+                            if (!empty($photos))
+                            {
+                                $ret .= '<div class="images">';
+                                foreach ($photos as $photo)
+                                {
+                                    $photo_model = SiteGallary::find($photo);
+                                    $ret .= '<img src="'.$photo_model->image.'">';
+                                }
+                                $ret .= '</div>';
+                            }
+
+                        }
+
+                    }
+                $ret .= '</div>';
+
+            }
+
+
+            $ret.= ' <script id="shuffle-images">
+                        $(document).ready(function(){
+                       $(".shuffle-me").shuffleImages({
+                         target: ".images > img"
+                       });
+                        });
+                    </script>';
+        }
+        return $ret;
+    }
+
     public static function gallery2($element,$page)
     {
         $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
