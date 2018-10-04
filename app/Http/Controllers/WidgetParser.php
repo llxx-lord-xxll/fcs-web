@@ -870,9 +870,8 @@ class WidgetParser extends Controller
             }
             foreach ($team_people as $person)
             {
-
                 $pInfo = SitePeople::getPersonInfo($person);
-                dump(asset('uploads/'.$pInfo));
+                dump(asset($pInfo));
                 $ret.= '<div class="col-lg-'.$size.' col-md-3 col-sm-4"><div class="team-sin text-center">';
 
                 $ret .= '<div class="speaker-img">
