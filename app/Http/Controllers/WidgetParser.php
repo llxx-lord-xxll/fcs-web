@@ -868,10 +868,10 @@ class WidgetParser extends Controller
                     $size = 3;
                 }
             }
+            dump($team_people);
             foreach ($team_people as $person)
             {
                 $pInfo = SitePeople::getPersonInfo($person);
-                dump($pInfo);
                 $ret.= '<div class="col-lg-'.$size.' col-md-3 col-sm-4"><div class="team-sin text-center">';
 
                 $ret .= '<div class="speaker-img">
