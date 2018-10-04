@@ -1217,7 +1217,7 @@ class WidgetParser extends Controller
                             $photos = SiteGallary::getPhotos(array($album_model->id));
 
                             $ret .= '<div data-si-mousemove-trigger="100" class="shuffle-me gallery_'. $gallery->id .'">';
-                            $ret .= '<a href="#" class="info" data-toggle="modal" data-target="album_'.$album_model->id.'">';
+                            $ret .= '<a href="#" class="info" data-toggle="modal" data-target="#album_'.$album_model->id.'">';
                             $ret .= '<h1>'. $album_model->title . '</h1>';
                             $ret .= '<h2>'. $album_model->description . '</h2>';
                             $ret .= '</a>';
@@ -1226,6 +1226,7 @@ class WidgetParser extends Controller
                             if (!empty($photos))
                             {
                                 $ret .= '<div class="images">';
+
                                 foreach ($photos as $photo)
                                 {
                                     $photo_model = SiteGallary::find($photo);
@@ -1251,9 +1252,11 @@ class WidgetParser extends Controller
                             if (!empty($photos))
                             {
                                 $c = 0;
+                                $ac = "active";
                                 foreach ($photos as $photo)
                                 {
-                                    $popup.='<li data-target="#album1CarouselG3'.$album_model->id.'" data-slide-to="'.$c++.'"></li>';
+                                    $popup.='<li class="'.$ac.'" data-target="#album1CarouselG3'.$album_model->id.'" data-slide-to="'.$c++.'"></li>';
+                                    $ac ="";
                                 }
                             }
 
@@ -1264,12 +1267,13 @@ class WidgetParser extends Controller
                             $popup .= '<div class="carousel-inner">';
 
                             if (!empty($photos)) {
-                                $c = 0;
+                                $ac = "active";
                                 foreach ($photos as $photo) {
                                     $photo_model = SiteGallary::find($photo);
-                                    $popup .= '<div class="item">';
+                                    $popup .= '<div class="item '.$ac.'">';
                                     $popup .= '<img src="'.$photo_model->image.'">';
                                     $popup .= '</div>';
+                                    $ac = "";
                                 }
                             }
 
