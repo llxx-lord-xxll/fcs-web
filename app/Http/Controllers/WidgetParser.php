@@ -1196,16 +1196,17 @@ class WidgetParser extends Controller
         $ret = "";
         $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
         $gallery = SiteGallary::getGallery($gallery_id);
+
+        $popup = "";
         if ($gallery != null)
         {
             $albums = SiteGallary::getAlbums($gallery_id);
             $ret.= "<script type='text/javascript' src='".asset('js/jquery.shuffle-images.js')."'> </script>";
-            $ret.= '<link rel="stylesheet" href="'.asset("css/jquery.shuffle-images-session.css").'"> </link>';
+            $ret.= '<link rel="stylesheet" href="'.asset("css/jquery.shuffle-images.css").'"> </link>';
 
             if (!empty($albums))
             {
                 $ret .= '<div class="shuffle-group">';
-
                 foreach ($albums as $album)
                 {
                     $album_model = SiteGallary::getAlbumInfo($album);
@@ -1214,7 +1215,12 @@ class WidgetParser extends Controller
                         $photos = SiteGallary::getPhotos(array($album_model->id));
 
                         $ret .= '<div data-si-mousemove-trigger="100" class="shuffle-me gallery_'. $gallery->id .'">';
-                        $ret .= '<div class="info"></div>';
+                        $ret .= '<a href="#" class="info" data-toggle="modal" data-target="#album_'.$album_model->id.'">';
+                        $ret .= '<h1>'. $album_model->title . '</h1>';
+                        $ret .= '<h2>'. $album_model->description . '</h2>';
+                        $ret .= '</a>';
+
+
                         if (!empty($photos))
                         {
                             $ret .= '<div class="images">';
@@ -1226,11 +1232,23 @@ class WidgetParser extends Controller
                             }
                             $ret .= '</div>';
                         }
-                    }
-                }
 
+                        $ret .= '</div>';
+
+                    }
+
+                }
                 $ret .= '</div>';
+
+
+                $ret .= $popup;
+
+
+
+
+
             }
+
 
             $ret.= ' <script type="text/javascript">
                         $(document).ready(function(){
@@ -1241,8 +1259,10 @@ class WidgetParser extends Controller
                     </script>';
         }
 
-        return $ret;
 
+
+
+        return $ret;
     }
 
     public static function gallery3($element,$page)
