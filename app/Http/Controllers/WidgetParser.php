@@ -1220,7 +1220,7 @@ class WidgetParser extends Controller
                             $ret .= '<h1>'. $album_model->title . '</h1>';
                             $ret .= '<h2>'. $album_model->description . '</h2>';
                             $ret .= '</a>';
-                            $ret .= '</div>';
+
 
                             if (!empty($photos))
                             {
@@ -1233,6 +1233,7 @@ class WidgetParser extends Controller
                                 $ret .= '</div>';
                             }
 
+                            $ret .= '</div>';
                         }
 
                     }
