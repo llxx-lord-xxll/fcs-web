@@ -1202,8 +1202,8 @@ class WidgetParser extends Controller
             if ($gallery != null)
             {
                 $albums = SiteGallary::getAlbums($gallery_id);
-                $ret.= "<script type='text/javascript' src='".asset('js/jquery.shuffle-images.js')."'>";
-                $ret.= '<link rel="stylesheet" href="'.asset("css/jquery.shuffle-images.css").'">';
+                $ret.= "<script type='text/javascript' src='".asset('js/jquery.shuffle-images.js')."'/>";
+                $ret.= '<link rel="stylesheet" href="'.asset("css/jquery.shuffle-images.css").'"/>';
 
                 if (count($albums))
                 {
