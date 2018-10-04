@@ -66,8 +66,14 @@
     font-size: 30px;
 }
 
-.shuffle-me .images{
-    height: 650px;
+.shuffle-group .shuffle-me:first-child .images{
+    height: 430px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.shuffle-group .shuffle-me .images{
+    height: 210px;
     width: 100%;
     overflow: hidden;
 }
