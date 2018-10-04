@@ -872,28 +872,33 @@ class WidgetParser extends Controller
             {
                 $pInfo = SitePeople::getPersonInfo($person);
 
-                $ret.= '<div class="col-lg-'.$size.' col-md-3 col-sm-4"><div class="team-sin text-center">';
-
-                $ret .= '<div class="speaker-img">
-                                    <img src="'. asset('uploads/'.$pInfo->photo) . '" alt="" />
-                                </div>';
-
-                $ret .= '<div class="speaker-content">
-                                    <h4>'.$pInfo->name.'</h4>
-                                    <p>'.$pInfo->profession;
-
-                if (!empty($pInfo->country))
+                if (!empty($pInfo))
                 {
-                    if ($pInfo->country !== "0")
+
+                    $ret.= '<div class="col-lg-'.$size.' col-md-3 col-sm-4"><div class="team-sin text-center">';
+
+                    $ret .= '<div class="speaker-img">
+                                        <img src="'. asset('uploads/'.$pInfo->photo) . '" alt="" />
+                                    </div>';
+
+                    $ret .= '<div class="speaker-content">
+                                        <h4>'.$pInfo->name.'</h4>
+                                        <p>'.$pInfo->profession;
+
+                    if (!empty($pInfo->country))
                     {
-                        $ret .= '<span style="display: block"> <span style="padding-right: 25px;" class="flag-icon flag-icon-'.strtolower($pInfo->country).' flag-icon-squared"></span>  '.SitePeople::get_country($pInfo->country).'</span>';
+                        if ($pInfo->country !== "0")
+                        {
+                            $ret .= '<span style="display: block"> <span style="padding-right: 25px;" class="flag-icon flag-icon-'.strtolower($pInfo->country).' flag-icon-squared"></span>  '.SitePeople::get_country($pInfo->country).'</span>';
+                        }
                     }
+
+                    $ret .= '</p>
+                                    </div>';
+
+                    $ret.='</div></div>';
+
                 }
-
-                $ret .= '</p>
-                                </div>';
-
-                $ret.='</div></div>';
             }
         }
 
