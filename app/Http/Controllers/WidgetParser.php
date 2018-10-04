@@ -1213,7 +1213,7 @@ class WidgetParser extends Controller
                         $album_model = SiteGallary::getAlbumInfo($album);
                         if (!(empty($album_model)))
                         {
-                            $photos = SiteGallary::getPhotos(array($album->id));
+                            $photos = SiteGallary::getPhotos(array($album_model->id));
 
                             $ret .= '<div data-si-mousemove-trigger="100" class="shuffle-me '. $gallery->slug .'">';
                             $ret .= '<a href="#" class="info" data-toggle="modal" data-target="album_'.$album_model->id.'">';
