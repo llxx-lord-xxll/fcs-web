@@ -1191,6 +1191,146 @@ class WidgetParser extends Controller
        return $ret;
     }
 
+    public static function gallery3($element,$page)
+    {
+        $ret = "";
+        $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
+        $gallery = SiteGallary::getGallery($gallery_id);
+
+        $popup = "";
+        try
+        {
+            if ($gallery != null)
+            {
+                $albums = SiteGallary::getAlbums($gallery_id);
+                $ret.= "<script type='text/javascript' src='".asset('js/jquery.shuffle-images.js')."'> </script>";
+                $ret.= '<link rel="stylesheet" href="'.asset("css/jquery.shuffle-images.css").'"> </link>';
+
+                if (!empty($albums))
+                {
+                    $ret .= '<div class="shuffle-group">';
+                    foreach ($albums as $album)
+                    {
+                        $album_model = SiteGallary::getAlbumInfo($album);
+                        if (!(empty($album_model)))
+                        {
+                            $photos = SiteGallary::getPhotos(array($album_model->id));
+
+                            $ret .= '<div data-si-mousemove-trigger="100" class="shuffle-me gallery_'. $gallery->id .'">';
+                            $ret .= '<a href="#" class="info" data-toggle="modal" data-target="#album_'.$album_model->id.'">';
+                            $ret .= '<h1>'. $album_model->title . '</h1>';
+                            $ret .= '<h2>'. $album_model->description . '</h2>';
+                            $ret .= '</a>';
+
+
+                            if (!empty($photos))
+                            {
+                                $ret .= '<div class="images">';
+
+                                foreach ($photos as $photo)
+                                {
+                                    $photo_model = SiteGallary::find($photo);
+                                    $ret .= '<img src="'.$photo_model->image.'">';
+                                }
+                                $ret .= '</div>';
+                            }
+
+                            $ret .= '</div>';
+
+                            //POPUP DATA
+                            $popup .= '<div id="album_'.$album_model->id.'" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">'.$album_model->title.'</h4>
+                            </div>
+                            <div class="modal-body">';
+
+                            $popup .= '<div id="album1CarouselG3'.$album_model->id.'" class="carousel slide" data-ride="carousel">
+                                        <ol class="carousel-indicators">';
+                            if (!empty($photos))
+                            {
+                                $c = 0;
+                                $ac = "active";
+                                foreach ($photos as $photo)
+                                {
+                                    $popup.='<li class="'.$ac.'" data-target="#album1CarouselG3'.$album_model->id.'" data-slide-to="'.$c++.'"></li>';
+                                    $ac ="";
+                                }
+                            }
+
+                            $popup .= '</ol>';
+
+
+
+                            $popup .= '<div class="carousel-inner">';
+
+                            if (!empty($photos)) {
+                                $ac = "active";
+                                foreach ($photos as $photo) {
+                                    $photo_model = SiteGallary::find($photo);
+                                    $popup .= '<div class="item '.$ac.'">';
+                                    $popup .= '<img src="'.$photo_model->image.'">';
+                                    $popup .= '</div>';
+                                    $ac = "";
+                                }
+                            }
+
+                            $popup .= '</div>';
+
+
+
+                            $popup .= '<a class="left carousel-control" href="#album1CarouselG3'.$album_model->id.'" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#album1CarouselG3'.$album_model->id.'" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>';
+
+                            $popup .= '</div>';
+                            $popup .= '</div>';
+                            $popup .= '</div>';
+                            $popup .= '</div>';
+                            $popup .= '</div>';
+                            //END OF POPUP DATA
+                        }
+
+                    }
+                    $ret .= '</div>';
+
+
+                    $ret .= $popup;
+
+
+
+
+
+                }
+
+
+                $ret.= ' <script type="text/javascript">
+                        $(document).ready(function(){
+                       $(".shuffle-me").shuffleImages({
+                         target: ".images > img"
+                       });
+                        });
+                    </script>';
+            }
+        }
+        catch (\Exception $exception)
+        {
+            dump($exception->getTraceAsString());
+        }
+
+
+
+
+        return $ret;
+    }
+
     public static function gallery2($element,$page)
     {
         $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
