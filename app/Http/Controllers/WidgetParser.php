@@ -1196,15 +1196,18 @@ class WidgetParser extends Controller
         $ret = "";
         $gallery_id =SitePages::get_page_data($page,"input_" .$element['id']);
         $gallery = SiteGallary::getGallery($gallery_id);
-        if ($gallery != null)
-        {
-            $albums = SiteGallary::getAlbums($gallery_id);
-            $ret.= "<script type='text/javascript' src='".asset('js/jquery.shuffle-images.js')."'>";
-            $ret.= '<link rel="stylesheet" href="'.asset("css/jquery.shuffle-images.css").'">';
 
-            if (count($albums))
+        try
+        {
+            if ($gallery != null)
             {
-                $ret .= '<div class="shuffle-group">';
+                $albums = SiteGallary::getAlbums($gallery_id);
+                $ret.= "<script type='text/javascript' src='".asset('js/jquery.shuffle-images.js')."'>";
+                $ret.= '<link rel="stylesheet" href="'.asset("css/jquery.shuffle-images.css").'">';
+
+                if (count($albums))
+                {
+                    $ret .= '<div class="shuffle-group">';
                     foreach ($albums as $album)
                     {
                         $album_model = SiteGallary::getAlbumInfo($album);
@@ -1233,19 +1236,28 @@ class WidgetParser extends Controller
                         }
 
                     }
-                $ret .= '</div>';
+                    $ret .= '</div>';
 
-            }
+                }
 
 
-            $ret.= ' <script id="shuffle-images">
+                $ret.= ' <script id="shuffle-images">
                         $(document).ready(function(){
                        $(".shuffle-me").shuffleImages({
                          target: ".images > img"
                        });
                         });
                     </script>';
+            }
         }
+        catch (\Exception $exception)
+        {
+            dump($exception->getTraceAsString());
+        }
+
+
+
+
         return $ret;
     }
 
