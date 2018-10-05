@@ -27,7 +27,7 @@
 /* CORE CSS */
 
 body {
-	color:#33404c;
+	color:#A2BFDA;
 	font-family: 'Quicksand', sans-serif;
 	font-size:14px;
 	font-weight:400;
@@ -95,7 +95,7 @@ a {
 
 /*
 .owl-theme .owl-controls .owl-page span {
-	background:#33404c;
+	background:#A2BFDA;
 }
 
 */
@@ -135,7 +135,7 @@ a {
 }
 
 .navbar-custom .icon-bar {
-	background:#33404c;
+	background:#A2BFDA;
 }
 
 .sticky-wrapper {
@@ -264,7 +264,7 @@ a {
 	}
 
 	#highlight h2 {
-		color:#33404c;
+		color:#A2BFDA;
 	}
 
 	#highlight #right {
@@ -363,7 +363,7 @@ a {
 }
 
 .fcs-team .speaker-content h4 {
-	color: #33404c;
+	color: #A2BFDA
 	font-family: 'Quicksand', sans-serif;
 	font-size: 14px;
 	font-weight: 600;
@@ -412,7 +412,7 @@ a {
 }
 
 #program .nav-tabs > li.active > a {
-	color: #33404c;
+	color: #A2BFDA;
 	padding:10px 50px 10px 0;
 	border-bottom:4px solid #ffffff;
 	padding:10px 100px 10px 0;
@@ -420,7 +420,7 @@ a {
 
 #program .nav-tabs > li > a:hover,
 #program .nav-tabs > li.active > a:hover {
-	color: #33404c;
+	color: #A2BFDA;
 }
 
 #program .panel {
@@ -450,7 +450,7 @@ a {
 }
 
 #program .panel-title > a {
-	color: #33404c;
+	color: #A2BFDA;
 	text-decoration:none;
 	-webkit-transition: all 0.1s;
 	-moz-transition: all 0.1s;
@@ -462,7 +462,7 @@ a {
 }
 
 #program .date {
-	color:#33404c;
+	color:#A2BFDA
 	font-family: 'Quicksand', sans-serif;
 	margin-bottom:0;
 	font-size:17px;
@@ -477,7 +477,7 @@ a {
 }
 
 #program .panel-body h4 {
-	color:#33404c;
+	color:#A2BFDA;
 	font-size:21px;
 }
 
@@ -487,21 +487,21 @@ a {
 }
 
 #program .panel-body p span {
-	color:#33404c;
+	color:#A2BFDA;
 	display:inherit;
 }
 
 #program .about-speaker i{
-	color:#33404c;
+	color:#A2BFDA
 }
 
 #program .about-speaker a{
-	color:#33404c;
+	color:#A2BFDA
 	text-decoration:none;
 }
 
 #program .about-speaker a:hover{
-	color:#33404c000;
+	color:#A2BFDA;
 	text-decoration:none;
 }
 
@@ -544,7 +544,7 @@ a {
 }*/
 #pitching-day {
 	color:#ffffff;
-	background:#33404c;
+	background:#A2BFDA
 }
 
 #pitching-day h4 {
@@ -572,7 +572,7 @@ a {
 }
 
 #pitching-day .nav-tabs > li.active > a {
-	color: #33404c;
+	color: #A2BFDA;
 	padding:10px 50px 10px 0;
 	border-bottom:4px solid #ffffff;
 	padding:10px 100px 10px 0;
@@ -580,7 +580,7 @@ a {
 
 #pitching-day .nav-tabs > li > a:hover,
 #pitching-day .nav-tabs > li.active > a:hover {
-	color: #33404c;
+	color: #A2BFDA;
 }
 
 #pitching-day .panel {
@@ -610,7 +610,7 @@ a {
 }
 
 #pitching-day .panel-title > a {
-	color: #33404c;
+	color: #A2BFDA;
 	text-decoration:none;
 	-webkit-transition: all 0.1s;
 	-moz-transition: all 0.1s;
@@ -622,7 +622,7 @@ a {
 }
 
 #pitching-day .date {
-	color:#33404c;
+	color:#A2BFDA;
 	font-family: 'Quicksand', sans-serif;
 	margin-bottom:0;
 	font-size:16px;
@@ -637,7 +637,7 @@ a {
 }
 
 #pitching-day .panel-body h4 {
-	color:#33404c;
+	color:#A2BFDA;
 	font-size:16px;
 }
 
@@ -647,21 +647,21 @@ a {
 }
 
 #pitching-day .panel-body p span {
-	color:#33404c;
+	color:#A2BFDA;
 	display:inherit;
 }
 
 #pitching-day .about-speaker i{
-	color:#33404c;
+	color:#A2BFDA;
 }
 
 #pitching-day .about-speaker a{
-	color:#33404c;
+	color:#A2BFDA
 	text-decoration:none;
 }
 
 #pitching-day .about-speaker a:hover{
-	color:#33404c000;
+	color:#A2BFDA;
 	text-decoration:none;
 }
 
@@ -695,7 +695,7 @@ a {
 	content: "";
 	display: block;
 	height: 3px;
-	background-color: #33404c;
+	background-color: #A2BFDA
 	margin-top: 12px;
 	margin-bottom: 15px;
 }
@@ -741,7 +741,7 @@ a {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background-color: #33404c;
+	background-color:#A2BFDA;
 	margin-top: 12px;
 	margin-bottom: 15px;
 }
@@ -755,7 +755,7 @@ a {
 	display: block;
 	width: 60px;
 	height: 3px;
-	background-color: #33404c;
+	background-color: #A2BFDA
 	margin-top: 12px;
 	margin-bottom: 15px;
 }
@@ -766,7 +766,7 @@ a {
 }
 
 .venue i {
-	color:#33404c;
+	color:#A2BFDA;
 }
 
 .venue-inner .lead {
@@ -1138,7 +1138,7 @@ a {
 
 footer {
 	color:#b0b0b0;
-	background:#33404c;
+	background:#A2BFDA;
 	padding:70px 0;
 }
 
@@ -1188,7 +1188,7 @@ footer dt {
 	color:#ececee;
 	font-size:10px;
 	letter-spacing:1px;
-	background:#33404c000;
+	background:#A2BFDA;
 	padding:20px 0;
 }
 
@@ -1210,7 +1210,7 @@ footer dt {
 /* Newsletter */
 
 #newsletter {
-	color:#33404c;
+	color:#A2BFDA;
 	background:#ebe8e8;
 	margin-bottom:0;
 }
@@ -1287,21 +1287,21 @@ textarea {
 
 .button-line-light:hover,
 .button-line-light:active {
-	color: #33404c;
+	color: #A2BFDA;
 	background: #ffffff;
 	text-decoration:none;
 }
 
 .button-line-dark {
-	color:#33404c;
+	color:#A2BFDA;
 	background:transparent;
-	border:2px solid #33404c;
+	border:2px solid #A2BFDA;
 }
 
 .button-line-dark:hover,
 .button-line-dark:active {
 	color: #ffffff;
-	background: #33404c;
+	background: #A2BFDA;
 	text-decoration:none;
 }
 
@@ -1889,7 +1889,7 @@ h1 {
 }
 
 .fcs-story-post .fcs-story-block {
-	background-color: #33404c;
+	background-color: #A2BFDA;
 }
 .fcs-story-post .fcs-story-block:hover .fcs-story-menu-fcs-story-content span {
 	-webkit-transform: translate(-50%, -10px);
@@ -2170,7 +2170,7 @@ figcaption {
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 .snip1529 {
-	background-color: #33404c000;
+	background-color: #A2BFDA;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 	color: #ffffff;
 	float: left;
@@ -2360,7 +2360,7 @@ figcaption {
 }
 .tabs--blue label {
 	top: 5px;
-	color: #33404c;
+	color: #A2BFDA;
 	border-radius: 0px;
 	border: none;
 	background: #9FD356;
@@ -2887,7 +2887,7 @@ body .progress_inner input[type="radio"] {
 
 .fcs-local-li a {
 	text-decoration: none;
-	color: #33404c;
+	color: #A2BFDA;
 
 	/* transitions & animations
     transition: all .5s ease;
@@ -3119,7 +3119,7 @@ body .progress_inner input[type="radio"] {
 	margin: 20px 0 10px 0;
 	padding: 20px 0 0 0;
 	font-size: 2em;
-	color: #33404c;
+	color: #A2BFDA;
 	position: relative;
 	-webkit-transition: -webkit-transform 0.2s;
 	-moz-transition: -moz-transform 0.2s;
@@ -3466,13 +3466,13 @@ body .progress_inner input[type="radio"] {
 .heading-teaser-content {
 	position: relative;
 	z-index: 2;
-	color: #33404C;
+	color: #A2BFDA;
 }
 
 .heading-teaser {
 	z-index: 1;
 	position: absolute;
-	color: #33404C;
+	color: #A2BFDA;
 	font-size: 50px;
 	line-height: 60px;
 }
@@ -3567,7 +3567,7 @@ body .progress_inner input[type="radio"] {
 	-moz-background-size: cover;
 	background-attachment: fixed;
 	/*
-box-shadow: 0px 0px 6px #33404c000;
+box-shadow: 0px 0px 6px #A2BFDA;
 transform: translate(-50%); */
 }
 
@@ -4487,9 +4487,9 @@ button[type="submit"]:active {
 	list-style: none;
 	display: inline-block;
 	font-size: 1.5em;
-	border: 2px solid #33404c;
+	border: 2px solid #A2BFDA;
 	cursor: pointer;
-	color: #33404c;
+	color: #A2BFDA;
 	font-size: 1.5em;
 	line-height: 33px;
 	text-decoration: none;
@@ -4603,7 +4603,7 @@ button[type="submit"]:active {
 	margin: 10% 30%;
 	transform: rotate(-25deg);
 	position: left;
-	border: 1px solid #33404C;
+	border: 1px solid #A2BFDA;
 
 }
 
