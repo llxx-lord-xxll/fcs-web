@@ -3300,8 +3300,8 @@ body .progress_inner input[type="radio"] {
 .fcs-form-outer li select,
 .fcs-form-outer li textarea {
 	padding: 15px;
-    color: #648fb7;
-	border: 1px solid #163e64;
+	color: #648fb7;
+	border: 1px solid #163E64 !important;
 	background-color: #092d4e;
 }
 
@@ -4207,7 +4207,7 @@ ul.fcs-form-outer > li > label.text-danger
 /* Landing Page */
 
 .bg-img-landing-page {
-	background-image: url(../img/banner-hk-ship.jpg);
+	background-image: url(../img/bali-2019-fcs.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -4331,7 +4331,7 @@ ul.fcs-form-outer > li > label.text-danger
 
 .fcs-inline-form .fcs-form-outer li button[type="submit"]{
 	cursor: pointer;
-	background: #9aca41;
+	background: #14497B;
 	width:180px;
 	color:#FFFFFF;
 	text-align:center;
