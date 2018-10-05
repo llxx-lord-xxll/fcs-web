@@ -5501,7 +5501,7 @@ button.close {
 }
 @media (min-width: 992px) {
   .modal-dialog {
-    width: 600px;
+    width: 1000px;
     margin: 30px auto;
   }
   .modal-content {
