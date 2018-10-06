@@ -4052,6 +4052,18 @@ ul.fcs-form-outer > li > label.text-danger
 	height: 400px;
 	width: 100%;
 }
+
+.bg-image-conference-tickets {
+	background-image: url(../img/ticket-page.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 400px;
+	width: 100%;
+}
+
 /* Footer */
 
 /*  HUman of FCS */
