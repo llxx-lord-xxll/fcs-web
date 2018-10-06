@@ -4256,11 +4256,12 @@ ul.fcs-form-outer > li > label.text-danger
 
 
 .landing-header-style {
-	margin-top: 200px;
+	margin-top: 180px;
 	margin-bottom: 40px;
 	text-align: center;
 	color: #fff;
 	font-weight: 400;
+	font-size: 22px;
 }
 
 .landing-header {
