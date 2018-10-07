@@ -4065,7 +4065,11 @@ ul.fcs-form-outer > li > label.text-danger
 }
 
 .tickets-heading-style {
-	margin-top: 250px;
+	margin-top: 250px!important;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;
 }
 
 /* Footer */
