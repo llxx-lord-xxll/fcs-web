@@ -4060,8 +4060,12 @@ ul.fcs-form-outer > li > label.text-danger
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	height: 400px;
+	height: 600px;
 	width: 100%;
+}
+
+.tickets-heading-style {
+	margin-top: 250px;
 }
 
 /* Footer */
