@@ -4739,3 +4739,8 @@ li.expiry-date .expiry-group{
 .ticket-header-paragraph {
 	padding-top: 90px;
 }
+
+/* Footprint Section */
+.footprint-section {
+	padding: 90px 0px;
+}
