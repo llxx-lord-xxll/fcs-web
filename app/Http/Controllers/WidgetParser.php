@@ -877,7 +877,7 @@ class WidgetParser extends Controller
                 if (!empty($pInfo))
                 {
 
-                    $ret.= '<div class="col-lg-3 col-md-3 col-sm-4"><div class="team-sin text-center">';
+                    $ret.= '<div class="col-lg-3 col-md-3 col-sm-4" style="height: 280px;"><div class="team-sin text-center">';
 
                     $ret .= '<div class="speaker-img">
                                         <img src="'. asset('uploads/'.$pInfo->photo) . '" alt="" />
