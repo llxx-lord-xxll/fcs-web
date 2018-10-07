@@ -4728,3 +4728,10 @@ li.expiry-date .expiry-group{
 .StripeElement--webkit-autofill {
 	background-color: #fefde5 !important;
 }
+
+
+/* Ticket Page */
+
+.ticket-header-paragraph {
+	padding-top: 90px;
+}
