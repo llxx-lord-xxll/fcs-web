@@ -58,7 +58,7 @@
 }
 
 .shuffle-group .shuffle-me:nth-child(3n+1) {
-    width: 64.8%;
+    width: 58%;
     float: left;
     height: 428px;
 }
