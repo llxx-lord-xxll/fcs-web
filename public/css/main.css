@@ -1660,7 +1660,7 @@ a:hover, a:focus {
 	display: block;
 	position: relative;
 	background:transparent;
-	color:#A2BFDA;
+	color:#ffffff;
 	font-size:14px;
 	font-weight: bolder;
 	text-transform:uppercase;
@@ -1714,7 +1714,7 @@ a:hover, a:focus {
 }
 #accordion .panel-body{
 	border-top:0 none;
-	color:#163e64;
+	color:#A2BFDA;
 }
 
 /* FCS CONTACT PAGE */
