@@ -852,7 +852,7 @@ class WidgetParser extends Controller
 
         if (!empty($team_people))
         {
-            $size = 3;
+           /* $size = 3;
             if(count($team_people)< 5)
             {
                 $size = 3;
@@ -868,6 +868,8 @@ class WidgetParser extends Controller
                     $size = 3;
                 }
             }
+
+           */
             foreach ($team_people as $person)
             {
                 $pInfo = SitePeople::getPersonInfo($person);
@@ -875,7 +877,7 @@ class WidgetParser extends Controller
                 if (!empty($pInfo))
                 {
 
-                    $ret.= '<div class="col-lg-'.$size.' col-md-3 col-sm-4"><div class="team-sin text-center">';
+                    $ret.= '<div class="col-lg-3 col-md-3 col-sm-4" style="height: 280px;"><div class="team-sin text-center">';
 
                     $ret .= '<div class="speaker-img">
                                         <img src="'. asset('uploads/'.$pInfo->photo) . '" alt="" />
