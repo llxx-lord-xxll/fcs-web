@@ -380,7 +380,7 @@ a {
 
 #program {
 	color:#ffffff;
-	background:#9ccc40;
+	background:#092d4e;
 	padding:70px 0 90px 0;
 }
 
@@ -875,7 +875,7 @@ a {
 
 .price-table {
 	color:#A2BFDA;
-	background:#94cc34;
+	background:#092d4e;
 	padding:20px;
 	line-height:1;
 	font-weight:300;
@@ -889,11 +889,11 @@ a {
 }
 
 .standart {
-	background:#9ccc40;
+	background:#092d4e;
 }
 
 .vip {
-	background:#94cc34;
+	background:#092d4e;
 }
 
 .premium-early-bird {
@@ -1654,29 +1654,29 @@ a:hover, a:focus {
 }
 #accordion .panel-heading{
 	padding:0;
-	background: #fff;
+	background: #052441;
 }
 #accordion .panel-title a{
 	display: block;
 	position: relative;
 	background:transparent;
-	color:#349c64;
+	color:#A2BFDA;
 	font-size:14px;
 	font-weight: bolder;
 	text-transform:uppercase;
 	margin-bottom:15px;
 	padding:15px 20px;
-	border-bottom:1px solid #9ccc40;
+	border-bottom:1px solid #163e64;
 	border-radius: 0 15px 0 15px;
 	transition:all 0.10s linear 0s;
 }
 #accordion .panel-title a.collapsed{
-	color:#808080;
-	border-bottom:1px solid #d3d3d3;
+	color:#648fb7;
+	border-bottom:1px solid #163e64;
 	margin: 0;
 }
 #accordion .panel-title a i{
-	color:#94cc34;
+	color:#163e64;
 	position: absolute;
 	top: 14px;
 	left:25px;
@@ -1688,20 +1688,20 @@ a:hover, a:focus {
 	bottom:-15px;
 	left:36px;
 	border:7px solid transparent;
-	border-top:7px solid #a4e844;
+	border-top:7px solid #163e64;
 }
 #accordion .panel-title a.collapsed:before{
 	content:"";
 	border: 0px none;
 }
 #accordion .panel-title a.collapsed:hover{
-	color: #6a6060;
+	color: #A2BFDA;
 }
 #accordion .panel-title a:after,
 #accordion .panel-title a.collapsed:after{
 	content: "\f106";
 	font-family: FontAwesome;
-	color: #9ccc40;
+	color: #163e64;
 	font-size: 20px;
 	line-height: 20px;
 	position: absolute;
@@ -1710,11 +1710,11 @@ a:hover, a:focus {
 }
 #accordion .panel-title a.collapsed:after{
 	content: "\f107";
-	color:#808080;
+	color:#163e64;
 }
 #accordion .panel-body{
 	border-top:0 none;
-	color:#808080;
+	color:#163e64;
 }
 
 /* FCS CONTACT PAGE */
@@ -2874,7 +2874,7 @@ body .progress_inner input[type="radio"] {
 	font-size: 20px;
 	font-weight:500;
 	text-align: center;
-	background-color: #9ccc40;
+	background-color: #092d4e;
 	width: 100%;
 	max-width: 200px;
 	margin-left: 2px;
@@ -2907,11 +2907,11 @@ body .progress_inner input[type="radio"] {
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
 	color: #ffffff;
-	background-color: #9ccc40;
+	background-color: #092d4e;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-	background-color: #9ccc40;
+	background-color: #092d4e;
 }
 
 .chapter-mini-menu {
