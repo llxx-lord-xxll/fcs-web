@@ -4140,6 +4140,10 @@ ul.fcs-form-outer > li > label.text-danger
 	max-width: 100%;
 }
 
+.fcs-story-article blockquote{
+	color: #f7f7f7;
+}
+
 .fcs-story-article ul li {
 	font-size: 1.3em;
 	line-height: 1.7em;
