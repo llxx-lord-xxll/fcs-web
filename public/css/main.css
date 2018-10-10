@@ -4751,3 +4751,35 @@ li.expiry-date .expiry-group{
 	padding-top: 90px;
 }
 
+/* Bali Landing Page */
+.image-text-block img, .image-text-block h2 {
+	display: inline;
+}
+
+.image-left-block h2 {
+	padding-left: 15px;
+}
+
+.image-left-block {
+	padding: 20px 0px;
+}
+
+.image-left-text {
+	padding-left: 50px;
+}
+
+.image-left-text p {
+	border-left: 5px solid #0D3358;
+	padding: 0 0 0 15px;
+}
+
+.image-text-block .col-lg-6 ,.image-text-block .col-lg-5   {
+	vertical-align: middle;
+	display: inline-block;
+	float: none;
+}
+
+.image-text-block {
+	padding: 60px 0px;
+	background:#03213D;
+}
