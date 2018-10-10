@@ -647,18 +647,24 @@ class WidgetParser extends Controller
                                 <label class="fcs-title-label" for="payment_package">Choose a package</label>
                                 <select name="payment_package" id="payment_package" required>
                                     ';
-
-                    foreach (DB::table('site_package_group')->get() as $package_groups)
-                    {
-                        $ret .= '<optgroup label="'.$package_groups->title.'">';
-                        foreach (DB::table('site_packages')->where('package_group_id','=',$package_groups->id)->get() as $package_item)
+                        $form->package_groups = json_decode($form->package_groups);
+                        if (!empty($form->package_groups))
                         {
-                            $ret .= '<option value="'.$package_item->id.'">'.$package_item->title. ' ( $'. $package_item->price .')'.'</option>';
+                            foreach ( $form->package_groups as $package_groups)
+                            {
+                                $package_groups = DB::table('site_package_group')->find($package_groups);
+                                if (!empty($package_groups))
+                                {
+                                    $ret .= '<optgroup label="'.$package_groups->title.'">';
+                                    foreach (DB::table('site_packages')->where('package_group_id','=',$package_groups->id)->get() as $package_item)
+                                    {
+                                        $ret .= '<option value="'.$package_item->id.'">'.$package_item->title. ' ( $'. $package_item->price .')'.'</option>';
+                                    }
+
+                                    $ret .= '</optgroup>';
+                                }
+                            }
                         }
-
-                        $ret .= '</optgroup>';
-
-                    }
 
                     $ret .= '
                                 </select>
