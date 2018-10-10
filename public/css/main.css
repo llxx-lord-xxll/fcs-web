@@ -282,7 +282,7 @@ a {
 }
 
 #info i {
-	color:#9aca41;
+	color:#0D3358;
 	font-size: 4em;
 	margin-bottom:10px;
 }
@@ -987,7 +987,7 @@ a {
 /* TESTIMONIAL */
 
 #testimonial {
-	background:#94cc34;
+	background:#0D3358;
 	background-image: url(../img/parallex-000.jpg);
 	background-repeat: no-repeat;
 	background-attachment:fixed;
@@ -1043,7 +1043,7 @@ a {
 }
 
 .sponsor {
-	border:2px solid #94cc34;
+	border:2px solid #0D3358;
 	margin:0 5px;
 	padding:10px;
 	text-align:center;
@@ -1058,7 +1058,7 @@ a {
 }
 
 #sponsors i {
-	color:#94cc34;
+	color:#0D3358;
 }
 
 
