@@ -4783,3 +4783,10 @@ li.expiry-date .expiry-group{
 	padding: 60px 0px;
 	background:#03213D;
 }
+
+
+.fcs-future-vision li {
+	text-align: justify;
+	font-size: 1.15em;
+	padding: 10px 0px;
+}
