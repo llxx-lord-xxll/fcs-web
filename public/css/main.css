@@ -4790,3 +4790,9 @@ li.expiry-date .expiry-group{
 	font-size: 1.15em;
 	padding: 10px 0px;
 }
+
+
+.fcs-background-content {
+	font-size: 1.25em;
+	text-align: justify;
+}
