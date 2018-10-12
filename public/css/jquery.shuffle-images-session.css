@@ -4,7 +4,7 @@
     position: relative;
     float: left;
     width: 26%;
-    height: 209px;
+    height: 210px;
 }
 
 .info {
@@ -55,13 +55,13 @@
 }
 
 .shuffle-group .shuffle-me {
-    width: 31.9%;
+    width: 27.7%;
     float: left;
     margin: 5px;
 }
 
 .shuffle-group .shuffle-me:first-child {
-    width: 64.8%;
+    width: 56.4%;
     float: left;
     height: 428px;
 }
