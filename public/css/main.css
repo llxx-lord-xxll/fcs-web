@@ -70,7 +70,7 @@ h6 {
 section {
 	display: block;
 	background-color: #03213D;
-	padding:40px 0!important;
+	padding:40px 0;
 }
 
 .uppercase {
