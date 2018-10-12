@@ -86,3 +86,14 @@
     height: 100% !important;
     width: 100% !important;
 }
+
+@media (max-width: 727px) {
+    .shuffle-group .shuffle-me:first-child{
+        width: 100%;
+    }
+    .shuffle-group .shuffle-me{
+        width: 50%;
+        padding: 5px;
+        margin-top: 10px;
+    }
+}
