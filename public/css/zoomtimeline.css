@@ -829,7 +829,7 @@
     width: 100%;
     height: 2px;
     content: "";
-    background-color: #33404c; 
+    background-color: #092d4e;
 	}
   .zoomtimeline.mode-3dslider .details-container {
     position: relative;
@@ -921,7 +921,7 @@
         background-size: cover;
         background-position: center center; }
       .zoomtimeline.mode-3dslider .details-container > .detail .detail-image--border {
-        border: 2px solid #33404c;
+        border: 2px solid #092d4e;
         position: absolute;
         border-radius: 0;
         transition-property: background, border;
@@ -1032,7 +1032,7 @@
           left: 50%;
           margin-left: -6px;
           box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25);
-          background-color: #33404c;
+          background-color: #092d4e;
           border-radius: 50%;
           transition-property: opacity, visibility;
           transition-duration: 0.25s;
@@ -1050,7 +1050,7 @@
           -o-transition-timing-function: ease-in;
           transition-timing-function: ease-in; }
           .zoomtimeline.mode-3dslider .details-container .detail .the-year figure polygon {
-            fill: #33404c; }
+            fill: #092d4e; }
           .zoomtimeline.mode-3dslider .details-container .detail .the-year figure polyline {
             stroke: rgba(255, 255, 255, 0.9); }
     .zoomtimeline.mode-3dslider .details-container > input {
@@ -1118,7 +1118,7 @@
       -webkit-transform: translate3d(calc(300px + 5vw), 0, 0); }
       .zoomtimeline.mode-3dslider .details-container > input:checked + .detail + * + .detail + * + .detail .detail-image--border {
         background-color: transparent;
-        border-color: #33404c; }
+        border-color: #092d4e; }
       .zoomtimeline.mode-3dslider .details-container > input:checked + .detail + * + .detail + * + .detail .detail-image {
         opacity: 0;
         box-shadow: 0 0 8px 0 transparent; }
