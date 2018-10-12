@@ -4804,7 +4804,7 @@ li.expiry-date .expiry-group{
 /* Partner Page Styles */
 
 .partners-block-background {
-	background: url(img/shape_01.png) no-repeat bottom center scroll;
+	background: url(../img/shape_01.png) no-repeat bottom center scroll;
 	background-size: cover;
 	height: auto;
 	width: 100%;
