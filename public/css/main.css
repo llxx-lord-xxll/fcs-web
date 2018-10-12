@@ -4758,6 +4758,7 @@ li.expiry-date .expiry-group{
 
 .image-left-block h2 {
 	padding-left: 15px;
+	font-size: 1.70em;
 }
 
 .image-left-block {
@@ -4771,6 +4772,7 @@ li.expiry-date .expiry-group{
 .image-left-text p {
 	border-left: 5px solid #0D3358;
 	padding: 0 0 0 15px;
+	font-size: 1.25em;
 }
 
 .image-text-block .col-lg-6 ,.image-text-block .col-lg-5   {
@@ -4784,6 +4786,9 @@ li.expiry-date .expiry-group{
 	background:#03213D;
 }
 
+.image-right-block img {
+	border:3px solid #052441;
+}
 
 .fcs-future-vision li {
 	text-align: justify;
