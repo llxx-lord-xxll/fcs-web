@@ -3414,19 +3414,19 @@ body .progress_inner input[type="radio"] {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	.bg-image-about {
-		height: 1000px!important;
+		height: 850px!important;
 	}
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
 	.bg-image-about {
-		height: 850px!important;
+		height: 700px!important;
 	}
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1920px) {
 	.bg-image-about {
-		height: 800px!important;
+		height: 700px!important;
 	}
 }
 
@@ -4923,3 +4923,4 @@ li.expiry-date .expiry-group{
 }
 
 /* Partner Page Style End */
+
