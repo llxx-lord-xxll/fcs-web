@@ -4864,9 +4864,8 @@ li.expiry-date .expiry-group{
 	display: block;
 }
 .partners-endorsements .partners-group img{
-	height: 100%;
 	width: auto;
-	max-width: 100%;
+	max-height: 80px;
 }
 
 @media (min-width:1541px) and (max-width: 1732px) {
@@ -4937,4 +4936,11 @@ li.expiry-date .expiry-group{
 /* Hong Kong & Its Neighbor Page */
 .caricom-logo {
 	max-width: 125px;
+}
+
+
+/* Partner Page */
+
+..partners-group h2 {
+	padding: 50px 0px;
 }
