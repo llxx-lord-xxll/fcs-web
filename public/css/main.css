@@ -4942,6 +4942,8 @@ li.expiry-date .expiry-group{
 	text-align: left;
 	font-size: 1.25em;
 	color: #A2BFDA;
+	margin-bottom: 10px;
+	line-height: 1;
 }
 
 /* Partner Page */
