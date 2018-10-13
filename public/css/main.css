@@ -4938,9 +4938,13 @@ li.expiry-date .expiry-group{
 	max-width: 125px;
 }
 
+.second-phase p {
+	text-align: left;
+}
 
 /* Partner Page */
 
 .partners-group h2 {
 	padding: 20px 0px;
 }
+
