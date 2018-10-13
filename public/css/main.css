@@ -4923,3 +4923,12 @@ li.expiry-date .expiry-group{
 
 /* Partner Page Style End */
 
+/* Home Page Media Section */
+.fcs-media-logo {
+	width: auto;
+	max-height: 100px;
+}
+
+.fcs-media-logo-block {
+	padding: 5%;
+}
