@@ -246,6 +246,7 @@ a {
 #highlight #left {
 	color:#b0b0b0;
 	min-height:100px;
+	text-align: center;
 }
 
 #highlight #right {
