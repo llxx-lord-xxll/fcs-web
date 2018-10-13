@@ -70,7 +70,7 @@ h6 {
 section {
 	display: block;
 	background-color: #03213D;
-	padding:90px 0;
+	padding:40px 0;
 }
 
 .uppercase {
@@ -277,7 +277,6 @@ a {
 /* INFO */
 
 #info {
-	padding: 70px 0 90px 0;
 	background-color: #03213D;
 }
 
@@ -814,7 +813,7 @@ a {
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	height:310px;
+	height:400px;
 	position:relative;
 	padding:0;
 }
@@ -3414,19 +3413,19 @@ body .progress_inner input[type="radio"] {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	.bg-image-about {
-		height: 1000px!important;
+		height: 850px!important;
 	}
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
 	.bg-image-about {
-		height: 850px!important;
+		height: 700px!important;
 	}
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1920px) {
 	.bg-image-about {
-		height: 800px!important;
+		height: 700px!important;
 	}
 }
 
@@ -4101,7 +4100,7 @@ ul.fcs-form-outer > li > label.text-danger
 @media screen and (min-width: 320px) and (max-width: 1024px) {
 	.tp-caption {
 		top: 35% !important;
-		left: 5% !important;
+		left: 14% !important;
 	}
 }
 
@@ -4122,7 +4121,7 @@ ul.fcs-form-outer > li > label.text-danger
 @media screen and (min-width: 1367px) and (max-width: 1920px) {
 	.tp-caption {
 		top: 35% !important;
-		left: 25% !important;
+		left: 21% !important;
 	}
 }
 
@@ -4234,7 +4233,7 @@ ul.fcs-form-outer > li > label.text-danger
 /* Landing Page */
 
 .bg-img-landing-page {
-	background-image: url(../img/bali-2019-fcs.jpg);
+	background-image: url(../img/FCS-Bali-2019-Slider.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -4758,6 +4757,7 @@ li.expiry-date .expiry-group{
 
 .image-left-block h2 {
 	padding-left: 15px;
+	font-size: 1.70em;
 }
 
 .image-left-block {
@@ -4771,6 +4771,7 @@ li.expiry-date .expiry-group{
 .image-left-text p {
 	border-left: 5px solid #0D3358;
 	padding: 0 0 0 15px;
+	font-size: 1.25em;
 }
 
 .image-text-block .col-lg-6 ,.image-text-block .col-lg-5   {
@@ -4784,6 +4785,9 @@ li.expiry-date .expiry-group{
 	background:#03213D;
 }
 
+.image-right-block img {
+	border:3px solid #052441;
+}
 
 .fcs-future-vision li {
 	text-align: justify;
@@ -4918,3 +4922,4 @@ li.expiry-date .expiry-group{
 }
 
 /* Partner Page Style End */
+
