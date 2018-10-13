@@ -52,16 +52,17 @@
     width: 100%;
     margin-bottom: 10px;
     display: list-item;
+    padding-left: 1.5%;
 }
 
 .shuffle-group .shuffle-me {
-    width: 31.9%;
+    width: 32.2%;
     float: left;
     margin: 5px;
 }
 
 .shuffle-group .shuffle-me:first-child {
-    width: 64.8%;
+    width: 65%;
     float: left;
     height: 428px;
 }
