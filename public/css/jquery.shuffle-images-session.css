@@ -112,7 +112,7 @@
     .shuffle-me:first-child {
         float: left;
         height: 190px !important;
-        font-size: 0.9em;
+        font-size: 0.9em!important;
         line-height: 1.2em;
     }
 
