@@ -94,15 +94,16 @@
 @media (max-width: 727px) {
     .shuffle-group .shuffle-me:first-child{
         width: 100%;
+        height: auto;
     }
     .shuffle-group .shuffle-me{
-        width: 50%;
+        width: 100%;
         padding: 5px;
         margin: 0;
         margin-top: 10px;
     }
     .info{
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
 
