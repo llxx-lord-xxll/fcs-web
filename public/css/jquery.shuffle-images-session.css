@@ -95,6 +95,7 @@
     .shuffle-group .shuffle-me:first-child{
         width: 100%;
         height: auto;
+        font-size: 1em;
     }
     .shuffle-group .shuffle-me{
         width: 100%;
