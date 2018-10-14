@@ -108,30 +108,3 @@
 
 /* All Media Query for Shuffle Gallery */
 
-@media screen and (min-width: 320px) {
-    .shuffle-me:first-child {
-        float: left;
-        height: 190px;
-        font-size: 0.9em;
-        line-height: 1.2em;
-    }
-
-    .shuffle-group .shuffle-me {
-        padding: 0px;
-    }
-
-    .shuffle-group .shuffle-me {
-        float: left;
-        margin: 5px;
-    }
-    .shuffle-me {
-        display: block;
-        position: relative;
-        height: 190px;
-    }
-
-    .info {
-        padding: 30% 20%;
-    }
-
-}
