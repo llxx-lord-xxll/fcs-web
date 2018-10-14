@@ -979,6 +979,9 @@ a {
 	padding:70px 0 90px 0;
 }
 
+#gallery h2 {
+	text-align: center!important;
+}
 #timeline .item {
 	margin:10px 10px 20px 10px;
 }
