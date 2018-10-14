@@ -108,7 +108,7 @@
 
 /* All Media Query for Shuffle Gallery */
 
-@media screen and (min-width: 320px) and (max-width: 359px) {
+@media screen and (min-width: 320px) {
     .shuffle-me:first-child {
         float: left;
         height: 190px !important;
@@ -132,7 +132,7 @@
     }
 
     .info {
-        padding: 30% 20%;
+        padding: 35% 20%;
     }
 
 }
