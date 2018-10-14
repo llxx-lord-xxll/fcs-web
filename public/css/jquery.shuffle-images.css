@@ -82,3 +82,22 @@
     height: 100% !important;
     width: 100% !important;
 }
+
+/* Additional Media Query */
+
+@media (max-width: 727px) {
+    .shuffle-group .shuffle-me:first-child{
+        width: 100%;
+        height: auto;
+        font-size: 1em;
+    }
+    .shuffle-group .shuffle-me{
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .info{
+        font-size: 1em;
+    }
+}
