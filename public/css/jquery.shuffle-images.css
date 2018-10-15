@@ -109,4 +109,7 @@
         height: auto !important;
         width: 100% !important;
     }
+    .shuffle-group .shuffle-me:nth-child(3n+1) .images{
+        height: 100%;
+    }
 }
