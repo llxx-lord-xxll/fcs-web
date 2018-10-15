@@ -105,4 +105,8 @@
     .info{
         font-size: 1em;
     }
+    .shuffle-me .images img {
+        height: auto !important;
+        width: 100% !important;
+    }
 }
