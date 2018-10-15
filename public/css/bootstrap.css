@@ -5463,7 +5463,7 @@ button.close {
 }
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #02203D;
   min-height: 16.42857143px;
 }
 .modal-header .close {
@@ -5471,11 +5471,13 @@ button.close {
 }
 .modal-title {
   margin: 0;
+  text-align: center;
   line-height: 1.42857143;
 }
 .modal-body {
   position: relative;
   padding: 15px;
+  background: #02203D;
 }
 .modal-footer {
   padding: 15px;
