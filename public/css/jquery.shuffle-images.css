@@ -86,7 +86,7 @@
 /* Additional Media Query */
 
 @media (max-width: 727px) {
-    .shuffle-group .shuffle-me:first-child{
+    .shuffle-group .shuffle-me:nth-child(3n+1){
         width: 100%;
         height: auto;
         font-size: 1em;
