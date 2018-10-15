@@ -89,7 +89,8 @@
 
 @media (max-width: 727px) {
     .shuffle-group .shuffle-me:nth-child(3n+1){
-        width: 100%;
+        width: 100% !important;
+        height: auto !important;
     }
     .shuffle-group .shuffle-me {
         width: 100%;
