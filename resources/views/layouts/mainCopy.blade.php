@@ -108,7 +108,7 @@
             <nav class="row">
                 <div class="col-xs-12 col-md-2">
                     <div class="footer-logo">
-                        <a href="#" style="background-image: url({{\App\Databases\SiteSettings::get_footer('logo')}})!important;" >fcs</a>
+                        <a href="#" style="background-image: url({{\App\Databases\SiteSettings::get_footer('logo')}})!important; width:83px!important; height:62px!important;" >fcs</a>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2">
