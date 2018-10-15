@@ -10312,3 +10312,13 @@
         margin-left: 0;
     }
 }
+
+
+/* Footer Background */
+
+@media (max-width: 1023px) {
+    .sp-footer .footer-default {
+        background:  #092d4e;
+    }
+}
+
