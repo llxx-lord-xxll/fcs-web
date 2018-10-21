@@ -34,6 +34,42 @@ return [
              */
             'id' => env('MAILCHIMP_LIST_ID'),
         ],
+       'fcs_bali012019_ip' => [
+
+            /*
+             * A MailChimp list id. Check the MailChimp docs if you don't know
+             * how to get this value:
+             * http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id.
+             */
+            'id' => '7cb280ba65',
+        ],
+        'fcs_bali012019_is' => [
+
+            /*
+             * A MailChimp list id. Check the MailChimp docs if you don't know
+             * how to get this value:
+             * http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id.
+             */
+            'id' => '71a736ca25',
+        ],
+        'fcs_bali012019_gp' => [
+
+            /*
+             * A MailChimp list id. Check the MailChimp docs if you don't know
+             * how to get this value:
+             * http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id.
+             */
+            'id' => 'ca8102dcce',
+        ],
+        'fcs_bali012019_gs' => [
+
+            /*
+             * A MailChimp list id. Check the MailChimp docs if you don't know
+             * how to get this value:
+             * http://kb.mailchimp.com/lists/managing-subscribers/find-your-list-id.
+             */
+            'id' => 'd979c638a2',
+        ],
         'newsletter' => [
 
             /*

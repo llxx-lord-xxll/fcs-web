@@ -125,6 +125,10 @@
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2">
                     {!! \App\Http\Controllers\WidgetParser::buildFooterMenuWidget(5,'social') !!}
+                    <div style="display:block">
+                        
+                        <div id="google_translate_element"></div>
+                    </div>
                 </div>
             </nav>
             <nav class="row row-small">
@@ -142,7 +146,7 @@
 
 
 
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=false"></script>
 <script src="{{asset('js/jquery.themepunch.tools.min.js')}}"></script>
 <script src="{{asset('js/jquery.themepunch.revolution.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
@@ -157,6 +161,7 @@
 <script src="{{asset('js/retina.js')}}"></script>
 <script src="{{asset('js/bodymovin.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/main.js')}}"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 
@@ -166,12 +171,22 @@
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-XXXXXXX-XX', 'yourdomain.com');
+    ga('create', 'UA-117105068-1', 'futurecitysummit.org');
     ga('send', 'pageview');
 
 </script>
+
+
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,zh-CN,zh-TW', autoDisplay: false, gaTrack: true, gaId: 'UA-117105068-1'}, 'google_translate_element');
+}
+</script>
+
+
 @hasSection('scripts')
     @yield('scripts')
 @endif

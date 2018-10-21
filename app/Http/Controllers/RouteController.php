@@ -26,7 +26,7 @@ class RouteController extends Controller
 
     public function index()
     {
-      return '';
+        return '';
     }
 
     public function show(Request $request)
@@ -71,237 +71,239 @@ class RouteController extends Controller
                 }
 
                 return view('404')->with('menus', WidgetParser::buildMenuWidget());
-            break;
+                break;
             case 'POST':
-            if(substr(ltrim($request->path(),'/'),0,5) == "forms")
-            {
-                $form_id = str_after(ltrim($request->path(),'/'),"forms/");
-                $form = SiteForms::find($form_id);
-
-                $validator_rules = array();
-                $validator_names = array();
-                if ($form)
+                if(substr(ltrim($request->path(),'/'),0,5) == "forms")
                 {
-                    foreach (DB::table('site_form_fields')->where('form_id','=',$form_id)->get() as $input)
+                    $form_id = str_after(ltrim($request->path(),'/'),"forms/");
+                    $form = SiteForms::find($form_id);
+
+                    $validator_rules = array();
+                    $validator_names = array();
+                    if ($form)
                     {
-                        $vals = $input->field_ivals;
-                        if ($input->field_type=='radiobutton' || $input->field_type=='checkbox' || $input->field_type=='select')
+                        foreach (DB::table('site_form_fields')->where('form_id','=',$form_id)->get() as $input)
                         {
-                            $vType = 'array';
-                        }
-                        else
-                        {
-                            $vType = 'string';
-                        }
-
-                        $rules = explode("\r\n",$input->field_rules);
-                        $input->required = "";
-                        switch ($vType)
-                        {
-                            case 'array':
-                                $vals = explode("\r\n",$vals);
-                                $tmp = array();
-                                foreach ($vals as $val)
-                                {
-                                    $tmp[str_slug($val)] = $val;
-                                }
-                                $vals = $tmp;
-                                break;
-                            case 'string':
-                                $vals = rtrim(ltrim($vals,'""'),'"');
-                                break;
-                        }
-
-
-                        foreach ($rules as $key => $rule)
-                        {
-                            switch ($rule)
+                            $vals = $input->field_ivals;
+                            if ($input->field_type=='radiobutton' || $input->field_type=='checkbox' || $input->field_type=='select')
                             {
-                                case 'unique':
-                                    $rules[$key] = new UniqueWhere($input->form_id,$input->id);
-                                    break;
-                                case 'in':
-                                    if ($vType == 'array')
-                                    {
-                                        $rules[$key] = Rule::in(array_keys($vals));
-                                    }
-                                    else
-                                    {
-                                        $vals = explode("\r\n",$vals);
-                                        $tmp = array();
-                                        foreach ($vals as $val)
-                                        {
-                                            $tmp[str_slug($val)] = $val;
-                                        }
-                                        $vals = $tmp;
-                                        $rules[$key] = Rule::in($vals);
-                                    }
+                                $vType = 'array';
+                            }
+                            else
+                            {
+                                $vType = 'string';
+                            }
 
+                            $rules = explode("\r\n",$input->field_rules);
+                            $input->required = "";
+                            switch ($vType)
+                            {
+                                case 'array':
+                                    $vals = explode("\r\n",$vals);
+                                    $tmp = array();
+                                    foreach ($vals as $val)
+                                    {
+                                        $tmp[str_slug($val)] = $val;
+                                    }
+                                    $vals = $tmp;
                                     break;
-                                case 'required':
-                                    $input->required = 'required';
+                                case 'string':
+                                    $vals = rtrim(ltrim($vals,'""'),'"');
                                     break;
                             }
-                        }
-                        $validator_rules[$input->field_name] = $rules;
-                        $validator_names[$input->field_name] = rtrim(str_replace("*","",$input->field_title)," ");
 
-                    }
-                    try
-                    {
-                        $validator = Validator::make($request->all(),$validator_rules)->setAttributeNames($validator_names);
-                        if($validator->fails())
-                        {
-                            return Redirect::back()->withErrors($validator)->withInput();
-                        }
-                        else
-                        {
-                            try
+
+                            foreach ($rules as $key => $rule)
                             {
-                                $arrToInsert = array_except($request->all(),['_token','agreement']);            //Trimming extras
-                                //Moving and renaming file inputs
-                                foreach ($request->file() as $key => $file)
+                                switch ($rule)
                                 {
-                                    $ext = $request->file($key)->getClientOriginalExtension();
-                                    $deckname = md5(uniqid()) . '.' . $ext;
-                                    $file->move(base_path('public/uploads/files/'.$ext), $deckname);
-                                    $arrToInsert[$key] = 'public/uploads/files/'.$ext . '/' . $deckname;
-                                }
-
-                                $sub = DB::table('site_forms_submissioon')->insertGetId(array('id'=>null,'form_id'=>$form_id,'ip'=> $request->ip(),'ua'=>$request->userAgent(),'created_at'=>Carbon::now()->toDateTimeString(),'updated_at'=>Carbon::now()->toDateTimeString()));
-
-                                foreach (DB::table('site_form_fields')->where('form_id','=',$form_id)->get() as $input)
-                                {
-                                    if (array_key_exists($input->field_name,$arrToInsert))
-                                    {
-                                        DB::table('site_forms_data')->insert(array('submission_id'=>$sub,'field_id'=>$input->id,'field_data'=> $arrToInsert[$input->field_name]));
-                                    }
-                                    else
-                                    {
-                                        DB::table('site_forms_data')->insert(array('submission_id'=>$sub,'field_id'=>$input->id,'field_data'=> null));
-                                    }
-
-                                }
-
-                                //Preparation of Subscribing to newsletter
-                                if ($request->has('newsletter_subscription'))
-                                {
-                                    if ($request->input('newsletter_subscription') == 'y')
-                                    {
-                                        $this->go_newsletter($form,$request);
-                                    }
-                                }
-
-                                $this->go_subscribe($form,$request);        //Subscribe to newsletter
-
-                                if ($form->payment==1)
-                                {
-                                    $amount = 0;
-                                    $description = "";
-
-                                    if ($form->payment_charge == 0 || $form->payment_charge == null)
-                                    {
-                                        $package = DB::table('site_packages')->find($request->input('payment_package'));
-                                        $package_group = DB::table('site_package_group')->find($package->package_group_id);
-
-                                        if ($package_group)
+                                    case 'unique':
+                                        $rules[$key] = new UniqueWhere($input->form_id,$input->id);
+                                        break;
+                                    case 'in':
+                                        if ($vType == 'array')
                                         {
-                                            $package_group = $package_group->title;
+                                            $rules[$key] = Rule::in(array_keys($vals));
                                         }
                                         else
                                         {
-                                            $package_group = "";
+                                            $vals = explode("\r\n",$vals);
+                                            $tmp = array();
+                                            foreach ($vals as $val)
+                                            {
+                                                $tmp[str_slug($val)] = $val;
+                                            }
+                                            $vals = $tmp;
+                                            $rules[$key] = Rule::in($vals);
                                         }
 
-                                        if ($package)
+                                        break;
+                                    case 'required':
+                                        $input->required = 'required';
+                                        break;
+                                }
+                            }
+                            $validator_rules[$input->field_name] = $rules;
+                            $validator_names[$input->field_name] = rtrim(str_replace("*","",$input->field_title)," ");
+
+                        }
+                        try
+                        {
+                            $validator = Validator::make($request->all(),$validator_rules)->setAttributeNames($validator_names);
+                            if($validator->fails())
+                            {
+                                return Redirect::back()->withErrors($validator)->withInput();
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    $arrToInsert = array_except($request->all(),['_token','agreement']);            //Trimming extras
+                                    //Moving and renaming file inputs
+                                    foreach ($request->file() as $key => $file)
+                                    {
+                                        $ext = $request->file($key)->getClientOriginalExtension();
+                                        $deckname = md5(uniqid()) . '.' . $ext;
+                                        $file->move(base_path('public/uploads/files/'.$ext), $deckname);
+                                        $arrToInsert[$key] = 'public/uploads/files/'.$ext . '/' . $deckname;
+                                    }
+
+                                    $sub = DB::table('site_forms_submissioon')->insertGetId(array('id'=>null,'form_id'=>$form_id,'ip'=> $request->ip(),'ua'=>$request->userAgent(),'created_at'=>Carbon::now()->toDateTimeString(),'updated_at'=>Carbon::now()->toDateTimeString()));
+
+                                    foreach (DB::table('site_form_fields')->where('form_id','=',$form_id)->get() as $input)
+                                    {
+                                        if (array_key_exists($input->field_name,$arrToInsert))
                                         {
-                                            $amount = $package->price * 100;
-                                            $description = "Payment for $package->title in $package_group";
+                                            DB::table('site_forms_data')->insert(array('submission_id'=>$sub,'field_id'=>$input->id,'field_data'=> $arrToInsert[$input->field_name]));
                                         }
                                         else
                                         {
-                                            //Throw error
+                                            DB::table('site_forms_data')->insert(array('submission_id'=>$sub,'field_id'=>$input->id,'field_data'=> null));
                                         }
+
                                     }
-                                    else
+
+
+                                    if ($form->payment==1)
                                     {
-                                        $description = $form->title . " Payment";
-                                        $amount = $form->payment_charge * 100;
-                                    }
-                                    //Handle payment, Charge
-                                    if ($request->has('stripeToken'))
-                                    {
-                                        Stripe::setApiKey(env("STRIPE_SECRET"));
+                                        $amount = 0;
+                                        $description = "";
+
+                                        if ($form->payment_charge == 0 || $form->payment_charge == null)
+                                        {
+                                            $package = DB::table('site_packages')->find($request->input('payment_package'));
+                                            $package_group = DB::table('site_package_group')->find($package->package_group_id);
+
+                                            if ($package_group)
+                                            {
+                                                $package_group = $package_group->title;
+                                            }
+                                            else
+                                            {
+                                                $package_group = "";
+                                            }
+
+                                            if ($package)
+                                            {
+                                                $amount = $package->price * 100;
+                                                $description = "Payment for $package->title in $package_group";
+                                            }
+                                            else
+                                            {
+                                                //Throw error
+                                            }
+                                        }
+                                        else
+                                        {
+                                            $description = $form->title . " Payment";
+                                            $amount = $form->payment_charge * 100;
+                                        }
+                                        //Handle payment, Charge
+                                        if ($request->has('stripeToken'))
+                                        {
+                                            Stripe::setApiKey(env("STRIPE_SECRET"));
 
 
-                                       $customer = $this->GetStripeCustomer($request->input('email'));
+                                            $customer = $this->GetStripeCustomer($request->input('email'));
 
-                                           if (!empty($customer)){
+                                            if (!empty($customer)){
 
-                                                   $card = $customer->sources->create(array(
-                                                           "source" => $request->input('stripeToken')
-                                                       ));
-                                                   $customer->default_source = $card->id;
-                                                   $customer->save();
+                                                $card = $customer->sources->create(array(
+                                                    "source" => $request->input('stripeToken')
+                                                ));
+                                                $customer->default_source = $card->id;
+                                                $customer->save();
 
-                                                   $charge = \Stripe\Charge::create(array(
-                                                       'customer' => $customer->id,
-                                                       'amount' => $amount,
-                                                       'currency' => 'usd',
-                                                       'description' => $description,
-                                                   ));
+                                                $charge = \Stripe\Charge::create(array(
+                                                    'customer' => $customer->id,
+                                                    'amount' => $amount,
+                                                    'currency' => 'usd',
+                                                    'description' => $description,
+                                                ));
                                                 DB::table('site_forms_submissioon')->where('id','=',$sub)->update(['stripe_charge'=>$charge->id]);
 
-                                               }else{
-                                                    Throw new \Exception("Something wrong with the email address provided");
-                                           }
+                                            }else{
+                                                Throw new \Exception("Something wrong with the email address provided");
+                                            }
+
+                                        }
 
                                     }
+                                
+                                	$form->sub = $sub;
+
+                                    //Preparation of Subscribing to newsletter
+                                    if ($request->has('newsletter_subscription'))
+                                    {
+                                        if ($request->input('newsletter_subscription') == 'y')
+                                        {
+                                            $this->go_newsletter($form,$request);
+                                        }
+                                    }
+
+                                    $this->go_subscribe($form,$request);        //Subscribe to newsletter
+
+
+                                    $suc = (new MessageBag())->add('none','Submitted successfully, we shall contact you via email for further assistance');
+                                    return Redirect::back()->with('success',$suc);
 
                                 }
+                                catch (\Exception $e)
+                                {
+                                    DB::table('site_forms_data')->where('submission_id', '=' , $sub)->delete();
+                                    DB::table('site_forms_submissioon')->where('id','=',$sub)->delete();
 
-
-
-                                $suc = (new MessageBag())->add('none','Submitted successfully, we shall contact you via email for further assistance');
-                                return Redirect::back()->with('success',$suc);
-
-                            }
-                            catch (\Exception $e)
-                            {
-                                DB::table('site_forms_data')->where('submission_id', '=' , $sub)->delete();
-                                DB::table('site_forms_submissioon')->where('id','=',$sub)->delete();
-
-                                $err = new MessageBag();
-                                //$err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
-                                $err->add('none', $e->getMessage() );
-                                return Redirect::back()->withErrors($err)->withInput();
+                                    $err = new MessageBag();
+                                    //$err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                                    $err->add('none', $e->getMessage() );
+                                    return Redirect::back()->withErrors($err)->withInput();
+                                }
                             }
                         }
+                        catch (\Exception $e)
+                        {
+                            DB::table('site_forms_data')->where('submission_id', '=' , $sub)->delete();
+                            DB::table('site_forms_submissioon')->where('id','=',$sub)->delete();
+
+                            $err = new MessageBag();
+                            //$err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
+                            $err->add('none',$e->getMessage());
+                            return Redirect::back()->withErrors($err)->withInput();
+                        }
+
+
+
+                        break;
+
+
+
+
+
+                        //dump(array_except($request->all(),'_token'));
+
                     }
-                    catch (\Exception $e)
-                    {
-                        DB::table('site_forms_data')->where('submission_id', '=' , $sub)->delete();
-                        DB::table('site_forms_submissioon')->where('id','=',$sub)->delete();
-
-                        $err = new MessageBag();
-                        //$err->add('none','Unknown Error, Something preventing this value to be saved in the databaase, change your input');
-                        $err->add('none',$e->getMessage());
-                        return Redirect::back()->withErrors($err)->withInput();
-                    }
-
-
-
-                    break;
-
-
-
-
-
-                    //dump(array_except($request->all(),'_token'));
 
                 }
-
-            }
 
                 break;
         }
@@ -339,13 +341,54 @@ class RouteController extends Controller
 
                 foreach (DB::table('site_forms_subscription')->where('form_id','=',$form->id)->where('subscription_type','=','subscription')->get() as $input)
                 {
-
-                    $arr[$input->list_field_name] = $request->input($input->form_field_name);
+                    if($request->has($input->form_field_name))
+                    {
+                        $arr[$input->list_field_name] = $request->input($input->form_field_name);
+                    }
                 }
+                if($form->payment == 1)
+                {
+                    if ($form->payment_charge == 0 || $form->payment_charge == null)
+                    {
+                        $package = DB::table('site_packages')->find($request->input('payment_package'));
+                        $package_group = DB::table('site_package_group')->find($package->package_group_id);
 
+                        if ($package_group)
+                        {
+                            $package_group = $package_group->title;
+                        }
+                        else
+                        {
+                            $package_group = "";
+                        }
 
-                Newsletter::subscribeOrUpdate($request->input('email'), $arr,$form->subscribers_confname);
+                        if ($package)
+                        {
+                            $amount = $package->price;
+                            $description = "$package->title in $package_group";
+                        	$order = "FCS". $package->id . "_" . $form->sub ;
+                        }
+                        else
+                        {
+                            //Throw error
+                        }
+                    }
+                    else
+                    {
+                        $description = $form->title . " Payment";
+                        $amount = $form->payment_charge;
+                    	$order = "FCSG_" . $form->id . "_" . $form->sub ;
+                    }
+
+                    $arr['SPACKAGE'] = $description;
+                    $arr['PPRICE'] =   $amount;
+                	$arr['ORDERID'] =   $order;
+
+                }
             }
+
+
+            Newsletter::subscribeOrUpdate($request->input('email'), $arr,$form->subscribers_confname);
         }
     }
 
